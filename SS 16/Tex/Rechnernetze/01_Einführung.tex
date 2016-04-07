@@ -1,0 +1,106 @@
+\documentclass[a4paper, 12pt] {article} %selbsterklärend
+\usepackage[latin1]{inputenc} %lateinischer Schriftsatz (umlaut.)
+\usepackage[ngerman]{babel} %das richtige Sprachpaket (deutsche Rechtschreibung)
+\usepackage[utf8]{inputenx} % ein anderes richtiges Sprachpaket
+\usepackage{a4wide} % sonst lässt er links und rechts je 3 Meilen Rand
+\usepackage[T1]{fontenc} %keine Ahnung, aber hatten die bei LLP auch
+\usepackage{enumerate} %wichtig für Aufzählungen
+\usepackage{xcolor} % buntes Zeugs
+\usepackage{soul} % unterstreichen mit Zeilenumbruch
+\usepackage{amsmath} %megawichtig für Mathe
+\usepackage{nccmath} % ach, das habe ich?
+\usepackage{amssymb} % "American Mathematical Society"
+\usepackage{stmaryrd} % kein Plan
+\usepackage{fancyhdr} % für "fancy" Kopf-Und Fußzeilen
+\usepackage{enumitem} % alternatives, schwierigeres Aufzählungszeug
+\usepackage{amsthm}
+\renewcommand{\arraystretch}{1.3} %damit sehen Tabellen wesentlich besser aus
+\parindent0cm % für Anti-Einzug
+%\usepackage{hyperref} %Alternative zu titleref 
+\usepackage{titleref}
+
+
+% INF ZEUG
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=c} 
+
+
+%Document
+\title{Rechnernetze 01 Einführung}
+\begin{document}
+\maketitle
+
+\begin{itemize}
+	\item Anwendungsfelder Rechnernetze (1.4)
+	\begin{itemize}
+		\item Geschäftsanwendungen - gemeinsame Nutzung von 							Resourcen
+		\item Privatbereich - Informationszugriff (z.B. WWW, IM)
+		\item Mobile Benutzer - Textnachrichten, ...
+		\item Gesellschaftliche Aspekte - Copyright, Profile, ...
+	\end{itemize}
+	\item Client Server Modell (1.5)
+	\item Peer-to-Peer Communication (1.6)
+	\item Basis-Netzstruktur (1.7)
+	\begin{itemize}
+		\item Übertragungsmodi
+		\begin{itemize}	
+			\item Verbindungsorientiert
+			\item Verbindungslos (z.B. IP)
+			\item Leitungsvermittelt
+			\item Paketvermittelt (flexibler, 												ressourcenschonend)
+		\end{itemize}
+	\end{itemize}
+	\item Schichtenarchitektur - ISO/OSI Referenzmodell (1.8)
+	\begin{itemize}
+		\item International Organization for Standardization
+		\item Open Systems Interconnection
+		\item Schichtenübersicht auf 1.8 ff.
+	\end{itemize}
+	\item Integriertes Referenzmodell (Tanenbaum) (1.11)
+	\begin{itemize}
+		\item Protokollimplementierung oft abweichend vom Referenzmodell
+	\end{itemize}
+	\item Besipiel Datenübertragung (1.12)
+	\item Schichteneffizienz (1.13)
+	\item Dienste - Begriffsklärung (1.14)
+	\begin{itemize}
+		\item Beispiel Ablaufdiagramm (1.15)
+	\end{itemize}
+	\item Netzkopplung - Basis-Topologien
+	\begin{itemize}
+		\item Punkt-zu-Punkt-Kanäle (Unicast)
+		\item Rundsendekanäle (Broadcast)
+		\item Klassifizierung nach Ausdehnung (1.17)
+		\begin{itemize}
+			\item Pan - Personal Area Network
+			\item LAN - Local Area Network
+			\item MAN - Metropolitan Aria Network
+			\item WAN - Wide Area Network (1.18)
+		\end{itemize}
+		\item Mobilität || Leistung (1.19)
+		\item Konzepte - Layer-N-Gateway(1.20)
+		\item Beispiel (1.21)
+	\end{itemize}
+	\item Internet(1.22 ff)
+	\begin{itemize}
+		\item Internet
+		\begin{itemize}
+			\item Geschichte des Internet (1.24 ff)
+			\item Normen (1.26)
+		\end{itemize}
+		\item Intranet (1.22)
+	\end{itemize}
+	
+\end{itemize}
+
+
+
+
+- THE END  :) - 
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+
+\end{document}
