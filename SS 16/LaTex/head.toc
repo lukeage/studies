@@ -1,0 +1,30 @@
+\select@language {ngerman}
+\contentsline {part}{I\hspace {1em}Computer Networks}{3}
+\contentsline {chapter}{\numberline {1}Vorlesung}{4}
+\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{4}
+\contentsline {section}{\numberline {1.2}Bit\IeC {\"u}bertragungsschicht}{5}
+\contentsline {chapter}{\numberline {2}\IeC {\"U}bung}{6}
+\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung}{6}
+\contentsline {subsection}{\numberline {2.1.1}}{6}
+\contentsline {subsection}{\numberline {2.1.2}}{7}
+\contentsline {subsection}{\numberline {2.1.3}}{7}
+\contentsline {subsection}{\numberline {2.1.4}}{8}
+\contentsline {part}{II\hspace {1em}Theoretical Informatic and Logic}{10}
+\contentsline {chapter}{\numberline {3}Vorlesung}{11}
+\contentsline {section}{\numberline {3.1}Pr\IeC {\"a}dikatenlogik erster Stufe}{11}
+\contentsline {section}{\numberline {3.2}Pr\IeC {\"a}dikatenlogik erster Stufe}{12}
+\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{14}
+\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik}{14}
+\contentsline {part}{III\hspace {1em}Computer Architecture}{15}
+\contentsline {chapter}{\numberline {5}Vorlesung}{16}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{16}
+\contentsline {subsection}{\numberline {5.1.1}Big Data}{16}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{17}
+\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{17}
+\contentsline {part}{IV\hspace {1em}Database}{18}
+\contentsline {chapter}{\numberline {7}Vorlesung}{19}
+\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{19}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{20}
+\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{20}
+\contentsline {part}{V\hspace {1em}Hardware Internship}{21}
+\contentsline {part}{VI\hspace {1em}C++4CG}{22}

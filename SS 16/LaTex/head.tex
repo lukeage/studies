@@ -1,0 +1,69 @@
+\documentclass[a4paper, 12pt] {report} %selbsterklärend
+\usepackage[latin1]{inputenc} %lateinischer Schriftsatz (umlaut.)
+\usepackage[ngerman]{babel} %das richtige Sprachpaket (deutsche Rechtschreibung)
+\usepackage[utf8]{inputenx} % ein anderes richtiges Sprachpaket
+\usepackage{a4wide} % sonst lässt er links und rechts je 3 Meilen Rand
+\usepackage[T1]{fontenc} %keine Ahnung, aber hatten die bei LLP auch
+\usepackage{enumerate} %wichtig für Aufzählungen
+\usepackage{xcolor} % buntes Zeugs
+\usepackage{soul} % unterstreichen mit Zeilenumbruch
+\usepackage{amsmath} %megawichtig für Mathe
+\usepackage{nccmath} % ach, das habe ich?
+\usepackage{amssymb} % "American Mathematical Society"
+\usepackage{stmaryrd} % kein Plan
+\usepackage{fancyhdr} % für "fancy" Kopf-Und Fußzeilen
+\usepackage{enumitem} % alternatives, schwierigeres Aufzählungszeug
+\usepackage{amsthm}
+\renewcommand{\arraystretch}{1.3} %damit sehen Tabellen wesentlich besser aus
+\parindent0cm % für Anti-Einzug
+%\usepackage{hyperref} %Alternative zu titleref 
+\usepackage{titleref}
+
+
+% INF ZEUG
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=c} 
+
+%Enumeration Formatation Krams
+\renewcommand\theenumi{\alph{enumi}} %verändert bestehende Einstellung
+\renewcommand\labelenumi{\theenumi)} %verändert Darstellung Aufzählung
+\renewcommand\theenumii{\arabic{enumii}} %verändert bestehende Einstellung
+\renewcommand\labelenumii{(\theenumii)} %verändert Darstellung Aufzählung
+
+
+
+%Document
+\author{Luke Hain}
+\begin{document}
+\title{SS 16}
+\maketitle
+
+\tableofcontents{}
+
+
+\part{Computer Networks}
+\input{./Rechnernetze/Vorlesung.tex}
+\input{./Rechnernetze/Übung.tex}
+
+\part{Theoretical Informatic and Logic}
+\input{./TheoreticalInformaticAndLogic/Vorlesung.tex}
+\input{./TheoreticalInformaticAndLogic/Übung.tex}
+
+\part{Computer Architecture}
+\input{./ComputerArchitecture/Vorlesung.tex}
+\input{./ComputerArchitecture/Übung.tex}
+
+\part{Database}
+\input{./Database/Vorlesung.tex}
+\input{./Database/Übung.tex}
+
+
+\part{Hardware Internship}
+%\input{Hardware_Internship}
+
+\part{C++4CG}
+%\input{C++4CG}
+
+
+
+
+\end{document}
