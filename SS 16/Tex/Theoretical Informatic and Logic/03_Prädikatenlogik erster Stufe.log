@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  11 APR 2016 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  11 APR 2016 10:47
 entering extended mode
-**./helloworld.tex
-(helloworld.tex
+**"./03_Prädikatenlogik erster Stufe.tex"
+("03_Prädikatenlogik erster Stufe.tex"
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -501,8 +501,8 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(helloworld.aux)
-\openout1 = `helloworld.aux'.
+("03_Prädikatenlogik erster Stufe.aux")
+\openout1 = `"03_Prädikatenlogik erster Stufe.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -553,26 +553,38 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
- [1
 
-{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (helloworld
-.aux) ) 
+Overfull \hbox (0.96867pt too wide) in paragraph at lines 57--58
+[]\T1/cmr/m/n/12 Def. 4.6 Ei-ne \T1/cmr/bx/n/12 ab-ge-schlos-se-ne \T1/cmr/m/n/
+12 For-mel (oder kurz ein Satz) der Spra-che \T1/cmr/m/it/12 L(R,F,V)
+ []
+
+[1
+
+{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+("03_Prädikatenlogik erster Stufe.aux") ) 
 Here is how much of TeX's memory you used:
- 5951 strings out of 493634
- 74818 string characters out of 3143745
- 166197 words of memory out of 3000000
- 9240 multiletter control sequences out of 15000+200000
- 10789 words of font info for 35 fonts, out of 3000000 for 9000
+ 5985 strings out of 493634
+ 75405 string characters out of 3143745
+ 169197 words of memory out of 3000000
+ 9263 multiletter control sequences out of 15000+200000
+ 16951 words of font info for 56 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,49p,257b,1097s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecrm1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
-ppen\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb>
-Output written on helloworld.pdf (1 page, 32153 bytes).
+ 27i,6n,49p,281b,1097s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lukas\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Lukas\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Us
+ers\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.
+pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "03_Prädikatenlogik erster Stufe.pdf" (2 pages, 82096 bytes)
+.
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 159 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
