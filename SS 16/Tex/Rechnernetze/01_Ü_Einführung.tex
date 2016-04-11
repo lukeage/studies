@@ -1,0 +1,199 @@
+\documentclass[a4paper, 12pt] {article} %selbsterklärend
+\usepackage[latin1]{inputenc} %lateinischer Schriftsatz (umlaut.)
+\usepackage[ngerman]{babel} %das richtige Sprachpaket (deutsche Rechtschreibung)
+\usepackage[utf8]{inputenx} % ein anderes richtiges Sprachpaket
+\usepackage{a4wide} % sonst lässt er links und rechts je 3 Meilen Rand
+\usepackage[T1]{fontenc} %keine Ahnung, aber hatten die bei LLP auch
+\usepackage{enumerate} %wichtig für Aufzählungen
+\usepackage{xcolor} % buntes Zeugs
+\usepackage{soul} % unterstreichen mit Zeilenumbruch
+\usepackage{amsmath} %megawichtig für Mathe
+\usepackage{nccmath} % ach, das habe ich?
+\usepackage{amssymb} % "American Mathematical Society"
+\usepackage{stmaryrd} % kein Plan
+\usepackage{fancyhdr} % für "fancy" Kopf-Und Fußzeilen
+\usepackage{enumitem} % alternatives, schwierigeres Aufzählungszeug
+\usepackage{amsthm}
+\renewcommand{\arraystretch}{1.3} %damit sehen Tabellen wesentlich besser aus
+\parindent0cm % für Anti-Einzug
+%\usepackage{hyperref} %Alternative zu titleref 
+\usepackage{titleref}
+
+
+% INF ZEUG
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=c} 
+
+
+%Document
+\title{01 Ü Einführung}
+\begin{document}
+\maketitle
+\author{Luke}
+
+\begin{itemize}
+\item 1.1
+\begin{itemize}
+	\item a)
+	\begin{itemize}
+		\item Sterntopologie: Ein zentrales Element(Sternkoppler), jeder 			Rechner benötigt eine Leitung zu Sternkoppler \(\to\) 5
+	\end{itemize}
+	\item b) Jeder mit Jedem \(= 4+3+2+1=10\)
+	\item c) 
+	\begin{itemize}
+		\item \(l(n)= n\) bei Sterntopologie
+		\item \(l(n) = \sum ... = (n*(n-1))/2\) bei vollvermaschter 					Topologie
+	\end{itemize}
+	\item d)
+	\begin{itemize}
+		\item LAN
+		\begin{itemize}
+			\item Reichweite: ~10m
+			\item Reaktionszeit: niedrig
+			\item Datenrate: hoch
+			\item Topologien: Sterntopologie
+		\end{itemize}
+		\item MAN
+		\begin{itemize}
+			\item Reichweite: ~10km
+			\item Reaktionszeit: mittel
+			\item Datenrate: mittel
+			\item Topologien: hierarchische Topologie
+		\end{itemize}
+		\item WAN
+		\begin{itemize}
+			\item Reichweite: ~100km - ~10.000km
+			\item Reaktionszeit: hoch
+			\item Datenrate: niedrig
+			\item Topologien: Vollvermaschte Topologie
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\item 1.2
+\begin{itemize}
+	\item a) Dienst und Protokoll
+	\begin{itemize}
+		\item siehe Musterlösung
+	\end{itemize}
+	\item b) OSI Schichtenmodell
+	\begin{itemize}
+		\item Schichtenmodell siehe Folie 1.8ff
+		\item Protokoll:
+		\begin{itemize}
+			\item ist eine Sprache zur horizontalen Kommunikation 							zwischen Prozessen derselben Schicht auf verschiedenen 						Hosts
+		\end{itemize}
+		\item Dienst
+		\begin{itemize}
+			\item dient der vertikalen Kommunikation zwischen zwei 							Schichten auf einem Host
+		\end{itemize}
+		\item Aufteilung des Bitstroms: Schicht 2 Sicherungsschicht
+		\item Ende-zu-Ende Kommunkation: Schicht 4 Transportschicht
+		\item Wegewahl: Schicht 3 Vermittlungsschicht
+	\end{itemize}
+	\item c)
+	\begin{itemize}
+		\item keine inhaltliche Bearbeitung, sondern nur 								Informationsweiterleitung
+	\end{itemize}
+\end{itemize}
+\item 1.3
+\begin{itemize}
+	\item a)
+	\begin{itemize}
+		\item siehe Folie 1.15; 
+		\item Initiator (Prozess A), ...
+		\item Responder (Prozess B), ...
+	\end{itemize}
+	\item b)
+	\begin{itemize}
+		\item Zustände bestimmen
+		\begin{itemize}
+			\item idle
+			\item connected
+			\item prepare(Initiator)
+			\item prepare(Responder)
+		\end{itemize}
+		\item Übergänge bestimmen (Knoten, Pfad, Knoten)
+		\begin{itemize}
+			\item (idle, conReq, prep(Init))
+			\item (idle, ConInd, prep(Resp))
+			\item (prep(Resp), conRsp, connected)
+			\item (prep(Init), conCnf, connected)
+			\item (connected, dataRep/dataInd, connected) 
+			\item (prep(Resp)/prep(Init)/connected, disRep/disInd, idle)
+			\end{itemize}
+	\end{itemize}
+	\item c)
+	\begin{itemize}
+		\item Ablaufdiagramm
+		\begin{itemize}
+			\item c1) + zeitlicher Ablauf
+			\item c2) - es werden n Diagramme benötigt
+			\item c3) - 
+		\end{itemize}
+		\item Zustandsdiagramm
+		\begin{itemize}
+			\item c1) - 
+			\item c2) + alle Abläufe in einem Diagramm darstellbar
+			\item c3) + 
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\item 1.4
+\begin{itemize}
+	\item a) siehe Folie 1.10
+	\begin{itemize}
+		\item \(PDU(N)=SDU(N-1)\)
+		\item \(IDU(N)=ICI(N)+SDU(N)\)
+	\end{itemize}
+	\item b) Seitenaufruf: http://www.heise.de/software
+	\begin{itemize}
+		\item httpRequest
+		\begin{itemize}
+			\item  GET/software/http/1.1
+			\item Host: www.heise.de
+		\end{itemize}
+		\item ICI 
+		\begin{itemize}
+			\item ip: 193.99.144.85 port:80
+		\end{itemize}
+		\item SDU
+		\begin{itemize}
+			\item  GET/software/http/1.1
+			\item Host: www.heise.de
+		\end{itemize}
+		\item IDU
+		\begin{itemize}
+			\item ICI
+			\item SDU
+		\end{itemize}
+		\item TCP-PDU
+		\begin{itemize}
+			\item src:80, dest:80,...
+			\item SDU
+			\item Data
+		\end{itemize}
+	\end{itemize}
+	\item c)
+	\begin{itemize}
+		\item \(b_{0}=125\frac{Mbit}s\)
+		\item \(b_{1}=b_{0}*0,8\)
+		\item \(b_{2}=b_{1}*\frac{(55+99)*0,01}2\)
+		\item \(b_{3}=b_{2}*\frac{(57+99)*0,01}2\)
+		\item \(b_{4}=b_{3}*\frac{(23+99)*0,01}2=36,4\frac{Mbit}s\)
+		\item \(b_{4}=b_{goodput}\)
+		\item \(b_{extra}=b_{2}*\frac{(23+99)*0,01}2=46,7\frac{Mbit}s\)
+	\end{itemize}
+\end{itemize}
+\item timo.schick@tu-dresden.de
+\end{itemize}
+
+
+
+- THE END  :) - 
+
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+
+\end{document}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  11 APR 2016 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  11 APR 2016 12:17
 entering extended mode
-**./helloworld.tex
-(helloworld.tex
+**./01_Ü_Einführung.tex
+(01_Ü_Einführung.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -501,8 +501,8 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(helloworld.aux)
-\openout1 = `helloworld.aux'.
+(01_Ü_Einführung.aux)
+\openout1 = `01_Ü_Einführung.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -555,26 +555,32 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
  [1
 
-{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (helloworld
-.aux) ) 
+{C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4]
+
+(01_Ü_Einführung.aux) ) 
 Here is how much of TeX's memory you used:
- 5986 strings out of 493634
- 75208 string characters out of 3143745
- 167197 words of memory out of 3000000
- 9265 multiletter control sequences out of 15000+200000
+ 5989 strings out of 493634
+ 75323 string characters out of 3143745
+ 172197 words of memory out of 3000000
+ 9268 multiletter control sequences out of 15000+200000
  16267 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,6n,49p,257b,1097s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dp
-i600\ecbx1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
-ppen\ec\dpi600\ecrm1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb>
-Output written on helloworld.pdf (1 page, 41388 bytes).
+ 27i,6n,49p,264b,1097s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lukas\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb>
+Output written on 01_Ü_Einführung.pdf (4 pages, 102528 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 151 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
