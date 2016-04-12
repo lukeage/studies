@@ -19,12 +19,30 @@
 \contentsline {chapter}{\numberline {5}Vorlesung}{16}
 \contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{16}
 \contentsline {subsection}{\numberline {5.1.1}Big Data}{16}
-\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{17}
-\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{17}
-\contentsline {part}{IV\hspace {1em}Database}{18}
-\contentsline {chapter}{\numberline {7}Vorlesung}{19}
-\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{19}
-\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{20}
-\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{20}
-\contentsline {part}{V\hspace {1em}Hardware Internship}{21}
-\contentsline {part}{VI\hspace {1em}C++4CG}{22}
+\contentsline {section}{\numberline {5.2}Vorlesung}{16}
+\contentsline {subsection}{\numberline {5.2.1}ZIH}{16}
+\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{16}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{18}
+\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{18}
+\contentsline {part}{IV\hspace {1em}Database}{19}
+\contentsline {chapter}{\numberline {7}Vorlesung}{20}
+\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{20}
+\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{21}
+\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{21}
+\contentsline {subsubsection}{Phasen der SW-Entwicklung}{21}
+\contentsline {subsubsection}{Phasen des DB-Entwurfs}{21}
+\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{21}
+\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{21}
+\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{22}
+\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{22}
+\contentsline {subsubsection}{Beziehungen / Relationships (22)}{22}
+\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{23}
+\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{23}
+\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{23}
+\contentsline {subsubsection}{Besonderheiten (32 ff.)}{23}
+\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{23}
+\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{23}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{24}
+\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{24}
+\contentsline {part}{V\hspace {1em}Hardware Internship}{25}
+\contentsline {part}{VI\hspace {1em}C++4CG}{26}

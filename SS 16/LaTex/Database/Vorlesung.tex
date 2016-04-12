@@ -35,3 +35,106 @@ Databases vs Big Data
 \begin{itemize}
 \item Big Data 1VL(47)
 \end{itemize}
+
+\section{Konzeptueller Entwurf}
+\subsection{Drei Phasen des Datenbank-Entwurfs (4, ff.)}
+\subsubsection{Phasen der SW-Entwicklung}
+\begin{itemize}
+	\item Anforderungs-analyse \(\to\) Vorstudie
+	\item Fachentwurf \(\to\) Fachknozept
+	\item IT-Entwurf \(\to\) IT-Konzept
+	\item Implementierung \(\to\) Module/Klassen/DB-Tabellen
+\end{itemize}
+\subsubsection{Phasen des DB-Entwurfs}
+\begin{itemize}
+	\item nach Fachentwurf: fachliche Anforderungen an Datenstrukturen \(\to\) Konzeptueller DB-Entwurf \(\to\) Konzeptuelles Schema (ER-D, UML, etc.)
+	\item nach IT-Entwurf: Entscheidung für logisches (Implementierungs-)Modell \(\to\) Logischer DB-Entwurf \(\to\) Logisches Schema (relational, OO, etc.)
+	\item nach Implementierung: Umsetzung in konkeretem System \(\to\) Physischer DB-Entwurf \(\to\) Physisches Schema (konkretes DBS)
+\end{itemize}
+\begin{itemize}
+	\item Datenbank = Schema + Daten
+\end{itemize}
+Datenbank = Schema + Daten
+\subsection{Lebenszyklus einer Datenbank}
+\begin{itemize}
+\item Konzeptioneller Entwurf (12)
+\item Logischer Entwurf (13)
+\item Physischer Entwurf (14)
+\item Wartung, Modifikationen, Erweiterungen (14)
+\item Beispiel (15)
+\end{itemize}
+\subsection{Prinzip eines Datenmodells (16)}
+\begin{itemize}
+	\item Grundlegendes Prinzip
+	\item Leistung: Beschreibung
+	\item Bestandteile
+	\item Skizze (17)
+\end{itemize}
+\subsection{Entity-Relationship-Modell}
+\subsubsection{Entitäten (20)}
+	\begin{itemize}
+		\item Definition
+		\begin{itemize}
+			\item Existiert in der realen Welt, unterscheidet sich von anderen Entitäten
+			\item Eine Entität ist ein Objekt der realen oder der Vorstellungswelt, über das Informationen gespeichert werden sollen
+			\item Es ist im Sinne der Anwendung eindeutig berschreibbar und von anderen unterscheidbar
+			\item Gleichartige Entitäten werden zu Entitätstypen (Entitätsmengen) zusammengefasst
+		\end{itemize}
+		\item Anmerkung
+		\begin{itemize}
+			\item Welche Entitäten zusammengehören, ist von Semantik der Anwendung abhängig
+		\end{itemize}
+		\item Merkmale von Entitätstypen (21)
+		\begin{itemize}
+			\item Nur für die Anwendung relevante Merkmale werden modelliert
+			\item Beschreiben eine charakteristische Eigenschaft eines Eintitätstypes
+			\item Werte eines Attributes aus Wertebereichen wie INTEGER, REAL, STRING
+		\end{itemize}
+		\item Schlüsselattribut(e)
+		\begin{itemize}
+			\item Ein Attribut oder eine Menge von Attributen, anhand deren Entitäten eines Entitätstyps unterscheiden lassen
+			\item Werden durch Unterstreichung gekennzeichnet
+			\item Beispiel: die ISBN-Nummer identifiziert das Buch
+		\end{itemize}
+		\end{itemize}
+\subsubsection{Beziehungen / Relationships (22)}
+	\begin{itemize}
+		\item Abbildung von Zusammenhängen zwischen Entitäten
+		\item Homogene Menge von Beziehungen wird zu Beziehungstyp zusammengefasst
+		\item binär / n-när
+		\item Kardinalitäten Titel \(\leftrightarrow\) Exemplar
+		\item Bemerkungen
+		\begin{itemize}
+		\item Ein Entitätstyp darf in einem Beziehungstyp mehrfach vorkommen
+		\item Mehr als zweistellige Beziehungstypen dürfen vorkommen
+		\item Beziehungstypen können auch Attribute besitzen
+		\end{itemize}
+	\end{itemize}
+\subsubsection{Beispiel eines ER-Diagramms (23)}
+\subsubsection{Beispiel Funtkionalitäten (24)}
+\subsubsection{Funktionalität von Beziehungstypen (25)}
+	\begin{itemize}
+		\item Beispiele (26 ff.)
+	\end{itemize}
+\subsubsection{Besonderheiten (32 ff.)}
+	\begin{itemize}
+		\item Rolle
+		\begin{itemize}
+			\item Anfrage an DB: "Gib mir alle Angestellten, die mehr verdienen als ihr Chef"
+		\end{itemize}
+		\item Extended-ER
+		\begin{itemize}
+			\item Weak Enitites
+			\begin{itemize}
+				\item ID nur im Kontext eindeutig (Bsp.: Stuhlnummer in Hörsaal 003 \(\leftrightarrow\) Stuhlnummer in Hörsaal 004)
+			\end{itemize}
+			\item Strukturierte Attribute
+			\begin{itemize}
+				\item Min-Max Beziehung (35 ff.)
+			\end{itemize}
+			
+		\end{itemize}
+	\end{itemize}
+\subsubsection{Entwurf eines ER Diagramms (38 ff.)}
+\subsubsection{Varianten für mehrstellige Beziehungstypen (40)}
+
