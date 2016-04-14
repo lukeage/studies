@@ -67,3 +67,214 @@
 \end{itemize}
 
 \section{Bitübertragungsschicht}
+
+\subsection{Nachrichtentechnische Kanäle}
+\begin{itemize}
+	\item Aufgabe: Physikalische Bitübertragung mittels Transformation in elektromagnetisches Signal
+	\item Daten \(\to\) Kanal \(\rightsquigarrow\) Störeinflüsse \(\to\) Daten
+
+\subsubsection{Kenngrößen (2.4 ff)}
+	\begin{itemize}
+		\item Bandbreite B: Breite des Frequenzbereichs eines Kanals, in dem ohne größere Dämpfung übertragen wird
+		\item Baudrate %\( \text{BR} = \fraq{\text{Signalschritte}}{\textsc{s}} \)
+		\item Bitrate
+		\item Nyquist Theorrem \( b < 2 \cdot B \cdot ld(S) \)
+		\begin{itemize}
+			\item Erweiterung durch Shannon \( b < B \cdot ld(1+SNR)\)
+			\item Kombination \(b < \text{min}(2 \cdot B \cdot ld(S)\text{ ; } B \cdot ld(1+SNR) )\)
+		\end{itemize}		
+	\end{itemize}
+
+\subsubsection{Leitungscodes}
+	\begin{itemize}
+		\item Wie soll Folge von 0en und 1en übertragen werden?
+		\item NRZ: \textbf{N}on-\textbf{R}eturn-to-\textbf{Z}ero  (2.6)
+		\item Manchester-Codierung
+		\item NRZI: NRZ-\textbf{I}nverted (2.7)
+		\begin{itemize}
+			\item Signaländerung bei 1, keine Signaländerung bei 0
+			\item Vortei: hohe Netto-Datenrate
+			\item Nachteil: Probleme bei langer Folge von Nullen
+			\item Lösung: 4B/5B Code
+			\begin{itemize}
+				\item jeweils 4 Bits Daten werden auf 5-Bit-Muster abgebildet \(\to\) 25% Overhead (statt 100% wie bei Manchester
+				\item durch 4B/5B-Code treten niemals mehr als 3 Nullen nacheinander auf
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Übertragungsmedien}
+\subsubsection{Elektrische Leitungen}
+\begin{itemize}
+	\item Twisted Pair (2.8)
+	\begin{itemize}
+		\item isolierte Kupferdräthe von 0,4 bis 1mm Stärke
+		\item Paarweise verdrillt \(\to\) Reduzierung von Störungen
+		\item Üblicherweise 4 Paare pro Kabel
+		\item Mehrere Kilometer Reichweite, mehrere MBit/s, preiswert
+		\item Signal aus Spannungsdifferenz zwischen den 2 Kabeln übertragen
+		\item Cat 3
+		\item Cat 5
+		\item Cat 6
+		\item Cat 7
+	\end{itemize}
+	\item Koaxialkabel (2.9)
+	\begin{itemize}
+		\item mehrere km, mehrere MBit/s, T-stecker ode rTap
+		\item 50-Ohm-Kabel: für digitale Übertragung
+		\item 75-Ohm-Kabel: für analoge Übertragung und Kabelfernsehen
+		\item Kabelfernsehen \(\to\) Breitband-Koaxialkabel, häufig mit analoger Übertragung bis ca. 1 GHz, bidirektionaler Ausbau für Internet-Zugang via Kabel
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Optische Leitungen und Sichtverbindung}
+\begin{itemize}
+	\item Optische Leitungen
+	\begin{itemize}
+		\item Lichtwellenleiter (LWL) / "Glasfaser"
+		\begin{itemize}
+			\item bis TBit/s-Bereich, über viele km Entfernung
+			\item Monomodefaser: nur eine ausbreitungsfähige Wellenform
+			\item Multimodefaser: verschiedene ausbreitungsfähige Wellenformen
+			\item Gradientenfaser: schrittweise Änderung des Brechungsindex
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Sichtverbindung}
+\begin{itemize}
+	\item Infrarotverbindung
+	\item Richtfunkstrecken
+\end{itemize}
+
+\subsubsection{Satelliten / Zellularfunk (2.11)}
+\begin{itemize}
+	\item Satelliten
+	\begin{itemize}
+		\item Getrennte Aufwärts-/Abwärtsbänder
+		\item Bandbreite von 500MHz, z.B. in mehrere 50 MBit/s - Kanäle oder 800 digitale Sprachkanäle mit 64 kBit/s
+		\item Zuordnung kurzer Zeitabschnitte zu einzelnen Kanälen (Zeitmultiplex)
+		\item Lange Laufzeiten (ca. 250 bis 300ms)
+	\end{itemize}
+	\item Zellularfunk
+	\begin{itemize}
+		\item Aufteilung eines geographischen Bereichs in Funkzellen mit spezifischen Frequenzbändern
+		\item Beispiel: GSM (Global System for Mobile Communication)
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Strukturierte Verkabelung (2.12}
+\begin{itemize}
+	\item Ziel: Systematische, gut wartbare und erweiterbare Kabelinfrastruktur
+	\item Trennung in drei wesentliche Bereiche (jeweils sternförmig hierarchisch)
+	\begin{itemize}
+		\item Primärebene
+		\item Sekundärebene
+		\item Tertiärebene
+	\end{itemize}
+\end{itemize}
+
+\subsection{Mehrfachnutzung von Kanälen}
+\subsubsection{Frequenzmultiplex (2.13)}
+\begin{itemize}
+	\item getrennte Frequenzbänder (mit z.B. 3000 Hz) und zwischengeschaltete Sperrbänder (mit z.B. 500 Hz)
+\end{itemize}
+
+\subsubsection{Orthogonales Frequenzmultiplex (Orthogonal FDM, OFDM)}
+\begin{itemize}
+	\item Überlaguerung der Kanäle ohne Sperrbänder \(\to\) effizienter
+	\item Empfänger: Trennung der Signale mehrerer Bänder durch schnelle Fouriertransformation
+	\item Einsatz: Wlan, Kabelnetze, 4G Mobilfunk, LTE, ...
+\end{itemize}
+
+\subsubsection{Zeitmultiplex (2.14)}
+\begin{itemize}
+	\item Zyklische Kanalzuteilung
+\end{itemize}
+
+\subsubsection{Statistisches Zeitmultiplex}
+\begin{itemize}
+	\item flexible Zuteilung nach Bedarf
+\end{itemize}
+
+\subsubsection{Codemultiplex (CDM, 2.15)}
+\begin{itemize}
+	\item Didizierte (Kodierungs-)Codes pro Teilnehmerpaar
+\end{itemize}
+
+\subsubsection{Wellenlängenmultiplex (WDM)}
+\begin{itemize}
+	\item Variation von Frequenzmultiplex, indem direkte optische Einkopplung mehrerer \\Lichtwellenleiter (mit Licht unterschiedlicher Wellenlängen) in einen besonders leistungsfähigen Lichtwellenleiter erfolgt
+	\item entsprechende Wiederauskopplung im Zielsystem
+\end{itemize}
+\subsection{Datenübertragung}
+\subsubsection{Signalklassen (2.16)}
+\begin{itemize}
+	\item Wert/Zeit kontinuierlich \(\leftrightarrow \) Wert/Zeit diskret
+	\item Beispiele (2.17)
+	\begin{itemize}
+		\item Wert- und zeitkontinuierlich: analoges Telefon
+		\item Wertkontinuierlich, zeitdiskret: Prozesssteuerung mit periodischen Messpunkten
+		\item Wertdiskret, zeitkontinuerlich: digitale Temperaturanzeige
+		\item Wert- und zeitdiskret: digitale Übertragung mit isochronem Taktmuster; z.B. Sprachübertragung über digitale Kanäle
+	\end{itemize}
+\end{itemize}
+\subsubsection{Beispiel: Telefonsystem (2.18)}
+\subsubsection{Sprachübertragung über digitale Kanäle (2.19)}
+\begin{itemize}
+	\item Analoge Eingangssignale (Sprache) vor Übertragung im Kernnetz zu digitalisieren: Codec (Coder-Decoder)
+	\item Basis: Abtasttheorem nach Shannon \( f_(A) > 2\cdot f_(G) \)
+	\item PCM: Pulse Code Modulation
+	\begin{itemize}
+		\item Bsp.: Grenzfrequenz (Telefon) : 3400 z; Abtastfrequenz: 8000 Hz
+		\item logarithmische Quantisierungsintervalle \(\to\) Quantisierungsfehler begrenzen
+	\end{itemize}
+\end{itemize}
+\subsubsection{Datenübertragung über analoge Kanäle}
+\begin{itemize}
+	\item Modem: Übertragung digitaler Signale über analoge (2.20) Telefonverbindung
+	\begin{itemize}
+		\item Problem: Nicht direkt möglich wegen kapazitiver und induktiver Einflüsse
+	\end{itemize}
+	\item Amplitudenabtastung
+	\item Periodenabtastung
+	\item Phasenabtastung
+	\begin{itemize}
+		\item Ziel: Deutlich höhere Übertragungsleistung durch gleichzeitige Anwendung mehrerer Modulationsverfahren (2.21)
+		\item Beispiele
+		\begin{itemize}
+			\item QPSK
+			\item QAM 16
+			\item QAM 64
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Beispieltechnologien}
+\subsubsection{Digital Subscriber Line (DSL, 2.22)}
+\begin{itemize}
+	\item digitaler Netzzugang über herkömmliche Telefonleitungen
+	\item Datenübertragung und Telefondienst gleichzeitig nutzbar
+	\item Realisierung durch Nutzung höherer Frequenzbereiche
+	\item hohe Datenraten, meist asymmetrisch (ADSL) bzgl. Up-/Downlink
+	\item weitere Varianten:
+	\begin{itemize}
+		\item VDSL (Very High Bitrate) : nur über kurze Entfernungen
+		\item SDSL (Symmetric): GLEICHE dATENRATE AUF Up-/Downlink
+	\end{itemize}
+	\item Signaltrennung (Telefon/Daten) und Modulation (basierend auf QAM, 2.23)
+	\begin{itemize}
+		\item CAS (Carrierless Amplitude / Pase System)
+		\item DMT (Discrete Multitone)
+	\end{itemize}
+\end{itemize}
+\subsection{Digitaler Netzzugang über Kabelmodem}
+\begin{itemize}
+	\item Signaltrennung zwischen Kabelfernsehen und Daten:
+	\begin{itemize}
+		\item Umwidmung einzelner TV-Kanäle in Datenkanäle
+		\item Rückkanalfähige Verstärker erforderlich
+		\item Datenraten theoretisch bis ca. 36 MBit/s, aber "Shared Medium", d.h. abhängig von der Zahl der Teilnehmer geringere Datenrate
+	\end{itemize}
+\end{itemize}

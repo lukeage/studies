@@ -76,5 +76,99 @@
 		\item Def. 4.10: Seien \(\sigma\) und \(\theta\) zwei 							Substitutionen Die 	Komposition \(\sigma\theta\) von 						\(\sigma\) und \(\theta\) ist die Substitution: (30)
 		\item Aufgaben
 	\end{itemize}
-	\item Komposition von Substitutionen (33)
 \end{itemize}
+
+\section{Prädikatenlogik erster Stufe}
+\subsection{Komposition von Substitutionen}
+\subsubsection{Korollar 4.11}
+Für jede Substitution \(\sigma\) gilt \(\epsilon\sigma = \sigma = \sigma\epsilon \)
+\subsubsection{Proposition 4.12}
+Seien \(\sigma\) und \(\theta\) Substitutionen. Für jeden term t gilt \(t(\hat{\sigma\theta}) = (t\hat{\sigma})\theta \) \\ Beweis Strukturelle Induktion über t \(\to\) Übung
+\subsubsection{Proposition 4.13}
+Sei \(t \in T(F,V) \) und seien \(\sigma, \theta    \text{ sowie } \lambda \) Substitutionen. Dann gilt:
+\begin{itemize}
+	\item \( t (\hat{(\sigma\theta)\lambda})\)
+	\item \(\sigma\theta)\lambda = \sigma(\theta\lambda)\)
+\end{itemize}
+Beweis siehe Folien (19)
+\subsection{Beschränkung von Substitutionen}
+\subsubsection{Definition 4.14}
+Sei \(\sigma\) eine Substitution. Dann ist 
+\begin{displaymath}
+	\sigma_{x} = \begin{cases} \sigma &\text{wenn } X \notin \text{dom}( \sigma ) \\
+\sigma / \{ X \mapsto t \} &\text{wenn } X \mapsto t \in\sigma
+\end{cases}
+\end{displaymath}
+\subsubsection{Proposition 4.15}
+Sei \(\sigma\) eine Substitution und t ein Term, in dem die Variable X nicht vorkommt.\\ Dann gilt: \(t\sigma = t\sigma_{X} \)
+\subsection{Anwendung von Substitutionen auf Formeln}
+\subsubsection{Definition 4.16}
+Die Anwendung einer Substitution \(\sigma\) auf eine Formel ist induktiv über den Aufbau prädikatenlogische Formel wie folgt definiert:
+\begin{itemize}
+	\item \( p(t_{1} , \ldots , t_{n} ) \sigma = p(t_{1}\sigma , \ldots , t_{n}\sigma ) \)
+	\item \((\neg F)\sigma = \neg (F\sigma) \)
+	\item \((F\circ G)\sigma = (F\sigma \circ G\sigma)\) für jeden binären Junktor \(\circ\)
+	\item \(((QX)F)\sigma = (QX)(F\sigma_{X})\) für jeden Quantor \(Q\)
+\end{itemize}
+\subsubsection{Beobachtung}
+Bei der Anwendung einer Substitution auf eine Formel werden nur frei vorkommende Variablen ersetzt\\
+Beweis: Übung
+\subsection{Substitutionen und Formeln}
+\subsubsection{Definition 4.17}
+Eine Substitution \(\sigma\) ist genau dann frei für eine prädikatenlogische Formel F, wenn sie sich gemäß der folgenden bedingungen als frei erweist:
+\begin{itemize}
+	\item \(\sigma\) ist frei für \(F\), wenn \(F\) ein Atom ist
+	\item \(\sigma\) ist frei für \(\neg F\) \textbf{gdw} \(\sigma\) ist frei für \(F\)
+	\item \(\sigma\) ist frei für \((F\circ G)\) \textbf{gdw} \(\sigma\) ist frei für \(F\) und \(\sigma\) ist frei für \(G\)
+	\item \(\sigma\) ist frei für \((QY)F\) \textbf{gdw} \(\sigma_{Y}\) ist frei für \(F\) und für jede von \(Y\) verschiedene und in \(F\) frei vorkommende Variable \(X\) gilt: \(Y\) kommt in \(X\sigma\) nicht vor 
+\end{itemize}
+\subsection{Satz 4.18}
+\subsubsection{Satz 4.18}
+Wenn die Substitution \(\sigma\) frei für die prädikatenlogische Formel \(F\) und die Substitution \(\theta\) frei für \(F\sigma\) ist, dann gilt: \(F(\sigma\theta) = (F\sigma)\theta \)
+\subsubsection{Beweis Satz 4.18}
+Strukturelle Induktion über \(F\)
+\begin{itemize}
+	\item \textbf{IA} \(F\) ist Atom der Form \(p(t_{1} , \ldots , t_{n})\)
+	\begin{align*}
+		&p(t_{1} , \ldots , t_{n} )(\sigma\theta)\\&=p(t_{1}(\sigma\theta) , \ldots , t_{n}(\sigma\theta)) &&\text{Def 4.16}\\ &= p((t_{1}\sigma)\theta , \ldots , (t_{n}\sigma)\theta) &&\text{Prop 4.12}\\ &= p(t_{1}\sigma, \ldots , t_{n}\sigma)\theta &&\text{Def 4.16}\\ &= p(t_{1}, \ldots , t_{n})\sigma)\theta &&\text{Def 4.16}
+	\end{align*}
+	\item \textbf{IH} Das Resultat gilt für \(F\)
+	\item \textbf{IS}
+	\begin{itemize}
+		\item \textbf{Fall} \(\neg F\)
+		\begin{align*}
+		&\text{Sei } \sigma \text{ frei für } \neg F \text{ und } \theta \text{ frei für } (\neg F)\sigma \\ &\text{Da } \sigma \text{ frei für } \neg F \text{ ist, ist } \sigma \text{ auch frei für } F \\ &\text{Da } \theta \text{ frei für} (\neg F)\sigma \text{ und } (\neg F)\sigma = \neg (F\sigma) \text{ ist, ist } \theta \text{ auch frei für } F\sigma \\ &((\neg F)\sigma)\theta = (\neg(F\sigma))\theta = \neg ((F\sigma)\theta) =_{(IH)} \neg (F(\sigma\theta)) = (\neg F)\sigma\theta
+		\end{align*}
+		\item \textbf{Fall} \((F\circ G) \rightsquigarrow \) Übung
+		\item \textbf{Fall} \((\forall X)F\)
+		\begin{align*}
+		&\text{Sei }\sigma \text{ frei für } (\forall X)F \text{ und } \theta \text{ frei für }((\forall X)F)\sigma \\ &\text{Da }\sigma \text{ frei für } (\forall X)F \text{ ist, ist }\sigma_{X} \text{ frei für } F \\&\text{Da }\theta \text{ frei für } ((\forall X)F)\sigma = (\forall X)(F\sigma_{X}) \text{ ist, ist } \theta_{X} \text{ frei für } F\sigma_{X} \\& \textbf{Hilfsaussage } F(\sigma_{X}\theta_{X}) = F(\sigma\theta)_{X} \\&\text{Dann gilt: }
+		\end{align*}
+		\begin{align*}
+		&(((\forall X)F)\sigma)\theta\\&=((\forall X)(F\sigma_{X}))\theta &&\text{Def 4.16} \\&=(\forall X)((F\sigma_{X})\theta_{X}) &&\text{Def 4.16} \\&=(\forall X)(F(\sigma_{X}\theta_{X})) &&\text{IH} \\&=(\forall X)(F(\sigma\theta)_{X})&&\text{Hilfsaussage} \\& = ((\forall X)F)(\sigma\theta) &&\text{Def 4.16}
+		\end{align*}
+		\item \textbf{Fall} \(\exists X)F \rightsquigarrow\) Übung
+	\end{itemize}
+\end{itemize}
+
+\subsection{Beweis Hilfsaussage aus Satz 4.18}
+Unter den genannten Bedingungen gilt \(F(\sigma_{X}\theta_{X}) = F(\sigma\theta)_{X} \)\\ \textbf{Beweis} Da in \(F\) nur frei vorkommende Variablen ersetzt werden, genügt es zu zeigen, dass für jede frei in \(F\) vorkommende Variable \(Y\) gilt: \(Y(\sigma_{X}\theta_{X}) = Y(\sigma\theta)_{X} \)
+\begin{itemize}
+	\item \textbf{Fall} \(Y = X\)
+	\begin{align*}
+		&Y(\sigma_{X}\theta_{X}) = Y = Y(\sigma\theta)_{X}
+	\end{align*}
+	\item \textbf{Fall} \(Y \ne X\)
+	\begin{align*}
+	&Y\sigma = Y\sigma_{X} \text{ und } Y(\sigma\theta) = Y(\sigma\theta)_{X}\\&\text{Da }\sigma \text{ frei für } (\forall X)F \text{ ist, kommt die Variable } X \text{ in } Y\sigma \text{ nicht vor}\\&\text{Deshalb ist } (Y\sigma)\theta = (Y\sigma)\theta_{X} \\&\text{Dann gilt:}
+	\end{align*}
+	\begin{align*}
+	&Y(\sigma_{X}\theta_{X})\\&=(Y\sigma_{X})\theta_{X} &&\text{Prop 4.12}\\&=(Y\sigma)\theta_{X} && (X \ne Y)\\&=(Y\sigma)\theta && X \text{ kommt in } Y \text{ nicht vor}\\&= Y(\sigma\theta) &&\text{Prop 4.12}\\&= Y(\sigma\theta)_{X} && (X \ne Y)\\&
+	\end{align*}
+\end{itemize}
+
+\subsection{Varianten}
+\subsubsection{Definition 4.19}
+Seien \(E_{1} \) und \(E_{2} \) zwei Terme oder zwei prädikatenlogische Formeln. \(E_{1}\) und \(E_{2}\) heißen Varianten, wenn es Substitutionen \(\sigma \) und \(\theta \) gibt, so dass \(E_{1} = E_{2}\sigma \) und \(E_{2} = E_{1}\theta \). In diesem Fall wollen wir \(E_{1}\) auch als Variante von \(E_{2}\) und \(E_{2}\) als Variante von \(E_{1}\) bezeichnen. \\
+Wenn \(E_{1}\) und \(E_{2}\) Varianten sind und die in \(E_{2}\) vorkommenden Variablen im bisherigen Kontext nicht verwendet wurden, dann ist \(E_{2}\) eine neue Variante von \(E_{1}\).
+
