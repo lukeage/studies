@@ -1,91 +1,149 @@
 \select@language {ngerman}
-\contentsline {part}{I\hspace {1em}Computer Networks}{3}
-\contentsline {chapter}{\numberline {1}Vorlesung}{4}
-\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{4}
-\contentsline {section}{\numberline {1.2}Bit\IeC {\"u}bertragungsschicht}{5}
-\contentsline {subsection}{\numberline {1.2.1}Nachrichtentechnische Kan\IeC {\"a}le}{5}
-\contentsline {subsubsection}{Kenngr\IeC {\"o}\IeC {\ss }en (2.4 ff)}{6}
-\contentsline {subsubsection}{Leitungscodes}{6}
-\contentsline {subsection}{\numberline {1.2.2}\IeC {\"U}bertragungsmedien}{6}
-\contentsline {subsubsection}{Elektrische Leitungen}{6}
-\contentsline {subsubsection}{Optische Leitungen und Sichtverbindung}{7}
-\contentsline {subsubsection}{Sichtverbindung}{7}
-\contentsline {subsubsection}{Satelliten / Zellularfunk (2.11)}{7}
-\contentsline {subsubsection}{Strukturierte Verkabelung (2.12}{8}
-\contentsline {subsection}{\numberline {1.2.3}Mehrfachnutzung von Kan\IeC {\"a}len}{8}
-\contentsline {subsubsection}{Frequenzmultiplex (2.13)}{8}
-\contentsline {subsubsection}{Orthogonales Frequenzmultiplex (Orthogonal FDM, OFDM)}{8}
-\contentsline {subsubsection}{Zeitmultiplex (2.14)}{8}
-\contentsline {subsubsection}{Statistisches Zeitmultiplex}{8}
-\contentsline {subsubsection}{Codemultiplex (CDM, 2.15)}{8}
-\contentsline {subsubsection}{Wellenl\IeC {\"a}ngenmultiplex (WDM)}{8}
-\contentsline {subsection}{\numberline {1.2.4}Daten\IeC {\"u}bertragung}{9}
-\contentsline {subsubsection}{Signalklassen (2.16)}{9}
-\contentsline {subsubsection}{Beispiel: Telefonsystem (2.18)}{9}
-\contentsline {subsubsection}{Sprach\IeC {\"u}bertragung \IeC {\"u}ber digitale Kan\IeC {\"a}le (2.19)}{9}
-\contentsline {subsubsection}{Daten\IeC {\"u}bertragung \IeC {\"u}ber analoge Kan\IeC {\"a}le}{9}
-\contentsline {subsection}{\numberline {1.2.5}Beispieltechnologien}{10}
-\contentsline {subsubsection}{Digital Subscriber Line (DSL, 2.22)}{10}
-\contentsline {subsection}{\numberline {1.2.6}Digitaler Netzzugang \IeC {\"u}ber Kabelmodem}{10}
-\contentsline {chapter}{\numberline {2}\IeC {\"U}bung}{11}
-\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung}{11}
-\contentsline {subsection}{\numberline {2.1.1}}{11}
-\contentsline {subsection}{\numberline {2.1.2}}{12}
-\contentsline {subsection}{\numberline {2.1.3}}{12}
-\contentsline {subsection}{\numberline {2.1.4}}{13}
-\contentsline {part}{II\hspace {1em}Theoretical Informatic and Logic}{15}
-\contentsline {chapter}{\numberline {3}Vorlesung}{16}
-\contentsline {section}{\numberline {3.1}Pr\IeC {\"a}dikatenlogik erster Stufe}{16}
-\contentsline {section}{\numberline {3.2}Pr\IeC {\"a}dikatenlogik erster Stufe}{17}
-\contentsline {section}{\numberline {3.3}Pr\IeC {\"a}dikatenlogik erster Stufe}{18}
-\contentsline {subsection}{\numberline {3.3.1}Komposition von Substitutionen}{18}
-\contentsline {subsubsection}{Korollar 4.11}{18}
-\contentsline {subsubsection}{Proposition 4.12}{18}
-\contentsline {subsubsection}{Proposition 4.13}{18}
-\contentsline {subsection}{\numberline {3.3.2}Beschr\IeC {\"a}nkung von Substitutionen}{18}
-\contentsline {subsubsection}{Definition 4.14}{18}
-\contentsline {subsubsection}{Proposition 4.15}{18}
-\contentsline {subsection}{\numberline {3.3.3}Anwendung von Substitutionen auf Formeln}{19}
-\contentsline {subsubsection}{Definition 4.16}{19}
-\contentsline {subsubsection}{Beobachtung}{19}
-\contentsline {subsection}{\numberline {3.3.4}Substitutionen und Formeln}{19}
-\contentsline {subsubsection}{Definition 4.17}{19}
-\contentsline {subsection}{\numberline {3.3.5}Satz 4.18}{19}
-\contentsline {subsubsection}{Satz 4.18}{19}
-\contentsline {subsubsection}{Beweis Satz 4.18}{20}
-\contentsline {subsection}{\numberline {3.3.6}Beweis Hilfsaussage aus Satz 4.18}{21}
-\contentsline {subsection}{\numberline {3.3.7}Varianten}{21}
-\contentsline {subsubsection}{Definition 4.19}{21}
-\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{22}
-\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik}{22}
-\contentsline {part}{III\hspace {1em}Computer Architecture}{23}
-\contentsline {chapter}{\numberline {5}Vorlesung}{24}
-\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{24}
-\contentsline {subsection}{\numberline {5.1.1}Big Data}{24}
-\contentsline {section}{\numberline {5.2}Vorlesung}{24}
-\contentsline {subsection}{\numberline {5.2.1}ZIH}{24}
-\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{24}
-\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{26}
-\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{26}
-\contentsline {part}{IV\hspace {1em}Database}{27}
-\contentsline {chapter}{\numberline {7}Vorlesung}{28}
-\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{28}
-\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{29}
-\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{29}
-\contentsline {subsubsection}{Phasen der SW-Entwicklung}{29}
-\contentsline {subsubsection}{Phasen des DB-Entwurfs}{29}
-\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{29}
-\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{29}
-\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{30}
-\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{30}
-\contentsline {subsubsection}{Beziehungen / Relationships (22)}{30}
-\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{31}
-\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{31}
-\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{31}
-\contentsline {subsubsection}{Besonderheiten (32 ff.)}{31}
-\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{31}
-\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{31}
-\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{32}
-\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{32}
-\contentsline {part}{V\hspace {1em}Hardware Internship}{33}
-\contentsline {part}{VI\hspace {1em}C++4CG}{34}
+\contentsline {part}{I\hspace {1em}Computer Networks}{4}
+\contentsline {chapter}{\numberline {1}Vorlesung}{5}
+\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{5}
+\contentsline {section}{\numberline {1.2}Bit\IeC {\"u}bertragungsschicht}{6}
+\contentsline {subsection}{\numberline {1.2.1}Nachrichtentechnische Kan\IeC {\"a}le}{6}
+\contentsline {subsubsection}{Kenngr\IeC {\"o}\IeC {\ss }en (2.4 ff)}{7}
+\contentsline {subsubsection}{Leitungscodes}{7}
+\contentsline {subsection}{\numberline {1.2.2}\IeC {\"U}bertragungsmedien}{7}
+\contentsline {subsubsection}{Elektrische Leitungen}{7}
+\contentsline {subsubsection}{Optische Leitungen und Sichtverbindung}{8}
+\contentsline {subsubsection}{Sichtverbindung}{8}
+\contentsline {subsubsection}{Satelliten / Zellularfunk (2.11)}{8}
+\contentsline {subsubsection}{Strukturierte Verkabelung (2.12}{9}
+\contentsline {subsection}{\numberline {1.2.3}Mehrfachnutzung von Kan\IeC {\"a}len}{9}
+\contentsline {subsubsection}{Frequenzmultiplex (2.13)}{9}
+\contentsline {subsubsection}{Orthogonales Frequenzmultiplex (Orthogonal FDM, OFDM)}{9}
+\contentsline {subsubsection}{Zeitmultiplex (2.14)}{9}
+\contentsline {subsubsection}{Statistisches Zeitmultiplex}{9}
+\contentsline {subsubsection}{Codemultiplex (CDM, 2.15)}{9}
+\contentsline {subsubsection}{Wellenl\IeC {\"a}ngenmultiplex (WDM)}{9}
+\contentsline {subsection}{\numberline {1.2.4}Daten\IeC {\"u}bertragung}{10}
+\contentsline {subsubsection}{Signalklassen (2.16)}{10}
+\contentsline {subsubsection}{Beispiel: Telefonsystem (2.18)}{10}
+\contentsline {subsubsection}{Sprach\IeC {\"u}bertragung \IeC {\"u}ber digitale Kan\IeC {\"a}le (2.19)}{10}
+\contentsline {subsubsection}{Daten\IeC {\"u}bertragung \IeC {\"u}ber analoge Kan\IeC {\"a}le}{10}
+\contentsline {subsection}{\numberline {1.2.5}Beispieltechnologien}{11}
+\contentsline {subsubsection}{Digital Subscriber Line (DSL, 2.22)}{11}
+\contentsline {subsection}{\numberline {1.2.6}Digitaler Netzzugang \IeC {\"u}ber Kabelmodem}{11}
+\contentsline {chapter}{\numberline {2}\IeC {\"U}bung}{12}
+\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung}{12}
+\contentsline {subsection}{\numberline {2.1.1}}{12}
+\contentsline {subsection}{\numberline {2.1.2}}{13}
+\contentsline {subsection}{\numberline {2.1.3}}{13}
+\contentsline {subsection}{\numberline {2.1.4}}{14}
+\contentsline {section}{\numberline {2.2}Bit\IeC {\"u}bertragungsschicht}{15}
+\contentsline {subsection}{\numberline {2.2.1}Nyquist-Theorem}{15}
+\contentsline {subsection}{\numberline {2.2.2}Pulsecodemodulation}{16}
+\contentsline {subsection}{\numberline {2.2.3}Modulation}{16}
+\contentsline {subsection}{\numberline {2.2.4}Leitungskodierung}{17}
+\contentsline {subsection}{\numberline {2.2.5}Multiplex}{17}
+\contentsline {part}{II\hspace {1em}Theoretical Informatic and Logic}{19}
+\contentsline {chapter}{\numberline {3}Vorlesung}{20}
+\contentsline {section}{\numberline {3.1}Pr\IeC {\"a}dikatenlogik erster Stufe}{20}
+\contentsline {section}{\numberline {3.2}Pr\IeC {\"a}dikatenlogik erster Stufe}{21}
+\contentsline {section}{\numberline {3.3}Syntax/Substitutionen}{22}
+\contentsline {subsection}{\numberline {3.3.1}Komposition von Substitutionen}{22}
+\contentsline {subsubsection}{Korollar 4.11}{22}
+\contentsline {subsubsection}{Proposition 4.12}{22}
+\contentsline {subsubsection}{Proposition 4.13}{22}
+\contentsline {subsection}{\numberline {3.3.2}Beschr\IeC {\"a}nkung von Substitutionen}{22}
+\contentsline {subsubsection}{Definition 4.14}{22}
+\contentsline {subsubsection}{Proposition 4.15}{22}
+\contentsline {subsection}{\numberline {3.3.3}Anwendung von Substitutionen auf Formeln}{23}
+\contentsline {subsubsection}{Definition 4.16}{23}
+\contentsline {subsubsection}{Beobachtung}{23}
+\contentsline {subsection}{\numberline {3.3.4}Substitutionen und Formeln}{23}
+\contentsline {subsubsection}{Definition 4.17}{23}
+\contentsline {subsection}{\numberline {3.3.5}Satz 4.18}{23}
+\contentsline {subsubsection}{Satz 4.18}{23}
+\contentsline {subsubsection}{Beweis Satz 4.18}{24}
+\contentsline {subsection}{\numberline {3.3.6}Beweis Hilfsaussage aus Satz 4.18}{25}
+\contentsline {subsection}{\numberline {3.3.7}Varianten}{25}
+\contentsline {subsubsection}{Definition 4.19}{25}
+\contentsline {section}{\numberline {3.4}Semantik}{25}
+\contentsline {subsection}{\numberline {3.4.1}Relationen und Funktionen}{25}
+\contentsline {subsection}{\numberline {3.4.2}Interpretationen}{26}
+\contentsline {subsubsection}{Definition 4.20}{26}
+\contentsline {subsubsection}{Definition 4.21}{26}
+\contentsline {subsubsection}{Definition 4.22}{26}
+\contentsline {subsubsection}{Definition 4.23}{27}
+\contentsline {subsubsection}{Proposition 4.24}{27}
+\contentsline {subsubsection}{Lemma 4.25}{27}
+\contentsline {subsection}{\numberline {3.4.3}Herbrand-Interpretationen}{27}
+\contentsline {subsubsection}{Definition 4.26}{27}
+\contentsline {subsection}{\numberline {3.4.4}Modelle f\IeC {\"u}r abgeschlossene Formeln}{28}
+\contentsline {subsection}{\numberline {3.4.5}Modelle f\IeC {\"u}r nicht-abgeschlossene Formeln}{28}
+\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{29}
+\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik - Syntax}{29}
+\contentsline {subsection}{\numberline {4.1.1}Konstruktion von Teiltermen}{29}
+\contentsline {subsection}{\numberline {4.1.2}\IeC {\"U}ber Nachbarn}{30}
+\contentsline {part}{III\hspace {1em}Computer Architecture}{32}
+\contentsline {chapter}{\numberline {5}Vorlesung}{33}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{33}
+\contentsline {subsection}{\numberline {5.1.1}Big Data}{33}
+\contentsline {section}{\numberline {5.2}Vorlesung}{33}
+\contentsline {subsection}{\numberline {5.2.1}ZIH}{33}
+\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{33}
+\contentsline {section}{\numberline {5.3}VL}{34}
+\contentsline {subsection}{\numberline {5.3.1}Modifiziertes Dreiphasenmodell zum Entwurf eines RS}{34}
+\contentsline {subsubsection}{Befelhlssatzarchitektur}{34}
+\contentsline {subsubsection}{Implementierung}{34}
+\contentsline {subsubsection}{Realisierung}{34}
+\contentsline {subsection}{\numberline {5.3.2}Architektur-Definition (Tanenbaum)}{34}
+\contentsline {subsection}{\numberline {5.3.3}Architektur-Definition (Hennessy/Patterson)}{34}
+\contentsline {subsection}{\numberline {5.3.4}Einflusskomplexe}{35}
+\contentsline {subsection}{\numberline {5.3.5}Entwurf eines Rechnersystems}{36}
+\contentsline {subsection}{\numberline {5.3.6}Architectural Trends}{37}
+\contentsline {subsection}{\numberline {5.3.7}Bemerkungen zum klassischen Digitalrechner}{38}
+\contentsline {subsection}{\numberline {5.3.8}Aufgaben und Ziele der Rechnerarchitektur}{39}
+\contentsline {subsubsection}{Aufgaben}{39}
+\contentsline {subsubsection}{Ziele}{39}
+\contentsline {subsection}{\numberline {5.3.9}Klassifizierung nach Flynn}{39}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{40}
+\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{40}
+\contentsline {subsection}{\numberline {6.1.1}von-Neumann}{40}
+\contentsline {subsubsection}{Komponenten des v. Neumann Architektur}{40}
+\contentsline {subsection}{\numberline {6.1.2}v.Neumann vs. Harvard}{41}
+\contentsline {subsubsection}{Harvard}{41}
+\contentsline {subsection}{\numberline {6.1.3}Def. von Brooks vs Giloi}{41}
+\contentsline {subsubsection}{Brooks (1962)}{41}
+\contentsline {subsubsection}{Giloi}{41}
+\contentsline {subsection}{\numberline {6.1.4}RA-Definition Begriffe}{42}
+\contentsline {part}{IV\hspace {1em}Database}{44}
+\contentsline {chapter}{\numberline {7}Vorlesung}{45}
+\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{45}
+\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{46}
+\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{46}
+\contentsline {subsubsection}{Phasen der SW-Entwicklung}{46}
+\contentsline {subsubsection}{Phasen des DB-Entwurfs}{46}
+\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{46}
+\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{46}
+\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{47}
+\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{47}
+\contentsline {subsubsection}{Beziehungen / Relationships (22)}{47}
+\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{48}
+\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{48}
+\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{48}
+\contentsline {subsubsection}{Besonderheiten (32 ff.)}{48}
+\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{48}
+\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{48}
+\contentsline {section}{\numberline {7.3}Konzeptueller Entwurf}{48}
+\contentsline {subsection}{\numberline {7.3.1}Grundlagen (5)}{48}
+\contentsline {subsubsection}{Ausgangspunkt}{48}
+\contentsline {subsubsection}{Grundlagen}{48}
+\contentsline {subsection}{\numberline {7.3.2}Prim\IeC {\"a}rschl\IeC {\"u}ssel (8)}{49}
+\contentsline {subsection}{\numberline {7.3.3}ER-Modell Relationales Modell}{49}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Entit\IeC {\"a}ten}{49}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Attributen}{49}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Beziehungen}{49}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{51}
+\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{51}
+\contentsline {subsection}{\numberline {8.1.1}}{51}
+\contentsline {subsection}{\numberline {8.1.2}}{51}
+\contentsline {subsection}{\numberline {8.1.3}}{52}
+\contentsline {subsection}{\numberline {8.1.4}}{52}
+\contentsline {subsection}{\numberline {8.1.5}}{52}
+\contentsline {part}{V\hspace {1em}Hardware Internship}{53}
+\contentsline {part}{VI\hspace {1em}C++4CG}{54}

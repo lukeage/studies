@@ -1,4 +1,48 @@
 %!TEX root = ../../head.tex
 
 \chapter{Übung}
-\section{Prädikatenlogik}
+tobias.philipp@tu-dresden.de\\ Fr. 14:00 2005/2006
+\section{Prädikatenlogik - Syntax}
+\subsection{Konstruktion von Teiltermen}
+\begin{enumerate}
+	\item Bestimme für den Term \( t = h(f(Y,X),Y,g(a)) \) gemäß obiger Definition 2 die Mengen \(K_{n}(t)\) für alle \(n \in \mathbb{N} \)  und geben Sie für alle Terme \(s\in K_{n}(t)\) die zugehörige Konstruktion an.
+	\begin{align*}
+	&K_{0}(t) = \{t\}&&[t]\\
+	&K_{1}(t) = \{f(Y,X),X,g(a)\}&&[t,f(Y,X)],[t,X],[t,g(a)]\\
+	&K_{2}(t) = \{Y,X,a\}&&[t,f(Y,X),Y],                          [t,f(Y,X),X],[t,g(a),a]\\
+	&K_{3}(t) = \emptyset\\
+	&\Rightarrow K(t) = \{t,f(Y,X),X,g(a),Y,a\}
+	\end{align*}			
+
+	\item Zeigen Sie, dass \(T_{t} = K(t) \) für beliebige \(t \in T(F,V)\) gilt.
+	\begin{align*}
+	&\text{z.Z.: }T_{t} = \{t,f(Y,X),X,g(a),Y,a\}\\
+	&\text{1. Idee: } T_{t} = K(t) \forall t \in T(F,V)\\
+	&\text{2. Idee: Strukt. Induktion}
+	\end{align*}
+	\item Strukturelle Induktion
+	\begin{itemize}
+		\item IA
+		\begin{align*}
+		&\textbf{Fall a) } t \text{ ist von der Form } X\in V \\&\text{Wir wissen, dass } K_{0}(t) = {X} \text{ Außerdem gilt } K_{n}(t) = \emptyset \forall n \ge 1. \\&\text{Aus der Def. von  } K(t) \text{, wissen wir dann dass } K(t) = \{X\} \\&\text{z.Z.: } T_{t} = \{X\} \\& \Rightarrow \{X\} \text{ erfüllt Bed 1 und 2 der Def 1 und Minimalität}\\& \text{1. ist offensichtlich erfüllt} \\&\text{2. ist erfüllt, weil die Vorbedingung immer falsch ist} \\&\text{Minimalität über } \emptyset \\&\Rightarrow K(t) = T_{t} \\&\textbf{Fall b) }t \text{ ist v.d.F. Atom } \in F \textbf{ analog}
+		\end{align*}
+		\item IV Die Aussage gelte für \(t_{1},\ldots,t_{n})\)
+		\item IS z.Z Die Aussage gilt für \(f(t_{1},\ldots,t_{n}) \)
+		\begin{align*}
+		T_{f(t_{1},\ldots,t_{m})}&=K(f(t_{1},\ldots,t_{m}))\\&=\bigcup_{n = 0}^\infty {K_{n}(f(t_{1},\ldots,t_{m}))}\\&\text{zuerst} \supseteq \\&\text{Sei } s\in \bigcup_{n = 0}^\infty {K_{n}(f(t_{1},\ldots,t_{m}))} \text{ Dann ex. ein }l\text{ sodass } \\& s\in K_{l}(f(t_{1},\ldots,t_{m}) [s_{0},\ldots,s_{l}] \\&\text{Dann gibt es Konst der Länge } l-1 \text{ von } s \text{ aus } t_{i}, i \in \{1,\ldots,m\} \\& s\in K_{l-1}(t_{i}) \forall i \\&\Rightarrow s\in K(t_{i}) \\&\Rightarrow s \in T_{t_{i}} \text{nach I.V.}\\& \text{Es fehlt} \subseteq 
+		\end{align*}
+	\end{itemize}
+\end{enumerate}
+\subsection{Über Nachbarn}
+\begin{enumerate}
+	\item Definieren Sie ...
+	\begin{align*}
+		&(\forall X)\Big((\exists Y)(m(X)\wedge e(X,Y))\leftrightarrow \text{ vater}(X)\Big)\\
+		&(\forall X)(\exists Y)(m(X)\wedge e(X,Y))\leftrightarrow \text{ vater}(X)\\
+	\end{align*}
+	\item Drücken Sie ...
+	\begin{align*}
+	&(\forall X)\neg n(X,X)\\
+	&(\forall X)\neg (d(X,X) \wedge n(X,X))
+	\end{align*}
+\end{enumerate}

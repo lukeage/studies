@@ -155,3 +155,139 @@ timo.schick@tu-dresden.de
 	\end{align*}
 \end{enumerate}
 
+\section{Bitübertragungsschicht}
+\subsection{Nyquist-Theorem}
+\begin{enumerate}
+	\item 
+	\begin{itemize}
+		\item Bandbreite B [Hz]
+		\item Signalrauschabstand SNR
+		\item Abschneidefrequenzen in niedrigen Bereichen \(\to\) Differenz = Bandbreite
+		\item Signalstufen S [1], digitaler Signal: \(S = 2\)
+		\item Signalrate SR [Hz]
+		\item Bitrate b \([\frac{\text{Bit}}{\text{s}}]\)
+	\end{itemize}
+	\(b = SR \cdot ld(S)\)
+	\begin{itemize}
+		\item Nyquist 1 (rauschfrei) \(b < 2\cdot B\cdot ld(2)\)
+		\item Nyquist 2 (verrauscht) \(b < B \cdot ld(1+SNR) \)
+		\item \(SNR_{dB} = 10 \cdot log_{10}(SNR)\)
+	\end{itemize}
+	Informationsgehalt \(I = ld(16) = 4 \text{ [Bit]f}\)\\
+	Signalrate \(SR = \frac{b}{ld(S)} = \frac{9600 \frac{\text{ Bit}}{\text{s}}}{4 \text{ [Bit]}} \)
+	\item
+	\begin{align*}
+	&SNR_{dB} = 12 \text{dB} \\ &SNR = 10^{\frac{SNR_{dB}}{10}} = 15 \\ &B > \frac{b}{(d(1+SNR))} = \frac{9600\frac{\text{Bit}}{\text{s}}}{ld(1+15)} = 2400 \text{Hz}
+	\end{align*}
+	\item 
+	\begin{displaymath}
+		B > 963 Hz \to B > 1200 Hz \text{Nyquist 1}
+	\end{displaymath}
+\end{enumerate}
+\subsection{Pulsecodemodulation}
+\begin{enumerate}
+	\item
+	\begin{itemize}
+		\item PCM: analoges Signal \(\to\) Tiefpass \((f_{g}) \to \) Abtastung (zeitdiskret, \((f_{a})\)) \\ \(\to\) Quantisierung (wertdiskret)
+		\item \(f_{a} > 2 f_{g}\)
+	\end{itemize}
+	gegeben: 
+	\begin{align*}
+		&B = 60 \text{ kHz} \\
+		&QS = 1024 \\
+		&S = 2
+	\end{align*}
+	gesucht:
+	\begin{align*}
+		b &< 2\cdot B \cdot ld(S) \\
+		&= 2 \cdot 60\text{ kHz} \cdot 1\text{ [Bit]} \\
+		&= \frac{120\text{ kBit}}{\text{s}}\\ \\
+		f_{a} &= \frac{b}{(d(QS))}	\\
+		&= \frac{b}{10\text{ [Bit]}} \\
+		&= 12 \text{ kHz} \\
+		f_{g} &< \frac{f_{a}}{2} \\
+		&= 6 \text{ kHz}
+	\end{align*}
+	
+	\item
+	\begin{itemize}
+		\item 8 Bit: leises Hintergrundrauschen
+		\item 4 Bit: starkes Rauschen
+		\item 1 Bit: extremes Rauschen
+	\end{itemize}
+\end{enumerate}
+\subsection{Modulation}
+\begin{enumerate}
+	\item Tabelle zeichnen siehe VL
+	\begin{enumerate}
+		\item Amplitudenmodulation
+		\item Frequenzmodulation
+		\item Phasenmodulation
+	\end{enumerate}
+	\item 
+	\begin{itemize}
+		\item Realisierungsaufwand
+		\begin{enumerate}
+			\item sehr gut
+			\item gut
+			\item schlecht
+		\end{enumerate}
+		\item Störsicherheit
+		\begin{enumerate}
+			\item schlecht
+			\item gut
+			\item sehr gut
+		\end{enumerate}
+	\end{itemize}
+\end{enumerate}
+\subsection{Leitungskodierung}
+\begin{enumerate}
+	\item Leitungskodierung: \\Anpassung des Datenstroms an das eingesetzte Übertragungsmedium \\ 
+	Ziel:
+	\begin{itemize}
+		\item Erkennung von Leitungsunterbrechungen
+		\item Synchronisation (\(\to\) Takt)
+	\end{itemize}
+	\item einfacher Manchesterkodierung
+	\begin{itemize}
+		\item Leitungskode (Takt kann herausgelesen werden, Leitungen können unterbrochen werden)
+		\item jedes Bit in zwei Intervalle teilen
+		\item 0 \(\to\) low, high
+		\item 1 \(\to\) high, low
+	\end{itemize}
+	\item siehe b)\\
+	Übertragungsrate = \(\frac{1}{2}\) Signalrate
+\end{enumerate}
+\subsection{Multiplex}
+\begin{enumerate}
+	\item siehe Musterlösung
+	\begin{itemize}
+		\item synchrones Zeitmultiplex
+		\begin{itemize}
+			\item feste Zeitschlitze - Taktung nötig
+			\item fester Zeitabschnitt für jeden Sender
+			\item Zuordnung zu virtuellem Kanal durch Position im Übertragungskanal
+		\end{itemize}
+		\item asynchrones Zeitmultiplex
+		\begin{itemize}
+			\item feste Zeitschlitze - Taktung nötig
+			\item Senden nach Bedarf
+			\item Channel Identifier für Zuordnung zu virtuellem Kanal
+		\end{itemize}
+	\end{itemize}
+	\item gegeben:
+	\begin{align*}
+		&B_{\text{Gesamt}} = 49 \text{ MHz} \\
+		&B_{\text{Abstand}} = 1,5 \text{ MHz} \\
+		&B_{\text{Kanal}} = 5,5 \text{ MHz}
+	\end{align*}
+	gesucht: Anzahl n der möglichen Fernsehkanäle:
+	\begin{align*}
+		&49 \text{ MHz} = 5,5 \text{ MHz} \cdot n + 1,5 \text{ MHz} \cdot (n - 1) \\
+		&49\text{ MHz} = (5,5+1,5)\text{ MHz} \cdot n - 1,5 \text{ MHz} \\
+		&50,5 = 7n \\
+		&n = \frac{50,5}{7} = 7,21
+	\end{align*}
+	\(\to\) Es können 7 Kanäle angeboten werden.
+\end{enumerate}
+

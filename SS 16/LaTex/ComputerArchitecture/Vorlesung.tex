@@ -38,13 +38,215 @@
 		\end{itemize}
 	\end{itemize}
 	\item Taxonomie
-	\item Dreiphasenmodell zum Entwurf eins REchnersystems
+	\item Dreiphasenmodell zum Entwurf eins Rechnersystems
 	\begin{itemize}
 		\item Bottom-up (Realisierung \(\to\) Implementierung \(\to\) Rechnerarchitektur)
 		\item Top-down (Rechnerarchitektur \(\to\) Implementierung \(\to\) Realisierung)
 		\item Rückwirkungen durch den technologischen Stand						\end{itemize}
 \end{itemize}
 
-
-
-
+\section{VL}
+\subsection{Modifiziertes Dreiphasenmodell zum Entwurf eines RS}
+\subsubsection{Befelhlssatzarchitektur}
+\subsubsection{Implementierung}
+\subsubsection{Realisierung}
+\subsection{Architektur-Definition (Tanenbaum)}
+Den Satz von Datentypen, Operationen und Merkmalen jeder Ebene bezeichnet man als ihre Architektur. Die Architektur betrifft die Aspekte, die für den Benutzer der jeweiligen Ebene sichtbar sind.
+\subsection{Architektur-Definition (Hennessy/Patterson)}
+We use the term instruction set architecture (ISA) to refer to the actual programmervisible instruction set in this book. the ISA serves as the boundary betweeen the software and hardware. \\ The implementation of a computer has two components: organization and hardware.
+\subsection{Einflusskomplexe}
+\begin{itemize}
+	\item Die Rechnerarchitektur steht in Wechselwirkung mit zahlreichen benachbarten Disziplinen
+	\begin{itemize}
+		\item Betriebssysteme
+		\begin{itemize}
+			\item Konzepte aus dem Bereich Betriebssysteme werden durch Rechnerkomponenten unterstützt (z.B.: Virtueller Speicher/ I/O-Instruktionen)
+			\item Andererseits werden durch moderne Rechnerarchitektur-Konzepte neue Anforderungen and die Betriebssysteme gestellt (z.B.: Erweiterung für Parallelarbeit)
+		\end{itemize}
+		\item Topologie
+		\begin{itemize}
+			\item Ursprünglich Teilgebiet der Mathematik zur Untersuchung der Struktur von Punktmengen und Räumen einschließlich ihrer Klassifizierung
+			\item Daraus folgte: Gestaltung von Verbindungseinrichtungen in Multiprozessorsystemen (3-D Hypercube, D-Gitter)
+		\end{itemize}
+		\item Hardware-Entwurf
+		\begin{itemize}
+			\item Die Sammlung von Anforderungen bildet die strukturelle und organisatorische Entwurfsspezifikation der Teilkomponenten eines Rechners
+			\item Darstellung: Very-High-Scale-Hardware-Description-Language (VHDL)
+		\end{itemize}
+		\item Compilerbau und Softwaretechnik
+		\begin{itemize}
+		\item Codegenerator eines Compilers hänt von Architektur und Befehlssatz des Zielprozessors ab.
+			\item Intel-Titanium-Prozessor: EPIC-Architektur
+		\end{itemize}
+		\item Software-Entwurf
+		\begin{itemize}
+			\item Nutzung unterschiedlicher Programmierparadigmen und -modelle zur bestmöglichen Nutzung architetkonischer Möglichkeiten von Prozessoren und Rechnersystemen
+			\item Für den Software-Entwuf existieren eine Vielzahl von Werkzeugen
+		\end{itemize}
+		\item Software-Ergonomie
+		\begin{itemize}
+			\item Gesamtheit der Krieterien für eine Nutzerakzeptanz
+			\item Software für die Gestaltung der Beutzerschnittstelle ist oft umfangreicher als die Applikationssoftware
+		\end{itemize}
+		\item Algorithmen-Entwurf
+		\begin{itemize}
+			\item Optimale Programme erfordern geeignete Lösungsalgorithmen
+			\item Besonders drastische Bedingungen bestehen bei Parallelverarbeitung durch erforderliche Parallelalgorithmen und Parallelisierung sequenzieller Algorithmen
+			\item Optimale Parallelalgorithmen können zum Einsatz sogenannter Systolischer Arrays führen
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{Entwurf eines Rechnersystems}
+\begin{itemize}
+	\item Kompromissfindung zwischen
+	\begin{itemize}
+		\item Zielsetzungen: Anwendungsbereiche, Funtkionalität, Verfügbarkeit, ...
+		\item Gestaltungsgrundsätzen: Modularität, Sparksamkeit, Fehlertoleranz, ...
+		\item Randbedingungen: Technologie, Finanzen, Umwelt, ...
+	\end{itemize}
+	\item Zielsetzungen
+	\begin{itemize}
+		\item Andwendungsbereich
+		\begin{itemize}
+			\item Technisch-wissenschaftlicher Bereich (z.B. Strömungsmechanik, Materialforschung, ...)
+			\item Kommerzieller Bereich (z.B.: Datenbankanwendungen, Internet, Suchmaschinen,...
+			\item Eingebettete Systeme (z.B.: Verarbeitung digitaler Medien, Automatisierungstechnik, ...)
+		\end{itemize}
+		\item Benutzerfreundlichkeit
+		\begin{itemize}
+			\item Beziehung zwischen einem Rechnersystem und Nutzer
+			\item Gestaltung der Schnittstelle zwischen dem Rechnersystem und seinem Benutzer
+		\end{itemize}
+		\item Verlässlichkeit/Robustheit
+		\begin{itemize}
+			\item Gewährleistung einer minimalen Verfügbarkeit des Systems
+		\end{itemize}
+		\item Erweiterbarkeit/Skalierbarkeit
+		\begin{itemize}
+			\item Eine Rechnerfamilie ist in Ausbaustufen skalierbar für verschiedene Anwendungen
+			\item Skalierbarkeit ist ein wesentliches Erfordernis aller Rechnersysteme \\ \(\Rightarrow\) Chancen auf dem Markt
+			\item z.B. SGI Slogan: Paying by growing von Einstiegs-Servern bis zu HPC-Maschinen
+			\item Motivation: Architektur kennen und schätzen lernen \(\Rightarrow\) Ideen für neue Projekte
+			\item Fragestellung: Welche architektonischen Voraussetzungen sind für die Erweiterbarkeit erforderlich?
+		\end{itemize}
+		\item  Konsistenz
+		\begin{itemize}
+			\item Eigenschaft des Systems mit folgerichtigem, schlüssigem Aufbau
+			\item Vorausschauender Entwurf einer Rechner- bzw. Prozessorarchitektur, der zu erwartenden Architekturerweiterungen schon Rechnung trägt
+			\item Beispiel: MIPS-Prozessor-Familie
+		\end{itemize}
+		\item Orthogonalität/Modularität
+		\begin{itemize}
+			\item Funtkional unabhägige Teilelmente sind unabhängig voneinander spezifiziert und realisiert
+			\item Standardisierung hat immer größere Bedeutung 
+			\item Hauseigene Lösungen ohne Zweitanbieter relativ chancenlos
+			\item Wichtiger Gestaltungsgrundsatz für Befehlssätze \(\Rightarrow\) vereinfachte Code- \\Erzeugung in Compilern
+		\end{itemize}
+	\end{itemize}
+	\item Gestaltungsgrundsätze
+	\begin{itemize}
+		\item Symmetrie
+		\item Angemessenheit
+		\item Sparsamkeit
+		\item Wiederverwendbarkeit
+		\item Transparenz/Abstraktion
+		\item Virtualität
+	\end{itemize}
+	\item Randbedingungen
+	\begin{itemize}
+		\item Technologische
+		\item Finanzielle
+		\item Käuferakzeptanz
+		\item Moore's Law
+	\end{itemize}
+\end{itemize}
+\subsection{Architectural Trends}
+\begin{itemize}
+	\item Architecture translates technology's gifts into performance and capability
+	\item Resolves the tradeoff between parallelism and locality
+	\item Understanding microprocessor architectural trends
+	\item Greatest trend in VLSI generation is increase in parallelism
+	\begin{itemize}
+		\item up to 1985: bit level parallelism: 4-bit \(\to\) 8-bit \(\to\) 16-bit
+		\item mid 80s to mid 90s: instruction level parallelism
+		\item End 90s: thread level parallelism and/or chip multiprocessors
+		\item Next step: reconfigurable computing
+	\end{itemize}
+	\item How far will ILP go? 
+	\begin{itemize}
+		\item Infinite resources and fetch bandwidth, perferct branch prediction and renaming
+	\end{itemize}
+	\item Thread Level Parallelism "on board"
+	\begin{itemize}
+		\item Micro on a chip makes it natual to connect many to shared memory
+	\end{itemize}
+	\item Problem: Prozessor-Memory Performance Gap: 50 percent per year
+\end{itemize}
+\subsection{Bemerkungen zum klassischen Digitalrechner}
+\begin{itemize}
+	\item zentrale Steuerung durch Steuerwerk
+	\item zentrale Verarbeitung durch Rechenwerk
+	\item Harvard \(\leftrightarrow\) von Neumann
+	\item Harvard-Architektur
+	\begin{itemize}
+		\item Vorteile
+		\begin{itemize}
+			\item geringere Wartezeiten
+			\item einfache Busverwaltung
+		\end{itemize}
+		\item Nachteile
+		\begin{itemize}
+			\item höherer Verdrahtungsaufwand (hohe Kabelkosten)
+			\item verminderte Flexibilität bei der Ausnutzung der Speicher (keine Austauschbarkeit)
+		\end{itemize}
+		\item Grundidee: Optimierung der Speicherhierarchie
+	\end{itemize}
+	\item Von-Neumann-Architektur
+	\begin{itemize}
+		\item Architektur des minimalen Hardware-Aufwands
+		\item Einzigartige Verbindung von
+		\begin{itemize}
+			\item Einfachheit
+			\item Flexibilität
+		\end{itemize}
+		\item Grundelemente
+		\begin{itemize}
+			\item Leitwerk und Rechenwerk
+			\item Hauptspeicher
+			\item Eingabeeinheit und Ausgabeeinheit
+			\item Verbindungseinrichtung
+		\end{itemize}
+		\item Vorteile
+		\begin{itemize}
+			\item Einfachheit
+			\item maximale Flexibilität
+		\end{itemize}
+		\item Nachteile
+		\begin{itemize}
+			\item Befehle und Programmdaten müssen über einen Kanal zwischen \\Speicher und Prozessor transportiert werden (sog. physikalischer von- \\Neumann-Flaschenhals)
+			\item streng sequentielle Abarbeitung (sog. intellektueller von-\\Neumann-Flaschenhals)
+			\item große semantsiche Lücke zwischen den für die Benutzungsschnittstelle typischen höheren Programmiersprachen und den im von-Neumann-Speicher enthaltenen von-Neumann-Variablen
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{Aufgaben und Ziele der Rechnerarchitektur}
+\subsubsection{Aufgaben}
+\begin{itemize}
+	\item Architekturanalyse bestehender Rechnersysteme und ihrer Komponenten, wie Prozessoren, Speicher, Verbindungseinrichtungen u.a.
+	\item Beobachtung der Evolution von Rechnerfamilien und Architekturklassen sowie Ableitung neuer Architekturrichtungen 
+	\item Entwurf und Synthese neuer leistungsfähiger Rechensysteme mit bewährten Entwurfsmethoden und automatisierten Werkzeugen
+	\item Umsetzung von Leistungsanforderungen, die von Anwendungsbereichen vorgegeben werden, in Struktur und Organisationsformen für Rechner und deren Komponenten
+\end{itemize}
+\subsubsection{Ziele}
+\begin{itemize}
+	\item Leistungssteigerung durch Architekturverbesserungen
+	\item Steigerung der Nutzerakzeptanz durch benutzergerechte System- und Anwendersoftware
+	\item Entwurf ausbaufähiger Rechnerarchitekturen, die konkurrenzfähig bleiben und Weiterentwicklungen mit reduzierten Kosten gestatten
+\end{itemize}
+\subsection{Klassifizierung nach Flynn}
+\begin{itemize}
+\item SISD - single instruction stream, single data stream
+\item SIMD - single instruction stream, multiple data streams
+\item MISD - multiple instruction streams, single data stream
+\item MIMD - multiple instruction streams, multiple data streams
+\end{itemize}

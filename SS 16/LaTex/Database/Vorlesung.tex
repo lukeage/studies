@@ -137,4 +137,67 @@ Datenbank = Schema + Daten
 	\end{itemize}
 \subsubsection{Entwurf eines ER Diagramms (38 ff.)}
 \subsubsection{Varianten für mehrstellige Beziehungstypen (40)}
+\section{Konzeptueller Entwurf}
+\subsection{Grundlagen (5)}
+\subsubsection{Ausgangspunkt}
+\begin{itemize}
+	\item Idee und mathematische Formulierung geht zurück auf Ted Codd
+	\item Basis für eine Vielzahl kommerzieller DBMS
+\end{itemize}
+\subsubsection{Grundlagen}
+\begin{itemize}
+	\item Domänen / Wertebereiche: Integer, Sing[20], Datum, ...
+	\item Relation R ist definiert auf einem Relationenschema RS:
+	\begin{itemize}
+		\item RS: Menge von Attributen \(\{A_{1},\ldots,A_{k}\}\)
+		\item Attribute: Wertebereiche \(D_{j} = \text{dom} (A_{j})\)
+		\item Relation: Teilmenge des kartesischen Produkts der Wertebereiche \(R \subseteq D_{1}\times D_{2} \times \ldots \)
+	\end{itemize}
+	\item weitere Terminologie (6)
+	\begin{itemize}
+		\item Tupel: Element einer Relation
+		\item Kardinalität einer Relation: Anzahl der Tupel in einer Relation (endlich!!)
+		\item Darstellung der Relationen in Tabellenform
+	\end{itemize}
+	\item Relationenschema (7): (Name, Einwohner, land) mit dom(Name) = String[40], ...
+	\item Ausprägungen
+	\item Allgemein
+\end{itemize}
+\subsection{Primärschlüssel (8)}
+	\begin{itemize}
+		\item Eindeutigkeit \(\forall t_{i}, t_{i} \in R : t_{i}[x]=t_{j}[x] \Rightarrow i = j \)
+		\item Minimalität \(\tau \exists Z \subset X(Z+X) \), so dass alle anderen Bedingungen gelten
+		\item Definiertheit \(\forall t_{i} \in R : t[x] \ne \text{NULL}\)
+	\end{itemize}
+\subsection{ER-Modell Relationales Modell}
+\subsubsection{Übersetzung von Entitäten}
+Eins-zu-Eins Übersetzung in Relationen
+\subsubsection{Übersetzung von Attributen}
+\begin{itemize}
+	\item Einfache Attribute
+	\item Zusammengesetzte Attribute (z.B.: Adresse)
+	\begin{itemize}
+		\item Berechnete Attribute (z.B.: Umsatz = Preis * Verkauf)
+		\item Mehrwertige Attribute (z.B.: Telefonnummer)
+	\end{itemize}
+\end{itemize}
+\subsubsection{Übersetzung von Beziehungen}
+\begin{itemize}
+	\item Übersetzung von 1:1 Beziehungen (15)
+	\begin{itemize}
+		\item Fall 1
+		\item Fall 2
+		\item Fall 3
+	\end{itemize}
+	\item Übersetzung von 1:N Beziehungen (16)
+	\begin{itemize}
+		\item Fall 1
+		\item Fall 2
+	\end{itemize}
+	\item Übersetzung von N:M Beziehungen (18)
+	\item Übersetzung von Beziehungen zwischen mehr als zwei Relationen
+	\item Übersetzung rekursiver Beziehungen (19)
+	\item Übersetzung von Attributen an Beziehungen (20)
+	\item Übersetzung von Vererbungsbeziehungen
+\end{itemize}
 

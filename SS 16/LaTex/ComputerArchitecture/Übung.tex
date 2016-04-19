@@ -2,7 +2,115 @@
 
 \chapter{Übung}
 \section{Einführung}
-
-
-
+\subsection{von-Neumann}
+\subsubsection{Komponenten des v. Neumann Architektur}
+	\begin{itemize}
+		\item CPU
+		\begin{itemize}
+			\item Steuerwerk
+			\begin{itemize}
+				\item steuert die Befehlsabarbeitung
+				\item Befehlszähler (program counter)\(\to\) Instruction Fetch (Befehl holen) \\ \(\to\) Adresse des Befehls steht im pc		
+				\item Befehlsregister \(\to\) Befehlswort ins Befehlsregister laden
+				\item Befehlsdekoder \(\to\) ID (Instruktction Decode)
+				\item zentrale Steuerschleife \(\to\) EX (execute - Befehl ausführen)
+				\begin{itemize}
+					\item CISC, Abarbeitung des Befehls unter Aufsicht der zentralen Steuerschleife
+					\item RISC \(\to\) nutzt das Rechenwerk, ALU
+				\end{itemize}
+				\item Steuer -und Statusregister (Flag Overflow) \(\to\) WB (Write Back)
+			\end{itemize}
+			\item Rechenwerk
+		\end{itemize}
+		\item Speicher
+		\begin{itemize}
+			\item Programmkode und Daten liegen im gleichen Speicher
+		\end{itemize}
+		\item Bus
+		\begin{itemize}
+			\item v.Neumannscher-Flaschenhals: Daten + Befehle müssen über den BUS
+			\begin{itemize}
+				\item IF \(\to\) Bus
+				\item ID
+				\item EX \(\to\) Bus (wenn Operanden geholt werden
+				\item WB \(\to\) Bus
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\subsection{v.Neumann vs. Harvard}
+\subsubsection{Harvard}
+\begin{itemize}
+	\item Trennung von Befehls und Datenspeicher: Befehlsspeicher \(\to\) VN \(\to\) CPU \(\to\) Verbindungseinrichtung (z.B. Bus (VN)) \(\to\) Datenspeicher
+	\item heutige Anwendung: Getrennter L1-Cache in L1I- und L1D-Cache
+\end{itemize}
+\subsection{Def. von Brooks vs Giloi}
+\subsubsection{Brooks (1962)}
+Rechnerarchitektur, wie andere Architekturen, ist die Kunst der Bestimmung von Nutzerbedürfnissen nach einer Struktur, die so zu entwerfen ist, dass sie jene Bedürfnisse so effektiv wie möglich hinsichtlich ökonomischer und technologischer Erfordernisse erfüllt.
+\begin{itemize}
+	\item gilt auch für jede Bauarchitektur
+	\item bis Ende der 70er Jahre bezog sich Rechnerarchitektur vor allem auf die Programmierschnittstelle 
+	\begin{itemize}
+		\item Maschinenbefehlssatz (meist Assemblerbefehle) 
+		\item Interruptbehandlung (maskierbare + nichtmaskierbare Interrupts)
+		\item Registersatz
+		\item Adressierungsarten (Basisadressierung, indirekte Adressierung, direkte Adressierung)
+		\item Ein-/Ausgabe
+	\end{itemize}
+\end{itemize}
+\subsubsection{Giloi}
+z.B. Maschinendarstellung eines Floating Point Wertes Single Precision
+\begin{itemize}
+	\item Single Precision \(\to\) 32 Bit
+	\item IFEE 754: |Sign|Charakteristik (Exponent + Bias|Mantisse| \(\to\) Mantisse wird so weit verschoben, bis führende 1 herausfällt
+\end{itemize}
+\subsection{RA-Definition Begriffe}
+\textbf{Rechnerarchitektur}
+	\begin{itemize}
+		\item Hardware-Struktur
+		\begin{itemize}
+			\item Hardwarebetriebsmittelstruktur
+			\begin{itemize}
+				\item Prozessorstruktur
+				\begin{itemize}
+					\item 1985 Intel 80 386 (erster 32-Bit Prozessor) \(\to\) nur Integer Unit
+					\item 1987 Intel 80 387 (erster Floating Point Unit, FPU)
+					\item 1993 Pentium 1: V-Pipe(IU) und U-Pipe (IU oder Teil der FPU) \(\to\) 2 Betriebsarten: IU+IU, IU+FPU
+					\item 1995 Pentium Pro: P6-Architektur \(\to\) heutige Core-Architektur ist davon abgeleitet
+				\end{itemize}
+				\item Speicherstruktur
+				\begin{itemize}
+					\item intern: Register (L1,L2,L3- Cache, DRAM, Festplatte, Archiv, ...)
+					\item zwischen Prozessoren: gemeinsamer Speicher \(\Rightarrow\) CPU 1 \(\to\) CPU N haben gemeinsamen MEMORY || \\ verteilter Speicher \(\Rightarrow\) CPU 1, RAM 1 \(\to\) CPU N, RAM N; verbunden durch Verbindungsnetzwerk
+				\end{itemize}
+			\end{itemize}
+			\item Verbindungsstruktur
+			\begin{itemize}
+				\item intern
+				\begin{itemize}
+					\item Adressbus
+					\item Steuerbus
+					\item Datenbus
+				\end{itemize}
+				\item extern 
+				\begin{itemize}
+					\item Verbindungsnetzwerk unterschiedlicher Typologie (Hypercube, 2D Gitter, ...)
+				\end{itemize}
+			\end{itemize}
+			\item Kooperationsregeln (z.B. Master-Slave)
+		\end{itemize}
+		\item Operationspprinzip
+		\begin{itemize}
+			\item Informationsstruktur
+			\begin{itemize}
+				\item Klassen von Datentypen (Byte, Wort, ...)
+				\item Menge der Maschinendarstellungen der Datenobjekte
+			\end{itemize}
+			\item Steuerungsstruktur
+			\begin{itemize}
+				\item Ablaufsteuerung, pc-getrieben \(\to\) unsere üblichen Rechner 
+				\item Ablaufsteuerung, datengetrieben (Datenflussrechner) \(\to\) wenn die Daten da sind wird automatisch die Operation ausgeführt
+				\item Datenzugriffssteuerung  \(\to\) Zugriff über Adresslogik, einfache Wertzuordnung, Assoziativer Zugriff (Adresse und Inhalt werden gemeinsam gespeichert) \(\to\) Caches
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
 

@@ -2,3 +2,53 @@
 
 \chapter{Übung}
 \section{Einführung}
+\subsection{}
+\begin{enumerate}
+	\item Datenformat inflexibel:
+	\begin{enumerate}
+		\item keine stand. Pfade
+		\item viele Dateisys. erlauben keine Dateien über fixe Größe
+		\item keine stand. Datentypen (.txt) und Schema der Datenspericherung leicht uneinheitl.
+	\end{enumerate}
+	\item mehrere Personen sollen/können darauf zugreifen
+	\item Datenformat Abfragesprache/-tool auch neu "lernen" SQL einheitl.
+	\item Redundanz sorgt für Anomalien (z.B. Aktualisierung d. Daten)
+\end{enumerate}
+\subsection{}
+Rechteck: Entität, Raute: Bezeichner, Kreis: Attribute
+\begin{enumerate}
+	\item 3
+	\item partielle Beziehungen
+	\begin{itemize}
+		\item SxT\(\to\)Ü
+		\item ÜxT\(\to\)S
+		\item SxÜ\(\to\)T
+	\end{itemize}
+	\item
+	\begin{enumerate}
+		\item Ein Tutor und ein Student nehmen an einer Übung teil
+		\item An einer Übung mit einem Tutor nimmt ein Student teil
+		\item Ein Student in einer Übung hat einen Tutor
+	\end{enumerate}
+	\item (1) und (3)
+\end{enumerate}
+\subsection{}
+\begin{displaymath}
+	A:N, C:M, B:1
+\end{displaymath}
+Faustregel: Auf der rechten Seite steht eine 1.
+\subsection{}
+ACHTUNG: Multiplizitäten genau andersrum wie bei 1.3
+\begin{itemize}
+	\item T:(1,*)
+	\item Ü:(1,*)
+	\item S:(0,1)
+\end{itemize}
+\subsection{}
+\begin{itemize}
+	\item Bahnhöfe M \(\leftrightarrow\) 1 Städte
+	\item Bahnhöfe 1 \(\leftrightarrow\)verbindet\(\leftrightarrow\) 1 Bahnhöfe
+	\item Bahnhöfe 1 \(\leftrightarrow\)verbindet\(\leftrightarrow\) N Züge
+	\item Bahnhöfe 1 \(\leftrightarrow\)Start\(\leftrightarrow\) L Züge
+	\item Bahnhöfe 1 \(\leftrightarrow\)Ziel\(\leftrightarrow\) K Züge
+\end{itemize}

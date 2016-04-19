@@ -78,7 +78,7 @@
 	\end{itemize}
 \end{itemize}
 
-\section{Prädikatenlogik erster Stufe}
+\section{Syntax/Substitutionen}
 \subsection{Komposition von Substitutionen}
 \subsubsection{Korollar 4.11}
 Für jede Substitution \(\sigma\) gilt \(\epsilon\sigma = \sigma = \sigma\epsilon \)
@@ -172,3 +172,64 @@ Unter den genannten Bedingungen gilt \(F(\sigma_{X}\theta_{X}) = F(\sigma\theta)
 Seien \(E_{1} \) und \(E_{2} \) zwei Terme oder zwei prädikatenlogische Formeln. \(E_{1}\) und \(E_{2}\) heißen Varianten, wenn es Substitutionen \(\sigma \) und \(\theta \) gibt, so dass \(E_{1} = E_{2}\sigma \) und \(E_{2} = E_{1}\theta \). In diesem Fall wollen wir \(E_{1}\) auch als Variante von \(E_{2}\) und \(E_{2}\) als Variante von \(E_{1}\) bezeichnen. \\
 Wenn \(E_{1}\) und \(E_{2}\) Varianten sind und die in \(E_{2}\) vorkommenden Variablen im bisherigen Kontext nicht verwendet wurden, dann ist \(E_{2}\) eine neue Variante von \(E_{1}\).
 
+\section{Semantik}
+\subsection{Relationen und Funktionen}
+\begin{itemize}
+	\item Sei D eine Menge ...
+	\item Relationen ... 
+	\item \textbf{Notation}: Anstelle von \((d)\) schreibt man häufig kurz \(d\)
+	\item Funtionen (\(+,\circ,\))
+\end{itemize}
+\subsection{Interpretationen}
+\subsubsection{Definition 4.20}
+Eine prädikatenlogische Interpretation \(I\) für eine prädikatenlogische Sprache \(L(R,F,V)\) besteht aus einer nichtleeren Menge \(D\) und einer Abbildung \(\cdot ^I, \) die die folgenden Bedingungen erfüllt:
+\begin{itemize}
+	\item Jedem n-stelligen Funktionssymbol \(g\in F\) wird eine n-stellige Funktion \(g^I:D^n\to D\) zugeordnet
+	\item Jedem n-stelligen Prädikatssymbol \(p\in R\) wird eine n-stellige Relation \(p^I \subseteq D^n\) zugeordnet
+\end{itemize}
+\(D\) wird Grundbereich oder auch Domäne der Interpretation genannt
+\subsubsection{Definition 4.21}
+Eine Variablenzuordnung bezüglich einer Interpretation \(I=(D,\cdot ^I)\) ist eine Abbildung \(Z: V\to D\) Das Bild einer Variablen \(X\) unter \(Z\) bezeichnen wir mit \(X^Z\) Sei \(Z\) eine Variablenzuordnung und \(d\in D\),  mit \(\{X \to d\}Z\) bezeichnen wir die Variablenzuordnung für die gilt:
+\begin{displaymath}
+	Y^{\{ X\mapsto d\}Z}  = \begin{cases}
+		d &\text{wenn } Y = X \\
+		Y^Z &\text{sonst }
+		\end{cases}
+\end{displaymath}
+\subsubsection{Definition 4.22}
+Sei \(I=(D,\cdot ^I)\) eine Interpretation und \(Z\) eine Variablenzuordnung bezüglich \(I\). Die Bedeutung \(t^{I,Z}\) eines Terms \(t\in T(F,V)\) ist wie folgt definiert:
+\begin{itemize}
+	\item Für jede Variable \(X\in V: X^{I,Z} = X^Z\)
+	\item Für jeden Term der Form \(g(t_{1}, \ldots, t_{n})\) ist
+	\begin{displaymath}
+		[g(t_{1}, \ldots, t_{n})]^{I,Z}=g^I(t_{1}^{I,Z},\ldots,t_n^{I,Z})
+	\end{displaymath}
+	wobei \(g/n\in F\) ist und \(t_1, \ldots, t_n \in T(F,V)\) sind
+\end{itemize}
+\subsubsection{Definition 4.23}
+Sei \(I=(D,\cdot ^I)\) eine Interpretation und \(Z\) eine Variablenzuordnung bezüglich \(I\) und \(I\) und \(Z\) weisen jeder Formel \(F\in L(R,F,V)\) einen Wahrheitswert \(F^{I,Z} \) wie folgt zu: 
+\begin{align*}
+&[p(t_1,\ldots ,t_n)]^{I,Z} =  \top \text{ gdw } (t_1^{I,Z},\ldots ,t_n^{I,Z} \in p^I \\ &[\neg F )]^{I,Z} = \neg^*(F^{I,Z}) \\
+&[(F\circ G)]^{I,Z} = (F^{I,Z}\circ^* G^{I,Z}) \text{ für alle binären Juntkoren }\circ \\
+&[(\forall X)F]^{I,Z}=\top \text{ gdw } F^{I,\{X \mapsto d\}Z} = \top \text{ für alle } d \in D \\
+&[(\exists X)F]^{I,Z}=\top \text{ gdw } F^{I,\{X \mapsto d\}Z} = \top \text{ für alle } d \in D \\
+\end{align*}
+\subsubsection{Proposition 4.24}
+Wenn \(F\in L(R,F,V)\) abgeschlossen ist, dann gilt \(F^{I,Z} = F^{I,Z^I}\) für jede Interpretation \(I\) und alle Variablenzuordnungen \(Z\) und \(Z^I\) bezüglich \(I\)
+\subsubsection{Lemma 4.25}
+Seien \(s,t\) Terme, \(G\) eine Formel, \(Y\) eine Variable, \(I=(D,\cdot ^I)\) eine Interpretation, \(Z\) eine Variablenzuordnung bzgl. \(I\) und \(d\in D\). Wenn \([t]^{I,Z}= d\) ist, dann gilt:
+\begin{align*}
+&[s\{Y\mapsto t\}]^{I,Z}=[s]^{I,\{Y\mapsto d\} Z} \\
+&[G\{Y\mapsto t\}]^{I,Z}=[G]^{I,\{Y\mapsto d\} Z}\text{, wenn } \{Y\mapsto t\} \text{ frei für } g \text{ ist }
+\end{align*}
+\\\textbf{Beweis} Induktion über den Aufbau von \(s\) bzw. \(G\) \(\rightsquigarrow\) Übung
+\subsection{Herbrand-Interpretationen}
+Im Folgenden nehmen wir an, dass \(F\) mindestens ein Konstantensymbol enthält. Ist das nicht der Fall, dann fügern wir zu \(F\) ein Symbol \(a/0\) hinzu
+\subsubsection{Definition 4.26}
+Sei \(F\) eine Menge von Funktionssymbolen, in der mindstens ein Konstantensymbol vorkommt. Eine Interpretation \(I=(D,\cdot ^I)\) für eine prädikatenlogische Sprache \(L(R,F,V)\) ist eine Herbrand-Interpretation, wenn die folgenden Bedingungen erfüllt sind:
+\begin{align*}
+	&D = T(F) \text{ (D wird Herbrand-Universum genannt})\\
+	&\text{Für jeden abgeschlossenen Term } t\in T(F) \text{ gilt } t^I = t
+\end{align*}
+\subsection{Modelle für abgeschlossene Formeln}
+\subsection{Modelle für nicht-abgeschlossene Formeln}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  14 APR 2016 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  19 APR 2016 21:10
 entering extended mode
 **./head.tex
 (head.tex
@@ -552,11 +552,11 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 39.
 {C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (head.toc [
 1
 
-])
+] [2])
 \tf@toc=\write3
 \openout3 = `head.toc'.
 
- [2] [3
+ [3] [4
 
 ] (Rechnernetze/Vorlesung.tex
 Kapitel 1.
@@ -566,76 +566,83 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [4
+ [5
 
-] [5] [6] [7]
-[8] [9]) (Rechnernetze/Übung.tex [10]
+] [6] [7] [8]
+[9] [10]) (Rechnernetze/Übung.tex [11]
 Kapitel 2.
-[11
+[12
 
-] [12] [13]) [14] [15
+] [13] [14] [15] [16] [17]) [18] [19
 
-] (TheoreticalInformaticAndLogic/Vorlesung.tex
+]
+(TheoreticalInformaticAndLogic/Vorlesung.tex
 Kapitel 3.
-[16
+[20
 
-] [17] [18] [19] [20]) (TheoreticalInformaticAndLogic/Übung.tex [21]
+] [21] [22] [23] [24] [25] [26]) (TheoreticalInformaticAndLogic/Übung.tex
+[27] [28]
 Kapitel 4.
-) [22
+[29
 
-] [23
+] [30]) [31] [32
 
 ] (ComputerArchitecture/Vorlesung.tex
 Kapitel 5.
-[24
+[33
 
-]) (ComputerArchitecture/Übung.tex [25]
+] [34] [35] [36] [37] [38]) (ComputerArchitecture/Übung.tex [39]
 Kapitel 6.
-) [26
+[40
 
-] [27
+] [41]) [42] [43] [44
 
 ] (Database/Vorlesung.tex
 Kapitel 7.
-[28
+[45
 
-] [29] [30]) (Database/Übung.tex [31]
+] [46] [47] [48] [49]) (Database/Übung.tex [50]
 Kapitel 8.
-) [32
+[51
 
-] [33
+]) [52] [53
 
-] [34
+] [54
 
 ] (head.aux) ) 
 Here is how much of TeX's memory you used:
- 5756 strings out of 493634
- 73999 string characters out of 3143745
+ 5757 strings out of 493634
+ 74014 string characters out of 3143745
  175544 words of memory out of 3000000
- 8996 multiletter control sequences out of 15000+200000
+ 8997 multiletter control sequences out of 15000+200000
  23138 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,13n,49p,556b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,13n,49p,657b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lukas\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Lukas\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Luka
-s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\
-Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm144
+ur\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Lukas\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lukas\AppData\
+Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Luka
+s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\
+Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
 0.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/symbols/msam10.pfb>
-Output written on head.pdf (35 pages, 251837 bytes).
+00\ecbx2488.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on head.pdf (55 pages, 332893 bytes).
 PDF statistics:
- 506 PDF objects out of 1000 (max. 8388607)
+ 630 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
