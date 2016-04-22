@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  19 APR 2016 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  22 APR 2016 10:52
 entering extended mode
 **./head.tex
 (head.tex
@@ -569,55 +569,60 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [5
 
 ] [6] [7] [8]
-[9] [10]) (Rechnernetze/Übung.tex [11]
+[9] [10] [11] [12] [13] [14] [15] [16]) (Rechnernetze/Übung.tex [17]
 Kapitel 2.
-[12
+[18
 
-] [13] [14] [15] [16] [17]) [18] [19
+] [19] [20] [21] [22] [23]) [24] [25
 
 ]
 (TheoreticalInformaticAndLogic/Vorlesung.tex
 Kapitel 3.
-[20
+[26
 
-] [21] [22] [23] [24] [25] [26]) (TheoreticalInformaticAndLogic/Übung.tex
-[27] [28]
+] [27] [28] [29] [30] [31] [32] [33] [34])
+(TheoreticalInformaticAndLogic/Übung.tex [35]
 Kapitel 4.
-[29
+[36
 
-] [30]) [31] [32
+] [37]
+Overfull \hbox (61.68213pt too wide) in paragraph at lines 76--76
+[] 
+ []
+
+[38]) [39] [40
 
 ] (ComputerArchitecture/Vorlesung.tex
 Kapitel 5.
-[33
+[41
 
-] [34] [35] [36] [37] [38]) (ComputerArchitecture/Übung.tex [39]
+] [42] [43] [44] [45] [46]) (ComputerArchitecture/Übung.tex [47]
 Kapitel 6.
-[40
+[48
 
-] [41]) [42] [43] [44
+] [49]) [50] [51] [52
 
 ] (Database/Vorlesung.tex
 Kapitel 7.
-[45
+[53
 
-] [46] [47] [48] [49]) (Database/Übung.tex [50]
+] [54] [55] [56] [57]) (Database/Übung.tex [58]
 Kapitel 8.
-[51
+[59
 
-]) [52] [53
+]) [60] [61
 
-] [54
+] [62
 
 ] (head.aux) ) 
 Here is how much of TeX's memory you used:
- 5757 strings out of 493634
- 74014 string characters out of 3143745
+ 5761 strings out of 493634
+ 74074 string characters out of 3143745
  175544 words of memory out of 3000000
- 8997 multiletter control sequences out of 15000+200000
+ 9001 multiletter control sequences out of 15000+200000
  23138 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,13n,49p,657b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,14n,49p,657b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
 ur\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
@@ -640,9 +645,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9
 ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on head.pdf (55 pages, 332893 bytes).
+Output written on head.pdf (63 pages, 353375 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
+ 660 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

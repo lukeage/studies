@@ -278,3 +278,219 @@
 		\item Datenraten theoretisch bis ca. 36 MBit/s, aber "Shared Medium", d.h. abhängig von der Zahl der Teilnehmer geringere Datenrate
 	\end{itemize}
 \end{itemize}
+
+\section{Netztechnologie 1}
+\subsection{Medienzugriff}
+\subsubsection{ALOHA Protokoll}
+\begin{itemize}
+	\item historisches Paketfunknetz, University of Hawaii, seit 1979
+	\item dezentrale Stationen, Kommunikation über Zentrale
+	\item unkoordiniertes Wettbewerbsverfahren (stochastisch)
+	\item Kollision auf \(f_{1}\) bei Zentrale, da Senden stets möglich
+	\item Fehlerbehandlung durch Wiederholung, falls nach Zeit \(t\) keine Quittung auf \(f_{2}\)
+	\item kein Mithören während des Sendevorgangs
+\end{itemize}
+\subsubsection{ALOHA Beispiel}
+\begin{itemize}
+	\item Pure ALOHA: Max. etwa 18 Prozent des Kanaldurchsatzes
+	\item Slotted ALOHA: Max. etwa 36 Prozent des Kanaldurchsatzes (3.6)
+\end{itemize}
+\subsubsection{CSMA-Verfahren}
+\begin{itemize}
+	\item kein Funk, sondern Coaxialkabel
+	\item Abhören vor Senden (CSMA - Carrier Sense Multiple Acces)
+	\item Trotzdem Kollision möglich: (1-persistent CSMA, immer sendebereit)
+	\item nonpersistent CSMA: belegter Kanal wird nicht sofort erneut abgehört, erst nach zufällig verteiltem Zeitintervall; dadurch geringere Kollisionswahrscheinlichkeit
+	\item p-persistent CSMA (slotted): Prüfe Kanal, sende mit Wahrscheinlichkeit p, warte sonst 1 Slot und prüfe wieder
+\end{itemize}
+\subsubsection{Bewertung der Verfahren (3.8)}
+\subsubsection{CSMA mit "Collision Detection" (CD)}
+\begin{itemize}
+	\item Mithören während des Sendevorgangs
+	\item Kollisionserkennung dadurch schneller möglich (ohne Warten auf Quittung)
+	\item Funktioniert für ein gemeinsam genutztes Kommunikationsmedium ... (z.B. gemeinsames Kabel bei IEEE 802.3, Lukf bei IEEE 802.11, etc.)
+	\item ... mit mindestens einer Station (Kollisionen mit sich selbst können erkannt werden, z.B. durch Signalreflexion am offenen Kabelende
+\end{itemize}
+\subsubsection{CSMA/CD-Verfahren Beispiel (3.10 ff.)}
+\subsection{Ethernet}
+\subsubsection{IEEE 802.3}
+\begin{itemize}
+	\item Zugriffsverfahren: 1-persistent CSMA/CD, in Hardware auf Ethernet-Karte realisiert
+	\item Datenrate der Basistechnologie: 10 MBit/s
+	\item Segmentlänge: 500m
+	\item Kabel der Kategorie 5 oder höher bzw. Lichtwellenleiter (dann auch deutlich größere räumliche Ausdehnungen möglich)
+	\item heute grundsätzlich mit Switches und Duplex-Betrieb im Einsatz
+	\item dennoch Kollisionsbehandlung generell mit eingebaut:
+	\begin{itemize}
+		\item warte s Slots nach Kollision, s zwischen 0 und \(2^n-1\) bei n vorherigen Kollisionen zufällig gewählt
+	\end{itemize}
+\end{itemize}
+\subsubsection{Rahmenstruktur (3.14)}
+\begin{itemize}
+	\item Präambel erlaubt Synchronisation mit Empfänger
+	\item EtherType/Size
+	\begin{itemize}
+		\item \(\le 1500 \to \) Länge des Datenfelds
+		\item \(\ge 1536 \to \) Typ der Daten (z.B. IP, IPv6, etc.), Länge der Daten nicht spezifiziert \(\to\) Interframe Gap als Begrenzer
+	\end{itemize}
+	\item Pad zum Auffüllen auf minimale Rahmenlänge wegen Kollisionsverfahren
+	\item Prüfsumme: CRC (Cyclic Redundancy Check), ohne Präambel und SFD
+\end{itemize}
+\subsubsection{Fast- / Gigabit Ethernet}
+\begin{itemize}
+	\item Fast Ethernet
+	\begin{itemize}
+		\item 1995 als IEEE 802.3u standardisiert
+		\item Datenrate 100 MBit/s
+		\item Segmentlänge: 100m bei Kupferkabel, 2km bei Lichtwellenleiter
+		\item Kompatibilität zu Ethernet und Cat-3-Kabel, noch CSMA/CD unterstützt aber keine Multidrop-Kabel mehr
+	\end{itemize}
+	\item Gigabit Ethernet
+	\begin{itemize}
+		\item 1999 als IEEE 802.3ab standardisiert
+		\item Datenrate 1 GBit/s
+		\item Vollduplex (Standard): kein CSMA/CD mehr \(\to\) keine Beschränkung der Kabellänge
+		\item Halbduplex: Layer-1-Kopplung über Hub; CSMA/CD mit Modifikationen: 
+		\begin{itemize}
+			\item Padding - Rahmen immer auf 512 Byte auffüllen
+			\item Frame-Bursting - mehrere Rahmen in einem Ethernet-Frame übertragen
+		\end{itemize}
+	\end{itemize}
+	\item 10 / 100 GBit/s Ethernet
+	\begin{itemize}
+		\item für optische Verbindungen in WANs \(\to\) siehe Kapitel 4
+	\end{itemize}
+\end{itemize}
+\subsubsection{Ethernet-Varianten für LAN (3.16)}
+\subsubsection{Switched Ethernet: Beispiel (3.17)}
+\begin{itemize}
+	\item parallele Vermittlung aller Verkehrsströme durch Switch-Hardware
+	\item Vorteil: Keine Kollisionen, jeder Station steht die volle Ethernet-Datenrate zur Verfügung \(\Rightarrow\) Ethernet wird vom "Shared Medium" zum "Switched MEdium"
+	\item Aufteilung der Stationen and einem oder mehreren Switches in unterschiedliche virtuelle lokale Netze (VLAN) möglich \(\Rightarrow\) Sicherheitszonen
+\end{itemize}
+
+\subsection{Switches in der Sicherungsschicht}
+Ziele (3.18):
+\begin{itemize}
+	\item parallele Vermittlung durch Switches, sequentiell duch Bridges (veraltet)
+	\item Trennung organisatorischer Bereiche/verschieden Verkehrsströme
+	\item Zuverlässigkeit und Sicherheit (gegen Störsignale und unberechtigte Weiterleitung)
+	\item Begrenzung der Netzlast durch selektives Weiterleiten von Nachrichten
+\end{itemize}
+\subsubsection{Modell (3.19)}
+\subsubsection{Transparent Bridges / Switches (3.20)}
+\begin{itemize}
+	\item Selbstlernend: Automatischer Aufbau von Routing-Tabellen
+	\item Topologie-Erkennung durch Quelladressen, schrittweiser Tabellenaufbau
+	\item Fluten, falls Zielrechner noch unbekannt
+	\item Löschen von Einträgen nach bestimmter Zeit zur Anpassung an Topologieänderungen
+\end{itemize}
+\subsubsection{Spanning Tree (3.21)}
+\begin{itemize}
+	\item Problem: Mehrfachwege \(\to\) Endlosschleifen
+	\item Lösung: Aufbau eines "überspannenden Baumes" mit eindeutigen Wegen durch dezentralen Algorithmus / kürzester Weg zur Wurzel
+\end{itemize}
+\subsubsection{Interne Realisierung (3.22)}
+\begin{itemize}
+	\item Parallele Vermittlung mehrerer Eingangs- an mehrere Ausgangsports
+	\item Hohe Leistung, unterstützt durch Hardware-Realisierung
+	\item Store-and-Forward-Switch: Gesamtes Frame wird im Switch zwischengespeichert, die Prüfsumme wird kontrolliert und erst dann wird weitergeleitet \(\Rightarrow\) einfach; Pufferung und Datenratenanpassung
+	\item Cut-Through-Switch: Andommende Frames werden nach Prüfung der Zieladresse sofort weitergeleitet \(\Rightarrow\) effizienter, kürzere Verzögerung, aber problematisch bei unterschiedlichen Datenraten und bei Fehlern
+\end{itemize}
+\subsubsection{VLAN - Virtual Local Area Network (2.23)}
+\begin{itemize}
+	\item Motivation:
+	\begin{itemize}
+		\item Flexibilität: Änderung der Zuordnung von Geräten zu lokalen Netzen ohne neue Verkabelung
+		\item Sicherheits- und Performance-Aspekte
+	\end{itemize}
+\end{itemize}
+\subsubsection{Port-basiertes VLAN (3.24)}
+\begin{itemize}
+	\item Jeder Port eines Switches wird einem VLAN zugeordnet
+	\item Ports können nur Mitglied eines VLANs sein
+	\item redundante Links zwischen Switches benötigt
+\end{itemize}
+\subsubsection{Tag-basiertes VLAN - IEEE 802.1Q (3.25)}
+\begin{itemize}
+	\item Transport mehrerer VLAN-Pakete über einen Link \(\to\) Tagging der Pakete
+	\item IEEE 802.1Q - Ergänzung des Ethernet-Headers - VLAN-Tag
+	\item letzter VLAN-Fähiger Switch entfernt das VLAN-Tag wieder \(\to\) Kompatibilität
+	\item VLAN Identifier = 12 Bit
+	\item andere Felder (Priority und CFI) nicht für VLAN genutzt
+\end{itemize}
+\subsection{Drahtlose Netze für PAN und LAN (3.26)}
+\subsubsection{WLAN: IEEE 802.11 (3.27)}
+\subsubsection{802.11 - Medienzugriff mit CSMA/CA (3.28) ff.}
+\begin{itemize}
+	\item RTS/CTS - Request to Send / Clear to Send
+	\item Hidden terminal: A kann C wegen begrenzter Funkreichweite nicht hören
+	\begin{itemize}
+		\item A sendet RTS-Signal an B, und B sendet dann CTS
+		\item Alle anderen möglichen Sender (C) erhalten das CTS-Signal und stellen ihren Sendevorgang zurück
+	\end{itemize}
+	\item Exposed terminal (unnötiges Warten, hier durch B bei Senden nach links)
+	\begin{itemize}
+		\item C sendet RTS an möglichen anderen Empfänger
+		\item Falls dieser beriet, erhält C das CTS und kann übertragen (unabhängig von B)
+	\end{itemize}
+\end{itemize}
+\subsubsection{Bluetooth}
+\begin{itemize}
+		\item drahtlose Ad-Hoc-Piconetze (<10m), billige Ein-Chip-Lösung
+		\item offener Standard: IEEE 802.15.1
+		\item Einsatzgebiete:
+		\begin{itemize}
+			\item Verbindung von Perpheriegeräten
+			\item Unterstützung von Ad-Hoc-Netzen
+			\item Verbindung verschiedener Netze (z.B. drahtloses Headset mit GSM)
+		\end{itemize}
+		\item Frequenzband im 2,4 GHz- Bereich; Integrierte Sicherheitsverfahren \\(128-Bit-Verschlüsselung)
+		\item Datenraten:
+		\begin{itemize}
+			\item 433,9 kBit/s asynchronous-symmetrical
+			\item 723,2 kBit/s / 57,6 KBit/s asynchronous-asymmetrical
+			\item 64 kBit/s synchronous, voice service
+			\item Erweiterungen bis zu 20 Mbit/s (IEEE 802.15.3a: UWB (Ultra Wide Band)
+		\end{itemize}
+\end{itemize}
+\subsubsection{ZigBee (3.30}
+\subsubsection{RFID - Radio Frequency Identification (3.31)}
+\begin{itemize}
+	\item Klasse-1-Tags:
+	\begin{itemize}
+		\item bestehen aus Antenne und RFID-Chip
+		\item 96-Bit-Identifikator, kleiner Speicher, passiv
+		\item geringer Preis, lässt sich z.B: auf Produkte aufkleben
+	\end{itemize}
+	\item Lesegerät:
+	\begin{itemize}
+		\item aktiv, leistungsfähig, MAC-Protokolle
+		\item sendet Trägersignal, wird von Tag reflektiert
+	\end{itemize}
+	\item Backscatter: Tag überlagert das Trägersignal mit eigenen zu sendenden Bits \(\to\) Lesegerät filtert dies Bits aus
+	\item Mehrfachzugriff: modifizierte Version von Slotted ALOHA
+\end{itemize}
+\subsubsection{NFC - Near Field Communication}
+\begin{itemize}
+	\item kontaktloser Datenaustausch über Kürzeste Distanzen (4cm)
+	\begin{itemize}
+		\item Auflegen/anlegen des Transmitters an Lesegerät erforderlich
+	\end{itemize}
+	\item Datenübertragunsrate bis zu 424 kBit/s
+	\item Übertragung
+	\begin{itemize}
+		\item verbindungslos: passive RFID-Tags
+		\item verbindungsorientiert: aktive Transmitter (z.B. Smartphone)
+	\end{itemize}
+	\item mögliche Anwendungen
+	\begin{itemize}
+		\item Bezahlung per Smartphone oder Smartcard
+		\item Smartphone als Türschlüssel
+	\end{itemize}
+	\item Kritik
+	\begin{itemize}
+		\item Distanz als Sicherheitsfeature ungeeignet (durch große Antennen bis zu 1m möglich) 
+		\item NFC-Sicherheitsmechanismen unzureichend
+	\end{itemize}
+\end{itemize}

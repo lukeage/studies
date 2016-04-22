@@ -46,3 +46,46 @@ tobias.philipp@tu-dresden.de\\ Fr. 14:00 2005/2006
 	&(\forall X)\neg (d(X,X) \wedge n(X,X))
 	\end{align*}
 \end{enumerate}
+\section{Substitutionen}
+\subsection{Substitutionskomposition ist eine Substitution}
+Siehe Lösungen Übungsbuch
+\begin{align*}
+&\text{z.Z.: } \sigma\theta \text{ ist eine Funktion} \\
+&\text{1. Fall: Wenn } X\notin dom(\sigma\theta) \\
+&\nexists \text{ Paar } (X\mapsto t\theta ) \in M_1 \text{ mit } X \ne t\theta \\
+&\nexists \text{ Paar } (X\mapsto s) \notin M_2 \\
+&\text{Dann gibt es ein solches Paar } (X\mapsto s) \notin (M_1 \cup M_2)\\
+&\text{ X bildet auf sich selbst ab } \\
+&\text{2. Fall: } \\
+&\nexists ( Paar ) (X\mapsto t\sigma)\in M_1 , X\ne t\theta \text{, und } \\
+&\exists \text{ Paar } (X\mapsto s)\in M_2 \\
+& \text{z.Z.: } dom(\sigma\theta) \text{ ist endlich } \\
+& \{X|X\in U \text{ und } \sigma\theta (X) \ne X\} \\
+& \text{DEF.: }\sigma\theta \sim \{X\mapsto t\theta | X \mapsto t\in \sigma, X \ne t\theta \} \\
+& \cup \{ Y \mapsto s | Y \mapsto s \in \theta, Y \notin dom(\sigma) \} \\
+& dom(\sigma\theta) \subseteq dom(\sigma ) \cup dom(\theta) \\
+&\text{Die Vereinigung von endlichen Mengen ist endlich. Da } dom(\sigma\theta) \text{ eine Teilmenge ist, folgt Endlichkeit. } \\
+&\text{Sei } X\in dom(\sigma\theta)\\
+&\text{ Dann } \sigma\theta (X) \ne X \\
+&\text{Dann muss es ein Paar: }\\
+& 1. (X\mapsto t)\in M_{1} \text{ oder }\\
+& 2. (X\mapsto t)\in M_{2} \text{ aufgen können}\\
+& 1. \exists X\mapsto s \in \sigma , t = s\theta\\
+& X \in dom(\sigma), X \in dom(\sigma)\cup dom(\theta) \\
+& 2. X\mapsto t \in \theta, X \in dom(\theta), X\in dom(\sigma) \cup dom(\theta)
+\end{align*}
+\subsection{Eingenschaften von Substitutionen}
+Proposition 4.12
+\begin{enumerate}
+	\item Zeigen Sie, dass für alle Variablen \(X \in V\) gilt: \\
+	\( X(\widehat{\sigma\theta}) = (X\hat \sigma )\hat \theta \)
+	\begin{align*}
+		&\text{1. } \exists X\mapsto t\in \sigma\theta \\
+		&\ldots
+	\end{align*}
+	Fallunterscheidung siehe Lehrbuch
+	\item Strukturelle Induktion siehe Lehrbuch
+	\begin{itemize}
+		\item IA
+	\end{itemize}
+\end{enumerate}

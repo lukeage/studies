@@ -231,5 +231,46 @@ Sei \(F\) eine Menge von Funktionssymbolen, in der mindstens ein Konstantensymbo
 	&D = T(F) \text{ (D wird Herbrand-Universum genannt})\\
 	&\text{Für jeden abgeschlossenen Term } t\in T(F) \text{ gilt } t^I = t
 \end{align*}
+\subsubsection{Herbrand-Interpretationen und Formeln (41)}
+\subsubsection{Aufgabe (42)}
 \subsection{Modelle für abgeschlossene Formeln}
+\subsubsection{Definition 4.27}
+Sei \(I = (D,\cdot ^I)\) eine Interpretation und \(F\in L(R,F,V)\) ein Satz \(I\) ist ein Modell für \(F\), symbolisch \(I \vDash F\), wenn gilt: \(F^I = \top \) \\
+Viele aus der Aussagenlogik bekannte Begriffe und REsultate lassen sich auf die Prädikatenlogik übertragen. Zum Beispiel:
+\begin{itemize}
+	\item Allgemeingültigkeit, Erfüllbarkeit, Widerlegbarkeit und Unerfüllbarkeit
+	\item z.B.: Ein Satz \(F\) ist allgemeingültig gdw alle Interpretationen Modelle für \(F\) sind
+	\item Satz 3.14 erweitert: Ein Satz \(F\) ist allgemeingültig gdw  \(\neg F\) ist unerfüllbar
+	\item Satz 3.17 erweitert: Seien \(F,F_{1}, \ldots, F_{n}\) Sätze\\ \(\{F_{1}, \ldots , F_{n}\} \vDash F\) gdw \(\vDash (\langle F_{1}, \ldots, F_{n} \rangle \to F)\)
+\end{itemize}
+\subsubsection{Definition 4.28}
+Ein Satz F ist eine (prädikatenlogische) Konsequenz der Menge \(G\) von Sätzen, symbolisch \\ \(G \vDash F\), gdw. jedes Modell für alle Elemente aus \(G\) auch Modell für \(F\) ist.
+\subsubsection{Aufgaben (45)}
+\subsubsection{Aussagenlogik - Prädikatenlogik}
+\begin{itemize}
+	\item Wenn alle Relationssymbole in \(R\) nullstellig sind, dann ist die Prädikatenlogik äquivalent zur Aussagenlogik
+	\item Wenn in der Formeln keine Variablen vorkommen, dann ist die Prädikatenlogik äquivalent zur Aussagenlogik
+\end{itemize}
 \subsection{Modelle für nicht-abgeschlossene Formeln}
+\subsubsection{Definition 4.29}
+Sei \(G \in L(R,F,V) \) und \(fv(G) = \{X_{1}, \ldots , X_{n}\}\)
+\begin{align*}
+& ucl(G) = (\forall (X_{1}, \ldots , X_{n}) G \text{ ist der universelle Abschluss von } G \\
+& ecl(G) = (\exists X_{1}, \ldots , X_{n}) G \text{ ist der existenzielle Abschluss von } G
+\end{align*}
+\subsubsection{Definition 4.30}
+\begin{align*}
+& I \vDash _{u} \text{ wenn } I \vDash ucl(G) \\
+& I \vDash _{e} \text{ wenn } I \vDash ecl(G) 
+\end{align*}
+\subsubsection{Proposition 4.31}
+Für alle Sätze G gilt:
+\begin{align*}
+& ucl(G) = G = ecl (G) \\
+& I \vDash G \text{ gdw } I \vDash _{u} G \text{ gdw } I \vDash_{e} G
+\end{align*}
+\subsubsection{Universeller Abschluss: Einige Eigenschaften (49)}
+\begin{align*}
+&\vDash _{u} ((\forall X)p(X) \to p(X)) \\
+&\nvDash _{u} (p(X) \to (\forall X)p(X) 
+\end{align*}
