@@ -52,3 +52,55 @@ ACHTUNG: Multiplizitäten genau andersrum wie bei 1.3
 	\item Bahnhöfe 1 \(\leftrightarrow\)Start\(\leftrightarrow\) L Züge
 	\item Bahnhöfe 1 \(\leftrightarrow\)Ziel\(\leftrightarrow\) K Züge
 \end{itemize}
+
+\section{ER-Modellierung}
+\subsection{Prof-Stud}
+\ref{img:Prof-Stud-ER}
+\begin{figure}
+	\includegraphics[width = 16cm]{./Database/Images/2_1.png}
+	\caption{Professor-Student ER}
+	\label{img:Prof-Stud-ER}
+\end{figure}
+
+\subsection{ER-Bahn}
+\ref{img:Bahn-ER}
+\begin{figure}
+	\centering
+	\includegraphics[width = 16cm]{./Database/Images/2_2.png}
+	\caption{Bahnnetz ER}
+	\label{img:Bahn-ER}
+\end{figure}
+\subsection{ER-Bsp}
+\ref{img:Relations-ER}
+\begin{figure}
+	\centering
+	\includegraphics[width = 16cm]{./Database/Images/2_3a.png}
+	\caption{Relations ER}
+	\label{img:Relations-ER}
+\end{figure}
+\begin{enumerate}
+	\item
+	\begin{itemize}
+		\item A x B \(\to\) C
+		\item A x C \(\to\) B
+	\end{itemize}
+	\item
+	\begin{itemize}
+		\item A: (\underline{a id: INT})
+		\item B: (\underline{b id: INT})
+		\item C: (\underline{c id: INT})
+	\end{itemize}
+	\item
+	\begin{itemize}
+		\item \(R_1\): (\underline{a id}, \underline{b id}, c id)
+		\item \(R_2\): (\underline{a id}, b id, \underline{c id})
+	\end{itemize}
+\end{enumerate}
+\subsection{Vererbungshierarchie - Relationsschema }
+\ref{img:Vererbungshierarchie}
+\begin{figure}
+	\centering
+	\includegraphics[width = 16cm]{./Database/Images/2_4.png}
+	\caption{Relations ER}
+	\label{img:Vererbungshierarchie}
+\end{figure}

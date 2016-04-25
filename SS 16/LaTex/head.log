@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  22 APR 2016 10:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  25 APR 2016 20:29
 entering extended mode
 **./head.tex
 (head.tex
@@ -467,29 +467,174 @@ Package: amsthm 2015/03/04 v2.20.2
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\titleref\titleref.sty
 Package: titleref 2001/04/05 v3.1  Cross-references with titles.
 )
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\qtree\qtree.sty
+Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+WARNING: Option [(no)eepic] is obsolete. Enhanced picture support for both pdf 
+and PostScript is now provided by the package pict2e.sty. (If you need to suppr
+ess loading of pict2e.sty, use option [noload]).
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\pict2e\pict2e.sty
+Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\pict2e.cfg"
+File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\pict2e\p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+\pIIe@GRAPH=\toks35
+\@arclen=\dimen118
+\@arcrad=\dimen119
+\@tempdimd=\dimen120
+)
+\c@treecount=\count103
+\c@branchcount=\count104
+\parentbox=\box29
+\treebox=\box30
+\treeboxone=\box31
+\treeboxtwo=\box32
+\treeboxthree=\box33
+\treeboxfour=\box34
+\treeboxfive=\box35
+\treeboxsix=\box36
+\treeboxseven=\box37
+\treeboxeight=\box38
+\treeboxnine=\box39
+\treeboxten=\box40
+\treeboxeleven=\box41
+\treeboxtwelve=\box42
+\treeboxthirteen=\box43
+\treeboxfourteen=\box44
+\treeboxfifteen=\box45
+\treeboxsixteen=\box46
+\treeboxseventeen=\box47
+\treeboxeighteen=\box48
+\treeboxnineteen=\box49
+\treeboxtwenty=\box50
+\treeoffsetone=\skip60
+\treeoffsettwo=\skip61
+\treeoffsetthree=\skip62
+\treeoffsetfour=\skip63
+\treeoffsetfive=\skip64
+\treeoffsetsix=\skip65
+\treeoffsetseven=\skip66
+\treeoffseteight=\skip67
+\treeoffsetnine=\skip68
+\treeoffsetten=\skip69
+\treeoffseteleven=\skip70
+\treeoffsettwelve=\skip71
+\treeoffsetthirteen=\skip72
+\treeoffsetfourteen=\skip73
+\treeoffsetfifteen=\skip74
+\treeoffsetsixteen=\skip75
+\treeoffsetseventeen=\skip76
+\treeoffseteighteen=\skip77
+\treeoffsetnineteen=\skip78
+\treeoffsettwenty=\skip79
+\treeshiftone=\skip80
+\treeshifttwo=\skip81
+\treeshiftthree=\skip82
+\treeshiftfour=\skip83
+\treeshiftfive=\skip84
+\treeshiftsix=\skip85
+\treeshiftseven=\skip86
+\treeshifteight=\skip87
+\treeshiftnine=\skip88
+\treeshiftten=\skip89
+\treeshifteleven=\skip90
+\treeshifttwelve=\skip91
+\treeshiftthirteen=\skip92
+\treeshiftfourteen=\skip93
+\treeshiftfifteen=\skip94
+\treeshiftsixteen=\skip95
+\treeshiftseventeen=\skip96
+\treeshifteighteen=\skip97
+\treeshiftnineteen=\skip98
+\treeshifttwenty=\skip99
+\treewidthone=\skip100
+\treewidthtwo=\skip101
+\treewidththree=\skip102
+\treewidthfour=\skip103
+\treewidthfive=\skip104
+\treewidthsix=\skip105
+\treewidthseven=\skip106
+\treewidtheight=\skip107
+\treewidthnine=\skip108
+\treewidthten=\skip109
+\treewidtheleven=\skip110
+\treewidthtwelve=\skip111
+\treewidththirteen=\skip112
+\treewidthfourteen=\skip113
+\treewidthfifteen=\skip114
+\treewidthsixteen=\skip115
+\treewidthseventeen=\skip116
+\treewidtheighteen=\skip117
+\treewidthnineteen=\skip118
+\treewidthtwenty=\skip119
+\daughteroffsetone=\skip120
+\daughteroffsettwo=\skip121
+\daughteroffsetthree=\skip122
+\daughteroffsetfour=\skip123
+\branchwidthone=\skip124
+\branchwidthtwo=\skip125
+\branchwidththree=\skip126
+\branchwidthfour=\skip127
+\parentoffset=\skip128
+\treeoffset=\skip129
+\daughteroffset=\skip130
+\branchwidth=\skip131
+\parentwidth=\skip132
+\treewidth=\skip133
+\qta=\toks36
+\qtb=\toks37
+\nbranches=\count105
+\qroofx=\count106
+\qroofy=\count107
+\@qrscratchbox=\box51
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks35
+\KV@toks@=\toks38
 )
-\lst@mode=\count103
-\lst@gtempboxa=\box29
-\lst@token=\toks36
-\lst@length=\count104
-\lst@currlwidth=\dimen118
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen119
-\lst@width=\dimen120
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen121
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen121
+\Gin@req@width=\dimen122
+)
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+\lst@mode=\count108
+\lst@gtempboxa=\box52
+\lst@token=\toks39
+\lst@length=\count109
+\lst@currlwidth=\dimen123
+\lst@column=\count110
+\lst@pos=\count111
+\lst@lostspace=\dimen124
+\lst@width=\dimen125
+\lst@newlines=\count112
+\lst@lineno=\count113
+\lst@maxwidth=\dimen126
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
-\lst@framebox=\box30
+\c@lstnumber=\count114
+\lst@skipnumbers=\count115
+\lst@framebox=\box53
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -502,49 +647,49 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-\c@mydef=\count111
+\c@mydef=\count116
 
 (head.aux)
 \openout1 = `head.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count112
-\scratchdimen=\dimen122
-\scratchbox=\box31
-\nofMPsegments=\count113
-\nofMParguments=\count114
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count115
-\MPscratchDim=\dimen123
-\MPnumerator=\count116
-\makeMPintoPDFobject=\count117
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count117
+\scratchdimen=\dimen127
+\scratchbox=\box54
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen128
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks41
 )
-\c@lstlisting=\count118
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
+\c@lstlisting=\count123
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 39.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 40.
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd)
 [1
@@ -552,11 +697,11 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 39.
 {C:/Users/Lukas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (head.toc [
 1
 
-] [2])
+] [2] [3])
 \tf@toc=\write3
 \openout3 = `head.toc'.
 
- [3] [4
+ [4] [5
 
 ] (Rechnernetze/Vorlesung.tex
 Kapitel 1.
@@ -566,60 +711,87 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [5
+ [6
 
-] [6] [7] [8]
-[9] [10] [11] [12] [13] [14] [15] [16]) (Rechnernetze/Übung.tex [17]
+] [7] [8] [9]
+[10] [11] [12] [13] [14] [15] [16] [17]) (Rechnernetze/Übung.tex [18]
 Kapitel 2.
-[18
+[19
 
-] [19] [20] [21] [22] [23]) [24] [25
+] [20] [21] [22] [23] [24] [25] [26]) [27] [28] [29
 
 ]
 (TheoreticalInformaticAndLogic/Vorlesung.tex
 Kapitel 3.
-[26
+[30
 
-] [27] [28] [29] [30] [31] [32] [33] [34])
-(TheoreticalInformaticAndLogic/Übung.tex [35]
+] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41])
+(TheoreticalInformaticAndLogic/Übung.tex [42]
 Kapitel 4.
-[36
+[43
 
-] [37]
+] [44]
 Overfull \hbox (61.68213pt too wide) in paragraph at lines 76--76
 [] 
  []
 
-[38]) [39] [40
+[45]) [46] [47
 
 ] (ComputerArchitecture/Vorlesung.tex
 Kapitel 5.
-[41
-
-] [42] [43] [44] [45] [46]) (ComputerArchitecture/Übung.tex [47]
-Kapitel 6.
 [48
 
-] [49]) [50] [51] [52
+] [49] [50] [51] [52] [53]) (ComputerArchitecture/Übung.tex [54]
+Kapitel 6.
+[55
+
+] [56]) [57] [58] [59
 
 ] (Database/Vorlesung.tex
 Kapitel 7.
-[53
+[60
 
-] [54] [55] [56] [57]) (Database/Übung.tex [58]
+] [61] [62] [63] [64]) (Database/Übung.tex [65]
 Kapitel 8.
-[59
+[66
 
-]) [60] [61
+] <./Database/Images/2_1.png, id=235, 722.7pt x 406.51875pt>
+File: ./Database/Images/2_1.png Graphic file (type png)
 
-] [62
+<use ./Database/Images/2_1.png>
+Package pdftex.def Info: ./Database/Images/2_1.png used on input line 60.
+(pdftex.def)             Requested size: 455.24408pt x 256.07715pt.
+
+<./Database/Images/2_2.png, id=236, 676.02562pt x 429.85594pt>
+File: ./Database/Images/2_2.png Graphic file (type png)
+
+<use ./Database/Images/2_2.png>
+Package pdftex.def Info: ./Database/Images/2_2.png used on input line 69.
+(pdftex.def)             Requested size: 455.24408pt x 289.47777pt.
+
+<./Database/Images/2_3a.png, id=238, 470.50781pt x 232.61906pt>
+File: ./Database/Images/2_3a.png Graphic file (type png)
+
+<use ./Database/Images/2_3a.png>
+Package pdftex.def Info: ./Database/Images/2_3a.png used on input line 77.
+(pdftex.def)             Requested size: 455.24408pt x 225.07584pt.
+ [67] [68 <./Database/Images/2_1.png> <./Database/Images/2_2.png>]
+<./Database/Images/2_4.png, id=246, 402.75468pt x 406.51875pt>
+File: ./Database/Images/2_4.png Graphic file (type png)
+
+<use ./Database/Images/2_4.png>
+Package pdftex.def Info: ./Database/Images/2_4.png used on input line 103.
+(pdftex.def)             Requested size: 455.24408pt x 459.4973pt.
+) [69 <./Database/Images/2_3a.png>] [70 <./Database/Images/2_4.png>] [71
+
+] [72
 
 ] (head.aux) ) 
 Here is how much of TeX's memory you used:
- 5761 strings out of 493634
- 74074 string characters out of 3143745
- 175544 words of memory out of 3000000
- 9001 multiletter control sequences out of 15000+200000
+ 6280 strings out of 493634
+ 81281 string characters out of 3143745
+ 192081 words of memory out of 3000000
+ 9490 multiletter control sequences out of 15000+200000
  23138 words of font info for 64 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,14n,49p,657b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -645,9 +817,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9
 ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on head.pdf (63 pages, 353375 bytes).
+Output written on head.pdf (73 pages, 485348 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
+ 712 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

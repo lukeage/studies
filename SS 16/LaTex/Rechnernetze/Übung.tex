@@ -289,5 +289,91 @@ timo.schick@tu-dresden.de
 		&n = \frac{50,5}{7} = 7,21
 	\end{align*}
 	\(\to\) Es können 7 Kanäle angeboten werden.
+\end{enumerate} 
+
+\section{Netztechnologien 1}
+\subsection{Ethernet}
+\begin{enumerate}
+	\item CSMA/CD
+	\begin{enumerate}
+		\item \(t_0\): A beginnt ein Frame zu senden
+		\item \(t_0 + \tau - \epsilon\) B beginnt ein Frame zu senden
+		\item \(t_0 + \tau \) B erkennt Kollision
+		\item \(t_0 + \tau - \epsilon + \tau\) A erkennt die Kollision
+	\end{enumerate}
+	\(\Rightarrow t_s > 2\tau \) mit \(t_s\) Sendezeit für ein Frame
+	\begin{align*}
+	\tau &= \frac{d_{ges}}{v_{phy}}\\
+	&= \frac{\text{|Repeater| }+1 \cdot d}{v_{phy}}\\
+	&= \frac{5\cdot 500 \text{ m}}{\frac{200000 \text{km}}{s}}\\
+	&= 12,5 \mu s\\
+	&\rightsquigarrow 2\tau = 25 \mu s\\
+	&\text{Sendezeit} = \frac{\text{Rahmenlänge}}{Bitrate}\\
+	t_s &= \frac{F}{b}\\
+	F &= t_s \cdot b > 2\tau \cdot b\\
+	&= 25\mu s \cdot 10 \frac{\text{MBit}}{s}\\
+	&= 250 \text{Bit}\\
+	\end{align*}
+	\item Ethernet Flow Control
+	Switches kümmern sih um die Behandlung von potentiellen Kollisionen EFC dient ... siehe Lösungen
+\end{enumerate}
+\subsection{Switches}
+	|Präambel (8)|Ziel (6)|Quelle (6)|Typ/Size (2)|\\Daten (1500)|CRC (4)|Interframe Gap (12)| \(\rightsquigarrow \) () in Byte
+\begin{enumerate}
+	\item Store-and-Foreward Switches \\
+	\(t_s \text{ und } t_V\) werden vernachlässigt
+	\begin{align*}
+	&t_s + t_F + t_V + t_s + t_F\\
+	t_F &= \frac{SL +F}{b} = \frac{(8+1518)\cdot 8\text{Bit}}{100 \cdot 10^6 \frac{\text{Bit}}{s}}\\
+	&= 122,08 \mu s \\
+	t_{ges} &= 4 t_F = 488,32 \mu s
+	\end{align*}
+	\item Virtual-Cut-Through Switches
+	\begin{align*}
+	&t_s + t_H + t_s + t_F\\
+	t_{ges} &= 3t_H + t_F \\
+	&= 122,08 \mu s + 3 \cdot \frac{14 \cdot 8\text{ Bit}}{100 \cdot 10^6 \frac{\text{Bit}}{s}}\\
+	&= 122,08 \mu s + 3 \cdot 1,12 \mu s \\
+	&= 125,44 \mu s
+	\end{align*}
+\end{enumerate}
+\subsection{Transparent Bridges}
+\begin{enumerate}
+	\item Wegewahltabellen siehe Lösungen
+	\item Bridge Informationen: \\
+	X|Y : \\
+	X = kommt von welchem Rechner, \\
+	Y = kommt an welchem Port an
+	\item Probleme 
+	\begin{itemize}
+		\item bei Zyklen (Pakete werden im Kreis weitergereicht
+	\end{itemize}
+	\item Spanning Tree Protocol
+	siehe Lösungen
+\end{enumerate}
+\subsection{802.11 WLAN}
+\begin{enumerate}
+\item 
+Wkt., dass ein Bit falsch ist: 
+\begin{align*}
+&e_{\text{Bit}} = 3 \cdot 10^{-6}
+\end{align*}
+Wkt., dass ein Bit richtig ist: 
+\begin{align*}
+&p_{\text{Bit}} = 1- e_{\text{Bit}}
+\end{align*}
+Rahmen mit 1500 Byte Größe:
+\begin{align*}
+&p_{Frame} = p_{Bit} \cdot \ldots \cdot p_{Bit} = (p_Bit)^{1500 \cdot 8} \\
+&= (1-3\cdot 10^{-6})^{12000} = 0,96464 \\
+e_{\text{Frame}} = 1-p_{Frame} = 0,035\\
+\to \text{im Mittel 3,5 prozent der Frames fehlerhaft.}
+\end{align*}
+\item 
+\begin{align*}
+p_{Frame} &= (p_{Bit})^{(64\cdot 8)} = 0,99847\\
+\to e_{Frame} &= 0,00153
+\end{align*}
 \end{enumerate}
 
+\Tree [.A [.B [.C eins ] [.D zwei ] ].B [.E {3 und 4} ] ].A

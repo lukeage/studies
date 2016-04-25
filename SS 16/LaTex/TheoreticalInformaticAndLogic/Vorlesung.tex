@@ -231,6 +231,7 @@ Sei \(F\) eine Menge von Funktionssymbolen, in der mindstens ein Konstantensymbo
 	&D = T(F) \text{ (D wird Herbrand-Universum genannt})\\
 	&\text{Für jeden abgeschlossenen Term } t\in T(F) \text{ gilt } t^I = t
 \end{align*}
+\section{Modelle}
 \subsubsection{Herbrand-Interpretationen und Formeln (41)}
 \subsubsection{Aufgabe (42)}
 \subsection{Modelle für abgeschlossene Formeln}
@@ -274,3 +275,73 @@ Für alle Sätze G gilt:
 &\vDash _{u} ((\forall X)p(X) \to p(X)) \\
 &\nvDash _{u} (p(X) \to (\forall X)p(X) 
 \end{align*}
+
+\section{Äquivalenz und Normalform}
+\subsection{Semantische Äquivalenz}
+\subsubsection{Definition}
+Zwei prädikatenlogische Formeln \(F\) und \(G\) heißen \textbf{semantisch äquivalent}, symbolisch \(F\equiv G\), wenn \(F^{I,Z} = G^{I,Z}\) für alle Interpretationen \(I\) und alle Variablenzuweisungen \(Z\) bezüglich \(I\)
+\subsubsection{Satz 3.19}
+Für prädikatenlogische Sätze, Formeln gilt:
+\begin{align*}
+F \equiv G \leftrightarrow F^I = G^I
+\end{align*}
+\subsubsection{Satz 4.32}
+Seien F und G prädikatenlogische Formeln. Dann gilt:
+\begin{align*}
+\neg(\forall X)F&\equiv (\exists X)\neg F \\
+\neg(\exists X)F &\equiv (\forall X)\neg F \\
+((\forall X) F \wedge (\forall X)G) &\equiv (\forall X)(F\wedge G)\\
+\\
+&fill
+\end{align*}
+\subsubsection{Beweis 1}
+siehe Script, die anderen in Eigenarbeit
+\subsubsection{Definition 4.33}
+Die in einer Prädikatenlogischen Formel \(F\) vorkommenden Variablen sind \textbf{auseinander dividiert}, wenn keine zwei in \(F\) vorkommenden Quantoren die gleiche Variable binden und keine Variable sowohl frei als auch gebunden vorkommt
+\subsubsection{Definition 4.33}
+Zu jeder prädikatenlogischen Formel gibt es eine semantisch äquivalente Formel, in der die Variablen auseinander dividiert sind
+\subsubsection{Vereinbarung}
+In der Folge nehmen wir an, dass die Variablen auseinander dividiert sind.
+\subsection{Pränexnormalform}
+\subsubsection{Definition 4.35} 
+Eine Formel \(G\) ist in \textbf{Pränexnormalform}, wenn sie von der Form \((Q_1 X_1)\ldots (Q_n X_n)F \) ist, wobei \(Q_i \in \{\forall,\exists\}\), \(\le i \le n\) und \(n \ge 0 \) ist, \(X_1, \ldots , X_n\) Variablen sind und in \(F\) selbst kein Quantor mehr vorkommt. Wir nennen \(F\) auch Matrix von G
+\subsubsection{Proposition 4.36} 
+Es gibt einen Algorithmus, der einen Satz \(F\) in der Prädikatenlogik in einen semantisch äquivalenten Satz \(F'\) in Pränexnormalform transformiert
+\subsubsection{Transformation in Pränexnormalform}
+Solange die Formel \(F\) nciht in Pränexnormalform ist, wende eine der folgenden Regeln an:
+\begin{align*}
+&\frac{\neg(\forall X)F}{(\exists X)\neg F} 
+&& \frac{\neg(\exists X)F}{(\forall X)\neg F} \\
+&\frac{((QX)F \wedge G)}{(QX)(F \wedge G)} 
+&&\frac{(F\wedge (QX)G)}{(QX)(F\wedge G)} \\
+&\frac{((QX)F\lor G)}{(QX)(F\lor G)} 
+&&\frac{(F\lor (QX)G)}{(QX)(F\lor G)}
+\end{align*}
+\subsection{Skolem-Normalform}
+\subsubsection{Idee}
+Wir beseitigen alle existenziellen Quantoren
+\subsubsection{Definition 4.37}
+Sei \(L = L(R,F,V)\) eine prädikatenlogische Sprache. Sei \(F_S\) eine abzählbar unendliche Menge von Funktionssymbolen, so dass \(F_S \cap F = \emptyset \) und \(F_S\) für jede Stelligkeit abzählbar unendlich viele Funktionszeichen enthält. Die Elemente aus \(F_S\) werden \textbf{Skolem-Funktionssymbole} genannt. Wir betrachten nun die Sprache \(L(R,F\cup F_S, V)\)
+\subsubsection{Notation}
+0-stellige Skolem-Funktionssymbole werden häufig auch \textbf{Skolem-Konstantensymbole} genannt
+\subsubsection{Definition 4.38}
+Eine prädikatenlogische Formel ist in \textbf{Skolem-Normalform}, wenn sie von der Form \(\forall X_	) \ldots (\forall X_n)f\) ist, wobei \(n\geq 0\) ist, \(X_1 ,\ldots ,X_n\) Variablen sind und in \(F\) selbst kein Quantor mehr vorkommt
+\subsubsection{Transformation in Skolem-Normalform}
+Sei \(F\) Formel in Pränexnormalform, deren variablen auseinander dividert sind. Solange \(F\) nicht in Skolem-Normalform ist, wende die folgende Regel an
+\begin{align*}
+\frac{(\forall X_1) \ldots (\forall X_n)(\exists Y)G}{(\forall X_1)\ldots (\forall X_n)G \{Y\mapsto f(X_1 ,\ldots , X_n)\} }
+\end{align*}
+\subsubsection{Satz 4.39}
+Sei \(F'\) eine Skolem-Normalform des Satzes \(F\). \(F\) ist erfüllbar gdw  \(F'\) ist erfüllbar.\\ \(\to\) Die Tranformation in Skolem-Normalform ist erfüllbarkeitserhaltend
+\subsubsection{Beweis Satz 4.39}
+\begin{itemize}
+	\item Anname: \(F\) in Pränexnormalform; Variablen sind auseinander dividiert
+	\item \textbf{Hilfsaussage}: Sei \(F\) ein Satz in Pränexnormalform, in der die Variablen auseinander dividert sind. Sei \(F'\) durch einmalige Anwendung der Ersetzungsregel auf \(F\) entstanden. Dann gilt: \(F\) ist erfüllbar gdw. \(F'\) ist erfüllbar
+	\item Beweis Hilfsaussage \(\rightsquigarrow\) Übung
+	\item Sei \(E\) die folgende Zusicherung: \(F'\) ist ein Satz in Pränesnormalform, in der alle Variablen auseinander dividiert sind und \(F'\) ist erfüllbar gdw \(F\) ist erfüllbar
+	\item mit \(F = F'\) ist \(E\) vor Eintritt in die Schleife erfüllt
+	\item Gemäß der Hilfsaussage ist \(E\) eine Schleifeninvariante
+	\item Nach \textbf{Satz 3.30} gilt \(E\) dann auch nach Verlassen der Schleife
+	\item Die Schleife wird nur verlassen wenn \(F'\) in Skolem-Normalform ist
+\end{itemize}
+\subsection{Klauselform}
