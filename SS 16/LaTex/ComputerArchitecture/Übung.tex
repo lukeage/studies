@@ -113,4 +113,99 @@ z.B. Maschinendarstellung eines Floating Point Wertes Single Precision
 			\end{itemize}
 		\end{itemize}
 	\end{itemize}
+\subsubsection{Begriffsklärung}
+\begin{itemize}
+	\item [RA]/[HW-Struktur]/[HW-Betriebsmittel-Struktur]/[Prozessorstruktur]/[\textbf{Steuerwerk}]
+	\item [RA]/[HW-Struktur]/[HW-Betriebsmittel-Struktur]/[Speicherstruktur]/[\textbf{Register}]
+	\item [RA]/[HW-Struktur]/[Verbindungsstruktur]/[\textbf{Speicherbus}]
+	\item [RA]/[Operationsprinzip]/[Informationsstruktur]/[Menge der Maschinendarstellungen der Datenobjekte]/[\textbf{Festkommadatenformat} nach IEEE 754]
+	\item[RA]/[Operationsprinzip]/[Informationsstruktur]/[Klassen von Datentypen]/\\ Strukturdatentypen]/ [\textbf{Doppelt verkettete Liste}]
+	\item [RA]/[Hardware-Struktur]/[HW-Betriebsmittelstruktur]/[Speicherstruktur]/[\textbf{Cache}]
+	\item [RA]/[Operationsprinzip]/[Informationsstruktur]/[Menge der Maschinendarstellungen der Datenobjekte]/[\textbf{Gleitkomma-Datenformate} nach IEEE 754]
+	\item [RA]/[Operationsprinzip]/[Steuerungsstruktur]/Ablaufsteuerung]/\\\textbf{Program-Counter getriebene Ablaufsteuerung}]
+	\item [RA]/[Operationsprinzip]/[Informationsstruktur]/[Menge der Funktionen, die auf die Datenobjekte anwendbar sind]/[\textbf{Assemblerbefehl: ADD R6, R4, R1}]
+	\item [RA]/[HW-Struktur]/[\textbf{Verbindungsnetzwerk zwischen den Prozessoren}]
+	\item [RA]/[Operationsprinzip]/[Steuerungsstruktur]/Dateizugriffsteuerung]/[\textbf{Zugriff auf den Cache}]
+\end{itemize}
+\section{Einführung}
+\subsection{Moores Law}
+Die Anzahl der Transistoren pro Chip verdoppelt sich alle 1,5 bis 2 Jahre (1965).
+\subsubsection{Was macht man mit diesen Transistoren?}
+\begin{itemize}
+	\item Erhöhung der Prozessorleistung \\ \(\to\) Taktfrequenz kann erhöht werden, da bei kleineren Transistoren kleinere Kapazitäten umgeladen werden müssen (CMOS-Technik)
+	\begin{itemize}
+		\item 1985 Intel 80382 (erster 32-Bit Prozessor) \\ \(\to\) hatte nur eine Integer-Unit und keinen Cache
+	\end{itemize}
+	\item Verarbeitungsbreite erhöht (4-bit, 8-bit, 16-bit, 32-bit, 64-bit)
+	\item Erhöhung der Anzahl der Verarbeitungseinheiten
+	\begin{itemize}
+		\item 1989: 80486
+		\begin{itemize}
+			\item eine FPU (Floating Point Unit)
+			\item eine IU (Integer Unit)
+		\end{itemize}
+		\item Intel Itanium
+		\begin{itemize}
+			\item 2 FPU's
+			\item 6 IU's
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsubsection{Weshalb wir die Anzahl der Verarbeitungseinheiten nicht weiter erhöht?}
+ILP (Instruction Level Parallelism)\\
+Problem: Zu viele Funktionseinheiten führen zu keinem zusätzlichen Geschwindigkeitsgewinn (Sp. Speedup), da viele Befehle Datenabhängigkeiten aufweisen und so zu wenig unabhängige Befehle vorhanden sind.
+\subsubsection{Multicore-Prozessoren}
+\begin{itemize}
+	\item [2001] IBM: erster DualCore Prozessor
+	\item [2005] Intel, AMD 	
+\end{itemize}
+Problem: Wenn man Leistung umsetzen will muss man sich mit paralleler Programmierung beschäftigen.
+\subsubsection{Lücke zwischen Prozessorleistung und Zugriffszeit auf den DRAM verkleinern}
+\(\to\) Caches: benötigen ca. \(\frac{1}{3}\) der Chipfläche
+\begin{itemize}
+	\item L1-Cache: Harvard-Architektur
+	\begin{itemize}
+		\item L1-Instruction-Cache
+		\item L1-Data-Cache
+	\end{itemize}
+	\item L2-Cache: meistens nicht getrennt (es gibt Ausnahmen: Intel Itanium Motecito)
+	\item L3-Cache gemeinsam
+\end{itemize}
+\subsubsection{Integration weiterer Baugruppen}
+z.B.: GPU (Graphic Processing Unit)
+\subsection{Klassifikationen nach Flynn}
+\begin{enumerate}
+	\item Flynnsche Kategorien
+	\begin{enumerate}
+		\item SISD Single Instruction Stream Single Data Stream
+		\begin{itemize}
+			\item klassischer von Neumann Rechner
+			\item Single Core Processor unter bestimmten Voraussetzungen:
+			\begin{itemize}
+				\item Eingang: sequentielle Folge von Befehlen
+				\item Ausgang: Sequentielle Folge von Ergebnissen
+			\end{itemize}
+		\end{itemize}
+		\item SIMD Single Instruction Stream Multiple Data Streams
+		\begin{itemize}
+			\item Vektoraddition kann man durchführen mit
+			\begin{itemize}
+				\item Vektorrechner
+				\item Feldrechner: ein Universalprozessor steuert die gesamte Abarbeitung, sehr viele einfache Verarbeitungseinheiten (processing elements, PE) führen zu einem Zeitpunkt die gleiche Operation aus.
+				\item Unterschiede:
+			\end{itemize}
+		\end{itemize}
+		\item MISD Multiple Instruction Streams Single Data Stream\\\(\to\) leere Klasse
+		\item MIMD Multiple Instruction Streams Multiple Data Streams
+		\begin{itemize}
+			\item Multiprozessorsystem (MPS)
+			\item Cluster von Workstations 
+			\item Nachteil: viel zu grob für alle MPS und COW \\ \(\to\)  in der Literatur gibt es Erweiterungen zur Flynnschen Klasse MMID:
 
+			\medskip
+						
+			\Tree [.MIMD [.{Speichergekoppelte MPS} [.NUMA NL-NUMA CL-NUMA ] UMA COMA ] [.{Nachrichtengekoppelte MPS} COW MPP ] ].MIMD
+		\end{itemize}
+	\end{enumerate}
+	\item Flynssches Klassifikationsschema
+\end{enumerate}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  25 APR 2016 20:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  26 APR 2016 20:04
 entering extended mode
 **./head.tex
 (head.tex
@@ -426,6 +426,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\ifsym\ifsym.sty
+Package: ifsym 2000/04/18 I.Kloeckl
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip47
+\calc@Bskip=\skip48
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip49
+)
+\c@ifsymcnt=\count105
+)
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\stmaryrd.sty
 Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup6
@@ -433,24 +451,24 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
-\fancy@headwidth=\skip47
-\f@ncyO@elh=\skip48
-\f@ncyO@erh=\skip49
-\f@ncyO@olh=\skip50
-\f@ncyO@orh=\skip51
-\f@ncyO@elf=\skip52
-\f@ncyO@erf=\skip53
-\f@ncyO@olf=\skip54
-\f@ncyO@orf=\skip55
+\fancy@headwidth=\skip50
+\f@ncyO@elh=\skip51
+\f@ncyO@erh=\skip52
+\f@ncyO@olh=\skip53
+\f@ncyO@orh=\skip54
+\f@ncyO@elf=\skip55
+\f@ncyO@erf=\skip56
+\f@ncyO@olf=\skip57
+\f@ncyO@orf=\skip58
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks27
-\labelindent=\skip56
-\enit@outerparindent=\dimen117
+\labelindent=\skip59
+\enit@outerparindent=\dimen119
 \enit@toks=\toks28
 \enit@inbox=\box28
-\enitdp@description=\count102
+\enitdp@description=\count106
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
@@ -459,9 +477,9 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headfont=\toks31
 \thm@notefont=\toks32
 \thm@headpunct=\toks33
-\thm@preskip=\skip57
-\thm@postskip=\skip58
-\thm@headsep=\skip59
+\thm@preskip=\skip60
+\thm@postskip=\skip61
+\thm@headsep=\skip62
 \dth@everypar=\toks34
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\titleref\titleref.sty
@@ -489,12 +507,12 @@ File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
 \pIIe@GRAPH=\toks35
-\@arclen=\dimen118
-\@arcrad=\dimen119
-\@tempdimd=\dimen120
+\@arclen=\dimen120
+\@arcrad=\dimen121
+\@tempdimd=\dimen122
 )
-\c@treecount=\count103
-\c@branchcount=\count104
+\c@treecount=\count107
+\c@branchcount=\count108
 \parentbox=\box29
 \treebox=\box30
 \treeboxone=\box31
@@ -517,85 +535,85 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 \treeboxeighteen=\box48
 \treeboxnineteen=\box49
 \treeboxtwenty=\box50
-\treeoffsetone=\skip60
-\treeoffsettwo=\skip61
-\treeoffsetthree=\skip62
-\treeoffsetfour=\skip63
-\treeoffsetfive=\skip64
-\treeoffsetsix=\skip65
-\treeoffsetseven=\skip66
-\treeoffseteight=\skip67
-\treeoffsetnine=\skip68
-\treeoffsetten=\skip69
-\treeoffseteleven=\skip70
-\treeoffsettwelve=\skip71
-\treeoffsetthirteen=\skip72
-\treeoffsetfourteen=\skip73
-\treeoffsetfifteen=\skip74
-\treeoffsetsixteen=\skip75
-\treeoffsetseventeen=\skip76
-\treeoffseteighteen=\skip77
-\treeoffsetnineteen=\skip78
-\treeoffsettwenty=\skip79
-\treeshiftone=\skip80
-\treeshifttwo=\skip81
-\treeshiftthree=\skip82
-\treeshiftfour=\skip83
-\treeshiftfive=\skip84
-\treeshiftsix=\skip85
-\treeshiftseven=\skip86
-\treeshifteight=\skip87
-\treeshiftnine=\skip88
-\treeshiftten=\skip89
-\treeshifteleven=\skip90
-\treeshifttwelve=\skip91
-\treeshiftthirteen=\skip92
-\treeshiftfourteen=\skip93
-\treeshiftfifteen=\skip94
-\treeshiftsixteen=\skip95
-\treeshiftseventeen=\skip96
-\treeshifteighteen=\skip97
-\treeshiftnineteen=\skip98
-\treeshifttwenty=\skip99
-\treewidthone=\skip100
-\treewidthtwo=\skip101
-\treewidththree=\skip102
-\treewidthfour=\skip103
-\treewidthfive=\skip104
-\treewidthsix=\skip105
-\treewidthseven=\skip106
-\treewidtheight=\skip107
-\treewidthnine=\skip108
-\treewidthten=\skip109
-\treewidtheleven=\skip110
-\treewidthtwelve=\skip111
-\treewidththirteen=\skip112
-\treewidthfourteen=\skip113
-\treewidthfifteen=\skip114
-\treewidthsixteen=\skip115
-\treewidthseventeen=\skip116
-\treewidtheighteen=\skip117
-\treewidthnineteen=\skip118
-\treewidthtwenty=\skip119
-\daughteroffsetone=\skip120
-\daughteroffsettwo=\skip121
-\daughteroffsetthree=\skip122
-\daughteroffsetfour=\skip123
-\branchwidthone=\skip124
-\branchwidthtwo=\skip125
-\branchwidththree=\skip126
-\branchwidthfour=\skip127
-\parentoffset=\skip128
-\treeoffset=\skip129
-\daughteroffset=\skip130
-\branchwidth=\skip131
-\parentwidth=\skip132
-\treewidth=\skip133
+\treeoffsetone=\skip63
+\treeoffsettwo=\skip64
+\treeoffsetthree=\skip65
+\treeoffsetfour=\skip66
+\treeoffsetfive=\skip67
+\treeoffsetsix=\skip68
+\treeoffsetseven=\skip69
+\treeoffseteight=\skip70
+\treeoffsetnine=\skip71
+\treeoffsetten=\skip72
+\treeoffseteleven=\skip73
+\treeoffsettwelve=\skip74
+\treeoffsetthirteen=\skip75
+\treeoffsetfourteen=\skip76
+\treeoffsetfifteen=\skip77
+\treeoffsetsixteen=\skip78
+\treeoffsetseventeen=\skip79
+\treeoffseteighteen=\skip80
+\treeoffsetnineteen=\skip81
+\treeoffsettwenty=\skip82
+\treeshiftone=\skip83
+\treeshifttwo=\skip84
+\treeshiftthree=\skip85
+\treeshiftfour=\skip86
+\treeshiftfive=\skip87
+\treeshiftsix=\skip88
+\treeshiftseven=\skip89
+\treeshifteight=\skip90
+\treeshiftnine=\skip91
+\treeshiftten=\skip92
+\treeshifteleven=\skip93
+\treeshifttwelve=\skip94
+\treeshiftthirteen=\skip95
+\treeshiftfourteen=\skip96
+\treeshiftfifteen=\skip97
+\treeshiftsixteen=\skip98
+\treeshiftseventeen=\skip99
+\treeshifteighteen=\skip100
+\treeshiftnineteen=\skip101
+\treeshifttwenty=\skip102
+\treewidthone=\skip103
+\treewidthtwo=\skip104
+\treewidththree=\skip105
+\treewidthfour=\skip106
+\treewidthfive=\skip107
+\treewidthsix=\skip108
+\treewidthseven=\skip109
+\treewidtheight=\skip110
+\treewidthnine=\skip111
+\treewidthten=\skip112
+\treewidtheleven=\skip113
+\treewidthtwelve=\skip114
+\treewidththirteen=\skip115
+\treewidthfourteen=\skip116
+\treewidthfifteen=\skip117
+\treewidthsixteen=\skip118
+\treewidthseventeen=\skip119
+\treewidtheighteen=\skip120
+\treewidthnineteen=\skip121
+\treewidthtwenty=\skip122
+\daughteroffsetone=\skip123
+\daughteroffsettwo=\skip124
+\daughteroffsetthree=\skip125
+\daughteroffsetfour=\skip126
+\branchwidthone=\skip127
+\branchwidthtwo=\skip128
+\branchwidththree=\skip129
+\branchwidthfour=\skip130
+\parentoffset=\skip131
+\treeoffset=\skip132
+\daughteroffset=\skip133
+\branchwidth=\skip134
+\parentwidth=\skip135
+\treewidth=\skip136
 \qta=\toks36
 \qtb=\toks37
-\nbranches=\count105
-\qroofx=\count106
-\qroofy=\count107
+\nbranches=\count109
+\qroofx=\count110
+\qroofy=\count111
 \@qrscratchbox=\box51
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
@@ -613,27 +631,27 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 )
-\Gin@req@height=\dimen121
-\Gin@req@width=\dimen122
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
-\lst@mode=\count108
+\lst@mode=\count112
 \lst@gtempboxa=\box52
 \lst@token=\toks39
-\lst@length=\count109
-\lst@currlwidth=\dimen123
-\lst@column=\count110
-\lst@pos=\count111
-\lst@lostspace=\dimen124
-\lst@width=\dimen125
-\lst@newlines=\count112
-\lst@lineno=\count113
-\lst@maxwidth=\dimen126
+\lst@length=\count113
+\lst@currlwidth=\dimen125
+\lst@column=\count114
+\lst@pos=\count115
+\lst@lostspace=\dimen126
+\lst@width=\dimen127
+\lst@newlines=\count116
+\lst@lineno=\count117
+\lst@maxwidth=\dimen128
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count114
-\lst@skipnumbers=\count115
+\c@lstnumber=\count118
+\lst@skipnumbers=\count119
 \lst@framebox=\box53
 )
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
@@ -647,49 +665,49 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-\c@mydef=\count116
+\c@mydef=\count120
 
 (head.aux)
 \openout1 = `head.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen127
+\scratchcounter=\count121
+\scratchdimen=\dimen129
 \scratchbox=\box54
-\nofMPsegments=\count118
-\nofMParguments=\count119
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen128
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen130
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks41
 )
-\c@lstlisting=\count123
-LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+\c@lstlisting=\count127
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 40.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 41.
 
 (C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd)
 [1
@@ -730,96 +748,104 @@ Kapitel 3.
 Kapitel 4.
 [43
 
-] [44]
-Overfull \hbox (61.68213pt too wide) in paragraph at lines 76--76
-[] 
- []
-
-[45]) [46] [47
+] [44] [45]) [46] [47
 
 ] (ComputerArchitecture/Vorlesung.tex
 Kapitel 5.
 [48
 
-] [49] [50] [51] [52] [53]) (ComputerArchitecture/Übung.tex [54]
+] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61])
+(ComputerArchitecture/Übung.tex [62]
 Kapitel 6.
-[55
+[63
 
-] [56]) [57] [58] [59
+] [64] [65] [66] [67]
+Overfull \hbox (33.65053pt too wide) in paragraph at lines 207--208
+[] [] 
+ []
+
+) [68] [69
 
 ] (Database/Vorlesung.tex
 Kapitel 7.
-[60
+[70
 
-] [61] [62] [63] [64]) (Database/Übung.tex [65]
+] [71] [72] [73] [74] [75] [76] [77]
+LaTeX Font Info:    Try loading font information for U+ifsym on input line 321.
+
+
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\ifsym\uifsym.fd))
+(Database/Übung.tex [78]
 Kapitel 8.
-[66
+[79
 
-] <./Database/Images/2_1.png, id=235, 722.7pt x 406.51875pt>
+] <./Database/Images/2_1.png, id=278, 722.7pt x 406.51875pt>
 File: ./Database/Images/2_1.png Graphic file (type png)
 
 <use ./Database/Images/2_1.png>
 Package pdftex.def Info: ./Database/Images/2_1.png used on input line 60.
 (pdftex.def)             Requested size: 455.24408pt x 256.07715pt.
 
-<./Database/Images/2_2.png, id=236, 676.02562pt x 429.85594pt>
+<./Database/Images/2_2.png, id=279, 676.02562pt x 429.85594pt>
 File: ./Database/Images/2_2.png Graphic file (type png)
 
 <use ./Database/Images/2_2.png>
 Package pdftex.def Info: ./Database/Images/2_2.png used on input line 69.
 (pdftex.def)             Requested size: 455.24408pt x 289.47777pt.
 
-<./Database/Images/2_3a.png, id=238, 470.50781pt x 232.61906pt>
+<./Database/Images/2_3a.png, id=281, 470.50781pt x 232.61906pt>
 File: ./Database/Images/2_3a.png Graphic file (type png)
 
 <use ./Database/Images/2_3a.png>
 Package pdftex.def Info: ./Database/Images/2_3a.png used on input line 77.
 (pdftex.def)             Requested size: 455.24408pt x 225.07584pt.
- [67] [68 <./Database/Images/2_1.png> <./Database/Images/2_2.png>]
-<./Database/Images/2_4.png, id=246, 402.75468pt x 406.51875pt>
+ [80] [81 <./Database/Images/2_1.png> <./Database/Images/2_2.png>]
+<./Database/Images/2_4.png, id=289, 402.75468pt x 406.51875pt>
 File: ./Database/Images/2_4.png Graphic file (type png)
 
 <use ./Database/Images/2_4.png>
 Package pdftex.def Info: ./Database/Images/2_4.png used on input line 103.
 (pdftex.def)             Requested size: 455.24408pt x 459.4973pt.
-) [69 <./Database/Images/2_3a.png>] [70 <./Database/Images/2_4.png>] [71
+) [82 <./Database/Images/2_3a.png>] [83 <./Database/Images/2_4.png>] [84
 
-] [72
+] [85
 
 ] (head.aux) ) 
 Here is how much of TeX's memory you used:
- 6280 strings out of 493634
- 81281 string characters out of 3143745
- 192081 words of memory out of 3000000
- 9490 multiletter control sequences out of 15000+200000
- 23138 words of font info for 64 fonts, out of 3000000 for 9000
+ 6877 strings out of 493634
+ 87445 string characters out of 3143745
+ 193172 words of memory out of 3000000
+ 10076 multiletter control sequences out of 15000+200000
+ 23301 words of font info for 65 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,14n,49p,657b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Lukas\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lukas\AppData\
-Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Luka
-s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\
-Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx144
+ 27i,14n,49p,657b,1067s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
+ifsym\dpi360\ifsym10.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
+ur\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Lukas\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Lukas\AppData\
+Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Luka
+s\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\
+Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx120
 0.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecbx2488.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on head.pdf (73 pages, 485348 bytes).
+00\ecbx1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecbx2488.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on head.pdf (86 pages, 526524 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
+ 785 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

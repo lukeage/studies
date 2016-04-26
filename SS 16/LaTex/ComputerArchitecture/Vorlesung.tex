@@ -250,3 +250,314 @@ We use the term instruction set architecture (ISA) to refer to the actual progra
 \item MISD - multiple instruction streams, single data stream
 \item MIMD - multiple instruction streams, multiple data streams
 \end{itemize}
+
+\section{Intel Prozessoren}
+\subsection{Ursprung}
+\begin{itemize}
+	\item 32-Bit Integer-Verarbeitungsbreite
+	\item CISC Befehlssatz
+	\begin{itemize}
+		\item Vairable Befehlslänge
+		\item Arithmetische Operationen mit Speicheradressen
+		\item 32-Bit Immediate Werte im Befehlswort
+		\item 1-Adress und 2-Adress Format
+	\end{itemize}
+	\item SISD
+	\item Virtueller Speicher
+\end{itemize}
+\subsection{Intel 80386}
+\subsubsection{IA-32 Register}
+\begin{itemize}
+		\item EIP: Instruction Pointer
+		\item EFLAGS
+		\begin{itemize}
+			\item Overflow-, sign-, zero- Flag
+			\item Für Verzweigungsbefehle
+		\end{itemize}
+		\item 8 General Purpose Register
+		\begin{itemize}
+			\item Häufig implizite Adressierung
+		\end{itemize}
+		\item Segment Register zur Speicheradressierung
+\end{itemize}
+\subsubsection{Stack}
+\begin{itemize}
+	\item Wegen geringer Registerzahl häufiges Ausweichen auf Speicher erforderlich
+	\item Stack ist spezieller Speicherbereich in dem Werte zwischengespeichert werden
+\end{itemize}
+\subsubsection{Adressierungsarten}
+\begin{itemize}
+	\item Immediate Operand
+	\item Immediate Adresse
+	\item Register Zugriff
+	\item Register Indirekt
+	\item Register indirekt mit displacement
+	\item Zugriffe auf Stack (push/pop)
+	\begin{itemize}
+		\item Register indirekt mit preautodecrement
+		\item Register indirekt mit postautoincrement
+	\end{itemize}
+	\item Implizite Adressierung
+	\begin{itemize}
+		\item Feste Quell- oer Zielregister für Befehle z.B.:
+		\begin{itemize}
+			\item ein operand in EAX
+			\item Loop Counter in ECX
+			\item ESP/EBP/ESI/EDI für Adressberechnung
+		\end{itemize}
+		\item spart Bits im Befehl
+	\end{itemize}
+	\item Speicher indirekt
+\end{itemize}
+\subsubsection{Virtueller Speicher}
+\begin{itemize}
+	\item Mehrere Programme teilen sich den physischen Speicher
+	\item Eigener virtueller Adressraum für jedes Programm
+	\begin{itemize}
+		\item Adressierungsarten beziehen sich auf virtuelle Adressen
+		\item Übersetzung in physische Adressen erfolgt zusätzlich
+	\end{itemize}
+	\item Ressourcenverwaltung durch Betriebssystem
+\end{itemize}
+\subsection{Intel 80486}
+\begin{itemize}
+	\item Integrierter L1-Cache
+	\item Integrierte FPU )486DX
+\end{itemize}
+\subsubsection{Cache}
+\begin{itemize}
+	\item Kleiner, schneller Zwischenspeicher
+	\item Puffer für häufig benötigte Daten und Befehle
+\end{itemize}
+\subsubsection{Pipelining}
+\begin{itemize}
+	\item Aufteilung der Befehlsverarbeitung in 5 Phasen
+	\begin{itemize}
+		\item Instruction Fetch (IF): Befehl laden
+		\item Decode1 (D1)
+		\item Decode2 (D2)
+		\item Execute (EX)
+		\item  ...
+	\end{itemize}
+	\item Mehrere Befehle gleichzeitig in Bearbeitung
+	\item Speedup durch Pipelining
+	\begin{itemize}
+		\item ermöglicht höhere Taktfrequenz
+		\item nach Anlaufphase wird ein Befehl pro Takt fertiggestellt
+	\end{itemize}
+\end{itemize}
+\subsection{Pentium}
+\begin{itemize}
+	\item Getrennte L1-Caches; 8KB für Instruktionen; 8KB für Daten
+	\item Zwei Befehle gleichzeitig in jeder Phase \\ \(\to\) Es werden zwei Befehle pro Takt fertiggestellt
+	\item 2. Pipeline nur für einfache Befehle
+\end{itemize}
+\subsection{Pentium MMX}
+\begin{itemize}
+	\item Erweiterung der ISA um SIMD Befehle
+	\item 8 64-Bit Register
+	\begin{itemize}
+		\item Abgebildet auf FPU Register
+	\end{itemize}
+	\item Nur Integer Befehle
+\end{itemize}
+\subsection{Pentium Pro}
+\begin{itemize}
+	\item CISC Befehlssatz hinderlich für effizientes Pipelining
+	\begin{itemize}
+		\item Variable Ausführungszeit in Ausführungsphase (EX)
+		\item Direkte Verarbeitung von Speicheroperanden
+		\begin{itemize}
+			\item Cache Misses blockeren nachfolgende Befehle
+			\item Steigende Speicherlatenz bei höheren Taktraten
+		\end{itemize}
+		\item \(\Rightarrow\) Durchsatz (instruction per cycle) i.d.R. weit unter theoretischem Maximum
+	\end{itemize}
+	\item Lösung:
+	\begin{itemize}
+		\item RISC Verarbeitung in Rechenwerken
+		\item Out-of-order Execution zur Verdeckung von Speicherlatenzen
+	\end{itemize}
+\end{itemize}
+\subsubsection{RISC Kern}
+\begin{itemize}
+	\item Übersetzung der x86 Befehle in internen RISC Befehlssatz (Microops)
+	\item Eine Microop für simple Operationen
+	\item Mehrere Microops für komplexe Operationen
+	\begin{itemize}
+		\item Aufspaltung in Speicherzugriff und arithmetische Operation
+		\item Trigonometrische Funktionen als Mikroprogramm
+	\end{itemize}
+\end{itemize}
+\subsubsection{Out-of-Order Execution}
+\begin{itemize}
+	\item Abarbeitung der Microops abweichend von der Programmreihenfolge
+	\begin{itemize}
+		\item Scheduler (Reservation Station)
+		\begin{itemize}
+			\item Sendet Microops an die Rechenwerke sobald Operanden verfügbar sind
+			\item Microops einer Instruktion müssen nicht zusammen abgearbeitet werden
+		\end{itemize}
+		\item Reorder Buffer (ROB)
+		\begin{itemize}
+			\item Zusätzliche Register zur Speicherung der Ergebnisse (Register Renaming)
+			\item Zustand der für Software sichtbaren Register wird in Programmreihenfolge aktualisiert (In-order completion)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{Pentium 2 / Pentium 3}
+\begin{itemize}
+	\item Weiterentwicklung des PPentium Pro
+	\begin{itemize}
+		\item 3-fach superskalar
+		\item 2x 16KB L1-Cache
+		\item Zunächst Slot Prozessoren mit L2-Cache in zweitem Chip
+		\item später mit on-die L2-Cache wieder in Sockelbauweise
+	\end{itemize}
+	\item Pentium 3 mit SSE
+\end{itemize}
+\subsubsection{Streaming SIMD Extensions (SSE)}
+\begin{itemize}
+	\item Register FILL?
+	\item Datentypen FILL?
+\end{itemize}
+\subsection{Pentium 4}
+\begin{itemize}
+	\item Designziel hohe Taktfrequenz
+	\begin{itemize}
+		\item Frequenz begrenzt durch Länge der Pipelinestufen
+		\item Extrem lange Pipeline durch wetieres Aufteilen der einzelnen Phasen
+		\begin{itemize}
+			\item erste Modelle mit 20 Stufen, später 31 (vgl. Pentium 3: 10 Stufen)
+		\end{itemize}
+		\item 2006 eingestellt, da hohe Frequenzen u hohem Stromverbrauch führten
+	\end{itemize}
+	\item Execution Trace Cache
+	\begin{itemize}
+		\item Kein gewöhnlicher L1 Instruction Cache
+		\item Speicherung bereits dekodierter Instruktionen
+	\end{itemize}
+	\item HyperThreading
+	\begin{itemize}
+		\item Betriebssystem sieht zwei logische Prozessoren pro CPU
+		\item Doppelte Registersätze, gemeinsame Nutzung der Rechenwerke
+	\end{itemize}
+	\item Befehlssatzerweiterungen: SSE2, ab 2004 SSE3
+\end{itemize}
+\subsubsection{Netburst Mikroarchitektur}
+\begin{itemize}
+	\item Geringe Decoder Leistung
+	\begin{itemize}
+		\item bei Misses im Trace Cache nur 1 Microop pro Takt
+	\end{itemize}
+	\item 64 Bit breite SIMD Einheiten
+	\begin{itemize}
+		\item SSE Befehle in 2 Operationen
+	\end{itemize}
+	\item 126 Microops ROB
+	\item 2 Integer ALUs
+	\item 2 FP Einheiten
+	\item L1 Cache pro Kern
+	\begin{itemize}
+		\item 128 Bit lesen/schreiben pro Takt
+	\end{itemize}
+	\item Hyperthreading
+	\begin{itemize}
+		\item 2 Threads gleichzeitig
+	\end{itemize}
+\end{itemize}
+\subsubsection{SSE Erweiterungen}
+\begin{itemize}
+	\item SSE 2
+	\begin{itemize}
+		\item 64-Bit Floating Point Befehle (double precision)
+		\item 2 Operationen pro Befehl
+	\end{itemize}
+	\item SSE 3
+	\begin{itemize}
+		\item Mehrere Operanden aus einem Register
+		\item Reduziert Kopieroperationen
+	\end{itemize}
+\end{itemize}
+\subsection{Pentium M/ Core Solo/ Core Duo}
+\begin{itemize}
+	\item Parallelentwicklung zu Pentium 4
+	\item Basieren auf Pentium 3
+	\item Energiesparende Architektur für Mobilrechner
+	\begin{itemize}
+		\item Speedstep Technologie
+		\begin{itemize}
+			\item Anpassung der Taktfrequenz an Auslastung
+			\item Reduziert Leistungsaufnahme während Programme ausgeführt werden
+		\end{itemize}
+		\item Clock Gating
+		\begin{itemize}
+			\item Trennung von Logikblöcken vom Taktsignal
+			\item Reduziert Leistungsaufnahme in Leerlaufphasen
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{Intel64 Prozessoren (Auswahl)}
+\begin{itemize}
+	\item 2004 Pentium 3 /Pentium D
+	\item 2006 Core2 Duo, Core2Quad, Xeon54xx
+	\item 2008 Core i5/i7, Xeon 55xx (Nehalem)
+	\item 2010 Core i3/i5/i7, Xeon 56xx (Westmere)
+	\item 2011 2.Gen i3/5/7, Xeon E3 (Sandy Bridge)
+	\begin{itemize}
+		\item integrierte GPU
+		\item Advanced Vector Extansions (AVX)
+	\end{itemize}
+	\item 2012 3.Gen, Xeon E3 v2 (Ivy Bridge)
+	\item 2013 4.Gen, Xeon E3 v3 (Haswell)
+\end{itemize}
+\subsubsection{Befehlssatz}
+\begin{itemize}
+	\item IA-32 Befehlssatz auf 64 Bit Verarbetungsbreite erweitert
+	\item Registeranzahl verdoppelt
+	\begin{itemize}
+		\item Weniger Stackzugriffe nötig
+		\item Erhöhte Codegröße
+	\end{itemize}
+	\item Größerer virtueller Adressraum
+\end{itemize}
+\subsection{Multicore Prozessoren}
+\begin{itemize}
+	\item Moores Law
+	\item Leistung einzelner Prozessoren nicht beliebig steigerbar
+	\begin{itemize}
+		\item Höhere Grade an Superskalarität erhöhen Rechenleistung nicht proportional aufgrund von Abhängigkeiten zwischen Befehlen
+		\item Leistungssteigerungen durch Pipelining begrenzt durch Verzweigungen im Code
+	\end{itemize}
+	\item Multi-Core Prozessoren
+	\begin{itemize}
+		\item Leistungssteigerung durch Duplikation von Teilen des Prozessors
+		\item Erfordert Anpassung der Software an Nutzung mehrerer Kerne
+	\end{itemize}
+\end{itemize}
+\subsubsection{Entwicklung des Energieverbrauchs}
+\begin{itemize}
+	\item Kühlung limitert Verbrauch pro Prozessor
+	\item Mehr Kerne mit weniger Frequenz sind effizienter für parallele Anwendungen
+\end{itemize}
+\subsection{Intel Core Microarchitektur Core2Duo}
+\begin{itemize}
+	\item Decodiert bis zu 4 Instruktionen pro Takt (5 mit Makroop-Fusion)
+	\item 128 Bit breite SIMD Einheiten 
+	\item 96 Microops ROB
+	\item Verarbeitung von bis zu 6 Microops gleichzeitig
+	\item L1-Cache pro Kern
+	\item L2-Cache und FSB von beiden Kernen genutzt
+\end{itemize}
+\subsection{Intel Nehalem Mikroarchitektur}
+\begin{itemize}
+	\item Prozessorkerne kaum verändert gegenüber Core Mikroarchtektur
+	\begin{itemize}
+		\item SSE 4.2
+		\item Hyperthreading
+	\end{itemize}
+	\item L2-Cache pro Kern
+	\item Gemeinsamer L4-Cache für alle Cores
+	\item Integrierter Speichercontroller
+	\item FSB ersetzt durch Intel QuickPath Interconnect
+\end{itemize}

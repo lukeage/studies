@@ -200,4 +200,125 @@ Eins-zu-Eins Übersetzung in Relationen
 	\item Übersetzung von Attributen an Beziehungen (20)
 	\item Übersetzung von Vererbungsbeziehungen
 \end{itemize}
+\subsubsection{Abbildung der Vererbung 21}
+\begin{itemize}
+	\item Horizontale Partitionierung
+	\item Vertikale Partitionierung
+	\item Universalrelation (Typisierte Partitinierung)
+\end{itemize}
+\subsubsection{Vergleich der Abbildungsvarianten}
+\begin{itemize}
+	\item Jedes Objekt genau ein Tupel in genau einer Relation, d.h. gleiche ID bedeutet nicht: dasselbe Objekt
+	\item Gesamtheit aller Attribute eines Objekts nur durch  Verbund zu ermitteln (teuer!)
+	\item Referentielle Integrität unterstützt direkt Vererbung
+\end{itemize}
 
+\section{Relationale Algebra}
+\subsection{Motivation}
+\begin{itemize}
+	\item Formale Sprache, mit der sich Anfragen über einem relationalen Schmea formulieren lsassen
+	\item Formale Sprache für den Berechnungsweg von Anfrageergebnissen
+	\item Internrepräsentation für DB-Anfragen
+	\item Mathematische Rechenregeln ermöglichen Abfrageoptimierung durch algebraische Umformung
+	\item Nicht für den Nutzer eines DBMS sichtbar
+	\item Auch geeignet zur Formulierung von Integritätsbedingungen	
+\end{itemize}
+\subsection{Relationale Algebra}
+\begin{itemize}
+	\item Gegeben eine Menge N(Anker der Algebra): Menge der Relationen
+	\item Operationen opj: \(N^k\to N\) (Abgeschlossenheit)
+	\item 5 Basisoperationen
+\end{itemize}
+\subsection{Basisoperationen}
+\subsubsection{Projektion}
+\textbf{Definition } Sei A' eine Teilmenge der Attribute einer Relation \(R(A_1, ... A_n)\). Die Projektion de rAttribute A' aus einem Tupel \(t\in T\) ist definiert als das Tupel:
+\begin{align*}
+	\pi_{A'} = (A_1'(t), \ldots , A_m'(t))
+\end{align*}
+Die Projektion der Attribute A' einer Relation R ist definiert als die Relation
+\begin{align*}
+	\pi_{A'}(R) = \{\pi_{A'}(t)|t\in T\}
+\end{align*}
+heißt: Projektion ist eine Operation, die bestimmte Spalten aus einer Relation auswählt und diese als neue Relation ausgibt
+\begin{itemize}
+	\item Da Dubletten (identische Tupel) in Relationen nicht vorkommen drüfen, enthält die Projektion i.A. weniger Tupel als die ursprüngliche Relation!
+	\item ACHTUNG: Das ist in SQL standardmäßig nicht so!
+\end{itemize}
+\subsubsection{Projektion in SQL}
+Projektion: \(\pi_{\text{Name,Ort}}(Studenten)\)\\
+SQL Duplikate werden nicht standardmäßig eliminiert
+\begin{lstlisting}
+SELECT Name, Ort
+FROM Studenten
+\end{lstlisting}
+SQL mit Duplikat Eliminierung
+\begin{lstlisting}
+SELECT DISTINKT Name, Ort
+FROM Studenten
+\end{lstlisting}
+\subsubsection{Selektion(Restriktion)}
+\textbf{Definition} Die Selektion einer Relation R ist definiert als die Menge aller Tupel aus R, die der Selektionsbedingung P genügen:
+\begin{align*}
+\sigma_F(R) = \{t|t\in R\wedge P(t)\}
+\end{align*}
+P setzt sich zusammen aus:
+\begin{itemize}
+	\item Operanden: Konstanten oder Name eines Attributs
+	\item Vergleichsoperatoren
+	\item Boolesche Operatoren
+\end{itemize}
+\subsubsection{Selektion in SQL}
+\(\sigma_{\text{Name = 'Schmidt'}}(Studenten)\)
+\begin{lstlisting}
+SELECT *
+FROM Studenten
+WHERE Name = 'Schmidt'
+\end{lstlisting}
+\(\pi_{\text{Name, Vorname, Ort}}(\sigma_{\text{Name = 'Schmidt'}}(Studenten))\)
+\begin{lstlisting}
+SELECT Name, Vorname, Ort
+FROM Studenten
+WHERE Name = 'Schmidt' 
+\end{lstlisting}
+\subsubsection{Weitere Basisoperationen (15)}
+\begin{itemize}
+	\item Vereinigung \(R\cup S\)
+	\item Differenz \(R - S\)
+	\item Zusätzlicher Operator: Umbenennen von Relationen und Attributen: \(p_S(R)\)
+\end{itemize}
+\subsubsection{Beispiele für Anfragen (18)}
+\subsection{Abgeleitete Operationen}
+\subsubsection{Durchschnitt und Division}
+\begin{itemize}
+	\item Durchschnitt: \\
+	\(R\cap S) := \{r|r\in R \text{ und } r \in S\}\) \\
+	Es gilt: \(R\cap S = R - (R-S)\)
+	\item Division: \\
+	\(R \div S = \pi_{A-B}(R) - \pi_{A-B}((\pi_{A-B}(R) \times S)-R)\) 
+\end{itemize}
+\subsubsection{Natürlicher Verbund}
+Natural Join: \(\bowtie\)
+\begin{itemize}
+	\item Wichtigste Operation neben der Selektion
+	\item \textbf{Definition} \(R\bowtie S = \pi_{i_{k+1},\ldots, i_{r+s}}(\sigma_{R.A1 = S.B1 \wedge \ldots \wedge R.Ak = S.Bk}(R\times S))\)
+\end{itemize}
+\subsubsection{Theta- und Equi-Join}
+\begin{itemize}
+	\item Theta-Join: \(R \bowtie_\theta S\)\\
+	\textbf{Definition} \(R\bowtie_{i\theta j}S = \sigma_{A_i\theta B_j}(R\times S)\) mit \(\theta \in \{=, \ne, <, \le, >, \ge \}\)
+	\item Equi-Join: Theta Join mit \(\theta\) gleich '='
+\end{itemize}
+\subsubsection{Verlustfreiheit von Joins}
+\textbf{Definition} Eine Join-Operation zwischen R und S heißt verlustfrei, wenn jeder Datensatz aus R und jeder Datensatz aus S in der Ergebnisrelation enthalten ist.
+\begin{itemize}
+	\item Die inverse Operation Projektion erzeugt dann wieder R und S aus dem Join-Ergebnis
+	\item Tupel, denen bei Join-Operationen die entsprechenden Tupel in der anderen Tabelle fehlen, mit denen sie verknüpft werden können heißen auch 'Dangling Tupel' bzw. Datensätze
+	\item Um sie in die Ergebnismenge mit aufnehmen zu können, werden die Outer-Join-Operatoren benötigt
+	\item Inner Joins sind in der Regel verlustbehaftet!
+\end{itemize}
+\subsubsection{Outer Joins}
+\begin{itemize}
+	\item Left Outer Join: R {\tiny \textifsym{d|><|}} S
+	\item Right Outer Join: R {\tiny \textifsym{|><|d}} S
+	\item Full Outer Join: R {\tiny \textifsym{d|><|d}} S
+\end{itemize}
