@@ -128,12 +128,12 @@ Wenn die Substitution \(\sigma\) frei für die prädikatenlogische Formel \(F\) 
 \subsubsection{Beweis Satz 4.18}
 Strukturelle Induktion über \(F\)
 \begin{itemize}
-	\item \textbf{IA} \(F\) ist Atom der Form \(p(t_{1} , \ldots , t_{n})\)
+	\item[IA] \(F\) ist Atom der Form \(p(t_{1} , \ldots , t_{n})\)
 	\begin{align*}
 		&p(t_{1} , \ldots , t_{n} )(\sigma\theta)\\&=p(t_{1}(\sigma\theta) , \ldots , t_{n}(\sigma\theta)) &&\text{Def 4.16}\\ &= p((t_{1}\sigma)\theta , \ldots , (t_{n}\sigma)\theta) &&\text{Prop 4.12}\\ &= p(t_{1}\sigma, \ldots , t_{n}\sigma)\theta &&\text{Def 4.16}\\ &= p(t_{1}, \ldots , t_{n})\sigma)\theta &&\text{Def 4.16}
 	\end{align*}
-	\item \textbf{IH} Das Resultat gilt für \(F\)
-	\item \textbf{IS}
+	\item[IH] Das Resultat gilt für \(F\)
+	\item[IS]
 	\begin{itemize}
 		\item \textbf{Fall} \(\neg F\)
 		\begin{align*}
@@ -344,4 +344,65 @@ Sei \(F'\) eine Skolem-Normalform des Satzes \(F\). \(F\) ist erfüllbar gdw  \(
 	\item Nach \textbf{Satz 3.30} gilt \(E\) dann auch nach Verlassen der Schleife
 	\item Die Schleife wird nur verlassen wenn \(F'\) in Skolem-Normalform ist
 \end{itemize}
+\section{Äquivalenz und Normalenform (2)}
 \subsection{Klauselform}
+\begin{itemize}
+	\item Sei \(F\) ein Satz der Prädikatenlogik und \(H\) eine Skolem-Normalform von \(F\)
+	\item \(F\) ist erfüllbar gdw \(F\) erfüllbar
+	\item \(H\) ist von der Form \(\forall
+	G = (\forall X_1) \ldots (\forall X_n) G\), wobei \(X_1, \ldots ,X_n\) alle in \(H\) vorkommenden Variablen sind
+	\item In der Matrix \(G\) kommen keine Quantoren mehr vor
+	\item Alle in \(G\) vorkommenden Variablen sind universell quantifiziert
+	\item Wir können \(G\) in Klauselform transformieren
+	\item Sei \(G'\) eine Formel in Klauselform, die semantisch äquivalent zu \(G\) ist
+	\begin{itemize}
+		\item \(F\) ist erfüllbar gdw \(\forall G'\) ist erfüllbar
+		\item \(F\) ist unerfüllbar gdw \(\forall G'\) ist unerfüllbar
+	\end{itemize}
+\end{itemize}
+\subsection{maschinelles Beweisen mathematischer Sätze}
+siehe Folien
+\subsection{Unifikation}
+\subsubsection{Definition 4.40}
+Eine \textbf{Gleichung} ist ein Ausdruck der Form \(s = t\) wobei s und t Terme sind
+\subsubsection{Definition 4.41}
+Ein \textbf{Unifikationsproblem} \(U\) besteht aus einer Mulitmenge von Gleichungen
+\begin{align*}
+\{ s_1 = t_1, \ldots , s_n = t_n \}
+\end{align*}
+und ist die Frage, ob es eine Substitution \(\sigma \) gibt, so dass \(s_i\sigma = t_i\sigma \) für alle \(1\le i \le n\) gilt. \\ Wenn es eine solche Substitution \(\sigma \) gibt, dann
+\begin{itemize}
+	\item heißt \(U\) lösbar
+	\item sind die Terme \(s_i\) und \(t_i, 1 \le i \le n\), simultan unifizierbar
+	\item ist \(\sigma\) ein Unifikator für \(U\)
+\end{itemize}
+\subsection{Allgemeinste Unifikatoren}
+\subsubsection{Definition 4.42}
+Seien \(\sigma\) und \(\theta\) Substitutionen. \(\sigma\) ist \textbf{allgemeiner als} \(\theta\), symbolisch \(\sigma \ge \theta \), wenn es eine Substitution \(\lambda\) gibt, s dass \(\sigma \lambda = \theta \) gilt
+\subsubsection{Definition 4.43}
+Substitutionen \(\sigma \) und \(\theta \) sind \textbf{Varianten}, symbolisch \(\sigma \sim \theta\), wenn \(\sigma \ge \theta \) und \(\theta \ge \sigma \) gilt
+\subsubsection{Definition 4.44}
+Sei \(U\) ein Unifikationsproblem . Eine Substitution \(\sigma \) ist ein \textbf{allgemeinster Unifikator} für \(U\), wenn \(\sigma\) ein Unifikator für \(U\) ist und \(\sigma \ge \theta \) für jeden Unifikator \(\theta \) für \(U\) gilt. \\
+Im Englischen werden allgemeinste Unifikatoren Most General Unifier genannt und mit mgu abgekürzt.
+\subsubsection{Der Unifikationssatz}
+\subsubsection{Satz 4.45}
+Wenn \(U\) ein lösbares Unifikationsproblem ist, dann gibt es einen allgemeinsten Unifikator für \(U\)
+\subsubsection{Beweis Satz 4.45}
+\begin{itemize}
+	\item Unifikationsalgorithmus spezifizieren
+	\item Terminierung beweisen
+	\item Korrektheit beweisen
+\end{itemize}
+
+\section{Äquivalenz und Normalform}
+\subsection{Beweis Satz 4.45}
+\subsubsection{Der Unifikationsalgorithmus}
+\subsubsection{Eingabe}
+Ein Unifikationsproblem \(U\)
+\subsubsection{Ausgabe}
+Ein allgemeinster Unifikator \(\theta\) für \(U\), wenn \(U\) lösbar ist, oder \textbf{nicht unifizierbar}, wenn \(U\) keine Lösung besitzt
+\subsubsection{Terminierung (76)}
+\subsubsection{Korrektheit (79)}
+\subsection{Allgemeinste Unifikatoren}
+\subsubsection{Korollar 4.46}
+Sei \(U\) ein Unifikationsproblem und \(\sigma\) sowie \(\theta\) allgemeinste Unifikatoren für U. Dann gilt \(\sigma \sim \theta \to \) Allgemeinste Unifikatoren sind also bis auf Variantenbildung eindeutig \(\to\) Man spricht deshalb häufig auch von \textbf{dem} mgu zweier Terme

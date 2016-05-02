@@ -494,3 +494,306 @@ Ziele (3.18):
 		\item NFC-Sicherheitsmechanismen unzureichend
 	\end{itemize}
 \end{itemize}
+
+\section{Netztechnologien 2}
+\subsection{Schichtenübersicht - Sicherungsschicht}
+\subsection{Überblick}
+\begin{itemize}
+	\item Einordnung im Wesentlichen in OSI-Schichten 1 und 2
+	\item PAN - Personal Area Network / LAN - Local Area Network
+	\begin{itemize}
+		\item Ausdehnung bis zu einigen Kilometern
+		\item Privates Unternehmen / Privathaushalt als Netzbetreiber
+	\end{itemize}
+	\item MAN - Metropolitan Ariea Network / WAN - Wide Area Network
+	\begin{itemize}
+		\item weiträumige Ausdehnung, öffentlich zugänglich, dedizierte Betreiber
+		\item Dienstqualität sehr wichtig (viele konkurrierrende Verkehrsströme
+	\end{itemize}
+	\item hier: Technologien für MAN und WAN
+	\begin{itemize}
+		\item MAN: Drahtloses Breitband, Token Bus/RPR, Carrier Ethernet
+		\item WAN: Carrier Ethernet, MPLS, SDA, OTN (3)
+	\end{itemize}
+\end{itemize}
+\subsection{Drahtloses Breitband}
+\subsubsection{WiMAX}
+\begin{itemize}
+  \item Problem: Kabel-gebundenes Internet sehr teuer, vor allem in ländlichen Gegenden
+  \item Lösung: drahtlose Breitbandnetze
+  \item Standardisierung: IEEE 802.16 = WiMAX (Worldwide Interoperability for Microwave Acces)
+  \begin{itemize}
+  	\item Frequenzbereich 2 GHz - 66 GHz
+  	\item erste Version 2001: stationär, Sichtverbindung nötig
+  	\item heute: für mobile Anwendungen mit Fahrzeuggeschwindigkeit geeignet
+  	\item 4G-Technologie mit bis zu 1 GBit/s - verbindet Aspekte von WLAN und 3G
+  \end{itemize}
+  \item Technologien
+  \begin{itemize}
+  	\item OFDM (Orthogonal Frequency-Division Multiplexing)
+  	\item MIMO (Multiple Input Multiple Output)
+  \end{itemize}
+  \item Prinzip, grafisch (5)
+  \item Bitübertragungsschicht
+  \begin{itemize}
+  	\item OFDMA - Orthogonal Frequency Division Multiple Acces
+  	\begin{itemize}
+  		\item flexible Aufteilung von OFDM-Unterträgern auf Stationen
+  	\end{itemize}
+  	\item Zeiitduplexverfahren TDD (Time Division Duplex)
+  	\begin{itemize}
+  		\item Station wechselt zwischen Senden und Empfangen auf einem Unterträger (6)
+  	\end{itemize}
+  	\end{itemize}
+ 	\item WiMax - Dienstklassen und Rahmenstruktur
+  	\begin{itemize}
+  		\item Konstante Datenrate (z.B. unkomprimiertes VoIP)
+  		\item Echtzeit mit variabler Datenrate (z.B. kompr. VoIP)
+  		\item Nichtechtzeit mit variabler Datenrate - (z.B. Übertragung großer Dateien)
+  		\item Best Effort	
+  	\end{itemize}
+  	\item Rahmenstruktur (7)
+  	\begin{itemize}
+  		\item Anforderung Bandbreite \\
+  		Type \(\to\) Bytes Needed \(\to\) Connection ID \(\to\) Header CRC
+  		\item Datenübertragung \\
+  		Type \(\to\) Flags \(\to\) Length \(\to\) Connection ID \(\to\) Header CRC \(\to\) Data \(\to\) CRC
+  	\end{itemize}
+\end{itemize}
+\subsubsection{Steigerung der Datenrate: MIMO}
+\begin{itemize}
+	\item MIMO - Multiple Input Multiple Output
+	\item Nutzung mehrerer Sende- und Empfangsantennen pro Gerät
+	\item Signale überlagern sich, durch Mehrwege-Ausbreitung kleine Vraitionen im empfangenen Signal
+	\item Kanalmatrix H wird beim Empfänger berechnet \(\to\) sehr komplex
+	\item bei n Sende- und n Empfangsantennen theoretisch n-fache Kanalkapazität möglich
+	\item Komplexität der Berechnung steigt überproportional mit n
+	\item Nachteil MIMO: höhere Hardware-Kosten
+\end{itemize}
+\subsection{Token-basierte Technologien}
+\subsubsection{Token Bus IEEE 802.4}
+\begin{itemize}
+	\item physikalischer Bus, logischer Ring (nur für Token-Weitergabe)
+	\item Charakteristika: deterministisch, realzeitfähig, Prioritäten
+	\item Vorläufer mit ähnlichen Eigenschaften: Token Ring (IEEE 802.5)
+	\item Aufnahme neuer Stationen:
+	\begin{itemize}
+		\item Token-Besitzer sendet periodisch Anfragen (SOLICIT-SUCCESSOR)
+		\item Station kann "Aufnahmeantrag" stellen
+		\item Kollisionsbehandlung, falls sich mehrere Stationen melden
+	\end{itemize}
+	\item Verlassen des Ringes:
+	\begin{itemize}
+		\item sende SET-SUCCESSOR an Vorgänger (mit Nachfolgerangabe)
+		\item Vorgänger setzt neuen Nachfolger
+	\end{itemize}
+	\item Ausfall einer Station:
+	\begin{itemize}
+		\item Vorgänger prüft nach Token-Weitergabe, b gesendet wird oder Token wiederum weitergegeben wird (ggf. mehrfach)
+		\item falls nicht, sende WHO-FOLLOWS, übernächste Station wird dann durch SET-SUCCESSOR zum neuen Nachfolger
+		\item Ausfall des Token-Besitzer: Neuinitialisierung
+	\end{itemize}
+	\item Mehrfach-Token (durch zufällige Duplizierung etc.):
+	\begin{itemize}
+		\item Erkennung bei unberechtigten Sendevorgängen
+		\item freiwilliges Löschen des eigenen Tokens
+	\end{itemize}
+	\item Zahlreiche weitere Verwaltungsprotokolle
+\end{itemize}
+\subsubsection{RPR - Resilient Packet Ring}
+\begin{itemize}
+	\item RPR: Weiterentwicklung von Token Ring / Token Bus für den MAN/WAN Bereich (IEEE 802.17)
+	\item Datenraten: 1 GBit/s bis 10 GBit/s
+	\item doppelter Ring (Ringlets) für beide Richtungen mit optischen Verbindungen 
+	\item Dienstklassen: real time, near real time, best effort
+	\item Fairness: koordinierte Drosselung aller Datenströme bei Überlastung
+	\item wichtigstes Feature: schnelle umschaltung auf Ersatzwege bei Leitungsunterbrechungen (in 50 ms)
+	\item Spatial reuse: mehrere gleichzeitige Übertragungsvorgänge pro Ringlet möglich \(\to\) bessere Ausnutzung der Übertragungskapazität
+\end{itemize}
+\subsection{Carrier Ethernet}
+\begin{itemize}
+	\item Ethernet-Technologie hat sich auch im MAN/WAN Bereich durchgesetzt und dort andere Technologien (ATM, FDDI, Fibre Channel) verdrängt
+	\item Gründe: niedrige Kosten, kompatibel zu LAN-Paketen, flexibel, einfach zu nutzen
+	\item Voraussetzung: Punkt-zu-Punkt-Verbindungen (Connection-oriented Ethernet)
+	\begin{itemize}
+		\item kein CSMA/CD
+		\item Wegfall der Längenbecshränkungen
+	\end{itemize}
+	\item mit Glasfaserkabeln heute Ethernet-Verbindungen von 10 bis 140 km bei 1 bis 100 GBit/s realisierbar
+	\item weitere Optimierungen (siehe auch Kap. 8):
+	\begin{itemize}
+		\item Jumborahmen bis 9KB
+		\item Bitübertragung durch 8B/10B-Codierung bzw. 64B/66B-Codierung mit geringem Overhead
+	\end{itemize}
+\end{itemize}
+\subsubsection{Metro Ethernet Networks MEN}
+\begin{itemize}
+	\item Ethernet-basierte Dienste im MAN/WAN-Bereich
+	\item Standardisierung: Methro Thernet Forum (MEF) und IEEE
+	\item MEF-Standards enthalten Ethernet-Erweiterungen zu
+	\begin{itemize}
+		\item DIenste:E-line, E-LAN oder E-Tree
+		\item Skalierbarkeit: inkrementell skalierbare Datenrate
+		\item Zuverlässigkeit: Unterbrechungen entdecken und schnell beheben (50ms)
+		\item qquality of Service: Service Level Agreements (SLAs)
+		\item Service Management: Moitoring, zentrale Steuerung
+	\end{itemize}
+	\item verschiedene Transporttechnologien möglich: MPLS, SDH, OTN
+	\item Beispiel (14)
+\end{itemize}
+\subsubsection{Provider Bridging}
+\begin{itemize}
+	\item Provider Bridges - IEEE 802.1as QinQ (Stacked VLANs)
+	\item Erwetierung des Ethernet Frames:(15)
+	\item Outer Tag und Destination Address werden zum Routing im Provider-Netz verwendet
+	\item Weiterentwicklung: Provider Backbonde Bridges - 802.1ah Mac-in-Mac
+	\item neue Ethernet-Header: (15)
+\end{itemize}
+\subsubsection{Dienstgüte bei Carrier Ethernet}
+\begin{itemize}
+	\item MEF spezifiziert Bandwidth Profiles für Ehternet Virtual Connection (EVC) = Service Level Agreement (SLA)
+	\begin{itemize}
+		\item Ingress Badnwidth Profile - Spezifikation für eingehenden Traffic eines User Network Interface (UNI)
+		\item Egress Bandwidth Profile - Spezifikationen für ausgehenden Traffic an ein UNI
+		\item Commited Information Rate (CIR) - feste zusage für kritische Daten
+		\item Excess Information Rate (EIR) - weitere Kapazität für unkritische Daten
+	\end{itemize}
+	\item Traffic Coloring
+	\begin{itemize}
+		\item Grün: Service Frame liegt innerhalb der SLA = CIR
+		\item Gelb: Sercie Frame liegt außerhalb der SLA, wird aber auf Best Effort Basis weitergeleitet = EIR
+		\item Rot: Service Frame wird verworfen
+	\end{itemize}
+	\item Auch Beschränkungen für Delay, Paketverluste und Jitter können Bestandteil des SLA sein
+\end{itemize}
+\subsubsection{Exkurs: VPNs}
+\begin{itemize}
+	\item VPN = Virtual Private Network
+	\item Motivation
+	\begin{itemize}
+		\item Anbindung entfernte Bürostandorte
+		\item Einbindung mobiler Mitarbeiter
+		\item Einrichten eines Forschungsnetzes (Bsp.: CERN)
+	\end{itemize}
+	\item Funktion 
+	\begin{itemize}
+		\item Einrichten dedizierter privater Kommunkationpfade ("Tunnel") durch ein öffentliches Weitverkehrsnetz
+		\item meist kombiniert mit Verschlüsselung für Abhörsicherheit zischen zwei Zugangspunkten
+	\end{itemize}
+	\item Realisierung
+	\begin{itemize}
+		\item Layer 3 (Vermittlungsschicht): z.B. per IPsec - IP-basierter Tunnel zwischen 2 Endpunkten (Client und VPN-Gateway) oder 2 Routern
+		\item Layer 2 (Netzwerkschicht):
+		\begin{itemize}
+			\item Einrichten virtueller LANs (z.B. Carrier Ethernet)
+			\item Einrichten virtueller Pfade durch ein WAN (z.B. Multi Protocol Label Switching - MPLS)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection{MPLS - Multiprotocol Label Swtitching}
+\begin{itemize}
+	\item Motivation
+	\begin{itemize}
+		\item Schnelle Weiterleitung, QoS-Garantien
+		\item Entlastung von Routern
+		\item Trennung von Netzwerktraffic (z.B. VPNs, QoS-Klassen)
+	\end{itemize}
+	\item Merkmale
+	\begin{itemize}
+		\item Weiterleitung von Paketen entlang vordefinierter Pfade (gesteueret druch Labels)
+		\item Forward Equivalence Classes (FEC), d.h. gleiche Behandlung aller Pakete eines Datenstroms (z.B. Videokonferenz)
+		\item Abbildung auf existierende Netztechnologien möglich bzw. Implementierung durch spezielle MPLS-Hardware direkt über Lichtwellenleiter
+	\end{itemize}
+	\item MPLS zusammen mit Carrier Ethernet
+	\begin{itemize}
+		\item Variante 1: MPLS-Router per Carrier Ethernet verbunden \(\to\) MPLS over Carrier Ethernet
+		\item Variante 2: Carrier Ethernet als Overlay über optisches MPLS-Netz realisiert \(\to\) Carrier Ethernet over MPLS
+	\end{itemize}
+	\item Funktionsweise/Beispiel (19ff)
+\end{itemize}
+\subsubsection{MPLS-Switches / Layer-3-Switches}
+\begin{itemize}
+	\item Kombination von Router und Switch
+	\item zunächst Routing, bei längerer Dauer von Datenströmen ggf. Druchstalten von Verbindungen auf Basis von MPLS (Multiprotocol Label Switching) 
+	\item Teilweise auch Berücksichtigung von Informationen der Transportschicht ("Layer-4-Switches")
+\end{itemize}
+\subsubsection{MPLS Transprot Profile (MPLS-TP)}
+\begin{itemize}
+	\item verbindungsorientiertes MPLS, für Transprotnetze (Backbone) optimiert
+	\item durch IETF standardisiert, Nachfolger von T-MPLS (ITU-Standard)
+	\item vordefinierte Routen - bidirektional
+	\item QoS-Erweiterungen, Netzwerkmanagement
+	\item weitere Funktionen für Überwachung und Verwaltung des Netzes (in-band)
+	\item Unterstützung für Netzwerkmanagement-System (NMS)
+\end{itemize}
+\subsubsection{MPLS - Bewertung}
+\begin{itemize}
+	\item gute Integration mit IP und Ethernet, einfaches Netzmanagement
+	\item es wird ein eigener Header für MPLS eingeführt /zwischen IP-Header und Header des darunterliegenden Ethernet bzw. anderer Netze);
+	dadurch wird Unabhängigkeit vom Basisnetz erreicht ("Multiprotocol")
+	\item mehrere Anwendungen können zu einer Forward Equivalence Class zusammengefasst werden; daher flexibel und ressourcenschonend
+	\item MPLS-Pfade müssen nicht explizit aufgebaut werden, sonder werden \\"on-the-fly" etabliert, z.B. durch Analyse des Datenstromes
+	\item in der Praxis heute häufig (10/100) Gigabit Ethernet auf Basis von Hochleistungsswitches kombiniert mit MPLS im WAN-Bereich im Einsatz
+\end{itemize}
+\subsection{SONET / SDH}
+\begin{itemize}
+	\item SONET - Synchronous Optical Network, SDH - Syhnchronous Digital Hierarchy
+	\begin{itemize}
+		\item Bündelung mehrerer Datenströme über optische Leiter
+		\item wird im Telefonie-Backbone welweit eingesetzt
+	\end{itemize}
+	\item ISDN-Telefonie: 8000 \(\cdot\) 8 Bit/Sample = 64 kBit/s
+	\begin{itemize}
+		\item Idee: jede Telefonverbindung belegt ein Byte pro SONET/SDH-Rahmen
+		\item Rahmen alle 125 \(\mu s\) senden
+	\end{itemize}
+	\item SONET Basisrahmen: Block von 810 Byte = STS-1 
+	\begin{itemize}
+		\item 8 \(\cdot\) 810 Bit \(\cdot\) 8000 \(\cdot\) 1/s = 51,84 MBit/s
+		\item 9 Zeilen und 90 Spalten - 3 Spalten Overhead, 87 Spalten Nutzdaten
+	\end{itemize}
+	\item höhere Datenraten durch größere Pakete (Vielfache von STS-1)
+	\item hierarchisches Multiplexing/Demultiplexing
+\end{itemize}
+\subsection{OTN - Optical Transport Network}
+\begin{itemize}
+	\item Problem SONET/SDH: keine höhere Geschwindigkeit als 40 GBit/s
+	\item OTN - einheitliche Übertragungstechnologie für optische Netze
+	\begin{itemize}
+		\item Nachfolge-Technologie von SONET/SDH
+		\item kann SONET/SDH-Traffic transportieren
+		\item kann auch anderen Traffic wie Ethernet, ATM oder MPLS gemsicht über eine optische Verbindung übertragen
+	\end{itemize}
+	\item stadardisiert durch die ITU (G.709)
+	\item Datenübertragung basiert auf DWDM - Dense Wavelength Division Multiplexing
+	\item unterstützt Datenraten größer als 40 GBit/s
+	\item verbesserte Zuverlässigkeit
+	\item Funktionen
+	\begin{itemize}
+		\item Forward Error Correction
+		\item Frame Mapping
+		\item Multiplexing (DWDM)
+		\item Management von Pfaden und Performance
+	\end{itemize}
+	\item Beispiel (27)
+\end{itemize}
+\subsubsection{DWDM - Dense Wavelength Division Multiplexing}
+\begin{itemize}
+	\item WDM - Wavelength Division Multiplexing
+	\begin{itemize}
+		\item Aufteilung der Kanäle auf verschiedene Wellenlängen
+		\item Hinzufügen/Trennung und Verstärkung durch rein optische Elemente möglich
+		\item durch bessere Sende-Empfangstechnik können bestehende Glasfasern höhere Datenraten transprotieren \(\cdot\) Kosteneffizienz
+	\end{itemize}
+	\item CWDM - Coars Wavelength Division Multiplexing
+	\begin{itemize}
+		\item breite Trennbereiche zwischen Kanälen, ca. 5 bis 20 Kanäle pro LWL
+		\item kostengünstige Sende-/Empfangstechnik
+	\end{itemize}
+	\item DWDM - Dense Wavelength Division Multiplexing
+	\begin{itemize}
+		\item kleinere Trennbereiche \(\cdot\) aufwendigere Sende-/Empfangstechnik
+		\item ca. 60 - 160 Kanäle pro LWL
+		\item Reichweite: ca. 80 - 160 km bei 100 Gbit/s; bis zu 1 TBit/s theoretisch möglich
+	\end{itemize}
+\end{itemize}

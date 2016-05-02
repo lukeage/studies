@@ -90,3 +90,78 @@ Proposition 4.12
 		\item IA
 	\end{itemize}
 \end{enumerate}
+
+\section{Semantik}
+\subsection{Beispiele zur Interpretationsanwendung}
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\item \(f(g(f(a,g(a))),a)^{I_1}\)
+		\begin{align*}
+			\to &f^I((g(f(a,g(a)))^I,(a)^I) \\
+			&= f^I(g^I(f^I(a^I,(g(a))^I)), 0)\\
+			&= f^I(g^I(f^I(0,s(0))), 0)\\
+			&= f^I(g^I(s(0)), 0)\\
+			&= s(s(0))
+		\end{align*}
+		\item \(f(g(a),f(a,a))\) äquiv. zu a)
+		\item \([(\forall X)(p(X)\to \neg q(q(X)))]^{I,Z}\)
+		\begin{align*}
+			&\text{Sei Z eine beliebige Variablenzuordnung bzgl. }I_1 \\
+			\to & = \top &&\text{ gdw } \\
+			& \forall d \in D : [(p(X)\to \neg q (g(X))]^{I,\{X \mapsto d \} Z} = \top &&\text{ gdw }\\
+			& \forall d \in D : [p(X)]^{I,\{X \mapsto d \} Z} \to^* [\neg q (g(X)]^{I,\{X \mapsto d \} Z} = \top &&\text{ gdw}\\
+			& X^{I,\{X \mapsto d \} Z} \in p^I \text{ impl } [\neg q (g(X))]^{I,\{X \mapsto d \} Z} = \top &&\text{ gdw}\\
+			&\text{Angenommen }d\in D\text{ und es gelte } X^{I,\{X \mapsto d \} Z} \in p^I: \\
+			&\text{z.Z.: } [\neg q(g(X))]^{I,\{X \mapsto d \} Z} = \top \\
+			&[X]^{I,\{X \mapsto d \} Z} = X^{I,\{X \mapsto d \} Z} = d \\
+			&p^I = \{0\}\text{, dann muss } d = 0: \\			
+			&[\neg q(g(X))]^{I,\{X \mapsto d \} Z} = \top &&\text{gdw} \\
+			&\neg^*[q(g(X))]^{I,\{X \mapsto d \} Z} = \top &&\text{gdw}\\
+			&[q(g(X))]^{I,\{X \mapsto d \} Z} = \bot &&\text{gdw}\\
+			&[q(X)]^{I,\{X \mapsto d \} Z} \notin q^I \\
+			&= g^I(X^{I,\{X \mapsto d \} Z}) \notin q^I \\
+			&= s(d) \notin q^I\\
+			\Rightarrow &\text{ Offensichtlich falsch, da } q^I = D
+		\end{align*}
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item Bestimmen Sie den Wert von \(g(f(a,g(b)))\) unter der Interpretation \(I_2\)
+		\item Geben Sie einen Term t aus ... an
+		\item Bestimmen Sie (Formelauswertung)
+	\end{enumerate}
+\end{enumerate}
+\subsection{Verschiedene Interpretationen einer Formel}
+\begin{enumerate}
+	\item Interpretation betrachten
+	\item Geben Sie eine Interpretation \(I_2\) an unter ...
+	\item Zeigen Sie, dass die Formel \(F\) nicht allgemeingültig ist
+\end{enumerate}
+\subsection{Existenz einer Herbrand-Interpretation}
+\begin{align*}
+	&I = (D, \circ^I), D = T(F) \text{ ist nicht leer, weil wir voraussetzen, dass minestens }\\ &\text{1 Konstantensymbol in unserer Sprache enthalten ist. Jedem n-stelligen Funktionssymbol}\\ &f \text{ weisen wir folgende Funktion zu:}\\
+	&f^I(t_1, \ldots, t_n) \mapsto f(t_1, \ldots, t_n) \\
+	&p^I = \emptyset \\
+	&\text{z.Z.: }\forall t \in T(F): t^I = t
+\end{align*}
+Beweis über strukturelle Induktion:
+\begin{itemize}
+	\item[IA]
+	\begin{align*}
+		&a \in T(F) \text{ Konstantensymbol} \\
+		&\to a^I = a
+	\end{align*}
+	\item[IH]
+	\begin{align*}
+		\text{Die Aussage gelte } t_1,\ldots, t_n \in T(F)
+	\end{align*}
+	\item[IS]
+	\begin{align*}
+		&\forall f(t_1, \ldots, t_n) \in T(F): \\
+		&[f(t_1, \ldots,t_n)]^I \\
+		&= f^I(t_1^I,\ldots, t_n^I) \\
+		&=^{IH} f^I(t_1, \ldots, t_n) \\
+		&=^{Def I} f(t_1,\ldots , t_n)
+	\end{align*}
+\end{itemize}
