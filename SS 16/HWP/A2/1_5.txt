@@ -1,0 +1,4 @@
+Ein Impedanzwandler ist eine Sonderform des Operationsverstärkers.
+Er passt die Impedanz einer Quelle an die eines Verbrauchers an, indem er den Ausgang
+wieder zum Eingang zurückführt. -> der Eingangswiderstand geht gegen unendlich, der Ausgangswiderstand geht gegen 0.
+Einsatzgebiet: falls eine konstante Spannungsquelle benötigt wird

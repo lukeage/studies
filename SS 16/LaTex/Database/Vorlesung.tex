@@ -322,3 +322,105 @@ Natural Join: \(\bowtie\)
 	\item Right Outer Join: R {\tiny \textifsym{|><|d}} S
 	\item Full Outer Join: R {\tiny \textifsym{d|><|d}} S
 \end{itemize}
+
+\section{SQL}
+\subsection{Einleitung}
+\subsubsection{Bestandteile einer Datenbanksprache}
+\subsubsection{Datenbankanfragesprachen}
+\begin{itemize}
+	\item Typen von Datenbanksprachen
+\begin{itemize}
+	\item Prozedurale Datenbanksprachen
+	\item Deskriptive Datenbanksprachen
+\end{itemize}
+\end{itemize}
+\subsubsection{SQL}
+Structured Query Language (= SQL)
+\begin{itemize}
+	\item Standardisierte Datenbanksprache (durch ISO)
+	\item Erfordernisse einer vollständigen DB-Sprache
+	\begin{itemize}
+		\item Möglichkeitkeiten zur Datendefinition, Anfrage und Datenänderung (Einfügen, Löschen, Modifizieren einer Menge von Tupeln)
+		\item Definition von Sichten, physischen Hilfsmitteln, Integritätsbedingungen
+		\item Zugriffskontrolle im Sinne des Datenschutzes
+		\item Möglichkeiten zur Kopplung mit einer Wirtssprache
+	\end{itemize}
+\end{itemize}
+\subsection{Datendefinitionssprache}
+\subsubsection{SQL Datentypen}
+Standardtypen (z.B. in ORACLE)
+\begin{itemize}
+	\item CHAR
+	\item NUMBER
+	\item VARCHAR
+	\item DATE
+	\item DECIMAL
+\end{itemize}
+Spezielle Typen
+\begin{itemize}
+	\item CLOB
+	\item LONG RAW und BLOB
+	\item ROWID
+	\item XML
+\end{itemize}
+\subsubsection{Auswahl von Datentypen: ABC-Regel}
+Appriopriate (angemessen)\\
+Brief (kurz)\\
+Complete (vollständig)
+\subsubsection{Anlegen einer Relation (16ff)}
+Syntax: CREATE TABLE <Relationen-Name>(<Spaltendefinition>[Spaltendefinition]*) wobei <Spaltendefinition>::=<Attributname><Typ>[NOT NULL]
+\subsubsection{Ändern und Löschen einer Relation}
+Syntax ändern: ALTER TABLE <Relationen-Name> ADD <Attributname> <Typ> \\
+Syntax löschen: DROP TABLE <Relationen-Name>
+\subsubsection{Erzeugen einer Indexstruktur(19)}
+Syntax: CREATE [UNIQUE] INDEX 
+<INDEX-Name>ON <Relationen-Name>\\(<Attributname> [<Ordnung>][, <Attributname> [<Ordnung>]]*) [CLUSTER] \\
+Syntax Index löschen: DROP INDEX <Index-Name>
+\subsubsection{Erzeugen einer Datenbanksicht (21)}
+Syntax: CREATE VIEW <Sicht-Name>[(<Attributname>[, <Attributname>]*)] AS <subquery> \\
+Views zum Umgang mit komplexen und geschachtelten SQL-Abfragen
+\subsection{Datenbankanfragesprache (DQL 25 ff)}
+\subsection{Algebra-Operationen in SQL (32 ff)}
+\subsection{Sprachelemente jenseits der relationalen Algebra}
+\subsubsection{GROUP BY}
+\begin{itemize}
+	\item Auswahl benötigter Spalten (Projektion)
+	\item Formelberechnung
+	\item Sortierung
+	\item Gruppierung
+	\item Aggregation
+\end{itemize}
+\subsubsection{Verfügbare Aggregatfunktionen}
+\begin{itemize}
+	\item SUM(x)
+	\item AVG(x)
+	\item MAX(x)
+	\item MIN(x)
+	\item COUNT(x)
+\end{itemize}
+\subsubsection{Aggregatsfunktionen}
+Transformation, Verdichtung einzelner Tupel zu einem Gesamtwert
+\begin{itemize}
+	\item Funktion COUNT() kann auf eine Menge von Tupeln angewendet werden
+	\item Funktionen SUM(), AVG(), MIN(), MAX() können auf eine Menge von Zahen, die als Spalte einer Relation gegeben ist, anagewandt werden
+	\item Zusätzlich stehen die statistischen Größen STDDEV() und VARIANZ() zur Verfügung
+\end{itemize}
+\subsubsection{Aggregation}
+Syntax: 
+\begin{lstlisting}
+SELECT <group_columns>, <aggregate_expressions>
+FROM <table> [ JOIN <table> ... ]
+[ WHERE <condition> ]
+GROUP BY <group_columns>
+HAVING <aggregate_condition>
+\end{lstlisting}
+Hinweis: Alle Spalten bei SELECT, die nicht in einem Aggregat-Ausdruck (mit SUM(), COUNT(), ...) auftauchen, müssen in der GROUP BY Klausel stehen.
+\subsubsection{Gruppieren und Ordnen}
+\begin{itemize}
+	\item GOUP BY
+	\item HAVING
+	\item ORDER BY
+\end{itemize}
+\subsubsection{Beispiel (44)}
+\subsubsection{Tabellenausdrücke (46 ff)}
+

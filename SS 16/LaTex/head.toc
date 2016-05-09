@@ -190,146 +190,194 @@
 \contentsline {subsubsection}{Korrektheit (79)}{58}
 \contentsline {subsection}{\numberline {3.8.2}Allgemeinste Unifikatoren}{58}
 \contentsline {subsubsection}{Korollar 4.46}{58}
-\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{59}
-\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik - Syntax}{59}
-\contentsline {subsection}{\numberline {4.1.1}Konstruktion von Teiltermen}{59}
-\contentsline {subsection}{\numberline {4.1.2}\IeC {\"U}ber Nachbarn}{60}
-\contentsline {section}{\numberline {4.2}Substitutionen}{61}
-\contentsline {subsection}{\numberline {4.2.1}Substitutionskomposition ist eine Substitution}{61}
-\contentsline {subsection}{\numberline {4.2.2}Eingenschaften von Substitutionen}{61}
-\contentsline {section}{\numberline {4.3}Semantik}{62}
-\contentsline {subsection}{\numberline {4.3.1}Beispiele zur Interpretationsanwendung}{62}
-\contentsline {subsection}{\numberline {4.3.2}Verschiedene Interpretationen einer Formel}{63}
-\contentsline {subsection}{\numberline {4.3.3}Existenz einer Herbrand-Interpretation}{64}
-\contentsline {part}{III\hspace {1em}Computer Architecture}{65}
-\contentsline {chapter}{\numberline {5}Vorlesung}{66}
-\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{66}
-\contentsline {subsection}{\numberline {5.1.1}Big Data}{66}
-\contentsline {section}{\numberline {5.2}Vorlesung}{66}
-\contentsline {subsection}{\numberline {5.2.1}ZIH}{66}
-\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{66}
-\contentsline {section}{\numberline {5.3}VL}{67}
-\contentsline {subsection}{\numberline {5.3.1}Modifiziertes Dreiphasenmodell zum Entwurf eines RS}{67}
-\contentsline {subsubsection}{Befelhlssatzarchitektur}{67}
-\contentsline {subsubsection}{Implementierung}{67}
-\contentsline {subsubsection}{Realisierung}{67}
-\contentsline {subsection}{\numberline {5.3.2}Architektur-Definition (Tanenbaum)}{67}
-\contentsline {subsection}{\numberline {5.3.3}Architektur-Definition (Hennessy/Patterson)}{67}
-\contentsline {subsection}{\numberline {5.3.4}Einflusskomplexe}{68}
-\contentsline {subsection}{\numberline {5.3.5}Entwurf eines Rechnersystems}{69}
-\contentsline {subsection}{\numberline {5.3.6}Architectural Trends}{70}
-\contentsline {subsection}{\numberline {5.3.7}Bemerkungen zum klassischen Digitalrechner}{71}
-\contentsline {subsection}{\numberline {5.3.8}Aufgaben und Ziele der Rechnerarchitektur}{72}
-\contentsline {subsubsection}{Aufgaben}{72}
-\contentsline {subsubsection}{Ziele}{72}
-\contentsline {subsection}{\numberline {5.3.9}Klassifizierung nach Flynn}{72}
-\contentsline {section}{\numberline {5.4}Intel Prozessoren}{73}
-\contentsline {subsection}{\numberline {5.4.1}Ursprung}{73}
-\contentsline {subsection}{\numberline {5.4.2}Intel 80386}{73}
-\contentsline {subsubsection}{IA-32 Register}{73}
-\contentsline {subsubsection}{Stack}{73}
-\contentsline {subsubsection}{Adressierungsarten}{74}
-\contentsline {subsubsection}{Virtueller Speicher}{74}
-\contentsline {subsection}{\numberline {5.4.3}Intel 80486}{74}
-\contentsline {subsubsection}{Cache}{75}
-\contentsline {subsubsection}{Pipelining}{75}
-\contentsline {subsection}{\numberline {5.4.4}Pentium}{75}
-\contentsline {subsection}{\numberline {5.4.5}Pentium MMX}{75}
-\contentsline {subsection}{\numberline {5.4.6}Pentium Pro}{76}
-\contentsline {subsubsection}{RISC Kern}{76}
-\contentsline {subsubsection}{Out-of-Order Execution}{76}
-\contentsline {subsection}{\numberline {5.4.7}Pentium 2 / Pentium 3}{77}
-\contentsline {subsubsection}{Streaming SIMD Extensions (SSE)}{77}
-\contentsline {subsection}{\numberline {5.4.8}Pentium 4}{77}
-\contentsline {subsubsection}{Netburst Mikroarchitektur}{78}
-\contentsline {subsubsection}{SSE Erweiterungen}{78}
-\contentsline {subsection}{\numberline {5.4.9}Pentium M/ Core Solo/ Core Duo}{78}
-\contentsline {subsection}{\numberline {5.4.10}Intel64 Prozessoren (Auswahl)}{79}
-\contentsline {subsubsection}{Befehlssatz}{79}
-\contentsline {subsection}{\numberline {5.4.11}Multicore Prozessoren}{79}
-\contentsline {subsubsection}{Entwicklung des Energieverbrauchs}{80}
-\contentsline {subsection}{\numberline {5.4.12}Intel Core Microarchitektur Core2Duo}{80}
-\contentsline {subsection}{\numberline {5.4.13}Intel Nehalem Mikroarchitektur}{80}
-\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{81}
-\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{81}
-\contentsline {subsection}{\numberline {6.1.1}von-Neumann}{81}
-\contentsline {subsubsection}{Komponenten des v. Neumann Architektur}{81}
-\contentsline {subsection}{\numberline {6.1.2}v.Neumann vs. Harvard}{82}
-\contentsline {subsubsection}{Harvard}{82}
-\contentsline {subsection}{\numberline {6.1.3}Def. von Brooks vs Giloi}{82}
-\contentsline {subsubsection}{Brooks (1962)}{82}
-\contentsline {subsubsection}{Giloi}{82}
-\contentsline {subsection}{\numberline {6.1.4}RA-Definition Begriffe}{83}
-\contentsline {subsubsection}{Begriffskl\IeC {\"a}rung}{84}
-\contentsline {section}{\numberline {6.2}Einf\IeC {\"u}hrung}{84}
-\contentsline {subsection}{\numberline {6.2.1}Moores Law}{84}
-\contentsline {subsubsection}{Was macht man mit diesen Transistoren?}{84}
-\contentsline {subsubsection}{Weshalb wir die Anzahl der Verarbeitungseinheiten nicht weiter erh\IeC {\"o}ht?}{85}
-\contentsline {subsubsection}{Multicore-Prozessoren}{85}
-\contentsline {subsubsection}{L\IeC {\"u}cke zwischen Prozessorleistung und Zugriffszeit auf den DRAM verkleinern}{85}
-\contentsline {subsubsection}{Integration weiterer Baugruppen}{85}
-\contentsline {subsection}{\numberline {6.2.2}Klassifikationen nach Flynn}{86}
-\contentsline {part}{IV\hspace {1em}Database}{87}
-\contentsline {chapter}{\numberline {7}Vorlesung}{88}
-\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{88}
-\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{89}
-\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{89}
-\contentsline {subsubsection}{Phasen der SW-Entwicklung}{89}
-\contentsline {subsubsection}{Phasen des DB-Entwurfs}{89}
-\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{89}
-\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{89}
-\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{90}
-\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{90}
-\contentsline {subsubsection}{Beziehungen / Relationships (22)}{90}
-\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{91}
-\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{91}
-\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{91}
-\contentsline {subsubsection}{Besonderheiten (32 ff.)}{91}
-\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{91}
-\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{91}
-\contentsline {section}{\numberline {7.3}Konzeptueller Entwurf}{91}
-\contentsline {subsection}{\numberline {7.3.1}Grundlagen (5)}{91}
-\contentsline {subsubsection}{Ausgangspunkt}{91}
-\contentsline {subsubsection}{Grundlagen}{91}
-\contentsline {subsection}{\numberline {7.3.2}Prim\IeC {\"a}rschl\IeC {\"u}ssel (8)}{92}
-\contentsline {subsection}{\numberline {7.3.3}ER-Modell Relationales Modell}{92}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Entit\IeC {\"a}ten}{92}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Attributen}{92}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Beziehungen}{92}
-\contentsline {subsubsection}{Abbildung der Vererbung 21}{93}
-\contentsline {subsubsection}{Vergleich der Abbildungsvarianten}{93}
-\contentsline {section}{\numberline {7.4}Relationale Algebra}{93}
-\contentsline {subsection}{\numberline {7.4.1}Motivation}{93}
-\contentsline {subsection}{\numberline {7.4.2}Relationale Algebra}{94}
-\contentsline {subsection}{\numberline {7.4.3}Basisoperationen}{94}
-\contentsline {subsubsection}{Projektion}{94}
-\contentsline {subsubsection}{Projektion in SQL}{94}
-\contentsline {subsubsection}{Selektion(Restriktion)}{94}
-\contentsline {subsubsection}{Selektion in SQL}{95}
-\contentsline {subsubsection}{Weitere Basisoperationen (15)}{95}
-\contentsline {subsubsection}{Beispiele f\IeC {\"u}r Anfragen (18)}{95}
-\contentsline {subsection}{\numberline {7.4.4}Abgeleitete Operationen}{95}
-\contentsline {subsubsection}{Durchschnitt und Division}{95}
-\contentsline {subsubsection}{Nat\IeC {\"u}rlicher Verbund}{95}
-\contentsline {subsubsection}{Theta- und Equi-Join}{96}
-\contentsline {subsubsection}{Verlustfreiheit von Joins}{96}
-\contentsline {subsubsection}{Outer Joins}{96}
-\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{97}
-\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{97}
-\contentsline {subsection}{\numberline {8.1.1}}{97}
-\contentsline {subsection}{\numberline {8.1.2}}{97}
-\contentsline {subsection}{\numberline {8.1.3}}{98}
-\contentsline {subsection}{\numberline {8.1.4}}{98}
-\contentsline {subsection}{\numberline {8.1.5}}{98}
-\contentsline {section}{\numberline {8.2}ER-Modellierung}{98}
-\contentsline {subsection}{\numberline {8.2.1}Prof-Stud}{98}
-\contentsline {subsection}{\numberline {8.2.2}ER-Bahn}{98}
-\contentsline {subsection}{\numberline {8.2.3}ER-Bsp}{100}
-\contentsline {subsection}{\numberline {8.2.4}Vererbungshierarchie - Relationsschema }{100}
-\contentsline {section}{\numberline {8.3}Relationenalgebra}{100}
-\contentsline {subsection}{\numberline {8.3.1}}{102}
-\contentsline {subsection}{\numberline {8.3.2}}{102}
-\contentsline {subsection}{\numberline {8.3.3}}{102}
-\contentsline {subsection}{\numberline {8.3.4}Kreuzprodukt und Divisionsoperator}{103}
-\contentsline {part}{V\hspace {1em}Hardware Laboratory}{104}
-\contentsline {part}{VI\hspace {1em}C++4CG}{105}
+\contentsline {section}{\numberline {3.9}Resolution}{58}
+\contentsline {subsection}{\numberline {3.9.1}Resolutionsregel}{58}
+\contentsline {subsubsection}{Definition 4.47}{58}
+\contentsline {subsubsection}{Definition 4.48 Faktorisierungsregel}{59}
+\contentsline {subsection}{\numberline {3.9.2}Resolutionsableitungen und -widerlegungen}{59}
+\contentsline {subsubsection}{Definition 4.49}{59}
+\contentsline {subsubsection}{Vollst\IeC {\"a}ndigkeit des Resolutionsverfahrens - \IeC {\"U}berblick}{59}
+\contentsline {subsection}{\numberline {3.9.3}Herbrand-Interpretationen}{59}
+\contentsline {subsubsection}{Definition 4.58}{60}
+\contentsline {subsubsection}{Lemma 4.59}{60}
+\contentsline {subsubsection}{Satz 4.60}{60}
+\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{61}
+\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik - Syntax}{61}
+\contentsline {subsection}{\numberline {4.1.1}Konstruktion von Teiltermen}{61}
+\contentsline {subsection}{\numberline {4.1.2}\IeC {\"U}ber Nachbarn}{62}
+\contentsline {section}{\numberline {4.2}Substitutionen}{63}
+\contentsline {subsection}{\numberline {4.2.1}Substitutionskomposition ist eine Substitution}{63}
+\contentsline {subsection}{\numberline {4.2.2}Eingenschaften von Substitutionen}{63}
+\contentsline {section}{\numberline {4.3}Semantik}{64}
+\contentsline {subsection}{\numberline {4.3.1}Beispiele zur Interpretationsanwendung}{64}
+\contentsline {subsection}{\numberline {4.3.2}Verschiedene Interpretationen einer Formel}{65}
+\contentsline {subsection}{\numberline {4.3.3}Existenz einer Herbrand-Interpretation}{66}
+\contentsline {part}{III\hspace {1em}Computer Architecture}{67}
+\contentsline {chapter}{\numberline {5}Vorlesung}{68}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{68}
+\contentsline {subsection}{\numberline {5.1.1}Big Data}{68}
+\contentsline {section}{\numberline {5.2}Vorlesung}{68}
+\contentsline {subsection}{\numberline {5.2.1}ZIH}{68}
+\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{68}
+\contentsline {section}{\numberline {5.3}VL}{69}
+\contentsline {subsection}{\numberline {5.3.1}Modifiziertes Dreiphasenmodell zum Entwurf eines RS}{69}
+\contentsline {subsubsection}{Befelhlssatzarchitektur}{69}
+\contentsline {subsubsection}{Implementierung}{69}
+\contentsline {subsubsection}{Realisierung}{69}
+\contentsline {subsection}{\numberline {5.3.2}Architektur-Definition (Tanenbaum)}{69}
+\contentsline {subsection}{\numberline {5.3.3}Architektur-Definition (Hennessy/Patterson)}{69}
+\contentsline {subsection}{\numberline {5.3.4}Einflusskomplexe}{70}
+\contentsline {subsection}{\numberline {5.3.5}Entwurf eines Rechnersystems}{71}
+\contentsline {subsection}{\numberline {5.3.6}Architectural Trends}{72}
+\contentsline {subsection}{\numberline {5.3.7}Bemerkungen zum klassischen Digitalrechner}{73}
+\contentsline {subsection}{\numberline {5.3.8}Aufgaben und Ziele der Rechnerarchitektur}{74}
+\contentsline {subsubsection}{Aufgaben}{74}
+\contentsline {subsubsection}{Ziele}{74}
+\contentsline {subsection}{\numberline {5.3.9}Klassifizierung nach Flynn}{74}
+\contentsline {section}{\numberline {5.4}Intel Prozessoren}{75}
+\contentsline {subsection}{\numberline {5.4.1}Ursprung}{75}
+\contentsline {subsection}{\numberline {5.4.2}Intel 80386}{75}
+\contentsline {subsubsection}{IA-32 Register}{75}
+\contentsline {subsubsection}{Stack}{75}
+\contentsline {subsubsection}{Adressierungsarten}{76}
+\contentsline {subsubsection}{Virtueller Speicher}{76}
+\contentsline {subsection}{\numberline {5.4.3}Intel 80486}{76}
+\contentsline {subsubsection}{Cache}{77}
+\contentsline {subsubsection}{Pipelining}{77}
+\contentsline {subsection}{\numberline {5.4.4}Pentium}{77}
+\contentsline {subsection}{\numberline {5.4.5}Pentium MMX}{77}
+\contentsline {subsection}{\numberline {5.4.6}Pentium Pro}{78}
+\contentsline {subsubsection}{RISC Kern}{78}
+\contentsline {subsubsection}{Out-of-Order Execution}{78}
+\contentsline {subsection}{\numberline {5.4.7}Pentium 2 / Pentium 3}{79}
+\contentsline {subsubsection}{Streaming SIMD Extensions (SSE)}{79}
+\contentsline {subsection}{\numberline {5.4.8}Pentium 4}{79}
+\contentsline {subsubsection}{Netburst Mikroarchitektur}{80}
+\contentsline {subsubsection}{SSE Erweiterungen}{80}
+\contentsline {subsection}{\numberline {5.4.9}Pentium M/ Core Solo/ Core Duo}{80}
+\contentsline {subsection}{\numberline {5.4.10}Intel64 Prozessoren (Auswahl)}{81}
+\contentsline {subsubsection}{Befehlssatz}{81}
+\contentsline {subsection}{\numberline {5.4.11}Multicore Prozessoren}{81}
+\contentsline {subsubsection}{Entwicklung des Energieverbrauchs}{82}
+\contentsline {subsection}{\numberline {5.4.12}Intel Core Microarchitektur Core2Duo}{82}
+\contentsline {subsection}{\numberline {5.4.13}Intel Nehalem Mikroarchitektur}{82}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{83}
+\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{83}
+\contentsline {subsection}{\numberline {6.1.1}von-Neumann}{83}
+\contentsline {subsubsection}{Komponenten des v. Neumann Architektur}{83}
+\contentsline {subsection}{\numberline {6.1.2}v.Neumann vs. Harvard}{84}
+\contentsline {subsubsection}{Harvard}{84}
+\contentsline {subsection}{\numberline {6.1.3}Def. von Brooks vs Giloi}{84}
+\contentsline {subsubsection}{Brooks (1962)}{84}
+\contentsline {subsubsection}{Giloi}{84}
+\contentsline {subsection}{\numberline {6.1.4}RA-Definition Begriffe}{85}
+\contentsline {subsubsection}{Begriffskl\IeC {\"a}rung}{86}
+\contentsline {section}{\numberline {6.2}Einf\IeC {\"u}hrung}{86}
+\contentsline {subsection}{\numberline {6.2.1}Moores Law}{86}
+\contentsline {subsubsection}{Was macht man mit diesen Transistoren?}{86}
+\contentsline {subsubsection}{Weshalb wir die Anzahl der Verarbeitungseinheiten nicht weiter erh\IeC {\"o}ht?}{87}
+\contentsline {subsubsection}{Multicore-Prozessoren}{87}
+\contentsline {subsubsection}{L\IeC {\"u}cke zwischen Prozessorleistung und Zugriffszeit auf den DRAM verkleinern}{87}
+\contentsline {subsubsection}{Integration weiterer Baugruppen}{87}
+\contentsline {subsection}{\numberline {6.2.2}Klassifikationen nach Flynn}{88}
+\contentsline {subsection}{\numberline {6.2.3}MMX, SSE, AVX}{89}
+\contentsline {section}{\numberline {6.3}Prozessoren / Pipelifting}{89}
+\contentsline {subsection}{\numberline {6.3.1}Adressierungsarten}{89}
+\contentsline {subsection}{\numberline {6.3.2}scale-potenz}{90}
+\contentsline {subsection}{\numberline {6.3.3}Speedup}{91}
+\contentsline {subsection}{\numberline {6.3.4}}{91}
+\contentsline {part}{IV\hspace {1em}Database}{93}
+\contentsline {chapter}{\numberline {7}Vorlesung}{94}
+\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{94}
+\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{95}
+\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{95}
+\contentsline {subsubsection}{Phasen der SW-Entwicklung}{95}
+\contentsline {subsubsection}{Phasen des DB-Entwurfs}{95}
+\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{95}
+\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{95}
+\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{96}
+\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{96}
+\contentsline {subsubsection}{Beziehungen / Relationships (22)}{96}
+\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{97}
+\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{97}
+\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{97}
+\contentsline {subsubsection}{Besonderheiten (32 ff.)}{97}
+\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{97}
+\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{97}
+\contentsline {section}{\numberline {7.3}Konzeptueller Entwurf}{97}
+\contentsline {subsection}{\numberline {7.3.1}Grundlagen (5)}{97}
+\contentsline {subsubsection}{Ausgangspunkt}{97}
+\contentsline {subsubsection}{Grundlagen}{97}
+\contentsline {subsection}{\numberline {7.3.2}Prim\IeC {\"a}rschl\IeC {\"u}ssel (8)}{98}
+\contentsline {subsection}{\numberline {7.3.3}ER-Modell Relationales Modell}{98}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Entit\IeC {\"a}ten}{98}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Attributen}{98}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Beziehungen}{98}
+\contentsline {subsubsection}{Abbildung der Vererbung 21}{99}
+\contentsline {subsubsection}{Vergleich der Abbildungsvarianten}{99}
+\contentsline {section}{\numberline {7.4}Relationale Algebra}{99}
+\contentsline {subsection}{\numberline {7.4.1}Motivation}{99}
+\contentsline {subsection}{\numberline {7.4.2}Relationale Algebra}{100}
+\contentsline {subsection}{\numberline {7.4.3}Basisoperationen}{100}
+\contentsline {subsubsection}{Projektion}{100}
+\contentsline {subsubsection}{Projektion in SQL}{100}
+\contentsline {subsubsection}{Selektion(Restriktion)}{100}
+\contentsline {subsubsection}{Selektion in SQL}{101}
+\contentsline {subsubsection}{Weitere Basisoperationen (15)}{101}
+\contentsline {subsubsection}{Beispiele f\IeC {\"u}r Anfragen (18)}{101}
+\contentsline {subsection}{\numberline {7.4.4}Abgeleitete Operationen}{101}
+\contentsline {subsubsection}{Durchschnitt und Division}{101}
+\contentsline {subsubsection}{Nat\IeC {\"u}rlicher Verbund}{101}
+\contentsline {subsubsection}{Theta- und Equi-Join}{102}
+\contentsline {subsubsection}{Verlustfreiheit von Joins}{102}
+\contentsline {subsubsection}{Outer Joins}{102}
+\contentsline {section}{\numberline {7.5}SQL}{102}
+\contentsline {subsection}{\numberline {7.5.1}Einleitung}{102}
+\contentsline {subsubsection}{Bestandteile einer Datenbanksprache}{102}
+\contentsline {subsubsection}{Datenbankanfragesprachen}{102}
+\contentsline {subsubsection}{SQL}{103}
+\contentsline {subsection}{\numberline {7.5.2}Datendefinitionssprache}{103}
+\contentsline {subsubsection}{SQL Datentypen}{103}
+\contentsline {subsubsection}{Auswahl von Datentypen: ABC-Regel}{103}
+\contentsline {subsubsection}{Anlegen einer Relation (16ff)}{104}
+\contentsline {subsubsection}{\IeC {\"A}ndern und L\IeC {\"o}schen einer Relation}{104}
+\contentsline {subsubsection}{Erzeugen einer Indexstruktur(19)}{104}
+\contentsline {subsubsection}{Erzeugen einer Datenbanksicht (21)}{104}
+\contentsline {subsection}{\numberline {7.5.3}Datenbankanfragesprache (DQL 25 ff)}{104}
+\contentsline {subsection}{\numberline {7.5.4}Algebra-Operationen in SQL (32 ff)}{104}
+\contentsline {subsection}{\numberline {7.5.5}Sprachelemente jenseits der relationalen Algebra}{104}
+\contentsline {subsubsection}{GROUP BY}{104}
+\contentsline {subsubsection}{Verf\IeC {\"u}gbare Aggregatfunktionen}{104}
+\contentsline {subsubsection}{Aggregatsfunktionen}{105}
+\contentsline {subsubsection}{Aggregation}{105}
+\contentsline {subsubsection}{Gruppieren und Ordnen}{105}
+\contentsline {subsubsection}{Beispiel (44)}{105}
+\contentsline {subsubsection}{Tabellenausdr\IeC {\"u}cke (46 ff)}{105}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{106}
+\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{106}
+\contentsline {subsection}{\numberline {8.1.1}}{106}
+\contentsline {subsection}{\numberline {8.1.2}}{106}
+\contentsline {subsection}{\numberline {8.1.3}}{107}
+\contentsline {subsection}{\numberline {8.1.4}}{107}
+\contentsline {subsection}{\numberline {8.1.5}}{107}
+\contentsline {section}{\numberline {8.2}ER-Modellierung}{107}
+\contentsline {subsection}{\numberline {8.2.1}Prof-Stud}{107}
+\contentsline {subsection}{\numberline {8.2.2}ER-Bahn}{107}
+\contentsline {subsection}{\numberline {8.2.3}ER-Bsp}{109}
+\contentsline {subsection}{\numberline {8.2.4}Vererbungshierarchie - Relationsschema }{109}
+\contentsline {section}{\numberline {8.3}Relationenalgebra}{109}
+\contentsline {subsection}{\numberline {8.3.1}}{111}
+\contentsline {subsection}{\numberline {8.3.2}}{111}
+\contentsline {subsection}{\numberline {8.3.3}}{111}
+\contentsline {subsection}{\numberline {8.3.4}Kreuzprodukt und Divisionsoperator}{112}
+\contentsline {section}{\numberline {8.4}SQL}{112}
+\contentsline {subsection}{\numberline {8.4.1}Befehle in SQL}{112}
+\contentsline {subsubsection}{1}{112}
+\contentsline {subsubsection}{2}{112}
+\contentsline {subsubsection}{3}{112}
+\contentsline {subsubsection}{4}{113}
+\contentsline {subsubsection}{5}{113}
+\contentsline {subsubsection}{8}{113}
+\contentsline {subsubsection}{9}{113}
+\contentsline {part}{V\hspace {1em}Hardware Laboratory}{114}
+\contentsline {part}{VI\hspace {1em}C++4CG}{115}

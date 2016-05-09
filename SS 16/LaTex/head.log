@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  2 MAY 2016 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.4.2)  9 MAY 2016 14:26
 entering extended mode
 **./head.tex
 (head.tex
@@ -821,59 +821,86 @@ Package pdftex.def Info: ./Rechnernetze/Images/4_5abc.png used on input line 48
 Kapitel 3.
 [44
 
-] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
-(TheoreticalInformaticAndLogic/Übung.tex [58]
-Kapitel 4.
-[59
+] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58]
+Underfull \hbox (badness 10000) in paragraph at lines 438--441
 
-] [60] [61] [62] [63]) [64] [65
+ []
+
+
+Overfull \hbox (23.89824pt too wide) in paragraph at lines 457--457
+[] 
+ []
+
+
+Overfull \hbox (16.4187pt too wide) in paragraph at lines 459--462
+\T1/cmr/m/n/12 Wenn ei-ne In-ter-pre-ta-ti-on $\OML/cmm/m/it/12 I$ \T1/cmr/m/n/
+12 Mo-dell f�r einen pr�-di-ka-ten-lo-gi-schen Satz $\OML/cmm/m/it/12 F$ \T1/cm
+r/m/n/12 in Skolem-Normalform
+ []
+
+[59]) (TheoreticalInformaticAndLogic/Übung.tex [60]
+Kapitel 4.
+[61
+
+] [62] [63] [64] [65]) [66] [67
 
 ] (ComputerArchitecture/Vorlesung.tex
 Kapitel 5.
-[66
+[68
 
-] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79])
-(ComputerArchitecture/Übung.tex [80]
+] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81])
+(ComputerArchitecture/Übung.tex [82]
 Kapitel 6.
-[81
+[83
 
-] [82] [83] [84] [85]) [86] [87
+] [84] [85] [86] [87] [88] [89] [90]
+Underfull \hbox (badness 10000) in paragraph at lines 329--331
+
+ []
+
+[91]) [92] [93
 
 ] (Database/Vorlesung.tex
 Kapitel 7.
-[88
+[94
 
-] [89] [90] [91] [92] [93] [94] [95]
+] [95] [96] [97] [98] [99] [100] [101]
 LaTeX Font Info:    Try loading font information for U+ifsym on input line 321.
 
 
-(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\ifsym\uifsym.fd))
-(Database/Übung.tex [96]
-Kapitel 8.
-[97
+(C:\Users\Lukas\AppData\Roaming\MiKTeX\2.9\tex\latex\ifsym\uifsym.fd) [102]
+[103]
+Overfull \hbox (8.53612pt too wide) in paragraph at lines 380--382
+\T1/cmr/m/n/12 Syntax: CREA-TE VIEW <Sicht-Name>[(<Attributname>[, <At-tri-but-
+na-me>]*)] AS <sub-
+ []
 
-] <./Database/Images/2_1.png, id=346, 722.7pt x 406.51875pt>
+[104]) (Database/Übung.tex [105]
+Kapitel 8.
+[106
+
+] <./Database/Images/2_1.png, id=374, 722.7pt x 406.51875pt>
 File: ./Database/Images/2_1.png Graphic file (type png)
 
 <use ./Database/Images/2_1.png>
 Package pdftex.def Info: ./Database/Images/2_1.png used on input line 60.
 (pdftex.def)             Requested size: 455.24408pt x 256.07715pt.
 
-<./Database/Images/2_2.png, id=347, 676.02562pt x 429.85594pt>
+<./Database/Images/2_2.png, id=375, 676.02562pt x 429.85594pt>
 File: ./Database/Images/2_2.png Graphic file (type png)
 
 <use ./Database/Images/2_2.png>
 Package pdftex.def Info: ./Database/Images/2_2.png used on input line 69.
 (pdftex.def)             Requested size: 455.24408pt x 289.47777pt.
 
-<./Database/Images/2_3a.png, id=348, 470.50781pt x 232.61906pt>
+<./Database/Images/2_3a.png, id=376, 470.50781pt x 232.61906pt>
 File: ./Database/Images/2_3a.png Graphic file (type png)
 
 <use ./Database/Images/2_3a.png>
 Package pdftex.def Info: ./Database/Images/2_3a.png used on input line 77.
 (pdftex.def)             Requested size: 455.24408pt x 225.07584pt.
- [98] [99 <./Database/Images/2_1.png> <./Database/Images/2_2.png>]
-<./Database/Images/2_4.png, id=356, 402.75468pt x 406.51875pt>
+ [107] [108 <./Database/Images/2_1.png> <./Database/Images/2_2.png>]
+<./Database/Images/2_4.png, id=385, 402.75468pt x 406.51875pt>
 File: ./Database/Images/2_4.png Graphic file (type png)
 
 <use ./Database/Images/2_4.png>
@@ -884,7 +911,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--113
 
  []
 
-[100 <./Database/Images/2_3a.png>] [101 <./Database/Images/2_4.png>]
+[109 <./Database/Images/2_3a.png>] [110 <./Database/Images/2_4.png>]
 Overfull \hbox (58.37485pt too wide) in paragraph at lines 135--142
 []\T1/cmr/m/n/12 R \U/ifsym/m/n/6 |><| \T1/cmr/m/n/12 S [] 
  []
@@ -899,24 +926,24 @@ Overfull \hbox (64.37485pt too wide) in paragraph at lines 150--159
 []\T1/cmr/m/n/12 R \U/ifsym/m/n/6 d|><|d \T1/cmr/m/n/12 S [] 
  []
 
-[102]
+[111]
 Overfull \hbox (58.37485pt too wide) in paragraph at lines 159--166
 []\T1/cmr/m/n/12 R \U/ifsym/m/n/6 |>< \T1/cmr/m/n/12 S [] 
  []
 
-) [103] [104
+[112]) [113] [114
 
-] [105
+] [115
 
 ] (head.aux) ) 
 Here is how much of TeX's memory you used:
- 7020 strings out of 493634
- 89855 string characters out of 3143745
+ 7094 strings out of 493634
+ 90651 string characters out of 3143745
  188542 words of memory out of 3000000
- 10203 multiletter control sequences out of 15000+200000
+ 10277 multiletter control sequences out of 15000+200000
  23301 words of font info for 65 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,14n,49p,657b,1067s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,14n,49p,657b,1565s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
 ifsym\dpi360\ifsym10.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
 ur\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lukas\AppData\Local\MiKTeX\2.9\fon
@@ -941,9 +968,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
 type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on head.pdf (106 pages, 691875 bytes).
+Output written on head.pdf (116 pages, 714803 bytes).
 PDF statistics:
- 874 PDF objects out of 1000 (max. 8388607)
+ 919 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

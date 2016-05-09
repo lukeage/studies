@@ -406,3 +406,65 @@ Ein allgemeinster Unifikator \(\theta\) für \(U\), wenn \(U\) lösbar ist, oder
 \subsection{Allgemeinste Unifikatoren}
 \subsubsection{Korollar 4.46}
 Sei \(U\) ein Unifikationsproblem und \(\sigma\) sowie \(\theta\) allgemeinste Unifikatoren für U. Dann gilt \(\sigma \sim \theta \to \) Allgemeinste Unifikatoren sind also bis auf Variantenbildung eindeutig \(\to\) Man spricht deshalb häufig auch von \textbf{dem} mgu zweier Terme
+
+\section{Resolution}
+\subsection{Resolutionsregel}
+\subsubsection{Definition 4.47}
+Gegeben seien die prädikatenlogischen Klauseln
+\begin{align*}
+fill
+\end{align*}
+mit \(k,m,n \ge 0\). Wenn \(\{s_i= t_i| 1 \le i \le k\}\) mit einem allgemeinsten Unifikator \(\sigma\) unifizierbar ist, dann nennen wir 
+\begin{align*}
+	C = \{L_1, \ldots, L_n\}\sigma\}
+\end{align*}
+eine Resolvente \(C_1\) und \(C_2\) bezüglich \(p(s_1, \ldots , s_k)\) und \(\neg p (t_1, \ldots , t_k)\) \\
+fill
+\subsubsection{Definition 4.48 Faktorisierungsregel}
+Gegeben sei die prädikatenlogische Klausel:
+\begin{align*}
+ C = fill
+\end{align*}
+beziehungsweise
+\begin{align*}
+C = fill
+\end{align*}
+mit \(k,m \ge 0 \) ... fill
+\subsection{Resolutionsableitungen und -widerlegungen}
+\subsubsection{Definition 4.49}
+Sei \(F = \forall <C_1, \ldots , C_n>\) eine prädikatenlogische Formel in Klauselform, wobei \(C_i, 1 \le i \le n\), Klauseln sind.
+\begin{align*}
+	fill
+\end{align*}
+\textbf{Beachte}\\
+\begin{itemize}
+\item Eine Resolvente kann aus zwei Varianten einer Klausel gebildet werden.
+\item fill
+\item fill
+\item fill
+\end{itemize}
+Eine Resolvente kann aus zwei Varianten einer Klausel gebildet werden.
+\subsubsection{Vollständigkeit des Resolutionsverfahrens - Überblick}
+\begin{align*}
+\{F_1, \ldots ,F_n\} \vDash F &&\text{Satz 3.17 erweitert}\\
+fill
+\end{align*}
+\subsection{Herbrand-Interpretationen}
+\begin{align*}
+\text{Seien} F = \{s/0, f/1\}, R = \{p/1, q/1, r/1\}, X,Y \in V\\
+&G = (\forall X)(\forall Y)<[p(X), q(X)], [r(f(Y))]>\\
+fill
+\end{align*}
+\subsubsection{Definition 4.58} Sei \(I = (D, \cdot ^I)\) eine Interpretation. Eine zu \(I\) ... fill
+\subsubsection{Lemma 4.59} Wenn eine Interpretation \(I\) Modell für einen prädikatenlogischen Satz \(F\) in Skolem-Normalform ist, dann ist auch jede zu \(I\) korrespondierende Herbrand-Interpretation ein Modell für \(F\)\\
+\textbf{Folgerung} Die reellen Zahlen lassen sich in der Prädikatenlogik nicht charakterisieren
+\begin{itemize}
+	\item Angenommen, die reellen Zahlen liesen sich charakterisieren
+	\item Dann gibt es Satz f, so dass für alle \(I = (D,\cdot ^I)\) gilt: wenn \(F^I = \top \) dann ist \(D\) überabzählbar
+	\item Wähle I mit \(F^I = \top \) 
+	\item Sei J korrespondierende Herbrand-Interpretation
+	\item fill
+\end{itemize}
+\subsubsection{Satz 4.60}
+Eine prädkatenlogischer Satz F in Skolem-Normalform ist unerfüllbar gdw F wird von jeder Hebrand-Interpretation auf \(\bot\) abgebildet \\
+\textbf{Beweis} siehe Folien

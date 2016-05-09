@@ -210,3 +210,147 @@ z.B.: GPU (Graphic Processing Unit)
 	
 	\item Flynssches Klassifikationsschema
 \end{enumerate}
+\subsection{MMX, SSE, AVX}
+\begin{itemize}
+	\item MMX Mulit Media Extensions
+	\begin{itemize}
+		\item 1996 Pentium
+		\item 64-Bit Register
+		\item für Integer Verarbeitung
+		\item Flynn SIMD
+	\end{itemize}
+	\item SSE Steuerung SIMD Extensions
+	\begin{itemize}
+		\item 1999 Pentium 3
+		\item SSE 2 2001 Pentium 4
+		\item MIMX mit eingebunden
+		\item Flynn SIMD
+	\end{itemize}
+	\item Advanced Vector Extensions
+	\begin{itemize}
+		\item 2011 Sandy-Bridge
+		\item 256Bit Register (für Floating-Point-Ops)
+		\item 8*64Bit
+		\item 16*32Bit
+	\end{itemize}
+	\item AVX 2
+	\begin{itemize}
+		\item 256Bit auch für Integer-Befehle
+		\item Unterstützung FMA (Fused Multiply Add)
+	\end{itemize}
+	\item AVX 512
+	\begin{itemize}
+		\item Ende 2015 
+		\item 512Bit Register
+	\end{itemize}
+\end{itemize}
+
+\section{Prozessoren / Pipelifting}
+\subsection{Adressierungsarten}
+\begin{enumerate}
+	\item Immediate Operand
+	\begin{itemize}
+		\item Operand stehlt als Konstante im Befehl: \\
+		z.B. MOVE B R3, hash32\\
+		oder Add R1, hash17 \(\to\) Addiert den Wert 17 zu Inhalt von R1
+	\end{itemize}
+	\item Immediate Adresse
+	\begin{itemize}
+		\item Speicheradressierung direkt: \\
+		Effektiver: Adresse steht als absolute Adresse im Befehl \\
+		Operand steht im Speicher:\\
+		z.B.: Add 0xFFC0: hash323 
+	\end{itemize}
+	\item Register Direkt
+	\begin{itemize}
+		\item Adresse steht als kurze Registeradresse im Befehl 
+		z.B.: 3Bit für IA 32, Operand steht im Register: \\
+		z.B.: MOVE W SP, R0 transportiert den Wortinhalt von R0 in das Stack-Pointer-Register SP
+	\end{itemize}
+	\item Register Indirekt
+	\begin{itemize}
+		\item Effektive Adresse steht im Register
+		\item Adressierung erfolgt indirekt über Registerinhalt
+		\item Adressierung wird durch runde Klammern mit der Bedeutung "Inhalt von Register"
+		\item z.B.: MOVE H R1,(R0)  transportiert einen 16Bit Speicheroperanden; diesen Adressen in R0 steht nach R1
+	\end{itemize}
+	\item Register Indirekt mit Displacement
+	\begin{itemize}
+		\item Die im Register stehende Adresse wirkt als Basisadresse und wird nicht verändert (steht in Klammer) 
+		\item z.B.: MOVE H R2, hash4 (R3)
+		\item transportiert einen 16Bit Speicheroperanden nach R2
+		\item Basisadresse steht in R3
+		\item Adresse des Speicheroperanden = Basisadr. + Displacement (hash4)
+	\end{itemize}
+\end{enumerate}
+\subsection{scale-potenz}
+scaled indexed addressing mode \\
+img siehe Übungsblatt
+\begin{itemize}
+	\item Basisadresse + Displacement + Index*Scale = Adresse des Operanden
+	\item z.B. Im R1 steht 1000 im R2 steht Index 4:\\
+	MOVE R0, hash8(R1)(R2 * hash4) \(\to\) mit R0 von Adresse 1024\\
+	MOVE R0, hash1000(R1)(R2 * hash2) \(\to\) mit R0 von adresse 4000\\
+	MOVE R0, hash1000(R2*hash8) \(\to\) mit R0 von Adresse 1032
+	\item Weshalb nur eine 2er Potenz für scale?\\
+	\(\to\) * kein universeller Multiplizierer: mach nur Verschiebung
+\end{itemize}
+\subsection{Speedup}
+z.B. Intel 80486 Pipeline
+\begin{itemize}
+	\item Fetch Instruction FI
+	\item Main instruction Decode D1
+	\begin{itemize}
+		\item Befehlslänge einstellen?
+		\item Operanden decodieren
+	\end{itemize}
+	\item Secondary instruction Decode D2
+	\item execution EX
+	\item Write Back WB
+\end{itemize}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|}
+\hline
+	&1&2&3&4&5&6&7&8&9\\
+\hline
+1 & IF & D1 & D2 & EX & WB &&&&\\
+\hline
+2 && IF & D1 & D2 & EX & WB &&& \\
+\hline
+3 &&& IF & D1 & D2 & EX & WB && \\
+\hline
+4 &&&& IF & D1 & D2 & EX & WB &\\
+\hline
+5 &&&&& IF & D1 & D2 & EX & WB \\
+\hline
+\end{tabularx}
+
+\bigskip
+
+k-1 Zeitschritte Einlaufphase \\
+ab k pro Takt 1 Ergebnis (n-Mal)\\
+\begin{align*}
+	T_{Pipe} &= k-1 +n \\
+	&= 4 + 30 \\
+	&= 34 \\
+	S_{P_{Pipe}} &= \frac{T_1}{T_{P_{Pipe}}}\\
+	&= \frac{150}{34} \\
+	&= 4,41 \\
+\end{align*}
+\subsection{}
+\begin{enumerate}
+	\item
+	\begin{itemize}
+		\item IPS : Instruction per Second
+		\begin{itemize}
+			\item gibt an wie viele Maschinenbefehle pro Sekunde ausgeführt werden können (Integer, Floating Point, load/store, Sprung-Befehle, ...)
+			\item Vorteile: einfache Bestimmung da keine Trennung der Befehle notwendig
+			\item Nachteile: nicht für alles zu gebrauchen z.B. Rechnen arbeitet vorweigend mit Floating Point Operationen double Precision, Einflüsse durch RISC \(\leftrightarrow\) CISC: mehr Instruktionen als CISC bei gleichem Programm; Compilerabhängiger Programmablauf, ..., Art der Operationen: 64-Bit \(\leftrightarrow\) 16-Bit
+		\end{itemize}
+		\item IOPS : Integer Operation Per Second
+		\begin{itemize}
+			\item Vorteile: hohe Relevanz für Anwendungen die vorwiegend mit Integer Operationen arbeiten z.B. Bitverarbeitung
+			\item Nachteile: für Rechnen nicht so interessant, da meistens FP - Operationen
+			\item Einflüsse: Compiler, Genauigketi und Art der Operation (32Bit Int Div \(\leftrightarrow\) 16Bit Integer Div), CISC - RISC
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}

@@ -1,0 +1,3 @@
+Der Operationsverstärker sorgt selbst dafür, dass an seinem Eingang (wie bei normaler Masse) 
+die Differenzspannung auf Null gehalten wird ohne an der Masse angeschlossen zu sein.
+-> virtuelle Masse

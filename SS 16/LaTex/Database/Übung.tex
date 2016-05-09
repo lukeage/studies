@@ -164,6 +164,7 @@ dennis.koppenhagen@tu-dresden.de \\
 	2	&3	&3	&2 \\
 	\end{tabularx}
 \end{enumerate}
+
 \subsection{Kreuzprodukt und Divisionsoperator}
 \begin{align*}
 	&\Pi_A(R) &&= \{X,Y,Z\} \\
@@ -172,3 +173,54 @@ dennis.koppenhagen@tu-dresden.de \\
 	&\Pi_A((\Pi_A (R)xS)-R) &&= \{X\} \\
 	&\Pi_A(R) - \Pi_A (\ldots ) &&= \{Y,Z\}
 \end{align*}
+
+\section{SQL}
+\subsection{Befehle in SQL}
+\subsubsection{1}
+\begin{lstlisting}
+SELECT name,population
+FROM city
+ORDER BY population DESC
+\end{lstlisting}
+\subsubsection{2}
+\begin{lstlisting}
+SELECT city
+FROM located
+WHERE river IS NOT NULL
+AND lake IS NOT NULL
+\end{lstlisting}
+\subsubsection{3}
+\begin{lstlisting}
+SELECT name,population
+FROM city
+WHERE country = 'D'
+ORDER BY population DESC
+\end{lstlisting}
+\subsubsection{4}
+\begin{lstlisting}
+SELECT DISTINCT l.name 
+FROM language l 
+INNER JOIN encompasses e ON l.country = e.country
+WHERE e.continent = 'Europe'
+\end{lstlisting}
+\subsubsection{5}
+\begin{lstlisting}
+fill
+\end{lstlisting}
+\subsubsection{8}
+\begin{lstlisting}
+SELECT DISTINCT c.name 
+FROM country c
+INNER JOIN city s ON s.country = c.code
+INNER JOIN city hs ON c.capital = hs.name
+WHERE s.population > hs.population
+\end{lstlisting}
+\subsubsection{9}
+\begin{lstlisting}
+SELECT c.name, SUM(s.population)
+FROM city s
+INNER JOIN country c ON s.country = c.code
+WHERE s.population > 1000000
+GROUP BY c.name
+ORDER BY 2 DESC
+\end{lstlisting}
