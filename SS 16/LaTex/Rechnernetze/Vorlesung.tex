@@ -797,3 +797,80 @@ Ziele (3.18):
 		\item Reichweite: ca. 80 - 160 km bei 100 Gbit/s; bis zu 1 TBit/s theoretisch möglich
 	\end{itemize}
 \end{itemize}
+
+\section{Sicherungsschicht}
+\subsection{Sicherungsschicht}
+\subsubsection{Aufgaben}
+Kommunikation zwischen Partnern im gleichen Subnetz (z.B. via Ethernet) bzw. über Punkt-zu-Punkt-Verbindung (z.B. PPP - Point-to-Point-Protocol bei Internet-Zugang oder via VPN - Virtuelles Privates Netz)
+\begin{itemize}
+\item Bildung von Übertragungsrahmen zur Kontrolle von Prüfsummen
+\item Fehlerbehandlung
+\item Flusskontrolle zur Überlastvermeidung
+\item Verbindungsverwaltung
+\item Interface für die Vermittlungsschicht
+\end{itemize}
+\subsubsection{Zuverlässigketisebenen}
+\begin{itemize}
+	\item Unbestätigter verbindungsloser Dienst
+	\item Bestätigter verbindungsloser Dienst
+	\item Bestätigter verbindungsorientierter Dienst
+	\begin{itemize}
+		\item Aufbau einer Verbindung vor der Übertragung
+		\item nummerierte Rahmen
+		\item Garantie, dass der Rahmen ankommt
+		\item Reihenfolge wird beibehalten
+		\item genau einmaliger Empfang möglich
+	\end{itemize}
+\end{itemize}
+\subsubsection{Rahmenbildung}
+Realisierung durch:
+\begin{itemize}
+	\item Bytezahl am Anfang des Rahmens
+	\item Rahmenbegrenzer auf Sicherungssschicht (Flagbytes, Flagbits)
+	\item Rahmenbegrenzer auf der Bitübertragungsschicht
+	\item kombinierte Verfahren, z.B. Ethernet und WiFi: Präambel als Anfang des Rahmens + Bytezahl für die Länge des Rahmens
+\end{itemize}
+Problem bei Rahmenbegrenzern: Bitmuster des Rahmenbegrenzers muss auch im Payload zulässig sein: Byte-/Bit-Stuffing
+\subsubsection{Bytezahl (6)}
+\subsubsection{Bitstuffing}
+Ablauf: Füge nach jeder fünften aufeinanderfolgenden 1 in den Nutzdaten jeweils eine 0 ein und entferne diese wieder beim Empfänger \(\to\) eindeutige Rahmenbegrenzung (Beispiel (7))
+\subsection{Fehlerbehandlung}
+Probleme: Verfälschungen durch thermisches Rauschen, Impulsstärungen, frequenzabhängige Verzerrung etc. \(\to\) Einzelbitfehler und Bündelfehler\\
+Hamming Distanz d: Minimale Anzahl unterschiedlicher Bits zwischen zwei Quellcodewörtern; hier d = 3 Anzahl erkennbarer Fehler: d-1, Anzahl korrigierbarer Fehler: (d-1)/2
+\subsubsection{Fehlererkennende Codes}
+Paritätsicherung (9)
+\subsubsection{Cydlic Redundancy Check - CRC}
+Funktionsweise und Beispiel (10 ff)
+\subsection{Protokolle}
+\subsubsection{Stop-and-Wait-Protokoll(14)}
+\subsubsection{Protokoll mit Fehlerbehandlung}
+Ablauf:
+\begin{itemize}
+	\item Wiederhole verlorengegangene nachrichten nach Timeout, sonst sende nächsten Frame
+	\item Ignoriere entstende Duplikate \(\to\) Laufnummern 0/1 Erkennung
+\end{itemize}
+\subsection{Schnittstellenereignistypen}
+\subsubsection{Primitive des Dienstes}
+\begin{itemize}
+	\item Dienstname
+	\item Dienstpritivname
+	\item Grundform der Dienstleistung
+\end{itemize}
+\subsubsection{Dienstbeschreibung durch Zustandsdiagramme (18ff)}
+\subsubsection{Protokollbeschreibung (23ff)}
+\subsubsection{Point-to-Point Protocol PPP}
+\begin{itemize}
+\item Protokoll der Sicherungsschicht für Interet-Zugang, z.B. über Modem, ISDN, xDSL, ...
+\item Protokoll der sicherungsschicht für Packet over SONET und ADSL
+\item Network Control Protocol NCP
+\item Link Control Protocol LCP
+\item Funktionsweise basierend auf HDLC
+\item Ablauf (29)
+\end{itemize}
+\subsubsection{ADSL}
+\begin{itemize}
+\item Überblick und Protokollstapel: verbindet Privathaushalte über bestehende Telefonleitung mit dem Internet
+\item ATM (Asynchronous Transfer Mode)
+\item AAL5
+\item AAL Rahmen (31)
+\end{itemize}

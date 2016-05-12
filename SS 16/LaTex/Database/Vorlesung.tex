@@ -422,5 +422,121 @@ Hinweis: Alle Spalten bei SELECT, die nicht in einem Aggregat-Ausdruck (mit SUM(
 	\item ORDER BY
 \end{itemize}
 \subsubsection{Beispiel (44)}
-\subsubsection{Tabellenausdrücke (46 ff)}
 
+
+\section{SQL}
+\subsection{Innere und äußere Verbundoperationen}
+\subsubsection{Alternative Schreibweise zur "normalen" Verbundoperation}
+\begin{lstlisting}
+SELECT * 
+FROM x,y
+WHERE x.z = y.z
+
+SELECT *
+FROM x INNER JOIN y ON x.z = y.z
+\end{lstlisting}
+\subsubsection{Outer-Joins}
+Unterschieden werden rechte, linke und vollständige OUTER JOINS
+\subsection{Tabellenausdrücke}
+In der FROM Klausel kann ein beliebiger SELECT Ausdruck stehen
+\subsubsection{WITH}
+Muss mehrmals auf die gleiche geschachtelte Tabelle zugegriffen werden, so kann die Tabellendefinition mit WITH ausgeklammert werden
+\begin{lstlisting}
+WITH TempTab (x,y,z) AS (SELECT x,y,z FROM ...)
+
+SELECT ...
+FROM TempTab t1, TempTab t2
+WHERE ...
+\end{lstlisting}
+\subsubsection{Alias-Namen für Tabellen}
+Bennenung von Relationen
+\begin{itemize}
+	\item Anfragen sollen auch Relationen mit sich selbst verknüpfen können
+	\item Dafür notwendig die Benennung von Relationen \(\to\) Alias-Namen
+\end{itemize}
+Beispiel
+\begin{lstlisting}
+SELECT K1.KName, K1.KAdr
+FROM Kunde K1, Kunde K2
+WHERE K1.Kto < K2.Kto
+AND K2.KName = 'Huber'
+\end{lstlisting}
+\subsubsection{Guter SQL-Stil}
+\begin{itemize}
+	\item Einheiten L Einheitenname: l-name
+	\item Bennenung von DB-Objekten
+	\begin{itemize}
+		\item Tabelle: Einheiten
+		\item Index: Einheiten-idx
+		\item Primärschlüssel ...pk
+		\item Fremdschlüssel: ...sk
+	\end{itemize}
+\end{itemize}
+\subsection{Geschachtelte Anfragen}
+\subsubsection{Prinzip der geschachtelten Anfragen}
+\begin{lstlisting}
+SELECT DISTINCT LName
+FROM Lieferant
+WHERE Ware IN (SELECT Ware FROM Auftrag WHERE KNAME = 'Huber'
+\end{lstlisting}
+Welche Lieferanten liefern alles, was Huber estellt hat?
+\begin{lstlisting}
+SELECT DISTINCT LName
+FROM Lieferant L
+WHERE NOT EXISTS 
+	(SELECT Ware
+	FROM Auftrag
+	WHERE KName = 'Huber'
+		AND NOT Ware IN (SELECT Ware
+			FROM Lieferant
+			WHERE LName = L.LNAME))
+\end{lstlisting}
+\subsubsection{Weitere Sprachelemente von SQL (53)}
+Verwendung von ALL und SOME/ANY
+Arithmetische Ausdrücke in der SELECT KLAUSEL
+\subsection{Änderungsoperationen Insert, Update, Delete}
+\subsubsection{Einfügen von Tupeln}
+INSERT: Einfügen von Tupeln
+Spaltenliste ist optional, wenn alle Spalten angegeben werden
+\subsubsection{NULL und DEFAULT-Werte}
+Spalten und Werte müssen nicht angegeben weden, wenn:
+\begin{itemize}
+	\item NULL-Werte erlaubt sind oder
+	\item DEFAULT-Werte gestzt sind oder 
+	\item AUTO-INCREMENT angegeben wurde
+\end{itemize}
+\subsubsection{Varianten}
+Eifügen mehererer Zeilen auf einmal
+\begin{lstlisting}
+INSERT INTO Studiengaenge (SgNr, Kuerzel, ...)
+VALUES 
+	(1, INF, ...)
+	(2, WINF, ...)
+\end{lstlisting}
+\subsubsection{Löschen und Atualisieren}
+DELETE: Löschen von Tupeln\\
+UPDATE: Verändern von Tupeln
+\subsubsection{Beispiel zu Änderungsoperationen 60}
+\begin{lstlisting}
+INSERT INTO
+
+UPDATE
+WHERE
+
+DELETE
+FROM 
+WHERE
+\end{lstlisting}
+\subsection{Sequenzen und berechnete Spalten 63 ff}
+\subsection{Sicherung der Integrität mit SQL 69ff}
+\subsubsection{DBMS unterstützt die Benutzer bei}
+\begin{itemize}
+	\item Anfrageverarbeitung
+	\item Persistenter Speicherung der Daten
+	\item Gewährleistung der Konsistenz der Daten
+\end{itemize}
+\subsubsection{Sicherstellung der ref. Integrität}
+Regeln beim Ändern/Löschen/Einfügen von Tupeln (74 ff)
+\subsubsection{Weitere einfache statische Integritätsbedingungen}
+CHECK CONSTRAINTS (79)\\
+Erzwingen und Missachten von Integritätsbedingungen

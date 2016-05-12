@@ -352,5 +352,162 @@ ab k pro Takt 1 Ergebnis (n-Mal)\\
 			\item Nachteile: für Rechnen nicht so interessant, da meistens FP - Operationen
 			\item Einflüsse: Compiler, Genauigketi und Art der Operation (32Bit Int Div \(\leftrightarrow\) 16Bit Integer Div), CISC - RISC
 		\end{itemize}
+		\item FLOPS Floating Point Operations per Second
+		\begin{itemize}
+			\item ist wichtige Kenngröße für das wissenschaftliche Rechnen
+			\item Top 500- Liste
+			\begin{itemize}
+				\item Auflistung der 500 leistungsfähigsten Computer der Welt
+				\item Basis der Einordnung ist
+				\begin{itemize}
+					\item UNPACK-Benchmark läuft auf jeder Maschine
+					\item erreichte PFLOPS ist Basis für Einordnung
+				\end{itemize}
+			\end{itemize}
+			\item Probleme:
+			\begin{itemize}
+				\item hängt stark von der Anwendung ab
+				\item unterschiedliche Komplexität der Operation wird nicht berücksichtigt (ADD, DIV)
+				\item für Integer Probleme wie z.B. Bildverarbeitung nicht aussagekräftig
+			\end{itemize}
+		\end{itemize}
+		\item IOOPS Input/Output Operations per Second
+		\begin{itemize}
+			\item werden von Vertreibern von Festplatten, Solid State Disks und SAN (Storage Arial Networks) angegeben
+			\begin{itemize}
+				\item z.B.: Intel Solid State Drive 910
+				\begin{itemize}
+					\item 800GB
+					\item IOOPS (Random 4k)- Herstellerangabe
+					\item Read: 180.000
+					\item Write 75.000
+				\end{itemize}
+				\item z.B.: Western Digital Velori Raptor
+				\begin{itemize}
+					\item 600GB
+					\item IOOPS (Random 4k)- Messung
+					\item Read: 140
+					\item Write 120
+				\end{itemize}
+			\end{itemize}
+			\item Benchmarks: IOmeter (Itel), IOzone
+			\item Unterscheidung:
+			\begin{enumerate}
+				\item Random: Positionen zufällig gewählt (kein Streaming)
+				\item Sequentiell: z.B. Read lesen von aufeinanderfolgenden Speicherplätzen (Streaming)
+			\end{enumerate}
+			\item Hinweis: IOOPS werden fälschlicherweise oft als IOPS in der Literatur bezeichnet
+		\end{itemize}
 	\end{itemize}
+	\item Für die Bewertung von Allzwecksystemen sollten alle 4 Kenngrößen für eine Reihe von Programmen getestet werden, damit die verschiedenen Nutzen sich einordnen können\\
+	\(\to\) mit Theoretischen Peak Performance Werten vergleichen
+	\begin{itemize}
+		\item Peak Performance Werte
+		\begin{itemize}
+			\item sind Bestwerte, die anhand der Architektur berechnet werden
+			\item praktisch werden diese Obergrenzen nicht erreicht
+			\item z.B.: Top 500 Liste
+			\begin{itemize}
+				\item neben Linpack FLOPS wird auch die Theoretische Floating Point Peak Performance angegeben
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+\section{}
+\subsection{SPARC INTEL AMD}
+\begin{enumerate}
+	\item SPARC64 III 
+	\begin{enumerate}
+		\item Berechnung der Theoretischen Peak Performance IPS IOPS FLOPS
+		\begin{align*}
+			\text{geg.: } &f = 330  \text{ MHz Taktfrequenz} \\
+			&2 \text{ Integer Units}\\
+			&2 \text{ Floating Point Units}\\
+			&4 \text{ Befehle pro Takt}\\
+			&\text{IPS}\\
+			\text{IPS} &= f \cdot \text{ IPC} &&\text{IPC = Instructions per Cycle(Clock)}\\
+			&= 330 \cdot 10^6 \cdot 4 = 1,32 \text{ GiPS}\\
+			\text{IOPS} &= f \cdot \text{IO-PC}\\
+			&= 330 \cdot 10^6 \cdot 2 = 660 \text{ MIOPS}\\
+			\text{FLOPS} &= f \cdot \text{FLO-PC}\\
+			&= 330 \cdot 10^6 \cdot 2 = 660 \text{MFLOPS}
+		\end{align*}
+		\item Wie viele IOOPS?
+		\begin{itemize}
+			\item Volle Verarbetungsleistung wird erreicht, wenn 2 IOP und 2 FLOP pro Takt ausgeführt werden
+			\item Im worst case (bezogen auf den Speicherzugriff) müssen gleichzeitig Operanden und Befehle aus dem Speicher geholt werden und Ergebnisse zurückgeschrieben werden
+			\begin{itemize}
+				\item 4 IOOP für Instruction Fetch
+				\item 8 IOOP für Operand Fetch
+				\item 4 IOOP für Write Back
+				\item \(\to\) Gesamt: 16 IOOP pro Takt
+			\end{itemize}
+			Total IOOP \(= f \cdot \text{ IOOP-PC} = 330 \cdot 10^6 \cdot 16 = 5,28\) GIOOPS \\
+			Aktuell nicht Realisierbar in oberen Speicherhierarchieebenen, daher meist Optimierung der Speicherzugriffe durch das Laden mehrerer Instruktionen/Operanden mit eine I/O -Zugriff
+		\end{itemize}
+		\item Fused Multiply Add\\
+		im eingelaufenen Zustand der Pipeline wird pro Takt eine Multiplikation und eine Addition fertig
+		\begin{itemize}
+			\item hat das Einfluss auf IPS?\\
+			kein Einfluss
+			\begin{itemize}
+				\item mit FMA 
+				\begin{itemize}
+					\item Multiply/Add ist jetzt eine Instruktion \(X = A \cdot B + C\)
+					\item diese Instruction dauert einen Takt
+				\end{itemize}
+				\item ohne FMA
+				\begin{itemize}
+					\item Multiply/add sind 2 Instruktionen
+					\item \(\to\) dauert 2 Takte
+				\end{itemize}
+			\end{itemize}
+			\item hat das Einfluss auf FLOPS?
+			\begin{itemize}
+				\item FLOPS verdoppeln sich
+			\end{itemize}
+			\item hat das Einfluss auf IOPS?
+			\begin{itemize}
+				\item bis AVX2 ab Haswell gab es kein FMA für Integer Operationen
+				\item ab AVX2 auch FMA für Integer \(\to\) Verdopplung von IOPS
+			\end{itemize}
+		\end{itemize}
+	\end{enumerate}
+	\item INTEL CORE i7-2600K Sandy Bridge
+	\begin{enumerate}
+		\item Floating Point Peak Performance (Double Precision)
+		\begin{itemize}
+			\item 4 Kerne
+			\item 3,4GHz
+			\item pro Kern 5 Instruktionen laden + decodieren
+			\item pro Kern 2 FPUs
+			\item AVX (256Bit)
+		\end{itemize}
+		FPPP = Taktfrequenz * Anzahl der gleichzeitigen FP Operationen * Anzahl der Kerne\\
+		= \(3,4 \cdot 10^9 \cdot 4\text{ (AVX = 64Bit = Double Precision) } \cdot 2 \text{ FPUs} = 108,8 \text{ GFLOPS} \)
+		\item Bandbreite = FPPP * Operanden * Operandenbandbreite
+		\begin{align*}
+			= 108,8 \cdot 10^9 \text{ FLOPS } \cdot s^{-1} \cdot 3 \text{ Operanden } \cdot 8 \frac{\text{ Byte }}{\text{ Operand }}\text{ IEEE STANDARD}\\
+			&= 2,6 \text{ TB/s} \to \text{ geht nur mit intensiver Cache Nutzung}
+		\end{align*}
+	\end{enumerate}
+	\item AMD FX 8350
+	\begin{enumerate}
+		\item theoretische FPPP
+		\begin{align*}
+		\text{geg.: } &4 \text{ GHz Taktfrequenz}\\
+		& 8 \text{ Integer Kerne}\\
+		& 2 \text{ Integer Kerne teilen sich eine FPU }\\
+		& \text{Fused Multiply Add}\\
+		& 2 \text{ Pipelines pro FPU, jede Pipeline 128 Bit }\\
+		\text{FPPP } &=  \text{ Taktfrequenz } \cdot \text{  Anzahl gleichzeitiger FP Operationen }\\
+		&= 4 \cdot 10^9 s^{-1} \cdot 2 \text{ (Anzahl der Pipelines) } \cdot 2 ( 128\text{Bit}) \cdot 2 \text{ (FMA)} \\
+		&= 32 \text{ GFLOPS}
+		\end{align*}
+		\item FPPP für ganzen Prozessor
+		\begin{align*}
+		\text{FPPP } &= \text{ FPPP einer FPU } \cdot \text{ Anzahl der FPUs }\\
+		&= 32 \cdot 4 = 128 \text{ GFLOPS}
+		\end{align*}
+	\end{enumerate}
 \end{enumerate}

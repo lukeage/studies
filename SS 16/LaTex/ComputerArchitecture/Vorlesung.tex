@@ -561,3 +561,241 @@ We use the term instruction set architecture (ISA) to refer to the actual progra
 	\item Integrierter Speichercontroller
 	\item FSB ersetzt durch Intel QuickPath Interconnect
 \end{itemize}
+\section{fill 03.05.16}
+\section{}
+\subsection{Intel Itanium}
+Intel Itanium 2 1.5GHz, Fortran/C \\
+Tabelle siehe Folien
+\subsubsection{Quad-Core Itanium} 
+\begin{itemize}
+	\item Bereiche mit unterschiedlicher Taktrfrequenz und Spannung
+	\item 6MB L3 pro Kern
+	\item QPI-Links zur Verbindung mit anderen Prozessoren (Statt FSB)
+	\item On-chip Speichercontroller
+\end{itemize}
+\subsubsection{8-core Itanium}
+\begin{itemize}
+	\item Gemeinsamer L3 Cache für alle Kerne
+	\item Neue Mikroarchitektur für höhere IPC
+	\begin{itemize}
+		\item Fetch und Decode: 6 Instruktionen pro Takt (2 Befehls-Gruppen)
+		\item Execution: 12 Instruktionen pro Takt (unabhängig von Gruppen)
+	\end{itemize}
+\end{itemize}
+\subsection{IBM Power}
+\subsubsection{Die Power Architektur}
+POWER: Performance Optimization With Enhanced RISC
+\begin{itemize}
+	\item[90] IBM POWER1
+	\item[93] IBM POWER2
+	\item[96] IBM POWER2 Superchip (P2SC)
+	\item[93] Einführung der PowerPC-Prozessoren
+	\item[98] Einführung der IBM POWER3-Prozessoren
+	\item[01] Einführung des IBM POWER4-Prozessors
+	\item[04] POWER5
+	\item[07] POWER6
+	\item[10] POWER7
+	\item[14] POWER8
+\end{itemize}
+\subsubsection{POWER4+ Processor}
+\begin{itemize}
+	\item 2 Cores pro Chip
+	\item Pro Core l1 D-Cache und L1-l-Cache
+	\item Shared L2-Cache
+	\item L3-Cache off chip
+	\item 2 FPUs pro Core
+	\item Fused-Multiply-Add
+	\item 6,8 GFLOPS@1,7GHz
+\end{itemize}
+\subsubsection{Speicher  IO-Bandbreite}
+Grafik siehe Folien
+\subsubsection{8Prozessor SMP System(MCM: 11x11cm}
+Grafik siehe FOlien
+\subsubsection{Mikroarchitektur des Proessors IBM POWER4}
+\begin{itemize}
+	\item Jeder iBM POWER4-Chip besitzt zwei 64-Bit-Mikroprozessorkerne
+	\item Der gemeinsam genutzte L2-Cache ist in 4 gleichgroße Teile mit jeweils einem speraten L2-Cache-Controller aufgeteilt
+	\item Das L3-Cache-Directory und der L3-Cache-Controller befindensich auf dem Chip während der L3-Cache selbst aus DRAM besteht
+	\item Der für die I/O-Operationen verantwortliche GX-Controller ist mit zwei, je einer Richtung zugeordneten 4-Byte-breiten GX-Bussen ausgestattet
+	\item Fabric-Controller
+	\item Der Mikroprozessorkern ist n Form einer typisch superskalaren Mikroarchitektur implementiert
+	\item 8 unahängige Funktionseinheiten, die nebenläufig parallel arbeiten können
+	\item Jede der FPUs ist in der Lage einen Multiply/Add-Befehl pro Takt fertigzustellen
+\end{itemize}
+\subsubsection{Befehlsausführung und Ressourcnverwaltung}
+\begin{itemize}
+	\item Der IBM POWER4 arbeitet mit spekulativer Befehlsausführund, d.h. Befehle werden ausgeführt bevor sicher ist, ob sie überhaupt benötigt werden
+	\item Zur Vermeidung von Pseudoabhängigkeiten durch out-of-order Processing wird mit Register-Renaming gearbeitet
+\end{itemize}
+\subsubsection{Pipeline}
+Grafik siehe Folien
+\subsubsection{Instruction Fetch, Group Formation und Dispatch 1}
+\begin{itemize}
+	\item Die Adresse für den L1-I-Cache-Zugriff steht im Insturction Fetch Adress Register. Die adressinformation erhält das IFAR von der BR-Logik
+	\item In der IF-Phase werden die Befehle aus dem L1-Cache geholt und in die Instruction-Queue geladen. Die I-Queue ermöglicht dabei die Fortsetzung des Pipelinings auch bei einem Cache-Miss
+	\item Die geholten Befehle werden nach Sprugbefehlen durchsucht
+	\item In den Phasen Dß bis GD werden die Befehle decodert, zerlegt, zu gruppen formatiert
+	\item ...
+\end{itemize}
+\subsubsection{Out-of-Order Processing}
+\subsubsection{Load/stor Istruction Processing }
+\subsubsection{Floating-Point Execution Pipeline}
+\subsubsection{Group Completion}
+\begin{itemize}
+	\item Eine Befehlsgruppe wird beendet, wenn die Ergebnisse in das Zielregister geschrieben wurde und die Ergebnisse somit für das weitere Programm verfügbar sind.
+	\item Wurde ein Befehl oder eine Befehlsgruppe spekulativ ausgeführt kann sie erst vollendet werden, falls alle Bedingungen für seine Ausführung erfolgreich waren
+	\item Eine Befehlsgruppe kann erst vollendet werden, wenn alle älteren Gruppen komplett und korrekt abgeschlossen wurden
+	\item Por Takt ist eine Befehlsgruppe komplettierbar
+\end{itemize}
+\subsubsection{Matrix Multiplication}
+Grafik siehe Folien
+\subsection{POWER7}
+\begin{itemize}
+	\item 32MB shared L3-Cache; eDRAM
+	\item unterschiedliche SRAM Zellen für L1- und L2-Cache
+	\item 4 Threads pro Kern
+	\item Local (MCM) und Remote SMP Interface
+	
+\end{itemize}
+\subsubsection{SMP System}
+\begin{itemize}
+	\item 4 Chips pro MCM
+	\item 8 MCMs können direkt verbunden werden
+	\begin{itemize}
+		\item 256 Kerne; 1024 Threads
+	\end{itemize}
+\end{itemize}
+\subsubsection{POWER Prozessorfamilie}
+Grafik siehe Folien
+\subsection{MIPS}
+\subsubsection{MIPS Prozessoren}
+\begin{itemize}
+	\item[81] MIPS RISC ISA gegründet
+	\item[84] Gründung MIPS
+	\item[85] erster kommerzieller RISC-CHIP: MIPS R2000
+	\item[88] R3000
+	\item[91] R4000
+	\item[94] R8000
+	\item[96] R5000
+	\item[96] R10000
+	\item[98] R12000
+	\item[02] R16000
+\end{itemize}
+\subsubsection{R10k}
+\begin{itemize}
+	\item Ab dem Befehlsatz MIPS III werden folgende Datenregister auf ISA-Ebene unterstützt
+	\begin{itemize}
+		\item 32 General Purpose Register zu je 64Bit
+		\item 32 FLoating Point Register zu je 64Bit
+	\end{itemize}
+	\item Ab MIPS I werden folgende Adressierungsarten unterstützt:
+	\begin{itemize}
+		\item Direktwert-A
+		\item Direkte Register-A
+		\item PC-relative A
+		\item Relative Hauptspeicheradresssierung über ein Register mit Displacement
+	\end{itemize}
+	\item Ab MIPS IV gib es im beschränkten Umfang indexierte A
+\end{itemize}
+\subsubsection{Befehlssätze der Prozessoren R10k und R12k}
+\subsubsection{ALU-Befehle}
+\subsubsection{Mikroarchitektur der Prozessoren R10k und R12k}
+\subsubsection{Pipelines des MIPS R10k}
+\begin{itemize}
+	\item Der superskalare R10k arbeitet mit 5 weitestgehend unabhängigen Pipelines und ebso vielen Ausführungseinheiten
+	\item Für jeden Operationstyp steht eine Warteschlange für Befehle zur Verfügung
+	\item Die Load/Store-Warteschlange ist FIFO-georndet, um Speicherabhängigkeiten und Datenkonsistenz zu gewährleisten
+	\item Die anderen beiden Warteschlangen sind keiner strengen Ordnung unterworfen
+\end{itemize}
+\subsubsection{Pipeline-Stufen 3 bis 7}
+\subsubsection{Floating Point Units}
+\begin{itemize}
+	\item Floating-Point-Multiplizierer
+	\item Floating-Point-Dividierer und Radizierer
+	\item Floating-Point Addierer
+\end{itemize}
+\subsubsection{Integer Units und Load/Store Unit}
+\begin{itemize}
+	\item Integer-Einheit 1
+	\item Integer-Einheit 2
+	\item Load/Store
+\end{itemize}
+\subsubsection{Godson-3}
+\begin{itemize}
+	\item Basis für chinesisches Supercomputer Programm
+	\item 4-fach superskalar mit out-of-order Execution
+	\item MIPS64 ISA mit Erwetierung für x86 Emulation
+	\item Quad-Core Design
+	\begin{itemize}
+		\item On-chip Speichercontroller
+		\item HyperTransprot zur Kommunikation mit chipsatz und anderen Prozessoren
+	\end{itemize}
+\end{itemize}
+\subsection{SPARC}
+\begin{itemize}
+	\item[82] Wesentliche Forschungsarbeiten an der University of California Berkeley auf dem Gebiet von RISC-Prozesorarchitekturen
+	\item[87] Sun Microsystems stellt die SPARC-Architektur vor: Scalable Processor Architecture
+	\item[90] erste 32-Bit Implementierung
+	\item[95] SPARC64/UltraSparc mit 64-Bit Verarbeitungsbreite
+	\item[05] UltraSparc T1
+	\item[07] UltraSpard T2
+	\item[09] Sparc64 VIIIfx
+	\item[10] Sparc T3: 16 Kerne, 8fach SMT
+\end{itemize}
+\subsubsection{SUN Niagara II (T2)}
+\begin{itemize}
+	\item 8 Prozessorkerne
+	\item 4 MB L2-Cache
+	\item Max. 16 DDR2 FB-DIMMs
+	\item 2-mal 10Gb/s Netzwerk
+	\item x8 PCI-Express
+\end{itemize}
+\subsubsection{T2 Multithreading}
+\begin{itemize}
+	\item Abwechelndes Arbeiten an mehreren Threads, um Speicherlatenz (Cahcelatenz zu verdecken
+	\begin{itemize}
+		\item Kein komplexes out-of-order Design erforderlich
+		\item Erforder hohes Maß an Parallelität in der Software
+	\end{itemize}
+	\item Abwechselndes Arbeiten an mehreren Threads um Speicherlatenz zu verdecken
+\end{itemize}
+\subsection{CELL Broadband Engine}
+\begin{itemize}
+	\item Heterogener Multi-Core
+	\begin{itemize}
+		\item 1 PowerPC Kern (PPE)
+		\item 8 Synergistic Processing Elemts (SPE)
+	\end{itemize}
+	\item SPE:
+	\begin{itemize}
+		\item In-order Execution
+		\item 4 single precision Operationen pro Takt
+		\item Kein Cache
+		\item 256 KB Local Store
+	\end{itemize}
+	\item Gemeischaftsentwicklung von IBM, Sony und Toshiba
+	\item PowerXCell 8i
+	\item Roadrunner
+	\begin{itemize}
+		\item Erster PetaFlop Rechner
+		\item 3060 hybride Knoten
+	\end{itemize}
+\end{itemize}
+\subsection{ARM}
+\begin{itemize}
+	\item ARM: Advanced RISC Machines
+	\item IP-Cores zur Integration in System-on-Chips
+	\item 32-Bit RISC Architektur
+	\item Zeichnen sich durch geringen Stromverbrauch aus
+	\item Häufige Verzweigungen schlecht für effizientes Pipelining
+	\item Paralleles Ausführen beider Pfade bei if-then-else
+	\item Einsatz: unterschiedliche Kerne mit gleichem Befehlssatz
+	\item Cortes A15 liefert doppelte bis dreifache Rechenleistung des Cortex A7
+	\item Cortex A7 hat drei- bis vierfache Rechenleistung pro Watt
+\end{itemize}
+\subsection{DEC ALPHA}
+\begin{itemize}
+	\item Alpha 21064 und 21164 in Supercomputern on Cray
+	\item 2004 nach Übernahme durch HP eingestellt
+	\item 64 Bit RISC Architektur
+\end{itemize}

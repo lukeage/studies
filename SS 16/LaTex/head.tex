@@ -18,7 +18,8 @@
 \parindent0cm % für Anti-Einzug
 %\usepackage{hyperref} %Alternative zu titleref 
 \usepackage{titleref}
-
+\usepackage[numbers,round]{natbib}
+\bibpunct[, ]{}{}{;}{s}{,}{,}
 
 % INF ZEUG
 \usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=c} 
@@ -45,7 +46,6 @@
 
 \tableofcontents{}
 
-
 \part{Computer Networks}
 \input{./Rechnernetze/Vorlesung.tex}
 \input{./Rechnernetze/Übung.tex}
@@ -70,6 +70,7 @@
 %\input{C++4CG}
 
 
-
+\bibliography{literatur} 
+\bibliographystyle{natdin}
 
 \end{document}
