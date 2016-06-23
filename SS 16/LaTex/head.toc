@@ -1,464 +1,695 @@
 \select@language {ngerman}
-\contentsline {part}{I\hspace {1em}Computer Networks}{7}
-\contentsline {chapter}{\numberline {1}Vorlesung}{8}
-\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{8}
-\contentsline {section}{\numberline {1.2}Bit\IeC {\"u}bertragungsschicht}{9}
-\contentsline {subsection}{\numberline {1.2.1}Nachrichtentechnische Kan\IeC {\"a}le}{9}
-\contentsline {subsubsection}{Kenngr\IeC {\"o}\IeC {\ss }en (2.4 ff)}{10}
-\contentsline {subsubsection}{Leitungscodes}{10}
-\contentsline {subsection}{\numberline {1.2.2}\IeC {\"U}bertragungsmedien}{10}
-\contentsline {subsubsection}{Elektrische Leitungen}{10}
-\contentsline {subsubsection}{Optische Leitungen und Sichtverbindung}{11}
-\contentsline {subsubsection}{Sichtverbindung}{11}
-\contentsline {subsubsection}{Satelliten / Zellularfunk (2.11)}{11}
-\contentsline {subsubsection}{Strukturierte Verkabelung (2.12}{12}
-\contentsline {subsection}{\numberline {1.2.3}Mehrfachnutzung von Kan\IeC {\"a}len}{12}
-\contentsline {subsubsection}{Frequenzmultiplex (2.13)}{12}
-\contentsline {subsubsection}{Orthogonales Frequenzmultiplex (Orthogonal FDM, OFDM)}{12}
-\contentsline {subsubsection}{Zeitmultiplex (2.14)}{12}
-\contentsline {subsubsection}{Statistisches Zeitmultiplex}{12}
-\contentsline {subsubsection}{Codemultiplex (CDM, 2.15)}{12}
-\contentsline {subsubsection}{Wellenl\IeC {\"a}ngenmultiplex (WDM)}{12}
-\contentsline {subsection}{\numberline {1.2.4}Daten\IeC {\"u}bertragung}{13}
-\contentsline {subsubsection}{Signalklassen (2.16)}{13}
-\contentsline {subsubsection}{Beispiel: Telefonsystem (2.18)}{13}
-\contentsline {subsubsection}{Sprach\IeC {\"u}bertragung \IeC {\"u}ber digitale Kan\IeC {\"a}le (2.19)}{13}
-\contentsline {subsubsection}{Daten\IeC {\"u}bertragung \IeC {\"u}ber analoge Kan\IeC {\"a}le}{13}
-\contentsline {subsection}{\numberline {1.2.5}Beispieltechnologien}{14}
-\contentsline {subsubsection}{Digital Subscriber Line (DSL, 2.22)}{14}
-\contentsline {subsection}{\numberline {1.2.6}Digitaler Netzzugang \IeC {\"u}ber Kabelmodem}{14}
-\contentsline {section}{\numberline {1.3}Netztechnologie 1}{14}
-\contentsline {subsection}{\numberline {1.3.1}Medienzugriff}{14}
-\contentsline {subsubsection}{ALOHA Protokoll}{14}
-\contentsline {subsubsection}{ALOHA Beispiel}{15}
-\contentsline {subsubsection}{CSMA-Verfahren}{15}
-\contentsline {subsubsection}{Bewertung der Verfahren (3.8)}{15}
-\contentsline {subsubsection}{CSMA mit "Collision Detection" (CD)}{15}
-\contentsline {subsubsection}{CSMA/CD-Verfahren Beispiel (3.10 ff.)}{15}
-\contentsline {subsection}{\numberline {1.3.2}Ethernet}{15}
-\contentsline {subsubsection}{IEEE 802.3}{15}
-\contentsline {subsubsection}{Rahmenstruktur (3.14)}{16}
-\contentsline {subsubsection}{Fast- / Gigabit Ethernet}{16}
-\contentsline {subsubsection}{Ethernet-Varianten f\IeC {\"u}r LAN (3.16)}{17}
-\contentsline {subsubsection}{Switched Ethernet: Beispiel (3.17)}{17}
-\contentsline {subsection}{\numberline {1.3.3}Switches in der Sicherungsschicht}{17}
-\contentsline {subsubsection}{Modell (3.19)}{17}
-\contentsline {subsubsection}{Transparent Bridges / Switches (3.20)}{17}
-\contentsline {subsubsection}{Spanning Tree (3.21)}{17}
-\contentsline {subsubsection}{Interne Realisierung (3.22)}{18}
-\contentsline {subsubsection}{VLAN - Virtual Local Area Network (2.23)}{18}
-\contentsline {subsubsection}{Port-basiertes VLAN (3.24)}{18}
-\contentsline {subsubsection}{Tag-basiertes VLAN - IEEE 802.1Q (3.25)}{18}
-\contentsline {subsection}{\numberline {1.3.4}Drahtlose Netze f\IeC {\"u}r PAN und LAN (3.26)}{19}
-\contentsline {subsubsection}{WLAN: IEEE 802.11 (3.27)}{19}
-\contentsline {subsubsection}{802.11 - Medienzugriff mit CSMA/CA (3.28) ff.}{19}
-\contentsline {subsubsection}{Bluetooth}{19}
-\contentsline {subsubsection}{ZigBee (3.30}{20}
-\contentsline {subsubsection}{RFID - Radio Frequency Identification (3.31)}{20}
-\contentsline {subsubsection}{NFC - Near Field Communication}{20}
-\contentsline {section}{\numberline {1.4}Netztechnologien 2}{21}
-\contentsline {subsection}{\numberline {1.4.1}Schichten\IeC {\"u}bersicht - Sicherungsschicht}{21}
-\contentsline {subsection}{\numberline {1.4.2}\IeC {\"U}berblick}{21}
-\contentsline {subsection}{\numberline {1.4.3}Drahtloses Breitband}{21}
-\contentsline {subsubsection}{WiMAX}{21}
-\contentsline {subsubsection}{Steigerung der Datenrate: MIMO}{22}
-\contentsline {subsection}{\numberline {1.4.4}Token-basierte Technologien}{23}
-\contentsline {subsubsection}{Token Bus IEEE 802.4}{23}
-\contentsline {subsubsection}{RPR - Resilient Packet Ring}{23}
-\contentsline {subsection}{\numberline {1.4.5}Carrier Ethernet}{24}
-\contentsline {subsubsection}{Metro Ethernet Networks MEN}{24}
-\contentsline {subsubsection}{Provider Bridging}{25}
-\contentsline {subsubsection}{Dienstg\IeC {\"u}te bei Carrier Ethernet}{25}
-\contentsline {subsubsection}{Exkurs: VPNs}{25}
-\contentsline {subsection}{\numberline {1.4.6}MPLS - Multiprotocol Label Swtitching}{26}
-\contentsline {subsubsection}{MPLS-Switches / Layer-3-Switches}{27}
-\contentsline {subsubsection}{MPLS Transprot Profile (MPLS-TP)}{27}
-\contentsline {subsubsection}{MPLS - Bewertung}{27}
-\contentsline {subsection}{\numberline {1.4.7}SONET / SDH}{27}
-\contentsline {subsection}{\numberline {1.4.8}OTN - Optical Transport Network}{28}
-\contentsline {subsubsection}{DWDM - Dense Wavelength Division Multiplexing}{29}
-\contentsline {section}{\numberline {1.5}Sicherungsschicht}{29}
-\contentsline {subsection}{\numberline {1.5.1}Sicherungsschicht}{29}
-\contentsline {subsubsection}{Aufgaben}{29}
-\contentsline {subsubsection}{Zuverl\IeC {\"a}ssigketisebenen}{30}
-\contentsline {subsubsection}{Rahmenbildung}{30}
-\contentsline {subsubsection}{Bytezahl (6)}{30}
-\contentsline {subsubsection}{Bitstuffing}{30}
-\contentsline {subsection}{\numberline {1.5.2}Fehlerbehandlung}{30}
-\contentsline {subsubsection}{Fehlererkennende Codes}{31}
-\contentsline {subsubsection}{Cydlic Redundancy Check - CRC}{31}
-\contentsline {subsection}{\numberline {1.5.3}Protokolle}{31}
-\contentsline {subsubsection}{Stop-and-Wait-Protokoll(14)}{31}
-\contentsline {subsubsection}{Protokoll mit Fehlerbehandlung}{31}
-\contentsline {subsection}{\numberline {1.5.4}Schnittstellenereignistypen}{31}
-\contentsline {subsubsection}{Primitive des Dienstes}{31}
-\contentsline {subsubsection}{Dienstbeschreibung durch Zustandsdiagramme (18ff)}{31}
-\contentsline {subsubsection}{Protokollbeschreibung (23ff)}{31}
-\contentsline {subsubsection}{Point-to-Point Protocol PPP}{31}
-\contentsline {subsubsection}{ADSL}{32}
-\contentsline {chapter}{\numberline {2}\IeC {\"U}bung}{33}
-\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung}{33}
-\contentsline {subsection}{\numberline {2.1.1}}{33}
-\contentsline {subsection}{\numberline {2.1.2}}{34}
-\contentsline {subsection}{\numberline {2.1.3}}{34}
-\contentsline {subsection}{\numberline {2.1.4}}{35}
-\contentsline {section}{\numberline {2.2}Bit\IeC {\"u}bertragungsschicht}{36}
-\contentsline {subsection}{\numberline {2.2.1}Nyquist-Theorem}{36}
-\contentsline {subsection}{\numberline {2.2.2}Pulsecodemodulation}{37}
-\contentsline {subsection}{\numberline {2.2.3}Modulation}{37}
-\contentsline {subsection}{\numberline {2.2.4}Leitungskodierung}{38}
-\contentsline {subsection}{\numberline {2.2.5}Multiplex}{38}
-\contentsline {section}{\numberline {2.3}Netztechnologien 1}{39}
-\contentsline {subsection}{\numberline {2.3.1}Ethernet}{39}
-\contentsline {subsection}{\numberline {2.3.2}Switches}{40}
-\contentsline {subsection}{\numberline {2.3.3}Transparent Bridges}{41}
-\contentsline {subsection}{\numberline {2.3.4}802.11 WLAN}{41}
-\contentsline {section}{\numberline {2.4}Netztechnologien 2}{42}
-\contentsline {subsection}{\numberline {2.4.1}WiMax}{42}
-\contentsline {subsection}{\numberline {2.4.2}RPR}{42}
-\contentsline {subsection}{\numberline {2.4.3}Carrier Ethernet}{43}
-\contentsline {subsection}{\numberline {2.4.4}MPLS}{44}
-\contentsline {subsection}{\numberline {2.4.5}SONET/SDH und OTN}{45}
-\contentsline {part}{II\hspace {1em}Theoretical Informatic and Logic}{47}
-\contentsline {chapter}{\numberline {3}Vorlesung \cite [S. 22]{Hoelldobler2011}}{48}
-\contentsline {section}{\numberline {3.1}Pr\IeC {\"a}dikatenlogik erster Stufe}{48}
-\contentsline {section}{\numberline {3.2}Pr\IeC {\"a}dikatenlogik erster Stufe}{49}
-\contentsline {section}{\numberline {3.3}Syntax/Substitutionen}{50}
-\contentsline {subsection}{\numberline {3.3.1}Komposition von Substitutionen}{50}
-\contentsline {subsubsection}{Korollar 4.11}{50}
-\contentsline {subsubsection}{Proposition 4.12}{50}
-\contentsline {subsubsection}{Proposition 4.13}{50}
-\contentsline {subsection}{\numberline {3.3.2}Beschr\IeC {\"a}nkung von Substitutionen}{50}
-\contentsline {subsubsection}{Definition 4.14}{50}
-\contentsline {subsubsection}{Proposition 4.15}{50}
-\contentsline {subsection}{\numberline {3.3.3}Anwendung von Substitutionen auf Formeln}{51}
-\contentsline {subsubsection}{Definition 4.16}{51}
-\contentsline {subsubsection}{Beobachtung}{51}
-\contentsline {subsection}{\numberline {3.3.4}Substitutionen und Formeln}{51}
-\contentsline {subsubsection}{Definition 4.17}{51}
-\contentsline {subsection}{\numberline {3.3.5}Satz 4.18}{51}
-\contentsline {subsubsection}{Satz 4.18}{51}
-\contentsline {subsubsection}{Beweis Satz 4.18}{52}
-\contentsline {subsection}{\numberline {3.3.6}Beweis Hilfsaussage aus Satz 4.18}{53}
-\contentsline {subsection}{\numberline {3.3.7}Varianten}{53}
-\contentsline {subsubsection}{Definition 4.19}{53}
-\contentsline {section}{\numberline {3.4}Semantik}{53}
-\contentsline {subsection}{\numberline {3.4.1}Relationen und Funktionen}{53}
-\contentsline {subsection}{\numberline {3.4.2}Interpretationen}{54}
-\contentsline {subsubsection}{Definition 4.20}{54}
-\contentsline {subsubsection}{Definition 4.21}{54}
-\contentsline {subsubsection}{Definition 4.22}{54}
-\contentsline {subsubsection}{Definition 4.23}{55}
-\contentsline {subsubsection}{Proposition 4.24}{55}
-\contentsline {subsubsection}{Lemma 4.25}{55}
-\contentsline {subsection}{\numberline {3.4.3}Herbrand-Interpretationen}{55}
-\contentsline {subsubsection}{Definition 4.26}{55}
-\contentsline {section}{\numberline {3.5}Modelle}{56}
-\contentsline {subsubsection}{Herbrand-Interpretationen und Formeln (41)}{56}
-\contentsline {subsubsection}{Aufgabe (42)}{56}
-\contentsline {subsection}{\numberline {3.5.1}Modelle f\IeC {\"u}r abgeschlossene Formeln}{56}
-\contentsline {subsubsection}{Definition 4.27}{56}
-\contentsline {subsubsection}{Definition 4.28}{56}
-\contentsline {subsubsection}{Aufgaben (45)}{56}
-\contentsline {subsubsection}{Aussagenlogik - Pr\IeC {\"a}dikatenlogik}{56}
-\contentsline {subsection}{\numberline {3.5.2}Modelle f\IeC {\"u}r nicht-abgeschlossene Formeln}{56}
-\contentsline {subsubsection}{Definition 4.29}{56}
-\contentsline {subsubsection}{Definition 4.30}{57}
-\contentsline {subsubsection}{Proposition 4.31}{57}
-\contentsline {subsubsection}{Universeller Abschluss: Einige Eigenschaften (49)}{57}
-\contentsline {section}{\numberline {3.6}\IeC {\"A}quivalenz und Normalform}{57}
-\contentsline {subsection}{\numberline {3.6.1}Semantische \IeC {\"A}quivalenz}{57}
-\contentsline {subsubsection}{Definition}{57}
-\contentsline {subsubsection}{Satz 3.19}{57}
-\contentsline {subsubsection}{Satz 4.32}{57}
-\contentsline {subsubsection}{Beweis 1}{58}
-\contentsline {subsubsection}{Definition 4.33}{58}
-\contentsline {subsubsection}{Definition 4.33}{58}
-\contentsline {subsubsection}{Vereinbarung}{58}
-\contentsline {subsection}{\numberline {3.6.2}Pr\IeC {\"a}nexnormalform}{58}
-\contentsline {subsubsection}{Definition 4.35}{58}
-\contentsline {subsubsection}{Proposition 4.36}{58}
-\contentsline {subsubsection}{Transformation in Pr\IeC {\"a}nexnormalform}{58}
-\contentsline {subsection}{\numberline {3.6.3}Skolem-Normalform}{59}
-\contentsline {subsubsection}{Idee}{59}
-\contentsline {subsubsection}{Definition 4.37}{59}
-\contentsline {subsubsection}{Notation}{59}
-\contentsline {subsubsection}{Definition 4.38}{59}
-\contentsline {subsubsection}{Transformation in Skolem-Normalform}{59}
-\contentsline {subsubsection}{Satz 4.39}{59}
-\contentsline {subsubsection}{Beweis Satz 4.39}{59}
-\contentsline {section}{\numberline {3.7}\IeC {\"A}quivalenz und Normalenform (2)}{60}
-\contentsline {subsection}{\numberline {3.7.1}Klauselform}{60}
-\contentsline {subsection}{\numberline {3.7.2}maschinelles Beweisen mathematischer S\IeC {\"a}tze}{60}
-\contentsline {subsection}{\numberline {3.7.3}Unifikation}{60}
-\contentsline {subsubsection}{Definition 4.40}{60}
-\contentsline {subsubsection}{Definition 4.41}{61}
-\contentsline {subsection}{\numberline {3.7.4}Allgemeinste Unifikatoren}{61}
-\contentsline {subsubsection}{Definition 4.42}{61}
-\contentsline {subsubsection}{Definition 4.43}{61}
-\contentsline {subsubsection}{Definition 4.44}{61}
-\contentsline {subsubsection}{Der Unifikationssatz}{61}
-\contentsline {subsubsection}{Satz 4.45}{61}
-\contentsline {subsubsection}{Beweis Satz 4.45}{61}
-\contentsline {section}{\numberline {3.8}\IeC {\"A}quivalenz und Normalform}{62}
-\contentsline {subsection}{\numberline {3.8.1}Beweis Satz 4.45}{62}
-\contentsline {subsubsection}{Der Unifikationsalgorithmus}{62}
-\contentsline {subsubsection}{Eingabe}{62}
-\contentsline {subsubsection}{Ausgabe}{62}
-\contentsline {subsubsection}{Terminierung (76)}{62}
-\contentsline {subsubsection}{Korrektheit (79)}{62}
-\contentsline {subsection}{\numberline {3.8.2}Allgemeinste Unifikatoren}{62}
-\contentsline {subsubsection}{Korollar 4.46}{62}
-\contentsline {section}{\numberline {3.9}Resolution}{62}
-\contentsline {subsection}{\numberline {3.9.1}Resolutionsregel}{62}
-\contentsline {subsubsection}{Definition 4.47}{62}
-\contentsline {subsubsection}{Definition 4.48 Faktorisierungsregel}{63}
-\contentsline {subsection}{\numberline {3.9.2}Resolutionsableitungen und -widerlegungen}{63}
-\contentsline {subsubsection}{Definition 4.49}{63}
-\contentsline {subsubsection}{Vollst\IeC {\"a}ndigkeit des Resolutionsverfahrens - \IeC {\"U}berblick}{63}
-\contentsline {subsection}{\numberline {3.9.3}Herbrand-Interpretationen}{63}
-\contentsline {subsubsection}{Definition 4.58}{64}
-\contentsline {subsubsection}{Lemma 4.59}{64}
-\contentsline {subsubsection}{Satz 4.60}{64}
-\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{65}
-\contentsline {section}{\numberline {4.1}Pr\IeC {\"a}dikatenlogik - Syntax}{65}
-\contentsline {subsection}{\numberline {4.1.1}Konstruktion von Teiltermen}{65}
-\contentsline {subsection}{\numberline {4.1.2}\IeC {\"U}ber Nachbarn}{66}
-\contentsline {section}{\numberline {4.2}Substitutionen}{67}
-\contentsline {subsection}{\numberline {4.2.1}Substitutionskomposition ist eine Substitution}{67}
-\contentsline {subsection}{\numberline {4.2.2}Eingenschaften von Substitutionen}{67}
-\contentsline {section}{\numberline {4.3}Semantik}{68}
-\contentsline {subsection}{\numberline {4.3.1}Beispiele zur Interpretationsanwendung}{68}
-\contentsline {subsection}{\numberline {4.3.2}Verschiedene Interpretationen einer Formel}{69}
-\contentsline {subsection}{\numberline {4.3.3}Existenz einer Herbrand-Interpretation}{70}
-\contentsline {part}{III\hspace {1em}Computer Architecture}{71}
-\contentsline {chapter}{\numberline {5}Vorlesung}{72}
-\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{72}
-\contentsline {subsection}{\numberline {5.1.1}Big Data}{72}
-\contentsline {section}{\numberline {5.2}Vorlesung}{72}
-\contentsline {subsection}{\numberline {5.2.1}ZIH}{72}
-\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{72}
-\contentsline {section}{\numberline {5.3}VL}{73}
-\contentsline {subsection}{\numberline {5.3.1}Modifiziertes Dreiphasenmodell zum Entwurf eines RS}{73}
-\contentsline {subsubsection}{Befelhlssatzarchitektur}{73}
-\contentsline {subsubsection}{Implementierung}{73}
-\contentsline {subsubsection}{Realisierung}{73}
-\contentsline {subsection}{\numberline {5.3.2}Architektur-Definition (Tanenbaum)}{73}
-\contentsline {subsection}{\numberline {5.3.3}Architektur-Definition (Hennessy/Patterson)}{73}
-\contentsline {subsection}{\numberline {5.3.4}Einflusskomplexe}{74}
-\contentsline {subsection}{\numberline {5.3.5}Entwurf eines Rechnersystems}{75}
-\contentsline {subsection}{\numberline {5.3.6}Architectural Trends}{76}
-\contentsline {subsection}{\numberline {5.3.7}Bemerkungen zum klassischen Digitalrechner}{77}
-\contentsline {subsection}{\numberline {5.3.8}Aufgaben und Ziele der Rechnerarchitektur}{78}
-\contentsline {subsubsection}{Aufgaben}{78}
-\contentsline {subsubsection}{Ziele}{78}
-\contentsline {subsection}{\numberline {5.3.9}Klassifizierung nach Flynn}{78}
-\contentsline {section}{\numberline {5.4}Intel Prozessoren}{79}
-\contentsline {subsection}{\numberline {5.4.1}Ursprung}{79}
-\contentsline {subsection}{\numberline {5.4.2}Intel 80386}{79}
-\contentsline {subsubsection}{IA-32 Register}{79}
-\contentsline {subsubsection}{Stack}{79}
-\contentsline {subsubsection}{Adressierungsarten}{80}
-\contentsline {subsubsection}{Virtueller Speicher}{80}
-\contentsline {subsection}{\numberline {5.4.3}Intel 80486}{80}
-\contentsline {subsubsection}{Cache}{81}
-\contentsline {subsubsection}{Pipelining}{81}
-\contentsline {subsection}{\numberline {5.4.4}Pentium}{81}
-\contentsline {subsection}{\numberline {5.4.5}Pentium MMX}{81}
-\contentsline {subsection}{\numberline {5.4.6}Pentium Pro}{82}
-\contentsline {subsubsection}{RISC Kern}{82}
-\contentsline {subsubsection}{Out-of-Order Execution}{82}
-\contentsline {subsection}{\numberline {5.4.7}Pentium 2 / Pentium 3}{83}
-\contentsline {subsubsection}{Streaming SIMD Extensions (SSE)}{83}
-\contentsline {subsection}{\numberline {5.4.8}Pentium 4}{83}
-\contentsline {subsubsection}{Netburst Mikroarchitektur}{84}
-\contentsline {subsubsection}{SSE Erweiterungen}{84}
-\contentsline {subsection}{\numberline {5.4.9}Pentium M/ Core Solo/ Core Duo}{84}
-\contentsline {subsection}{\numberline {5.4.10}Intel64 Prozessoren (Auswahl)}{85}
-\contentsline {subsubsection}{Befehlssatz}{85}
-\contentsline {subsection}{\numberline {5.4.11}Multicore Prozessoren}{85}
-\contentsline {subsubsection}{Entwicklung des Energieverbrauchs}{86}
-\contentsline {subsection}{\numberline {5.4.12}Intel Core Microarchitektur Core2Duo}{86}
-\contentsline {subsection}{\numberline {5.4.13}Intel Nehalem Mikroarchitektur}{86}
-\contentsline {section}{\numberline {5.5}fill 03.05.16}{86}
-\contentsline {section}{\numberline {5.6}}{86}
-\contentsline {subsection}{\numberline {5.6.1}Intel Itanium}{86}
-\contentsline {subsubsection}{Quad-Core Itanium}{87}
-\contentsline {subsubsection}{8-core Itanium}{87}
-\contentsline {subsection}{\numberline {5.6.2}IBM Power}{87}
-\contentsline {subsubsection}{Die Power Architektur}{87}
-\contentsline {subsubsection}{POWER4+ Processor}{88}
-\contentsline {subsubsection}{Speicher IO-Bandbreite}{88}
-\contentsline {subsubsection}{8Prozessor SMP System(MCM: 11x11cm}{88}
-\contentsline {subsubsection}{Mikroarchitektur des Proessors IBM POWER4}{88}
-\contentsline {subsubsection}{Befehlsausf\IeC {\"u}hrung und Ressourcnverwaltung}{89}
-\contentsline {subsubsection}{Pipeline}{89}
-\contentsline {subsubsection}{Instruction Fetch, Group Formation und Dispatch 1}{89}
-\contentsline {subsubsection}{Out-of-Order Processing}{89}
-\contentsline {subsubsection}{Load/stor Istruction Processing }{89}
-\contentsline {subsubsection}{Floating-Point Execution Pipeline}{89}
-\contentsline {subsubsection}{Group Completion}{89}
-\contentsline {subsubsection}{Matrix Multiplication}{89}
-\contentsline {subsection}{\numberline {5.6.3}POWER7}{90}
-\contentsline {subsubsection}{SMP System}{90}
-\contentsline {subsubsection}{POWER Prozessorfamilie}{90}
-\contentsline {subsection}{\numberline {5.6.4}MIPS}{90}
-\contentsline {subsubsection}{MIPS Prozessoren}{90}
-\contentsline {subsubsection}{R10k}{91}
-\contentsline {subsubsection}{Befehlss\IeC {\"a}tze der Prozessoren R10k und R12k}{91}
-\contentsline {subsubsection}{ALU-Befehle}{91}
-\contentsline {subsubsection}{Mikroarchitektur der Prozessoren R10k und R12k}{91}
-\contentsline {subsubsection}{Pipelines des MIPS R10k}{91}
-\contentsline {subsubsection}{Pipeline-Stufen 3 bis 7}{91}
-\contentsline {subsubsection}{Floating Point Units}{91}
-\contentsline {subsubsection}{Integer Units und Load/Store Unit}{92}
-\contentsline {subsubsection}{Godson-3}{92}
-\contentsline {subsection}{\numberline {5.6.5}SPARC}{92}
-\contentsline {subsubsection}{SUN Niagara II (T2)}{92}
-\contentsline {subsubsection}{T2 Multithreading}{93}
-\contentsline {subsection}{\numberline {5.6.6}CELL Broadband Engine}{93}
-\contentsline {subsection}{\numberline {5.6.7}ARM}{93}
-\contentsline {subsection}{\numberline {5.6.8}DEC ALPHA}{94}
-\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{95}
-\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{95}
-\contentsline {subsection}{\numberline {6.1.1}von-Neumann}{95}
-\contentsline {subsubsection}{Komponenten des v. Neumann Architektur}{95}
-\contentsline {subsection}{\numberline {6.1.2}v.Neumann vs. Harvard}{96}
-\contentsline {subsubsection}{Harvard}{96}
-\contentsline {subsection}{\numberline {6.1.3}Def. von Brooks vs Giloi}{96}
-\contentsline {subsubsection}{Brooks (1962)}{96}
-\contentsline {subsubsection}{Giloi}{96}
-\contentsline {subsection}{\numberline {6.1.4}RA-Definition Begriffe}{97}
-\contentsline {subsubsection}{Begriffskl\IeC {\"a}rung}{98}
-\contentsline {section}{\numberline {6.2}Einf\IeC {\"u}hrung}{98}
-\contentsline {subsection}{\numberline {6.2.1}Moores Law}{98}
-\contentsline {subsubsection}{Was macht man mit diesen Transistoren?}{98}
-\contentsline {subsubsection}{Weshalb wir die Anzahl der Verarbeitungseinheiten nicht weiter erh\IeC {\"o}ht?}{99}
-\contentsline {subsubsection}{Multicore-Prozessoren}{99}
-\contentsline {subsubsection}{L\IeC {\"u}cke zwischen Prozessorleistung und Zugriffszeit auf den DRAM verkleinern}{99}
-\contentsline {subsubsection}{Integration weiterer Baugruppen}{99}
-\contentsline {subsection}{\numberline {6.2.2}Klassifikationen nach Flynn}{100}
-\contentsline {subsection}{\numberline {6.2.3}MMX, SSE, AVX}{101}
-\contentsline {section}{\numberline {6.3}Prozessoren / Pipelifting}{101}
-\contentsline {subsection}{\numberline {6.3.1}Adressierungsarten}{101}
-\contentsline {subsection}{\numberline {6.3.2}scale-potenz}{102}
-\contentsline {subsection}{\numberline {6.3.3}Speedup}{103}
-\contentsline {subsection}{\numberline {6.3.4}}{103}
-\contentsline {section}{\numberline {6.4}}{105}
-\contentsline {subsection}{\numberline {6.4.1}SPARC INTEL AMD}{105}
-\contentsline {part}{IV\hspace {1em}Database}{108}
-\contentsline {chapter}{\numberline {7}Vorlesung}{109}
-\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{109}
-\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{110}
-\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{110}
-\contentsline {subsubsection}{Phasen der SW-Entwicklung}{110}
-\contentsline {subsubsection}{Phasen des DB-Entwurfs}{110}
-\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{110}
-\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{110}
-\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{111}
-\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{111}
-\contentsline {subsubsection}{Beziehungen / Relationships (22)}{111}
-\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{112}
-\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{112}
-\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{112}
-\contentsline {subsubsection}{Besonderheiten (32 ff.)}{112}
-\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{112}
-\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{112}
-\contentsline {section}{\numberline {7.3}Konzeptueller Entwurf}{112}
-\contentsline {subsection}{\numberline {7.3.1}Grundlagen (5)}{112}
-\contentsline {subsubsection}{Ausgangspunkt}{112}
-\contentsline {subsubsection}{Grundlagen}{112}
-\contentsline {subsection}{\numberline {7.3.2}Prim\IeC {\"a}rschl\IeC {\"u}ssel (8)}{113}
-\contentsline {subsection}{\numberline {7.3.3}ER-Modell Relationales Modell}{113}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Entit\IeC {\"a}ten}{113}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Attributen}{113}
-\contentsline {subsubsection}{\IeC {\"U}bersetzung von Beziehungen}{113}
-\contentsline {subsubsection}{Abbildung der Vererbung 21}{114}
-\contentsline {subsubsection}{Vergleich der Abbildungsvarianten}{114}
-\contentsline {section}{\numberline {7.4}Relationale Algebra}{114}
-\contentsline {subsection}{\numberline {7.4.1}Motivation}{114}
-\contentsline {subsection}{\numberline {7.4.2}Relationale Algebra}{115}
-\contentsline {subsection}{\numberline {7.4.3}Basisoperationen}{115}
-\contentsline {subsubsection}{Projektion}{115}
-\contentsline {subsubsection}{Projektion in SQL}{115}
-\contentsline {subsubsection}{Selektion(Restriktion)}{115}
-\contentsline {subsubsection}{Selektion in SQL}{116}
-\contentsline {subsubsection}{Weitere Basisoperationen (15)}{116}
-\contentsline {subsubsection}{Beispiele f\IeC {\"u}r Anfragen (18)}{116}
-\contentsline {subsection}{\numberline {7.4.4}Abgeleitete Operationen}{116}
-\contentsline {subsubsection}{Durchschnitt und Division}{116}
-\contentsline {subsubsection}{Nat\IeC {\"u}rlicher Verbund}{116}
-\contentsline {subsubsection}{Theta- und Equi-Join}{117}
-\contentsline {subsubsection}{Verlustfreiheit von Joins}{117}
-\contentsline {subsubsection}{Outer Joins}{117}
-\contentsline {section}{\numberline {7.5}SQL}{117}
-\contentsline {subsection}{\numberline {7.5.1}Einleitung}{117}
-\contentsline {subsubsection}{Bestandteile einer Datenbanksprache}{117}
-\contentsline {subsubsection}{Datenbankanfragesprachen}{117}
-\contentsline {subsubsection}{SQL}{118}
-\contentsline {subsection}{\numberline {7.5.2}Datendefinitionssprache}{118}
-\contentsline {subsubsection}{SQL Datentypen}{118}
-\contentsline {subsubsection}{Auswahl von Datentypen: ABC-Regel}{118}
-\contentsline {subsubsection}{Anlegen einer Relation (16ff)}{119}
-\contentsline {subsubsection}{\IeC {\"A}ndern und L\IeC {\"o}schen einer Relation}{119}
-\contentsline {subsubsection}{Erzeugen einer Indexstruktur(19)}{119}
-\contentsline {subsubsection}{Erzeugen einer Datenbanksicht (21)}{119}
-\contentsline {subsection}{\numberline {7.5.3}Datenbankanfragesprache (DQL 25 ff)}{119}
-\contentsline {subsection}{\numberline {7.5.4}Algebra-Operationen in SQL (32 ff)}{119}
-\contentsline {subsection}{\numberline {7.5.5}Sprachelemente jenseits der relationalen Algebra}{119}
-\contentsline {subsubsection}{GROUP BY}{119}
-\contentsline {subsubsection}{Verf\IeC {\"u}gbare Aggregatfunktionen}{119}
-\contentsline {subsubsection}{Aggregatsfunktionen}{120}
-\contentsline {subsubsection}{Aggregation}{120}
-\contentsline {subsubsection}{Gruppieren und Ordnen}{120}
-\contentsline {subsubsection}{Beispiel (44)}{120}
-\contentsline {section}{\numberline {7.6}SQL}{120}
-\contentsline {subsection}{\numberline {7.6.1}Innere und \IeC {\"a}u\IeC {\ss }ere Verbundoperationen}{120}
-\contentsline {subsubsection}{Alternative Schreibweise zur "normalen" Verbundoperation}{120}
-\contentsline {subsubsection}{Outer-Joins}{121}
-\contentsline {subsection}{\numberline {7.6.2}Tabellenausdr\IeC {\"u}cke}{121}
-\contentsline {subsubsection}{WITH}{121}
-\contentsline {subsubsection}{Alias-Namen f\IeC {\"u}r Tabellen}{121}
-\contentsline {subsubsection}{Guter SQL-Stil}{121}
-\contentsline {subsection}{\numberline {7.6.3}Geschachtelte Anfragen}{122}
-\contentsline {subsubsection}{Prinzip der geschachtelten Anfragen}{122}
-\contentsline {subsubsection}{Weitere Sprachelemente von SQL (53)}{122}
-\contentsline {subsection}{\numberline {7.6.4}\IeC {\"A}nderungsoperationen Insert, Update, Delete}{122}
-\contentsline {subsubsection}{Einf\IeC {\"u}gen von Tupeln}{122}
-\contentsline {subsubsection}{NULL und DEFAULT-Werte}{122}
-\contentsline {subsubsection}{Varianten}{123}
-\contentsline {subsubsection}{L\IeC {\"o}schen und Atualisieren}{123}
-\contentsline {subsubsection}{Beispiel zu \IeC {\"A}nderungsoperationen 60}{123}
-\contentsline {subsection}{\numberline {7.6.5}Sequenzen und berechnete Spalten 63 ff}{123}
-\contentsline {subsection}{\numberline {7.6.6}Sicherung der Integrit\IeC {\"a}t mit SQL 69ff}{123}
-\contentsline {subsubsection}{DBMS unterst\IeC {\"u}tzt die Benutzer bei}{123}
-\contentsline {subsubsection}{Sicherstellung der ref. Integrit\IeC {\"a}t}{123}
-\contentsline {subsubsection}{Weitere einfache statische Integrit\IeC {\"a}tsbedingungen}{123}
-\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{124}
-\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{124}
-\contentsline {subsection}{\numberline {8.1.1}}{124}
-\contentsline {subsection}{\numberline {8.1.2}}{124}
-\contentsline {subsection}{\numberline {8.1.3}}{125}
-\contentsline {subsection}{\numberline {8.1.4}}{125}
-\contentsline {subsection}{\numberline {8.1.5}}{125}
-\contentsline {section}{\numberline {8.2}ER-Modellierung}{125}
-\contentsline {subsection}{\numberline {8.2.1}Prof-Stud}{125}
-\contentsline {subsection}{\numberline {8.2.2}ER-Bahn}{125}
-\contentsline {subsection}{\numberline {8.2.3}ER-Bsp}{127}
-\contentsline {subsection}{\numberline {8.2.4}Vererbungshierarchie - Relationsschema }{127}
-\contentsline {section}{\numberline {8.3}Relationenalgebra}{127}
-\contentsline {subsection}{\numberline {8.3.1}}{129}
-\contentsline {subsection}{\numberline {8.3.2}}{129}
-\contentsline {subsection}{\numberline {8.3.3}}{129}
-\contentsline {subsection}{\numberline {8.3.4}Kreuzprodukt und Divisionsoperator}{130}
-\contentsline {section}{\numberline {8.4}SQL}{130}
-\contentsline {subsection}{\numberline {8.4.1}Befehle in SQL}{130}
-\contentsline {subsubsection}{1}{130}
-\contentsline {subsubsection}{2}{130}
-\contentsline {subsubsection}{3}{130}
-\contentsline {subsubsection}{4}{131}
-\contentsline {subsubsection}{5}{131}
-\contentsline {subsubsection}{8}{131}
-\contentsline {subsubsection}{9}{131}
-\contentsline {part}{V\hspace {1em}Hardware Laboratory}{132}
-\contentsline {part}{VI\hspace {1em}C++4CG}{133}
+\contentsline {part}{I\hspace {1em}Computer Networks}{10}
+\contentsline {chapter}{\numberline {1}Vorlesung}{11}
+\contentsline {section}{\numberline {1.1}Einf\IeC {\"u}hrung}{11}
+\contentsline {section}{\numberline {1.2}Bit\IeC {\"u}bertragungsschicht}{12}
+\contentsline {subsection}{\numberline {1.2.1}Nachrichtentechnische Kan\IeC {\"a}le}{12}
+\contentsline {subsubsection}{Kenngr\IeC {\"o}\IeC {\ss }en (2.4 ff)}{13}
+\contentsline {subsubsection}{Leitungscodes}{13}
+\contentsline {subsection}{\numberline {1.2.2}\IeC {\"U}bertragungsmedien}{13}
+\contentsline {subsubsection}{Elektrische Leitungen}{13}
+\contentsline {subsubsection}{Optische Leitungen und Sichtverbindung}{14}
+\contentsline {subsubsection}{Sichtverbindung}{14}
+\contentsline {subsubsection}{Satelliten / Zellularfunk (2.11)}{14}
+\contentsline {subsubsection}{Strukturierte Verkabelung (2.12}{15}
+\contentsline {subsection}{\numberline {1.2.3}Mehrfachnutzung von Kan\IeC {\"a}len}{15}
+\contentsline {subsubsection}{Frequenzmultiplex (2.13)}{15}
+\contentsline {subsubsection}{Orthogonales Frequenzmultiplex (Orthogonal FDM, OFDM)}{15}
+\contentsline {subsubsection}{Zeitmultiplex (2.14)}{15}
+\contentsline {subsubsection}{Statistisches Zeitmultiplex}{15}
+\contentsline {subsubsection}{Codemultiplex (CDM, 2.15)}{15}
+\contentsline {subsubsection}{Wellenl\IeC {\"a}ngenmultiplex (WDM)}{15}
+\contentsline {subsection}{\numberline {1.2.4}Daten\IeC {\"u}bertragung}{16}
+\contentsline {subsubsection}{Signalklassen (2.16)}{16}
+\contentsline {subsubsection}{Beispiel: Telefonsystem (2.18)}{16}
+\contentsline {subsubsection}{Sprach\IeC {\"u}bertragung \IeC {\"u}ber digitale Kan\IeC {\"a}le (2.19)}{16}
+\contentsline {subsubsection}{Daten\IeC {\"u}bertragung \IeC {\"u}ber analoge Kan\IeC {\"a}le}{16}
+\contentsline {subsection}{\numberline {1.2.5}Beispieltechnologien}{17}
+\contentsline {subsubsection}{Digital Subscriber Line (DSL, 2.22)}{17}
+\contentsline {subsection}{\numberline {1.2.6}Digitaler Netzzugang \IeC {\"u}ber Kabelmodem}{17}
+\contentsline {section}{\numberline {1.3}Netztechnologie 1}{17}
+\contentsline {subsection}{\numberline {1.3.1}Medienzugriff}{17}
+\contentsline {subsubsection}{ALOHA Protokoll}{17}
+\contentsline {subsubsection}{ALOHA Beispiel}{18}
+\contentsline {subsubsection}{CSMA-Verfahren}{18}
+\contentsline {subsubsection}{Bewertung der Verfahren (3.8)}{18}
+\contentsline {subsubsection}{CSMA mit "Collision Detection" (CD)}{18}
+\contentsline {subsubsection}{CSMA/CD-Verfahren Beispiel (3.10 ff.)}{18}
+\contentsline {subsection}{\numberline {1.3.2}Ethernet}{18}
+\contentsline {subsubsection}{IEEE 802.3}{18}
+\contentsline {subsubsection}{Rahmenstruktur (3.14)}{19}
+\contentsline {subsubsection}{Fast- / Gigabit Ethernet}{19}
+\contentsline {subsubsection}{Ethernet-Varianten f\IeC {\"u}r LAN (3.16)}{20}
+\contentsline {subsubsection}{Switched Ethernet: Beispiel (3.17)}{20}
+\contentsline {subsection}{\numberline {1.3.3}Switches in der Sicherungsschicht}{20}
+\contentsline {subsubsection}{Modell (3.19)}{20}
+\contentsline {subsubsection}{Transparent Bridges / Switches (3.20)}{20}
+\contentsline {subsubsection}{Spanning Tree (3.21)}{20}
+\contentsline {subsubsection}{Interne Realisierung (3.22)}{21}
+\contentsline {subsubsection}{VLAN - Virtual Local Area Network (2.23)}{21}
+\contentsline {subsubsection}{Port-basiertes VLAN (3.24)}{21}
+\contentsline {subsubsection}{Tag-basiertes VLAN - IEEE 802.1Q (3.25)}{21}
+\contentsline {subsection}{\numberline {1.3.4}Drahtlose Netze f\IeC {\"u}r PAN und LAN (3.26)}{22}
+\contentsline {subsubsection}{WLAN: IEEE 802.11 (3.27)}{22}
+\contentsline {subsubsection}{802.11 - Medienzugriff mit CSMA/CA (3.28) ff.}{22}
+\contentsline {subsubsection}{Bluetooth}{22}
+\contentsline {subsubsection}{ZigBee (3.30}{23}
+\contentsline {subsubsection}{RFID - Radio Frequency Identification (3.31)}{23}
+\contentsline {subsubsection}{NFC - Near Field Communication}{23}
+\contentsline {section}{\numberline {1.4}Netztechnologien 2}{24}
+\contentsline {subsection}{\numberline {1.4.1}Schichten\IeC {\"u}bersicht - Sicherungsschicht}{24}
+\contentsline {subsection}{\numberline {1.4.2}\IeC {\"U}berblick}{24}
+\contentsline {subsection}{\numberline {1.4.3}Drahtloses Breitband}{24}
+\contentsline {subsubsection}{WiMAX}{24}
+\contentsline {subsubsection}{Steigerung der Datenrate: MIMO}{25}
+\contentsline {subsection}{\numberline {1.4.4}Token-basierte Technologien}{26}
+\contentsline {subsubsection}{Token Bus IEEE 802.4}{26}
+\contentsline {subsubsection}{RPR - Resilient Packet Ring}{26}
+\contentsline {subsection}{\numberline {1.4.5}Carrier Ethernet}{27}
+\contentsline {subsubsection}{Metro Ethernet Networks MEN}{27}
+\contentsline {subsubsection}{Provider Bridging}{28}
+\contentsline {subsubsection}{Dienstg\IeC {\"u}te bei Carrier Ethernet}{28}
+\contentsline {subsubsection}{Exkurs: VPNs}{28}
+\contentsline {subsection}{\numberline {1.4.6}MPLS - Multiprotocol Label Swtitching}{29}
+\contentsline {subsubsection}{MPLS-Switches / Layer-3-Switches}{30}
+\contentsline {subsubsection}{MPLS Transprot Profile (MPLS-TP)}{30}
+\contentsline {subsubsection}{MPLS - Bewertung}{30}
+\contentsline {subsection}{\numberline {1.4.7}SONET / SDH}{30}
+\contentsline {subsection}{\numberline {1.4.8}OTN - Optical Transport Network}{31}
+\contentsline {subsubsection}{DWDM - Dense Wavelength Division Multiplexing}{32}
+\contentsline {section}{\numberline {1.5}Sicherungsschicht}{32}
+\contentsline {subsection}{\numberline {1.5.1}Sicherungsschicht}{32}
+\contentsline {subsubsection}{Aufgaben}{32}
+\contentsline {subsubsection}{Zuverl\IeC {\"a}ssigketisebenen}{33}
+\contentsline {subsubsection}{Rahmenbildung}{33}
+\contentsline {subsubsection}{Bytezahl (6)}{33}
+\contentsline {subsubsection}{Bitstuffing}{33}
+\contentsline {subsection}{\numberline {1.5.2}Fehlerbehandlung}{33}
+\contentsline {subsubsection}{Fehlererkennende Codes}{34}
+\contentsline {subsubsection}{Cydlic Redundancy Check - CRC}{34}
+\contentsline {subsection}{\numberline {1.5.3}Protokolle}{34}
+\contentsline {subsubsection}{Stop-and-Wait-Protokoll(14)}{34}
+\contentsline {subsubsection}{Protokoll mit Fehlerbehandlung}{34}
+\contentsline {subsection}{\numberline {1.5.4}Schnittstellenereignistypen}{34}
+\contentsline {subsubsection}{Primitive des Dienstes}{34}
+\contentsline {subsubsection}{Dienstbeschreibung durch Zustandsdiagramme (18ff)}{34}
+\contentsline {subsubsection}{Protokollbeschreibung (23ff)}{34}
+\contentsline {subsubsection}{Point-to-Point Protocol PPP}{34}
+\contentsline {subsubsection}{ADSL}{35}
+\contentsline {section}{\numberline {1.6}}{35}
+\contentsline {section}{\numberline {1.7}}{35}
+\contentsline {section}{\numberline {1.8}Netzwerkperformance}{35}
+\contentsline {subsection}{\numberline {1.8.1}Einf\IeC {\"u}hrung}{35}
+\contentsline {subsubsection}{Leinstungsprobleme in Rechnernetzen}{35}
+\contentsline {subsection}{\numberline {1.8.2}Messung der Netzwerkleistung}{35}
+\contentsline {subsubsection}{Leistungsoptimierung}{36}
+\contentsline {subsubsection}{Performaceverlust - Beispiel}{36}
+\contentsline {subsection}{\numberline {1.8.3}Leistungsaspekte Ehernet}{36}
+\contentsline {subsubsection}{Jumbo-Frames}{36}
+\contentsline {subsubsection}{Jumbo-Frames und TCP-Lastkontrolle}{37}
+\contentsline {subsubsection}{Padding/Bursting: Motivation}{37}
+\contentsline {subsubsection}{Afubau eines Ehernet Frames}{37}
+\contentsline {subsubsection}{Berechnung Worst-Case-Effizienz}{37}
+\contentsline {subsection}{\numberline {1.8.4}Fairness}{37}
+\contentsline {subsubsection}{Fairness - Algorithmen}{37}
+\contentsline {subsubsection}{Fairness - Forschung}{38}
+\contentsline {subsection}{\numberline {1.8.5}\IeC {\"U}berlastungs\IeC {\"u}berwachung}{38}
+\contentsline {subsubsection}{Gew\IeC {\"u}nschte Bandbreitenzuordnung}{38}
+\contentsline {subsubsection}{Regulierung der Senderate}{39}
+\contentsline {subsubsection}{Fast TCP}{39}
+\contentsline {subsubsection}{TCP-Reno vs. Fast TCP}{40}
+\contentsline {subsection}{\numberline {1.8.6}Leistungsteigerung}{40}
+\contentsline {subsubsection}{Hostdesign}{40}
+\contentsline {subsubsection}{Protokolle f\IeC {\"u}r den Normalfall optimieren}{40}
+\contentsline {subsubsection}{Engpass: Beschr\IeC {\"a}nkte Bandbreite}{40}
+\contentsline {subsubsection}{Long Fat Networks}{40}
+\contentsline {subsubsection}{Bandwidth-Delay-Product}{40}
+\contentsline {subsubsection}{L\IeC {\"o}sungen f\IeC {\"u}r Long Fat networks}{40}
+\contentsline {subsection}{\numberline {1.8.7}Unterberungstolerante Netzwerke - DTN}{41}
+\contentsline {subsubsection}{DTN - disruption-tolerant network}{41}
+\contentsline {section}{\numberline {1.9}Internetdienste}{41}
+\contentsline {subsection}{\numberline {1.9.1}Domain Name System}{41}
+\contentsline {subsubsection}{Resource Records}{41}
+\contentsline {subsubsection}{Nameserver (6)}{42}
+\contentsline {subsubsection}{Namensaufl\IeC {\"o}sung f\IeC {\"u}r entfernte Dom\IeC {\"a}nen (7)}{42}
+\contentsline {subsection}{\numberline {1.9.2}E-Mail (8)}{42}
+\contentsline {subsubsection}{Nachrichtenformat - RFC 5322 (9)}{42}
+\contentsline {subsubsection}{MIME (10)}{42}
+\contentsline {subsubsection}{SMTP (11ff)}{42}
+\contentsline {subsubsection}{IMAP (13)}{42}
+\contentsline {subsubsection}{WWW (14)}{42}
+\contentsline {subsection}{\numberline {1.9.3}WWW - World Wide Web}{42}
+\contentsline {subsubsection}{Ablauf Abruf einer Webseite (15)}{42}
+\contentsline {subsubsection}{Webserver (16)}{42}
+\contentsline {subsubsection}{HTTP(17ff)}{42}
+\contentsline {subsubsection}{HTML (20ff)}{42}
+\contentsline {subsubsection}{Dynamische Webseiten (24ff)}{42}
+\contentsline {subsection}{\numberline {1.9.4}Content Delivery (25)}{42}
+\contentsline {subsubsection}{Serverfarmen (26)}{42}
+\contentsline {subsubsection}{Webproxys (27)}{42}
+\contentsline {subsubsection}{Content-Delivery-Netze (28)}{42}
+\contentsline {subsubsection}{Peer-to-Peer-Netze (29)}{42}
+\contentsline {subsection}{\numberline {1.9.5}Netzwerkmanagement (30 ff)}{42}
+\contentsline {subsubsection}{SNMP - Simple Network Management Protocol (22)}{42}
+\contentsline {chapter}{\numberline {2}\IeC {\"U}bung}{43}
+\contentsline {section}{\numberline {2.1}Einf\IeC {\"u}hrung}{43}
+\contentsline {subsection}{\numberline {2.1.1}}{43}
+\contentsline {subsection}{\numberline {2.1.2}}{44}
+\contentsline {subsection}{\numberline {2.1.3}}{44}
+\contentsline {subsection}{\numberline {2.1.4}}{45}
+\contentsline {section}{\numberline {2.2}Bit\IeC {\"u}bertragungsschicht}{46}
+\contentsline {subsection}{\numberline {2.2.1}Nyquist-Theorem}{46}
+\contentsline {subsection}{\numberline {2.2.2}Pulsecodemodulation}{47}
+\contentsline {subsection}{\numberline {2.2.3}Modulation}{47}
+\contentsline {subsection}{\numberline {2.2.4}Leitungskodierung}{48}
+\contentsline {subsection}{\numberline {2.2.5}Multiplex}{48}
+\contentsline {section}{\numberline {2.3}Netztechnologien 1}{49}
+\contentsline {subsection}{\numberline {2.3.1}Ethernet}{49}
+\contentsline {subsection}{\numberline {2.3.2}Switches}{50}
+\contentsline {subsection}{\numberline {2.3.3}Transparent Bridges}{51}
+\contentsline {subsection}{\numberline {2.3.4}802.11 WLAN}{51}
+\contentsline {section}{\numberline {2.4}Netztechnologien 2}{52}
+\contentsline {subsection}{\numberline {2.4.1}WiMax}{52}
+\contentsline {subsection}{\numberline {2.4.2}RPR}{52}
+\contentsline {subsection}{\numberline {2.4.3}Carrier Ethernet}{53}
+\contentsline {subsection}{\numberline {2.4.4}MPLS}{54}
+\contentsline {subsection}{\numberline {2.4.5}SONET/SDH und OTN}{55}
+\contentsline {section}{\numberline {2.5}Sicherungsschicht}{55}
+\contentsline {subsection}{\numberline {2.5.1}Rahmenbildung}{55}
+\contentsline {subsection}{\numberline {2.5.2}Fehlerkorrigierende Codes}{57}
+\contentsline {subsubsection}{Parit\IeC {\"a}tsbit}{57}
+\contentsline {subsection}{\numberline {2.5.3}CRC}{57}
+\contentsline {section}{\numberline {2.6}Vermittlungsschicht}{58}
+\contentsline {subsection}{\numberline {2.6.1}Shortest Path Algorithmus (Dijksstra-Algorithmus)}{58}
+\contentsline {subsection}{\numberline {2.6.2}Einsatz von IP: Adressen und Subnetze}{59}
+\contentsline {subsection}{\numberline {2.6.3}}{60}
+\contentsline {subsection}{\numberline {2.6.4}}{61}
+\contentsline {subsection}{\numberline {2.6.5}IPv6}{62}
+\contentsline {section}{\numberline {2.7}Transportschicht}{62}
+\contentsline {section}{\numberline {2.8}Netzwerkperformance}{62}
+\contentsline {subsection}{\numberline {2.8.1}Ehernet-Performance}{62}
+\contentsline {subsection}{\numberline {2.8.2}Fairness}{63}
+\contentsline {subsection}{\numberline {2.8.3}\IeC {\"U}berlastungs\IeC {\"u}berwachung}{63}
+\contentsline {subsection}{\numberline {2.8.4}\IeC {\"U}berlaststeuerung}{65}
+\contentsline {subsection}{\numberline {2.8.5}Leistungssteigerung}{65}
+\contentsline {section}{\numberline {2.9}Internetdienste}{66}
+\contentsline {subsection}{\numberline {2.9.1}Domain Name System (DNS)}{66}
+\contentsline {subsection}{\numberline {2.9.2}E-Mail}{67}
+\contentsline {subsection}{\numberline {2.9.3}World Wide Web}{67}
+\contentsline {subsection}{\numberline {2.9.4}Management in Rechnernetzen - Simple Network Management Protocol (SNMPv3)}{68}
+\contentsline {subsection}{\numberline {2.9.5}Zusammenspiel von UDP, TCP, HTTP und DNS}{69}
+\contentsline {part}{II\hspace {1em}Theoretical Informatic and Logic}{70}
+\contentsline {chapter}{\numberline {3}Vorlesung \cite [S. 22]{Hoelldobler2011}}{71}
+\contentsline {section}{\numberline {3.1}Pr\IeC {\"a}dikatenlogik erster Stufe}{71}
+\contentsline {section}{\numberline {3.2}Pr\IeC {\"a}dikatenlogik erster Stufe}{72}
+\contentsline {section}{\numberline {3.3}Syntax/Substitutionen}{73}
+\contentsline {subsection}{\numberline {3.3.1}Komposition von Substitutionen}{73}
+\contentsline {subsubsection}{Korollar 4.11}{73}
+\contentsline {subsubsection}{Proposition 4.12}{73}
+\contentsline {subsubsection}{Proposition 4.13}{73}
+\contentsline {subsection}{\numberline {3.3.2}Beschr\IeC {\"a}nkung von Substitutionen}{73}
+\contentsline {subsubsection}{Definition 4.14}{73}
+\contentsline {subsubsection}{Proposition 4.15}{73}
+\contentsline {subsection}{\numberline {3.3.3}Anwendung von Substitutionen auf Formeln}{74}
+\contentsline {subsubsection}{Definition 4.16}{74}
+\contentsline {subsubsection}{Beobachtung}{74}
+\contentsline {subsection}{\numberline {3.3.4}Substitutionen und Formeln}{74}
+\contentsline {subsubsection}{Definition 4.17}{74}
+\contentsline {subsection}{\numberline {3.3.5}Satz 4.18}{74}
+\contentsline {subsubsection}{Satz 4.18}{74}
+\contentsline {subsubsection}{Beweis Satz 4.18}{75}
+\contentsline {subsection}{\numberline {3.3.6}Beweis Hilfsaussage aus Satz 4.18}{76}
+\contentsline {subsection}{\numberline {3.3.7}Varianten}{76}
+\contentsline {subsubsection}{Definition 4.19}{76}
+\contentsline {section}{\numberline {3.4}Semantik}{76}
+\contentsline {subsection}{\numberline {3.4.1}Relationen und Funktionen}{76}
+\contentsline {subsection}{\numberline {3.4.2}Interpretationen}{77}
+\contentsline {subsubsection}{Definition 4.20}{77}
+\contentsline {subsubsection}{Definition 4.21}{77}
+\contentsline {subsubsection}{Definition 4.22}{77}
+\contentsline {subsubsection}{Definition 4.23}{78}
+\contentsline {subsubsection}{Proposition 4.24}{78}
+\contentsline {subsubsection}{Lemma 4.25}{78}
+\contentsline {subsection}{\numberline {3.4.3}Herbrand-Interpretationen}{78}
+\contentsline {subsubsection}{Definition 4.26}{78}
+\contentsline {section}{\numberline {3.5}Modelle}{79}
+\contentsline {subsubsection}{Herbrand-Interpretationen und Formeln (41)}{79}
+\contentsline {subsubsection}{Aufgabe (42)}{79}
+\contentsline {subsection}{\numberline {3.5.1}Modelle f\IeC {\"u}r abgeschlossene Formeln}{79}
+\contentsline {subsubsection}{Definition 4.27}{79}
+\contentsline {subsubsection}{Definition 4.28}{79}
+\contentsline {subsubsection}{Aufgaben (45)}{79}
+\contentsline {subsubsection}{Aussagenlogik - Pr\IeC {\"a}dikatenlogik}{79}
+\contentsline {subsection}{\numberline {3.5.2}Modelle f\IeC {\"u}r nicht-abgeschlossene Formeln}{79}
+\contentsline {subsubsection}{Definition 4.29}{79}
+\contentsline {subsubsection}{Definition 4.30}{80}
+\contentsline {subsubsection}{Proposition 4.31}{80}
+\contentsline {subsubsection}{Universeller Abschluss: Einige Eigenschaften (49)}{80}
+\contentsline {section}{\numberline {3.6}\IeC {\"A}quivalenz und Normalform}{80}
+\contentsline {subsection}{\numberline {3.6.1}Semantische \IeC {\"A}quivalenz}{80}
+\contentsline {subsubsection}{Definition}{80}
+\contentsline {subsubsection}{Satz 3.19}{80}
+\contentsline {subsubsection}{Satz 4.32}{80}
+\contentsline {subsubsection}{Beweis 1}{81}
+\contentsline {subsubsection}{Definition 4.33}{81}
+\contentsline {subsubsection}{Definition 4.33}{81}
+\contentsline {subsubsection}{Vereinbarung}{81}
+\contentsline {subsection}{\numberline {3.6.2}Pr\IeC {\"a}nexnormalform}{81}
+\contentsline {subsubsection}{Definition 4.35}{81}
+\contentsline {subsubsection}{Proposition 4.36}{81}
+\contentsline {subsubsection}{Transformation in Pr\IeC {\"a}nexnormalform}{81}
+\contentsline {subsection}{\numberline {3.6.3}Skolem-Normalform}{82}
+\contentsline {subsubsection}{Idee}{82}
+\contentsline {subsubsection}{Definition 4.37}{82}
+\contentsline {subsubsection}{Notation}{82}
+\contentsline {subsubsection}{Definition 4.38}{82}
+\contentsline {subsubsection}{Transformation in Skolem-Normalform}{82}
+\contentsline {subsubsection}{Satz 4.39}{82}
+\contentsline {subsubsection}{Beweis Satz 4.39}{82}
+\contentsline {section}{\numberline {3.7}\IeC {\"A}quivalenz und Normalenform (2)}{83}
+\contentsline {subsection}{\numberline {3.7.1}Klauselform}{83}
+\contentsline {subsection}{\numberline {3.7.2}maschinelles Beweisen mathematischer S\IeC {\"a}tze}{83}
+\contentsline {subsection}{\numberline {3.7.3}Unifikation}{83}
+\contentsline {subsubsection}{Definition 4.40}{83}
+\contentsline {subsubsection}{Definition 4.41}{84}
+\contentsline {subsection}{\numberline {3.7.4}Allgemeinste Unifikatoren}{84}
+\contentsline {subsubsection}{Definition 4.42}{84}
+\contentsline {subsubsection}{Definition 4.43}{84}
+\contentsline {subsubsection}{Definition 4.44}{84}
+\contentsline {subsubsection}{Der Unifikationssatz}{84}
+\contentsline {subsubsection}{Satz 4.45}{84}
+\contentsline {subsubsection}{Beweis Satz 4.45}{84}
+\contentsline {section}{\numberline {3.8}\IeC {\"A}quivalenz und Normalform}{85}
+\contentsline {subsection}{\numberline {3.8.1}Beweis Satz 4.45}{85}
+\contentsline {subsubsection}{Der Unifikationsalgorithmus}{85}
+\contentsline {subsubsection}{Eingabe}{85}
+\contentsline {subsubsection}{Ausgabe}{85}
+\contentsline {subsubsection}{Terminierung (76)}{85}
+\contentsline {subsubsection}{Korrektheit (79)}{85}
+\contentsline {subsection}{\numberline {3.8.2}Allgemeinste Unifikatoren}{85}
+\contentsline {subsubsection}{Korollar 4.46}{85}
+\contentsline {section}{\numberline {3.9}Resolution}{85}
+\contentsline {subsection}{\numberline {3.9.1}Resolutionsregel}{85}
+\contentsline {subsubsection}{Definition 4.47}{85}
+\contentsline {subsubsection}{Definition 4.48 Faktorisierungsregel}{86}
+\contentsline {subsection}{\numberline {3.9.2}Resolutionsableitungen und -widerlegungen}{86}
+\contentsline {subsubsection}{Definition 4.49}{86}
+\contentsline {subsubsection}{Vollst\IeC {\"a}ndigkeit des Resolutionsverfahrens - \IeC {\"U}berblick}{86}
+\contentsline {subsection}{\numberline {3.9.3}Herbrand-Interpretationen}{86}
+\contentsline {subsubsection}{Definition 4.58}{87}
+\contentsline {subsubsection}{Lemma 4.59}{87}
+\contentsline {subsubsection}{Satz 4.60}{87}
+\contentsline {section}{\numberline {3.10}Beweis}{87}
+\contentsline {subsection}{\numberline {3.10.1}Beweis Satz 4.60}{87}
+\contentsline {section}{\numberline {3.11}Ende Logik Anfang Automaten}{87}
+\contentsline {section}{\numberline {3.12}02.06.2016}{88}
+\contentsline {subsection}{\numberline {3.12.1}}{88}
+\contentsline {subsubsection}{Beispiel 3.4 (Addition)}{88}
+\contentsline {subsection}{\numberline {3.12.2}Definition}{88}
+\contentsline {subsection}{\numberline {3.12.3}primitiv rekursive Funktion: Beispiel}{88}
+\contentsline {subsection}{\numberline {3.12.4}Besipliel 3.7}{89}
+\contentsline {subsection}{\numberline {3.12.5}Lemma 3.9}{89}
+\contentsline {subsection}{\numberline {3.12.6}Fallunterscheidung}{89}
+\contentsline {subsection}{\numberline {3.12.7}Lemma 3.11}{89}
+\contentsline {subsection}{\numberline {3.12.8}Definition 3.12: bechr\IeC {\"a}nkte Minimalisierung}{89}
+\contentsline {subsection}{\numberline {3.12.9}Lemma 3.13}{90}
+\contentsline {section}{\numberline {3.13}\IeC {\textbullet }}{90}
+\contentsline {subsection}{\numberline {3.13.1}Definition 4.1}{90}
+\contentsline {subsection}{\numberline {3.13.2}Beispiel 4.2}{90}
+\contentsline {subsection}{\numberline {3.13.3}Definition 4.3 Klasse der $\mu $-rekursiven Funktionen}{90}
+\contentsline {subsection}{\numberline {3.13.4}Definition 4.4 Syntax von WHILE-Programmen}{91}
+\contentsline {subsection}{\numberline {3.13.5}Definition 4.5}{91}
+\contentsline {subsection}{\numberline {3.13.6}Satz 4.7}{91}
+\contentsline {subsection}{\numberline {3.13.7}Beweis Satz 4.7}{92}
+\contentsline {section}{\numberline {3.14}}{92}
+\contentsline {subsection}{\numberline {3.14.1}Darstellung von Zahlen auf Touringmaschinen}{92}
+\contentsline {subsection}{\numberline {3.14.2}Theorem 4.10}{92}
+\contentsline {subsection}{\numberline {3.14.3}Universelle Turing-maschinen und unentscheidbare Probleme}{92}
+\contentsline {subsubsection}{Konventionen}{92}
+\contentsline {subsection}{\numberline {3.14.4}Definition 5.1 - Kodierung einer Turingmaschine}{93}
+\contentsline {subsection}{\numberline {3.14.5}Bemerkung 5.2}{93}
+\contentsline {subsection}{\numberline {3.14.6}Satz 5.3 Turing}{93}
+\contentsline {subsubsection}{Konfigurationskodierung:}{93}
+\contentsline {subsubsection}{Arbeitsweise von U}{93}
+\contentsline {subsection}{\numberline {3.14.7}Satz 5.4}{94}
+\contentsline {subsubsection}{Beweis}{94}
+\contentsline {section}{\numberline {3.15}}{94}
+\contentsline {subsection}{\numberline {3.15.1}Satz 5.5}{94}
+\contentsline {subsubsection}{Beweis}{94}
+\contentsline {subsection}{\numberline {3.15.2}Satz 5.6}{94}
+\contentsline {subsection}{\numberline {3.15.3}Beweis}{94}
+\contentsline {subsection}{\numberline {3.15.4}Satz 5.7}{94}
+\contentsline {subsubsection}{Beweis}{95}
+\contentsline {subsection}{\numberline {3.15.5}Satz 5.8}{95}
+\contentsline {subsubsection}{Beweis}{95}
+\contentsline {subsection}{\numberline {3.15.6}Satz 5.9}{95}
+\contentsline {subsubsection}{Beweis}{96}
+\contentsline {subsection}{\numberline {3.15.7}Satz 5.10}{96}
+\contentsline {subsubsection}{Beweis}{96}
+\contentsline {subsubsection}{Unentscheidbarkeit zeigen}{96}
+\contentsline {subsection}{\numberline {3.15.8}Definition 5.11 (Reduktion)}{97}
+\contentsline {subsection}{\numberline {3.15.9}Lemma 5.12}{97}
+\contentsline {subsubsection}{Beweis}{97}
+\contentsline {subsection}{\numberline {3.15.10}Satz 5.13 (Satz von Rice)}{98}
+\contentsline {subsubsection}{Beweis}{98}
+\contentsline {section}{\numberline {3.16}}{99}
+\contentsline {subsection}{\numberline {3.16.1}Definition 6.1 (Postsches Korrespondenzproblem)}{99}
+\contentsline {subsubsection}{Beispiel}{99}
+\contentsline {subsubsection}{Bemerkung}{99}
+\contentsline {subsection}{\numberline {3.16.2}Lemma 6.3}{99}
+\contentsline {subsubsection}{Beweis}{100}
+\contentsline {subsubsection}{Beispiel}{100}
+\contentsline {subsection}{\numberline {3.16.3}Lemma 6.4}{100}
+\contentsline {subsubsection}{Beweis}{100}
+\contentsline {subsection}{\numberline {3.16.4}Satz 6.5}{100}
+\contentsline {subsection}{\numberline {3.16.5}Lemma 6.6}{100}
+\contentsline {subsection}{\numberline {3.16.6}Beweis}{100}
+\contentsline {chapter}{\numberline {4}\IeC {\"U}bung}{101}
+\contentsline {section}{\numberline {4.1}Syntax}{101}
+\contentsline {subsection}{\numberline {4.1.1}Konstruktion von Teiltermen}{101}
+\contentsline {subsection}{\numberline {4.1.2}\IeC {\"U}ber Nachbarn}{102}
+\contentsline {section}{\numberline {4.2}Substitutionen}{103}
+\contentsline {subsection}{\numberline {4.2.1}Substitutionskomposition ist eine Substitution}{103}
+\contentsline {subsection}{\numberline {4.2.2}Eingenschaften von Substitutionen}{103}
+\contentsline {section}{\numberline {4.3}Semantik}{104}
+\contentsline {subsection}{\numberline {4.3.1}Beispiele zur Interpretationsanwendung}{104}
+\contentsline {subsection}{\numberline {4.3.2}Verschiedene Interpretationen einer Formel}{105}
+\contentsline {subsection}{\numberline {4.3.3}Existenz einer Herbrand-Interpretation}{106}
+\contentsline {section}{\numberline {4.4}\IeC {\"A}quivalenz und Normalenform}{106}
+\contentsline {section}{\numberline {4.5}Unifikation}{106}
+\contentsline {section}{\numberline {4.6}Beweisverfahren}{107}
+\contentsline {subsection}{\numberline {4.6.1}Resolutionsverfahren}{107}
+\contentsline {subsection}{\numberline {4.6.2}Schrittweiser Resolutionsbeweis}{107}
+\contentsline {subsection}{\numberline {4.6.3}Notwendigkeit der Faktorisierung}{108}
+\contentsline {section}{\numberline {4.7}Eigenschaften}{109}
+\contentsline {subsection}{\numberline {4.7.1}Beispiel f\IeC {\"u}r korrespondierendes Herbrand-Modell}{109}
+\contentsline {section}{\numberline {4.8}Nachtrag Logik}{109}
+\contentsline {section}{\numberline {4.9}Turing-Maschine}{110}
+\contentsline {subsection}{\numberline {4.9.1}Palindrom Turingmaschine}{110}
+\contentsline {subsection}{\numberline {4.9.2}Wort 2-Band Turingmaschine}{110}
+\contentsline {section}{\numberline {4.10}}{110}
+\contentsline {subsection}{\numberline {4.10.1}Berechenbarkeit, Entscheidbarkeit, Aufz\IeC {\"a}hlbarkeit}{110}
+\contentsline {subsection}{\numberline {4.10.2}Primitiv rekursive Funktionen}{111}
+\contentsline {part}{III\hspace {1em}Computer Architecture}{113}
+\contentsline {chapter}{\numberline {5}Vorlesung}{114}
+\contentsline {section}{\numberline {5.1}Einf\IeC {\"u}hrung}{114}
+\contentsline {subsection}{\numberline {5.1.1}Big Data}{114}
+\contentsline {section}{\numberline {5.2}Vorlesung}{114}
+\contentsline {subsection}{\numberline {5.2.1}ZIH}{114}
+\contentsline {subsection}{\numberline {5.2.2}Begriffe und Definitionen}{114}
+\contentsline {section}{\numberline {5.3}VL}{115}
+\contentsline {subsection}{\numberline {5.3.1}Modifiziertes Dreiphasenmodell zum Entwurf eines RS}{115}
+\contentsline {subsubsection}{Befelhlssatzarchitektur}{115}
+\contentsline {subsubsection}{Implementierung}{115}
+\contentsline {subsubsection}{Realisierung}{115}
+\contentsline {subsection}{\numberline {5.3.2}Architektur-Definition (Tanenbaum)}{115}
+\contentsline {subsection}{\numberline {5.3.3}Architektur-Definition (Hennessy/Patterson)}{115}
+\contentsline {subsection}{\numberline {5.3.4}Einflusskomplexe}{116}
+\contentsline {subsection}{\numberline {5.3.5}Entwurf eines Rechnersystems}{117}
+\contentsline {subsection}{\numberline {5.3.6}Architectural Trends}{118}
+\contentsline {subsection}{\numberline {5.3.7}Bemerkungen zum klassischen Digitalrechner}{119}
+\contentsline {subsection}{\numberline {5.3.8}Aufgaben und Ziele der Rechnerarchitektur}{120}
+\contentsline {subsubsection}{Aufgaben}{120}
+\contentsline {subsubsection}{Ziele}{120}
+\contentsline {subsection}{\numberline {5.3.9}Klassifizierung nach Flynn}{120}
+\contentsline {section}{\numberline {5.4}Intel Prozessoren}{121}
+\contentsline {subsection}{\numberline {5.4.1}Ursprung}{121}
+\contentsline {subsection}{\numberline {5.4.2}Intel 80386}{121}
+\contentsline {subsubsection}{IA-32 Register}{121}
+\contentsline {subsubsection}{Stack}{121}
+\contentsline {subsubsection}{Adressierungsarten}{122}
+\contentsline {subsubsection}{Virtueller Speicher}{122}
+\contentsline {subsection}{\numberline {5.4.3}Intel 80486}{122}
+\contentsline {subsubsection}{Cache}{123}
+\contentsline {subsubsection}{Pipelining}{123}
+\contentsline {subsection}{\numberline {5.4.4}Pentium}{123}
+\contentsline {subsection}{\numberline {5.4.5}Pentium MMX}{123}
+\contentsline {subsection}{\numberline {5.4.6}Pentium Pro}{124}
+\contentsline {subsubsection}{RISC Kern}{124}
+\contentsline {subsubsection}{Out-of-Order Execution}{124}
+\contentsline {subsection}{\numberline {5.4.7}Pentium 2 / Pentium 3}{125}
+\contentsline {subsubsection}{Streaming SIMD Extensions (SSE)}{125}
+\contentsline {subsection}{\numberline {5.4.8}Pentium 4}{125}
+\contentsline {subsubsection}{Netburst Mikroarchitektur}{126}
+\contentsline {subsubsection}{SSE Erweiterungen}{126}
+\contentsline {subsection}{\numberline {5.4.9}Pentium M/ Core Solo/ Core Duo}{126}
+\contentsline {subsection}{\numberline {5.4.10}Intel64 Prozessoren (Auswahl)}{127}
+\contentsline {subsubsection}{Befehlssatz}{127}
+\contentsline {subsection}{\numberline {5.4.11}Multicore Prozessoren}{127}
+\contentsline {subsubsection}{Entwicklung des Energieverbrauchs}{128}
+\contentsline {subsection}{\numberline {5.4.12}Intel Core Microarchitektur Core2Duo}{128}
+\contentsline {subsection}{\numberline {5.4.13}Intel Nehalem Mikroarchitektur}{128}
+\contentsline {section}{\numberline {5.5}fill 03.05.16}{128}
+\contentsline {section}{\numberline {5.6}}{128}
+\contentsline {subsection}{\numberline {5.6.1}Intel Itanium}{128}
+\contentsline {subsubsection}{Quad-Core Itanium}{129}
+\contentsline {subsubsection}{8-core Itanium}{129}
+\contentsline {subsection}{\numberline {5.6.2}IBM Power}{129}
+\contentsline {subsubsection}{Die Power Architektur}{129}
+\contentsline {subsubsection}{POWER4+ Processor}{130}
+\contentsline {subsubsection}{Speicher IO-Bandbreite}{130}
+\contentsline {subsubsection}{8Prozessor SMP System(MCM: 11x11cm}{130}
+\contentsline {subsubsection}{Mikroarchitektur des Proessors IBM POWER4}{130}
+\contentsline {subsubsection}{Befehlsausf\IeC {\"u}hrung und Ressourcnverwaltung}{131}
+\contentsline {subsubsection}{Pipeline}{131}
+\contentsline {subsubsection}{Instruction Fetch, Group Formation und Dispatch 1}{131}
+\contentsline {subsubsection}{Out-of-Order Processing}{131}
+\contentsline {subsubsection}{Load/stor Istruction Processing }{131}
+\contentsline {subsubsection}{Floating-Point Execution Pipeline}{131}
+\contentsline {subsubsection}{Group Completion}{131}
+\contentsline {subsubsection}{Matrix Multiplication}{131}
+\contentsline {subsection}{\numberline {5.6.3}POWER7}{132}
+\contentsline {subsubsection}{SMP System}{132}
+\contentsline {subsubsection}{POWER Prozessorfamilie}{132}
+\contentsline {subsection}{\numberline {5.6.4}MIPS}{132}
+\contentsline {subsubsection}{MIPS Prozessoren}{132}
+\contentsline {subsubsection}{R10k}{133}
+\contentsline {subsubsection}{Befehlss\IeC {\"a}tze der Prozessoren R10k und R12k}{133}
+\contentsline {subsubsection}{ALU-Befehle}{133}
+\contentsline {subsubsection}{Mikroarchitektur der Prozessoren R10k und R12k}{133}
+\contentsline {subsubsection}{Pipelines des MIPS R10k}{133}
+\contentsline {subsubsection}{Pipeline-Stufen 3 bis 7}{133}
+\contentsline {subsubsection}{Floating Point Units}{133}
+\contentsline {subsubsection}{Integer Units und Load/Store Unit}{134}
+\contentsline {subsubsection}{Godson-3}{134}
+\contentsline {subsection}{\numberline {5.6.5}SPARC}{134}
+\contentsline {subsubsection}{SUN Niagara II (T2)}{134}
+\contentsline {subsubsection}{T2 Multithreading}{135}
+\contentsline {subsection}{\numberline {5.6.6}CELL Broadband Engine}{135}
+\contentsline {subsection}{\numberline {5.6.7}ARM}{135}
+\contentsline {subsection}{\numberline {5.6.8}DEC ALPHA}{136}
+\contentsline {section}{\numberline {5.7}24.05.2016}{136}
+\contentsline {section}{\numberline {5.8}31.05.2016}{136}
+\contentsline {section}{\numberline {5.9}07.06.2016}{136}
+\contentsline {subsection}{\numberline {5.9.1}Verbinungsnetzwerke}{136}
+\contentsline {subsubsection}{Ausgew\IeC {\"a}hlte Metriken statischer Verbindungsnetzwerke II}{136}
+\contentsline {chapter}{\numberline {6}\IeC {\"U}bung}{137}
+\contentsline {section}{\numberline {6.1}Einf\IeC {\"u}hrung}{137}
+\contentsline {subsection}{\numberline {6.1.1}von-Neumann}{137}
+\contentsline {subsubsection}{Komponenten des v. Neumann Architektur}{137}
+\contentsline {subsection}{\numberline {6.1.2}v.Neumann vs. Harvard}{138}
+\contentsline {subsubsection}{Harvard}{138}
+\contentsline {subsection}{\numberline {6.1.3}Def. von Brooks vs Giloi}{138}
+\contentsline {subsubsection}{Brooks (1962)}{138}
+\contentsline {subsubsection}{Giloi}{138}
+\contentsline {subsection}{\numberline {6.1.4}RA-Definition Begriffe}{139}
+\contentsline {subsubsection}{Begriffskl\IeC {\"a}rung}{140}
+\contentsline {section}{\numberline {6.2}Einf\IeC {\"u}hrung}{140}
+\contentsline {subsection}{\numberline {6.2.1}Moores Law}{140}
+\contentsline {subsubsection}{Was macht man mit diesen Transistoren?}{140}
+\contentsline {subsubsection}{Weshalb wir die Anzahl der Verarbeitungseinheiten nicht weiter erh\IeC {\"o}ht?}{141}
+\contentsline {subsubsection}{Multicore-Prozessoren}{141}
+\contentsline {subsubsection}{L\IeC {\"u}cke zwischen Prozessorleistung und Zugriffszeit auf den DRAM verkleinern}{141}
+\contentsline {subsubsection}{Integration weiterer Baugruppen}{141}
+\contentsline {subsection}{\numberline {6.2.2}Klassifikationen nach Flynn}{142}
+\contentsline {subsection}{\numberline {6.2.3}MMX, SSE, AVX}{143}
+\contentsline {section}{\numberline {6.3}Prozessoren / Pipelifting}{143}
+\contentsline {subsection}{\numberline {6.3.1}Adressierungsarten}{143}
+\contentsline {subsection}{\numberline {6.3.2}scale-potenz}{144}
+\contentsline {subsection}{\numberline {6.3.3}Speedup}{145}
+\contentsline {subsection}{\numberline {6.3.4}}{145}
+\contentsline {section}{\numberline {6.4}}{147}
+\contentsline {subsection}{\numberline {6.4.1}SPARC INTEL AMD}{147}
+\contentsline {section}{\numberline {6.5}}{149}
+\contentsline {section}{\numberline {6.6}HND, RISC, DLX-Architektur, Blatt 3}{149}
+\contentsline {subsection}{\numberline {6.6.1}Hauptkomponenten HDN (3.1)}{149}
+\contentsline {subsection}{\numberline {6.6.2}RISC-Architekturen (3.2)}{150}
+\contentsline {subsection}{\numberline {6.6.3}Beschr\IeC {\"a}nkungen bei DLX}{151}
+\contentsline {subsection}{\numberline {6.6.4}Zuordnung unter HDN}{151}
+\contentsline {subsection}{\numberline {6.6.5}HDN Beschreibung I-Typ-DLX}{152}
+\contentsline {subsection}{\numberline {6.6.6}DLX-Architektur}{153}
+\contentsline {subsection}{\numberline {6.6.7}DLX-Befehlsfolge mit HDN}{154}
+\contentsline {section}{\numberline {6.7}fill - Blatt 4}{155}
+\contentsline {subsection}{\numberline {6.7.1}fill}{155}
+\contentsline {subsection}{\numberline {6.7.2}}{155}
+\contentsline {subsection}{\numberline {6.7.3}Gitter Topologien}{156}
+\contentsline {subsection}{\numberline {6.7.4}Codierung - OMEGA Netz}{156}
+\contentsline {subsection}{\numberline {6.7.5}Prinzip Paketvermittlung}{157}
+\contentsline {part}{IV\hspace {1em}Database}{159}
+\contentsline {chapter}{\numberline {7}Vorlesung}{160}
+\contentsline {section}{\numberline {7.1}Einf\IeC {\"u}hrung}{160}
+\contentsline {section}{\numberline {7.2}Konzeptueller Entwurf}{161}
+\contentsline {subsection}{\numberline {7.2.1}Drei Phasen des Datenbank-Entwurfs (4, ff.)}{161}
+\contentsline {subsubsection}{Phasen der SW-Entwicklung}{161}
+\contentsline {subsubsection}{Phasen des DB-Entwurfs}{161}
+\contentsline {subsection}{\numberline {7.2.2}Lebenszyklus einer Datenbank}{161}
+\contentsline {subsection}{\numberline {7.2.3}Prinzip eines Datenmodells (16)}{161}
+\contentsline {subsection}{\numberline {7.2.4}Entity-Relationship-Modell}{162}
+\contentsline {subsubsection}{Entit\IeC {\"a}ten (20)}{162}
+\contentsline {subsubsection}{Beziehungen / Relationships (22)}{162}
+\contentsline {subsubsection}{Beispiel eines ER-Diagramms (23)}{163}
+\contentsline {subsubsection}{Beispiel Funtkionalit\IeC {\"a}ten (24)}{163}
+\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von Beziehungstypen (25)}{163}
+\contentsline {subsubsection}{Besonderheiten (32 ff.)}{163}
+\contentsline {subsubsection}{Entwurf eines ER Diagramms (38 ff.)}{163}
+\contentsline {subsubsection}{Varianten f\IeC {\"u}r mehrstellige Beziehungstypen (40)}{163}
+\contentsline {section}{\numberline {7.3}Konzeptueller Entwurf}{163}
+\contentsline {subsection}{\numberline {7.3.1}Grundlagen (5)}{163}
+\contentsline {subsubsection}{Ausgangspunkt}{163}
+\contentsline {subsubsection}{Grundlagen}{163}
+\contentsline {subsection}{\numberline {7.3.2}Prim\IeC {\"a}rschl\IeC {\"u}ssel (8)}{164}
+\contentsline {subsection}{\numberline {7.3.3}ER-Modell Relationales Modell}{164}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Entit\IeC {\"a}ten}{164}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Attributen}{164}
+\contentsline {subsubsection}{\IeC {\"U}bersetzung von Beziehungen}{164}
+\contentsline {subsubsection}{Abbildung der Vererbung 21}{165}
+\contentsline {subsubsection}{Vergleich der Abbildungsvarianten}{165}
+\contentsline {section}{\numberline {7.4}Relationale Algebra}{165}
+\contentsline {subsection}{\numberline {7.4.1}Motivation}{165}
+\contentsline {subsection}{\numberline {7.4.2}Relationale Algebra}{166}
+\contentsline {subsection}{\numberline {7.4.3}Basisoperationen}{166}
+\contentsline {subsubsection}{Projektion}{166}
+\contentsline {subsubsection}{Projektion in SQL}{166}
+\contentsline {subsubsection}{Selektion(Restriktion)}{166}
+\contentsline {subsubsection}{Selektion in SQL}{167}
+\contentsline {subsubsection}{Weitere Basisoperationen (15)}{167}
+\contentsline {subsubsection}{Beispiele f\IeC {\"u}r Anfragen (18)}{167}
+\contentsline {subsection}{\numberline {7.4.4}Abgeleitete Operationen}{167}
+\contentsline {subsubsection}{Durchschnitt und Division}{167}
+\contentsline {subsubsection}{Nat\IeC {\"u}rlicher Verbund}{167}
+\contentsline {subsubsection}{Theta- und Equi-Join}{168}
+\contentsline {subsubsection}{Verlustfreiheit von Joins}{168}
+\contentsline {subsubsection}{Outer Joins}{168}
+\contentsline {section}{\numberline {7.5}SQL}{168}
+\contentsline {subsection}{\numberline {7.5.1}Einleitung}{168}
+\contentsline {subsubsection}{Bestandteile einer Datenbanksprache}{168}
+\contentsline {subsubsection}{Datenbankanfragesprachen}{168}
+\contentsline {subsubsection}{SQL}{169}
+\contentsline {subsection}{\numberline {7.5.2}Datendefinitionssprache}{169}
+\contentsline {subsubsection}{SQL Datentypen}{169}
+\contentsline {subsubsection}{Auswahl von Datentypen: ABC-Regel}{169}
+\contentsline {subsubsection}{Anlegen einer Relation (16ff)}{170}
+\contentsline {subsubsection}{\IeC {\"A}ndern und L\IeC {\"o}schen einer Relation}{170}
+\contentsline {subsubsection}{Erzeugen einer Indexstruktur(19)}{170}
+\contentsline {subsubsection}{Erzeugen einer Datenbanksicht (21)}{170}
+\contentsline {subsection}{\numberline {7.5.3}Datenbankanfragesprache (DQL 25 ff)}{170}
+\contentsline {subsection}{\numberline {7.5.4}Algebra-Operationen in SQL (32 ff)}{170}
+\contentsline {subsection}{\numberline {7.5.5}Sprachelemente jenseits der relationalen Algebra}{170}
+\contentsline {subsubsection}{GROUP BY}{170}
+\contentsline {subsubsection}{Verf\IeC {\"u}gbare Aggregatfunktionen}{170}
+\contentsline {subsubsection}{Aggregatsfunktionen}{171}
+\contentsline {subsubsection}{Aggregation}{171}
+\contentsline {subsubsection}{Gruppieren und Ordnen}{171}
+\contentsline {subsubsection}{Beispiel (44)}{171}
+\contentsline {subsection}{\numberline {7.5.6}Innere und \IeC {\"a}u\IeC {\ss }ere Verbundoperationen}{171}
+\contentsline {subsubsection}{Alternative Schreibweise zur "normalen" Verbundoperation}{171}
+\contentsline {subsubsection}{Outer-Joins}{172}
+\contentsline {subsection}{\numberline {7.5.7}Tabellenausdr\IeC {\"u}cke}{172}
+\contentsline {subsubsection}{WITH}{172}
+\contentsline {subsubsection}{Alias-Namen f\IeC {\"u}r Tabellen}{172}
+\contentsline {subsubsection}{Guter SQL-Stil}{172}
+\contentsline {subsection}{\numberline {7.5.8}Geschachtelte Anfragen}{173}
+\contentsline {subsubsection}{Prinzip der geschachtelten Anfragen}{173}
+\contentsline {subsubsection}{Weitere Sprachelemente von SQL (53)}{173}
+\contentsline {subsection}{\numberline {7.5.9}\IeC {\"A}nderungsoperationen Insert, Update, Delete}{173}
+\contentsline {subsubsection}{Einf\IeC {\"u}gen von Tupeln}{173}
+\contentsline {subsubsection}{NULL und DEFAULT-Werte}{173}
+\contentsline {subsubsection}{Varianten}{173}
+\contentsline {subsubsection}{L\IeC {\"o}schen und Atualisieren}{174}
+\contentsline {subsubsection}{Beispiel zu \IeC {\"A}nderungsoperationen 60}{174}
+\contentsline {subsection}{\numberline {7.5.10}Sequenzen und berechnete Spalten 63 ff}{174}
+\contentsline {subsection}{\numberline {7.5.11}Sicherung der Integrit\IeC {\"a}t mit SQL 69ff}{174}
+\contentsline {subsubsection}{DBMS unterst\IeC {\"u}tzt die Benutzer bei}{174}
+\contentsline {subsubsection}{Sicherstellung der ref. Integrit\IeC {\"a}t}{174}
+\contentsline {subsubsection}{Weitere einfache statische Integrit\IeC {\"a}tsbedingungen}{174}
+\contentsline {subsection}{\numberline {7.5.12}Aktive Datenbanktechnologie (80 ff)}{174}
+\contentsline {subsubsection}{ECA-Prinzip eines Triggers}{174}
+\contentsline {subsubsection}{Anlegen von Triggern (82)}{175}
+\contentsline {subsubsection}{Triggeraktivierungszeit (83 ff)}{175}
+\contentsline {subsubsection}{Datenbankprozeduren und -funktionen (93)}{175}
+\contentsline {section}{\numberline {7.6}Entwurfstheorie relationaler Datenbanken}{175}
+\contentsline {subsection}{\numberline {7.6.1}Ziele und Motivation des Datenbankentwurfs}{175}
+\contentsline {subsection}{\numberline {7.6.2}Theorie der Funktionalen Abh\IeC {\"a}ngigkeiten}{175}
+\contentsline {subsubsection}{Funktionen (16)}{175}
+\contentsline {subsubsection}{Funktionale Abh\IeC {\"a}ngigkeiten}{175}
+\contentsline {subsubsection}{Berechnung funktionaler Abh\IeC {\"a}ngigkeiten}{175}
+\contentsline {subsubsection}{Membership-Problem (26)}{175}
+\contentsline {subsection}{\numberline {7.6.3}Zerlegung (Dekomposition) von Relationen}{175}
+\contentsline {subsubsection}{Zerlegung eines Relationenschemas (29)}{175}
+\contentsline {subsubsection}{Verlustlosigkeit (30 ff.)}{175}
+\contentsline {subsubsection}{Abh\IeC {\"a}ngigkeitsbewahrung (33)}{175}
+\contentsline {subsection}{\numberline {7.6.4}Normaleformena}{175}
+\contentsline {subsubsection}{Schemaaqualit\IeC {\"a}tspr\IeC {\"u}fung}{175}
+\contentsline {subsubsection}{Erste NF(39)}{176}
+\contentsline {subsubsection}{Zweite NF(40)}{176}
+\contentsline {subsubsection}{Dritte NF(43 ff)}{176}
+\contentsline {subsubsection}{Automatische Zerlegung}{176}
+\contentsline {subsubsection}{Kanonische \IeC {\"U}berdeckung (46 ff)}{176}
+\contentsline {subsubsection}{Beispiel Kanonische \IeC {\"U}berdeckung (49 ff)}{176}
+\contentsline {subsubsection}{3NF-Synthesealgorithmus (52)}{176}
+\contentsline {subsubsection}{Boyce-Codd-Normalform (57)}{176}
+\contentsline {subsubsection}{Erzeugung der BCNF}{176}
+\contentsline {subsubsection}{Mehrwertige Abh\IeC {\"a}ngigkeiten (59 ff)}{176}
+\contentsline {subsubsection}{Vierte Normalform (64)}{176}
+\contentsline {section}{\numberline {7.7}Transaktionsverarbeitung I - Synchronisation}{176}
+\contentsline {section}{\numberline {7.8} Transaktionsverarbeitung II - Fehlerbehandlung, Logging und Recovery}{176}
+\contentsline {chapter}{\numberline {8}\IeC {\"U}bung}{177}
+\contentsline {section}{\numberline {8.1}Einf\IeC {\"u}hrung}{177}
+\contentsline {subsection}{\numberline {8.1.1}}{177}
+\contentsline {subsection}{\numberline {8.1.2}}{177}
+\contentsline {subsection}{\numberline {8.1.3}}{178}
+\contentsline {subsection}{\numberline {8.1.4}}{178}
+\contentsline {subsection}{\numberline {8.1.5}}{178}
+\contentsline {section}{\numberline {8.2}ER-Modellierung}{178}
+\contentsline {subsection}{\numberline {8.2.1}Prof-Stud}{178}
+\contentsline {subsection}{\numberline {8.2.2}ER-Bahn}{178}
+\contentsline {subsection}{\numberline {8.2.3}ER-Bsp}{180}
+\contentsline {subsection}{\numberline {8.2.4}Vererbungshierarchie - Relationsschema }{180}
+\contentsline {section}{\numberline {8.3}Relationenalgebra}{180}
+\contentsline {subsection}{\numberline {8.3.1}}{182}
+\contentsline {subsection}{\numberline {8.3.2}}{182}
+\contentsline {subsection}{\numberline {8.3.3}}{182}
+\contentsline {subsection}{\numberline {8.3.4}Kreuzprodukt und Divisionsoperator}{183}
+\contentsline {section}{\numberline {8.4}SQL}{183}
+\contentsline {subsection}{\numberline {8.4.1}Befehle in SQL}{183}
+\contentsline {subsubsection}{1}{183}
+\contentsline {subsubsection}{2}{183}
+\contentsline {subsubsection}{3}{183}
+\contentsline {subsubsection}{4}{184}
+\contentsline {subsubsection}{5}{184}
+\contentsline {subsubsection}{8}{184}
+\contentsline {subsubsection}{9}{184}
+\contentsline {section}{\numberline {8.5}}{184}
+\contentsline {subsection}{\numberline {8.5.1}Primzeugs}{184}
+\contentsline {section}{\numberline {8.6}}{185}
+\contentsline {subsection}{\numberline {8.6.1}ER-Modell}{185}
+\contentsline {subsection}{\numberline {8.6.2}SQL-Anfragen}{186}
+\contentsline {subsection}{\numberline {8.6.3}Relationsschema}{186}
+\contentsline {section}{\numberline {8.7}06.06.2016}{186}
+\contentsline {subsection}{\numberline {8.7.1}}{186}
+\contentsline {subsubsection}{Links-Reduktion}{186}
+\contentsline {subsubsection}{Rechts-Reduktion}{186}
+\contentsline {subsubsection}{Aufgabe}{187}
+\contentsline {subsection}{\numberline {8.7.2}}{187}
+\contentsline {subsection}{\numberline {8.7.3}FL\IeC {\"u}ge}{188}
+\contentsline {section}{\numberline {8.8}}{188}
+\contentsline {subsection}{\numberline {8.8.1}}{188}
+\contentsline {subsection}{\numberline {8.8.2}}{189}
+\contentsline {subsubsection}{DIRTY READ}{189}
+\contentsline {subsubsection}{NON REPEATABLE READ}{189}
+\contentsline {subsection}{\numberline {8.8.3}}{189}
+\contentsline {subsection}{\numberline {8.8.4}}{190}
+\contentsline {subsection}{\numberline {8.8.5}}{190}
+\contentsline {subsection}{\numberline {8.8.6}}{191}
+\contentsline {part}{V\hspace {1em}Hardware Laboratory}{192}
+\contentsline {part}{VI\hspace {1em}C++4CG}{193}

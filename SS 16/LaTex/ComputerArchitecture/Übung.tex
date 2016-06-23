@@ -511,3 +511,370 @@ ab k pro Takt 1 Ergebnis (n-Mal)\\
 		\end{align*}
 	\end{enumerate}
 \end{enumerate}
+
+\section{}
+fill 24.05.
+\section{HND, RISC, DLX-Architektur, Blatt 3}
+\subsection{Hauptkomponenten HDN (3.1)}
+Welche Hauptkomponenten nutzt HDN für die Beschreibung von Befehlssätzen?
+\begin{itemize}
+	\item[$\leftarrow$] Transfer logisch (z.B. GPR[R6], Generel Purpose Register)
+	\item[M] Speicherzugriff
+	\item[$\leftarrow _n$] Transfer mit expliziter Längenangabe
+	\item[\#\#] Verkettungsoperator
+	\begin{itemize}
+		\item Beispiel: GPR[R4] $\leftarrow _{32} M$[Adresse x] \#\# M[x+2]
+	\end{itemize}
+	\item[$X^m$] Wiederholungsspezifikation
+	\item[$X_{m\ldots n}$] Zugriff auf eine Bitkette
+	\begin{itemize}
+		\item Beispiel: GPR[R6]$_{0\ldots 23} \leftarrow O^{24}$ 
+	\end{itemize}
+	\item[$X_n$] Zugriff zum Einzelbit
+	\begin{itemize}
+		\item Beispiel: GPR[R5]$_0\ldots 23\leftarrow M([\text{Adresse x}])_0^{24}$
+	\end{itemize}
+\end{itemize}
+\subsection{RISC-Architekturen (3.2)}
+Nennen Sie wesentliche Merkmale von RISC-Architekturen.
+\begin{itemize}
+	\item wenige Befehlsformate fester Länge (für DIX-Architekturen 32 Bit)
+	\begin{itemize}
+		\item erleichtert Pipelining erheblich. Durch konstante Befehlslänge kann schon der nächste Befehl geholt werden. (IF Instruction Fetch) während der vorhergehende Befehl dekodiert wird.
+	\end{itemize}
+	\item Ein-Zyklus Operationen
+	\begin{itemize}
+		\item im eingelaufenen Zustand der Pipeline stellt jede Verarbeitungseinheit pro Takt einen Befehl fertig
+	\end{itemize}
+	\item Load/Store-GPR-Architektur
+	\begin{itemize}
+		\item Verarbeitungsbefehle greifen nur zu Universalregistern (GPR General Purpose Register) zu. Damit können nur Load/Store-Befehle zum Speicher zugreifen
+	\end{itemize}
+	\item Festverdrahtete Steuerung
+	\begin{itemize}
+		\item Vorteil: geht schneller
+		\item Nachteil: bei Änderungen in der Architektur muss neue festverdrahtete Steuerung erstellt werden
+		\item[$\leftrightarrow$] Bei CISC Steuereung der Befehlsabarbeitung durch ein Mikroprogramm
+	\end{itemize}
+	\item Reduzierung der Prozessorhardware führt im Vergleich zu CISC zu kürzeren Entwicklungszeiten
+	\begin{itemize}
+		\item weniger Chipfläche
+	\end{itemize}
+\end{itemize}
+\subsection{Beschränkungen bei DLX}
+I-Typ-Befehlsformat
+	\begin{itemize}
+		\item Befehlswort wird in das IR (Instruction Register) geladen
+		\item $ ^{IR0}Opcode^{IR|IR6}rs1^{IR10|IR11}rs2^{IR15|IR16}Immidiate^{IR31}$
+	\end{itemize}
+Welche Beschräkungen ergeben sich aus einer einheitlichen Befehlslänge von 32 Bit bei der DLX-Architektur?
+\begin{itemize}
+	\item[1] Bei den Direktoperanden sind wir auf 16 Bit begrenzt, obwohl wir eine Registerlänge von 32 Bit haben
+	\begin{itemize}
+		\item Nutzung von 2 Befehlen, um ein Register mit einem 32 Bit Direktoperanden zu laden
+		\item LHI R10, 0x1234; lade höheres Halbwort mit Immediate 16; \\R10 $\leftarrow$ 0x1234 \#\# 0$^{16}$
+		\item ADDUI R10, R10, 0x8678; Addiere unsigend immediate; unsigned verwendet automatisch Null-Erweiterung
+		\begin{align*}
+			&12340000\\
+			+&00008678\\
+			=&12348678
+		\end{align*}
+	\end{itemize}
+	\item[2] nur 6 Bit für Operationscode $\to 2^6 = 64 $Befehle
+	\item[3] nur 5 Bit für Kodierung des Registers $\to 2^5 = 32$ Register Kodierbar
+	\item[2 $\leftrightarrow$ 3] mehr Register z.B.: $2^6 = 64$ bedeutet weniger Befehle $2^4 \to 16$ Befehle
+\end{itemize}
+\subsection{Zuordnung unter HDN}
+Was versteht man unter einer vorzeichenerweiterten Zuordnung zu einem 32-Bit-Register und wie kann diese in HDN dargestellt werden?
+\begin{itemize}
+	\item vorzeichenerweiterte Zuordnung
+	\begin{itemize}
+		\item Problem: Direktoperand hat nur 16 Bit IR16\ldots 31
+		\begin{itemize}
+			\item wenn eine Operation mit einem 32-Bit-Register erfolgen soll muss der Direktoperand auf 32 Bit erweitert werden, ohne dass sich der Wert des Direktoperanden verändert
+		\end{itemize}
+		\item Lösung: Das MSB (Most Significant Bit) $IR_16$ muss 16 mal vor den Direktoperanden verkettet werden:\\
+		$(IR_{16})^{} \#\# IR_{16 \ldots 31}$
+		\begin{enumerate}
+			\item $IR_{16} = 0 \to $ positive Zahl
+			\item $IR_{16} = 1 \to $ negative Zahl (Zweierkomplement)
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
+\subsection{HDN Beschreibung I-Typ-DLX}
+Interpretieren Sie die HDN-Beschreibung des I-Typ-DLX-Befehlsformates!
+\begin{itemize}
+	\item Immediate-ALU-Befehle
+	\begin{itemize}
+		\item GPR[rd] $\leftarrow$ GPR[rs1]op$((IR_{16})^{16}\#\# IR_{16\ldots 31}$
+		\item Direktoperand $(IR_{16\ldots 32}$ wird vorzeichenerweitert und über der Operationscode op(ADD, SUB, MUL, AND, \ldots) mit dem Inhalt des GPR, dessen Nummer auf den Bitstellen 6 \ldots 10 (rs1) steht, verknüpft. Das Ergebnis wird mit dem GPR, dessen Nummer auf den Bitstellen 11\ldots 15 des Befehlsowrtes steht, abgespeichert. 
+		\item Beispiel: ADDI rd,rs$_1$, 0xF43A; GPR[rd] $\leftarrow$ GPR[rs$_1$]+0xF43A
+	\end{itemize}
+	\item Lade-Speicher-Befehle
+	\begin{itemize}
+		\item Lade-Befehle
+		\begin{itemize}
+			\item GPR[rd]$\leftarrow$ M[GPR[rs$_1+((IR_{16})^{16}\#\# IR_{16\ldots 31})$]				\item Beispiel
+			\begin{enumerate}
+		\item LW rd, D(rs$_1$) allgemeine Darstellung
+		\item LW R1, 10(R2) ; R! $\leftarrow$ M[10+R2]\#\# M[11+R2] \#\# M[12+R2] \#\# M[12+R2]
+			\end{enumerate}
+		\end{itemize}
+		\item SPeicher-Befehle
+		\begin{itemize}
+			\item M(GPR[rs$_1$]+$((IR_{16})^{16}\#\# IR_{16\ldots 31})$]$\leftarrow$GPR(rs$_2$
+		\end{itemize}
+	\end{itemize}
+	\item bedingte Verzweigung
+	\begin{itemize}
+		\item if/GPR[rs1] PC $\leftarrow$ PC + (($IR_{16})^{16} \#\# IR_{16 \ldots 31}$ \\ Wenn die Sprungbedingung erfüllt ist, wird de rPC um das vorzeichnerweiterte Immediate erhöht und somit gesprungen. Sprungbedingung:
+		\begin{itemize}
+			\item BEQZ (Brand EQual Zero) $\to$ Wert in rs1 = 0
+			\item BNEQZ (Brand Not EQual Zero) $\to$ Wert in rs1 != 0
+		\end{itemize}
+	\end{itemize}
+	\item Sprungbefehl mit Zieladresse im Register
+	\begin{itemize}
+		\item rd = 0, IR$_{16 \ldots 31} = 0$
+		\item GPR[rs1] = Zieladresse des Sprungbefehls
+		\item Die durch den PC estimmte Befehlsfolge wird verlassen und bei rs1 fortgesetzt (unbedingter Sprung)
+	\end{itemize}
+\end{itemize}
+\subsection{DLX-Architektur}
+Wo zeigen sich bei der DLX-Architektur besonders die Gestaltungsgrundsätze "Sparsamkeit" und "Orthogonalität"?
+\begin{itemize}
+	\item Sparsamkeit
+	\begin{itemize}
+		\item[$\to$] notewendig, da nur wenig Befehls-Kodierungen
+		\item[Ziel:] möglichst mit einer Befehlskodierung mehrere Aufgaben erfüllen
+		\item[Weg:] Register R0 hardwaremäßig auf = gesetzt
+		\item Lade Speicher Befehle
+		\begin{itemize}
+			\item[z.B.:] LW rd, D(rs1) allg Darstellung \\ $\to$ LW R1, 10(R2); R1 $\leftarrow$ M[10+R2] \#\# M[11+R2] \#\# M[12+R2]\#\# M[13+R2],  Register indirekt mit Displacement \\ $\to$ LW R3, 100(R0) ; R3 $\leftarrow$ M[100] \#\# M[101] \#\# M[102] \#\# M[103] , Immediate Adress\\
+			$\to$ LW R5,0(R6) ; R5 $\leftarrow$ M[R6]\#\#M[1+R6]\#\#M[2+R6]\#\#M[3+R6], Register Indirekt
+			\item[z.B.:]
+			\begin{itemize}
+				\item SW D(rs1), rs2 allg. Darstellung
+				\item SW 10(R3), R4 ; M[10+R3]\#\#M[11+R3]\#\#M[12+R3]\#\#M[13+R3] $\leftarrow$ R4, Register Indirekt mit Displacement
+				\item SW 100(R0),R4 ;  M[100] \#\# M[101] \#\# M[102] \#\# M[103] $\leftarrow$ R4, Immediate Adress
+				\item SW 0(R3), R4 ; M[R3]\#\#M[1+R3]\#\#M[2+R3]\#\#M[3+R3] $\leftarrow$ R4, Register Indirekt
+			\end{itemize}
+			Man kann mit diesem Befehl auch onch den Speicher mit 0 initialisieren
+			\begin{itemize}
+				\item SW D(rs1), R0 ; M[D+GPR[rs1]]\#\# M[1+D+GPR[rs1]]\#\#M[2+D+GPR[rs1]]\#\# M[3+D+GPR[rs1]] $\leftarrow$ R0
+			\end{itemize}
+		\end{itemize}
+		\item R-Typ-Befehlsformat\\ z.B.: rd, rs1,rs2 allg. Darstellung
+		\begin{itemize}
+			\item Add R3,R2,R1 ; normale Addition R3 $\leftarrow$ R2+R1
+			\item Add R3,R2,R0 ; Registertransfer R3 $\leftarrow$ R2
+			\item Add R3,R0,R0 ; Clear Register R3 $\leftarrow 0^{32}$
+		\end{itemize}
+	\end{itemize}
+	\item Orthogonalität \\Funktionell unabhängige Teilelemente müssen auch unabhängig voneinander spezifiziert und realisiert sein. \\$\to$ spezieller Befehl wird konstruiert durch freie Kombination der Befehlselemente:
+	\begin{itemize}
+		\item[1] Operation
+		\item[2] Datentyp
+		\item[3] Adressierungsart
+		\item[4] Registernummern
+	\end{itemize}
+\end{itemize}
+\subsection{DLX-Befehlsfolge mit HDN}
+Kommentieren sie die folgende DLX-Befehlsfolge mit HDN!
+\begin{itemize}
+	\item ORI R5, R0, 0x102C ; R5 $\leftarrow_{32}$ R0 | 0x0000 102C \\danach in R5: 0x0000 102C
+	\item LW R3, 0(R5) ; R3 $\leftarrow_{32}$ M[0+R5]\#\# M[1+R5]\#\# M[2+R5]\#\# M[3+R5] \\ist das Big Endian oder Little Endian? Um was geht es bei Big und Little Endian?
+	\begin{itemize}
+		\item Ablage der Daten im Hauptspeicher
+		\item z.B.: im Regsiter steht 0x12345678
+		\begin{itemize}
+			\item Big Endian: Adressen sind Byteweise gespeichert, höherwertigstes byte (hier "12") zuerst
+			\item Little Endian: Adressen auch hier Byteweise gespeichert, niedrigwertigstest byte (hier "78") zuerst
+		\end{itemize}
+	\end{itemize}
+	$\to$ Adresse ist als Big Endian abgespeichert
+	\item SUBI R2, R0, 5 ; R2 $\leftarrow_{32}$ R0 - 0x0000 0005\\-5 wird in R2 geladen
+	\item loop: ADDI R2, R2, 1 ; R2 $\leftarrow_{32}$ R2 + 0x0000 0001 \\lege Anzahl der Schleifendurchläufe fest $\to$ 5 Schleifendurchläufe
+	\item SW 0(R3), R4 ; M[0+R3]\#\# M[1+R3]\#\# M[2+R3]\#\# M[3+R3] $\leftarrow $ R4 \\ Inhalt von R4 wird ab der Speicheradresse gleaden, die in R3 steht
+	\item ADDI R3, R3, 4 ; R3 $\leftarrow_{32}$ R3 + 0x0000 0004 \\ Inkrementierung der Speicheradresse in R3 um 4, damit in dem nächsten Schleifendurchlauf das nächste Wort (4 Byte) geschrieben werden kann
+	\item BNEZ R2, loop ; Offsetsxt 16 $\leftarrow (IR_{16})^{16}$ \#\# $IR_{16\ldots 31}$ \\; name(loop) $\leftarrow$ PC + Offsetsxt 16$_{16\ldots 31}$ \\ ; if(R2 != 0) PC $\leftarrow$ name(loop) \\
+	;nach 5 Durchläufen sit R0 = 0 $\to$ dann geht es weiter
+	\item ADD R3, R0, R0 ; löschen von Register R3
+\end{itemize}
+fill ...
+\section{fill - Blatt 4}
+\subsection{fill}
+\subsection{}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|}
+\hline
+&Grad d &Druchmesser &Konnektivität &Halbierungs-breite &kleinste Erweiterung\\
+\hline
+Ring &2 &N/2 &2 &2 &1 \\
+\hline
+Vollst. Graph &N-1 &1 &N-1 &N$^2$/4 &1\\
+\hline
+Stern &1 bzw. N-1 &2 &1 &N/2 &1\\
+\hline
+Vollst. Binärbaum &1,2,3 &$2\cdot ld((N+1)/2)$ &1 &1 &N+1\\
+\hline
+2D-Torus &4 &$2\sqrt{N}/2$ &4 &&$2\sqrt{N}+1$\\
+\hline
+Hypercube &$ld(N)$ &$ld(N)$ &$ld(N)$ &N/2 &N\\
+\hline
+\end{tabularx}
+\begin{itemize}
+	\item Ring:
+	\begin{itemize}
+		\item einfaches Routing
+		\item geringe Kosten $\to$ geringe Kabelmenge
+		\item schlechte Skalierung
+		\item leicht erweiterbar
+	\end{itemize}
+	\item Vollständiger Graph
+	\begin{itemize}
+		\item hohe Kosten $\to$ nur für kleine Netzwerke möglich
+		\item kein Routing
+		\item Ausfallsicherheit, schnell
+	\end{itemize}
+	\item Stern:
+	\begin{itemize}
+		\item leicht erweiterbar
+		\item schnell
+		\item viel Kabel in bezug auf Ring, Gitter
+		\item wenn zentrale station ausfällt bricht Netz zusammen
+	\end{itemize}
+	\item vollst. Binärbaum
+	\begin{itemize}
+		\item schwachstelle ist Wurzelknoten
+		\item relativ schwierig das auf Algorithmen abzuleiten $\to$ Anwendung für Broadcast
+	\end{itemize}
+	\item 2D Torus
+	\begin{itemize}
+		\item schnell gegenüber Gitter (halber Durchmesser)
+		\item konstanter Grad (vorteil)
+		\item Erweiterbarkeit geht noch (besser als Hyperscale, schlechter als Stern/Ring)
+	\end{itemize}
+	\item Hypercube
+	\begin{itemize}
+		\item kleiner Durchmesser (ld N)
+		\item schlechte Erweiterbarkeit
+	\end{itemize}
+\end{itemize}
+\subsection{Gitter Topologien}
+\begin{tabularx}{\textwidth}{|X|X|X|X|}
+\hline
+&4x6 &3x8 &2x12\\
+\hline
+Grad &2,3,4 &2,3,4 &2,3\\
+\hline
+Durchmesser &8 &9 &12\\
+\hline
+Halbierungsbreite &4 &3 &2\\
+\hline
+\end{tabularx}
+\subsection{Codierung - OMEGA Netz}
+Routing
+\begin{itemize}
+	\item Destination Rooting
+	\begin{itemize}
+		\item Bitwertigkeiten ($b_0b_1b_2b_3$) entsprechend den jeweiligen Ausgängen (oberer/unterer) der Betazelle
+		\begin{align*}
+			&A_6 = 0110 = obA - uA - uA - obA
+		\end{align*}
+		\item Beispiele: $E_1 \to A_6$ und $E_{14}\to A_6$
+	\end{itemize}
+	\item XOR-Routing
+	\begin{itemize}
+		\item XOR-Verknüpfung von Quell und Zieladresse $\to$ ergibt Schalterstellung der jeweiligen Beta-Zelle (schräg = 1, gerade = 0):
+		\begin{align*}
+			&E_{14} \to A_6 \to 1110 \text{ XOR } 0110 = 1000\\
+			&E_1 \to A_6 \to 0001 \text{ XOR } 0110 = 0111
+		\end{align*}
+	\end{itemize}
+\end{itemize}
+Blockierung im OMEGA-Netzwerk
+\begin{itemize}
+	\item Anzahl der Übereinstimmungen bei Blockierung $ld(E/A) = ld 16 = 4$
+	\item Festellen einer Blockierung (in einem  4x2er Block Fenster stimmen alle 4 Spalten überein)
+	\begin{align*}
+		E_1 \to A_6 \text{ und }E_{14} \to A_6 = &0001 0110\\
+		&1110 0110 \text{ 4.Stufe Blockierung am Ausgang A6}\\
+		E_1 \to A_6 \text{ und }E_{13} \to A_1 = &0001 0110\\
+		&1101 0001 \text{ keine Blockierung}\\
+		E_2 \to A_{13} \text{ und } E_0 \to A_{12} = &0010 1101\\
+		&1100 \text{ 3. Stufe Blockierung Ausgang A6}
+	\end{align*}
+\end{itemize}
+\subsection{Prinzip Paketvermittlung}
+\begin{itemize}
+	\item Nachricht wird in Pakete geteilt
+	\item Pakete werden unabhängig voneinander über das Netzwerk vom Sender zum Empfänger transportiert
+	\item Paket besteht aus drei Teilen:\\
+	\begin{itemize}
+		\item Header (enthält Routing- und Kontrollinformationen)
+		\item Datenteil (enthält Anteil der Nutzdaten/Gesamtnachricht)
+		\item Endstück (Trailer: Fehlerkorrekturcode)
+	\end{itemize}
+	\item Drei Verfahren:
+	\begin{itemize}
+		\item Store-and-forward Prinzip
+		\begin{itemize}
+			\item gesamtes Paket wird zum Empfänger gesendet
+			\item Jeder Zwischenknoten speichert das gesamte Paket (store), bevor es weitergesendet wird (forward)
+			\item Vorteile:
+			\begin{itemize}
+				\item schnelle Freigabe von Verbindungen
+			\end{itemize}
+			\item Nachteile:
+			\begin{itemize}
+				\item großer latenzzeiten, hoher Speicheraufwand
+			\end{itemize}
+		\end{itemize}
+		\item Virtual-Cut-Through-Verfahren (Infiniband)
+		\begin{itemize}
+			\item Pakete werden hier piplineartig durch das Netzwerk gesendet
+			\item Prinzip:
+			\begin{itemize}
+				\item Flusssteuerung erfolgt nicht auf Paketbasis sondern auf der Basis wesentlich kleinerer pysikalischer Transporteinheiten, phits (physical units), die mann deshalb auch als flits (= phits = float control units) bezeichnet
+				\item ein auf dem Übertragungspfad liegender Schalter (Knoten oder Router) betrachtet die ersten phits eines ankommenden Pakets (Routinginfos) $\to$ Entscheidung zu welchen Knoten das Paket weitergeleitet wird
+				\item Ist Verbindung frei, dann wird der Header weitergeschickt
+				\item restliches Paket wird hinterher geleitet $\to$ so dass phits des Paketes pipelineartig auf dem Übertragungspfad liegen
+				\item Freigabe der Verbindung: $\to$ wenn alle phits des Paketes (einschließlich Endstück) vollständig übertragen wurden, wird die Verbindung freigegeben
+			\end{itemize}
+			\item Blockierungen:
+			\begin{itemize}
+				\item alle phits des Paketes werden im letzten erreichbaren Knoten aufgesammelt (store-and-forward-artig)
+			\end{itemize}
+			\item Vorteile
+			\begin{itemize}
+				\item geringere Latenzzeiten, aber man muss viel Speicher vorhalten
+			\end{itemize}
+		\end{itemize}
+		\item Worm-Hole Routing
+		\begin{itemize}
+			\item unterscheidet sich vom Virtual Cut Through nur in der Behandlung von Blockierungen:
+			\begin{itemize}
+				\item Header blockeirt so lange bis Verbindung wieder frei ist
+				\item alle nachfolgenden flits werden auch blockiert und verbleiben in ihrer Position $\to$ flits des Paketes liegen wie ein Wurm in der Leitung 
+			\end{itemize}
+			\item Vorteile:
+			\begin{itemize}
+				\item niedrige Latenzzeit
+				\item am wenigsten Speicherbedarf
+			\end{itemize}
+			\item Nachteile:
+			\begin{itemize}
+				\item Verbindung blockiert komplett im Blockierungsfall
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+Leitungsvermittlung
+\begin{itemize}
+	\item Leitung wird stationär aufgebaut $\to$ Overhead $\to$ ist für andere blockiert
+	\item nach Aufbau kann man große Datenmengen drüber senden (gut für lange Nachrichten)
+	\item Parallelrechner fast nicht, weil:
+	\begin{itemize}
+		\item vor allem kurze Nachrichten
+	\end{itemize}
+\end{itemize}

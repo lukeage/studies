@@ -2,7 +2,7 @@
 
 \chapter{Übung}
 tobias.philipp@tu-dresden.de\\ Fr. 14:00 2005/2006
-\section{Prädikatenlogik - Syntax}
+\section{Syntax}
 \subsection{Konstruktion von Teiltermen}
 \begin{enumerate}
 	\item Bestimme für den Term \( t = h(f(Y,X),Y,g(a)) \) gemäß obiger Definition 2 die Mengen \(K_{n}(t)\) für alle \(n \in \mathbb{N} \)  und geben Sie für alle Terme \(s\in K_{n}(t)\) die zugehörige Konstruktion an.
@@ -165,3 +165,196 @@ Beweis über strukturelle Induktion:
 		&=^{Def I} f(t_1,\ldots , t_n)
 	\end{align*}
 \end{itemize}
+\section{Äquivalenz und Normalenform}
+fill
+\section{Unifikation}
+fill
+\section{Beweisverfahren}
+\subsection{Resolutionsverfahren}
+\begin{enumerate}
+	\item $<[p(X,Y),q(a,Y)],[\neg p(b,a)],[\neg q(Z,V)]>$
+	\begin{align*}
+	&[X,Y],q(a,Y)] &&(1)\\
+	&[\neg p(b,a)] &&(2)\\
+	&[\neg q(Z,V)] &&(3)\\
+	&res(1,2) &&(4)\\
+	&res(3,4) \to [] &&(5)\\
+	\end{align*}
+	\item
+	\begin{align*}
+		&[q(f(a),f(b))] &&(1)\\
+		&[\neg p(X,Y),\neg p(f(a),g(X,b)),\neg(X,Z)]&&(2)\\
+		&[p(f(X),g(Y,b)),\neg q(Y,f(Y))] &&(3)\\
+		&[\neg p(X_1,Y_1),\neg p(f(a),g(X_1,b)),\neg(X_1,Z_1)]&&(2')\\
+		&[p(f(X_2),g(Y_2,b)),\neg q(Y_2,f(Y_2))] &&(3')\\
+		\text{Faktor. von 2' }& \sigma\{X_1 \mapsto f(a), Y_1 \mapsto g(f(a),b)\}: \\
+		&[\neg p(f(a),g(f(a),b),\neg q(f(a),Z_1)] &&(4)\\
+		&[\neg p(f(a),g(f(a),b),\neg q(f(a),Z_4)] &&(4')\\
+		\text{res(1',4') }&[\neg p(f(a),g(f(a),b))]&&(5)\\
+		&[(q(f(a)),f(Y_5)] &&(1'')\\
+		\text{res(3',1'') } &\sigma = \{Y_2 \mapsto f(a), Y_5 \mapsto f(a)\}\\
+		&[p(f(X_2),g(f(a),b))] &&(6)\\
+		& [\neg p(f(a),g(f(a),b))] &&(5')\\
+		& p(f(X_6),g(f(a),b))] &&(6')\\
+		\text{res(5',6') }& \sigma = \{X_6 \mapsto a\}\\
+		&[] &&(7)
+	\end{align*}
+\end{enumerate}
+\subsection{Schrittweiser Resolutionsbeweis}
+$(\exists Y)(\forall U)(\neg (\forall U)q(U,Y)\lor q(f(Y),U))$
+\begin{itemize}
+	\item[1] Negation $\neg F$
+	\item[2] Variablen auseinander divideren
+	\begin{align*}
+		\neg (\exists Y)(\forall U)(\neg (\forall Z)q(Z,Y) \lor q(f(Y),U))
+	\end{align*}
+	\item[3] Pränex-Normal-Form bilden
+	\begin{align*}
+		&(\forall Y)\neg (\forall U) F_1\\
+		&(\forall Y)(\exists U) \neg F_1\\
+		&(\forall Y)(\exists U) \neg(\neg(\forall Z)q(Z,Y) \lor q(F(Y),U))\\
+		&(\forall Y)(\exists U) \neg ((\exists Z)\neg q(Z,Y) \lor q(f(Y),U)) \\
+		&(\forall Y)(\exists U)\neg(\exists Z)(\neg q(Z,Y) \lor q(f(Y),U)) \\
+		&(\forall Y)(\exists U)(\forall Z)\neg(\neg q(Z,Y)\lor q(f(Y),U))\\
+	\end{align*}
+	\item[4] Skolem-Normal-Form bilden
+	\begin{align*}
+	&(\forall Y) \sigma = \{U\mapsto g(Y)\}\\
+	&\rightsquigarrow (\forall Y)(\forall Z)\neg (\neg q(Z,Y) \lor q(f(Y),g(Y)))
+	\end{align*}
+	\item[5] Klauselform bilden
+	\begin{align*}
+	&\forall <[\neg(\neg q(Z,Y) \lor q(f(Y),g(Y))]>\\
+	&<[ \neg\neg q(Z,Y)],[\neg q(f(Y,g(Y))]>\\
+	&<[q(Z,Y)],[\neg q(f(Y),g(Y))]>\\
+	\end{align*}
+	\item[6] Resolutionsverfahren
+	\begin{align*}
+	&[q(Z_1,Y_1)] &&(1')\\
+	&[\neg q(f(Y_2),g(Y_2))] &&(2')\\
+	\text{res(1',2') }& [] && (3)\\
+	\end{align*}
+\end{itemize}
+\subsection{Notwendigkeit der Faktorisierung}
+\begin{align*}
+	&F = < [p(), p()], [\neg p(), \neg p()]>\\
+	\text{res 1,2) }& [p(), \neg p()] &&(3) \\
+	\text{fakt 1' }& [p] &&(4)\\
+	\text{fakt 2' }& [\neg p] &&(5)\\
+	\text{res 4',5') }& [] &&(6)\\
+\end{align*}
+Beweis über Induktion
+\section{Eigenschaften}
+\subsection{Beispiel für korrespondierendes Herbrand-Modell}
+\begin{align*}
+	&D^I = \mathbb{N}\\
+	&a^I = 0\\
+	&s^I = x \mapsto x + 1\\
+	&p^I = \{(x,y,z)|x \le y + z\}\\
+\end{align*}
+Herbrand Modell
+\begin{align*}
+	D^J &= T(F) \text{ Menge von Termen über F}\\
+	&= \{a, s(a), s(s(a)), \ldots \} \\
+	p^J &= \{(s^x(a), s^y(a), s^z(a))|x \le y + z\}
+\end{align*}
+\section{Nachtrag Logik}
+\begin{align*}
+	F \vDash p(t) \text{ für alle t}\in T(F) \to F \vDash (\forall X)p(X) ?
+\end{align*}
+Nein. Hier: häufige Fehler!! Gegenbeispiel:
+\begin{align*}
+	&L(R,F,V) \text{ bestimmen mit} F = \{c_1, \ldots, c_n\}\\
+	&\text{Sei G Formel:}\\
+	&G = p(c_1) \wedge p(c_2) \wedge \ldots \wedge p(c_n)\\
+	&\text{Wiederspruch ("Missmatch" mit Term und Domäne) mit:}\\
+	&D = \{1, \ldots , n+1\}\\
+	&c_1^I = \{1, \ldots, c_n^I = n\}\\
+	&p^I = \{1, \ldots, n\}
+\end{align*}
+
+\section{Turing-Maschine}
+\subsection{Palindrom Turingmaschine}
+\begin{align*}
+	A = &(Q,\{a,b\},\{a,b,\not b, \},q_0,\Delta,F) \\
+	\Delta = &\{(q_0,a,\not b, r, q_2) &&(q_0, b, \not b, r, q_3)\\
+	&(q_2, \not b, \not b, n, q_4) &&(q_3, \not b, not b, n, q_4)\\
+	&(q_2, *, *, r, q_a) &&(q_2, *, *, r, q_b)\\
+	&(q_a, *, *, r, q_a) &&(q_b, *, *, r, q_b)\\
+	&(q_a, \not b, \not b, l, q_{av}) &&(q_b, \not b, \not b, l, q_{b,v})\\
+	&(q_{av}, a, \not b, l, q_{l1}) &&(q_{bv}, b, \not b, l, q_{l1})\\
+	&(q_l, x,x, l, q_l) &&x \in \{a,b\}\\
+	&(q_{l1}, \not b, \not b, n, q_F) && (q_l, x,x,l,q_l)\\
+	&(q_l, \not b, \not b, r, q_0) &&\}\\
+\end{align*}
+\subsection{Wort 2-Band Turingmaschine}
+\begin{align*}
+q_0: &\underline{a}ba &&\underline{\not b}\not b \not b\\
+q_0: &a\underline{b}a &&a\underline{\not b}\not b\\
+q_0: &ab\underline{a} &&ab\underline{\not b}\\
+q_0: &aba\underline{\not b} &&aba\underline{\not b}\\
+q_1: &aba\underline{\not b} && ab\underline{a}\\
+q_1: &aba\underline{\not b} &&a\underline{b}a\\
+q_1: &aba\underline{\not b} &&\underline{a}ba\\
+q_1: &aba\underline{\not b} &&\underline{\not b}aba\\
+q_2: &aba\underline{\not b} && \underline{a}ba\\
+q_2: &abaa\underline{\not b} &&\not{b}\underline{b}a\\
+q_2: &abaaba\underline{\not b} &&\not{b}\not b\not b\underline{\not b}
+\end{align*}
+
+\section{}
+\subsection{Berechenbarkeit, Entscheidbarkeit, Aufzählbarkeit}
+\begin{enumerate}
+	\item wahr, nach Def.
+	\item wahr, gilt nach Satz 2.4
+	\item wahr, Beweis durch Gegenannahme falsch
+	\item falsch: sonst partiell entscheidbar = entscheidbar
+\end{enumerate}
+\subsection{Primitiv rekursive Funktionen}
+\begin{enumerate}
+	\item 
+	\begin{itemize}
+		\item PROD:
+		\begin{align*}
+			&f: \mathbb{N}^{n+1} \mapsto \mathbb{N} \\
+			&g: \mathbb{N}^{n}\mapsto \mathbb{N}\\
+			&h: \mathbb{N}^{n+1} \mapsto \mathbb{N}\\
+			&\text{falls gilt:}\\
+			&f(x_1, \ldots, x_n, 0) = g(x_1, \ldots, x_n)\\
+			&f(x_1, \ldots, x_n, y+1) = h(x_1, \ldots, x_n, f(x_1, \ldots, x_n, y), y)\\
+			PROD(X,0) &= 0 = g(X) = null^{(1)}(X)\\
+			PROD(X, Y+1) &= PROD(X,Y) + Y = h(X, PROD(X,Y),Y)\\
+			&= add(\pi_2^{(3)}(X,PROD(X,Y),Y),\pi_3^{(3)}(X,PROD(X,Y),Y)\\
+			&= add(\pi_2^{(3)}(X,PROD(X,Y),Y),\pi_3^{(3)}(X,PROD(X,Y),Y))
+		\end{align*}
+		\item MODDIFF:
+		\begin{align*}
+	         MD(X,0) &= X = g(X) = id_{(1)}^{(1)}\\
+	         MD(X,Y+1) &= MD(X,Y)-1\\
+	         min1(X) &= \begin{cases} x-1 &x>0\\
+	         0 &\text{sonst} \end{cases}\\
+	         &\text{oder:}\\
+	         vor(0) &= 0 = null^{(0)}\\
+	         vor(X+1)&=X= h(vor(X), X)\\
+	         &\text{dann:}\\
+	         MD(X,Y+1) &= vor(\pi_2^3(X, MD(X,Y),Y))\\   
+		\end{align*}
+	\end{itemize}
+	\item 
+	\begin{itemize}
+		\item $f_1$
+		\begin{align*} 
+		sum(0) &= \Sigma_{i=0}^{0} = 0 = g = null^{(0)} \\
+	         sum(y+1) &= \Sigma_{i=0}^{y+1} = add(sum(Y), Y+1)\\
+	         &= h(sum(Y),Y)\\
+	         &= add(\pi_1^{(2)}(sum(Y),Y),s(\pi_2^{(2)}(sum(Y),Y)))\\
+	         f_1(x_1,\ldots,x_k, x_{k+1}) &= sum(g(x_1, \ldots, x_k, i))\\
+	         f_1(x_1, \ldots, x_k, 0) &= g(x_1, \ldots, x_k, 0)\\
+	         f_1(x_1, \ldots, x_k, Y+1) &= add(f_1(x_1, \ldots, x_k, y), g(x_1, \ldots, x_k, Y+1)) \\
+	         &= h(x_1, \ldots, x_k, f_1(x_1, \ldots, x_k, Y), Y)\\
+	         &= add\Big(\pi_{k+1}^{(k+2)}\underbrace{\big(x_1, \ldots, x_k, f_1(x_1, \ldots, x_k, Y),Y\big)}_{=l}, \\&g\big(\pi_1^{(k+2)}(l), \ldots, \pi_k^{(k+2)}(l),s(\pi_{k+2}^{(k+2)}(l))\big)\Big)\\
+			tadaaaaa!!!
+		\end{align*}
+		\item $f_2$ sind wir nichmehr zu gekommen
+	\end{itemize}
+\end{enumerate}

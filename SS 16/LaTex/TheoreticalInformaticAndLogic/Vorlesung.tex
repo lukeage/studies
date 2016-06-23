@@ -467,3 +467,434 @@ fill
 \subsubsection{Satz 4.60}
 Eine prädkatenlogischer Satz F in Skolem-Normalform ist unerfüllbar gdw F wird von jeder Hebrand-Interpretation auf \(\bot\) abgebildet \\
 \textbf{Beweis} siehe Folien
+\section{Beweis}
+\subsection{Beweis Satz 4.60}
+siehe Skript
+\section{Ende Logik Anfang Automaten}
+Skript Baader:\\
+https://lat.inf.tu-dresden.de/teaching/ss2014/THEOLOG/\\
+THEOLOG2014
+B626165
+
+\section{02.06.2016}
+\subsection{}
+\subsubsection{Beispiel 3.4 (Addition)}
+Die Addition natürlicher Zahlen kann durch primitive Rekursion wie folgt definiert werden.:
+\begin{align*}
+	add(x,0)&= x &&= g(x)\\
+	add(x,y+1) &= add(x,y)+1 &&= h(x,add(x,y),y)
+\end{align*}
+Das heißt also: $add$ entsteht durch primitive Rekursion aus den Funktionen
+\begin{itemize}
+	\item $g: \mathbb{N} \to \mathbb{N} $\\fill
+\end{itemize}
+\subsection{Definition}
+\subsection{primitiv rekursive Funktion: Beispiel}
+\textbf{Multiplikation} erhält man durch primitive Rekursion aus der Addition:
+\begin{align*}
+	mult(x,0) &= 0&&=null^{(1)}(x)\\
+	mult(x,y+1) &= add(x,mult(x,y)) &&= add(\pi_1^{(3)},\pi_2^{(3)})(x,mult(x,y),y)
+\end{align*}
+\textbf{Exponentiation} erhält man durch primitive Rekursion aus der Multiplikation
+\begin{align*}
+	exp(x,0) &= 1 &&= s(null^{(1)}(x))\\
+	exp(x,y+1) &= mult(x,exp(x,y)) &&= ...\\
+\end{align*}
+Die Funktion
+\begin{align*}
+	min1:\mathbb{N} \to \mathbb{N} \text{ mit } x \mapsto x-1:= \begin{cases}
+  x-1 &x>0\\
+ 0 &x = 0
+\end{cases}
+\end{align*}
+ist ebenfalls primitiv rekursiv:
+\begin{align*}
+	min1(0) &= 0 &&= null^{(0)}()\\
+	min1(y+1) &= y &&= ...
+\end{align*}
+\subsection{Besipliel 3.7}
+Aus den bisher betrachteten Funktionen erhält man damit die Funktion
+\begin{align*}
+	c: \mathbb{N}^2 \to \mathbb{N} \text{ mit } (x,y) \mapsto 2^x \cdot (2y+1)-1
+\end{align*}
+durch Komposition, d.h. c ist primitiv rekursiv (diese Funktion ist eine Bijektion von $\mathbb{N}^2 \to \mathbb{N}$).
+Da c eine Bijektion ist, gibt es die Umkehrfunktionen $c_0$ und $c_1$ mit der Eigenschaft:
+\begin{align*}
+	&c_0(c(x,y))= x \text{ und } c_1(c(x,y)) = y\\
+	&c(c_0(z), c_1(z)) = z
+\end{align*}
+Diese ergeben sich im Prinzip aus dem Beweis von Lemma 3.8:
+\begin{align*}
+	c_0(z) &= ... \\
+	...
+\end{align*}
+\subsection{Lemma 3.9}
+Die Funktionen sign: $\mathbb{N} \to \mathbb{N} $ und $\overline{sign}: \mathbb{N} \to \mathbb{N}$ mit:
+\begin{align*}
+&sign(x) = \begin{cases} 0 &x = 0\\
+1 & x > 0 \end{cases}
+\end{align*}
+\subsection{Fallunterscheidung}
+Es seien $g_1, g_2, h : \mathbb{N}^n \to \mathbb{N} $ gegeben. Die Funktion $f:\mathbb{N}^n \to \mathbb{N} $ entsteht daraus durch Fallunterscheidung, falls für alle $x \in \mathbb{N}^n$ gilt:
+\begin{align*}
+	&f(x) = \begin{cases} g_1(x) &\text{falls } h(x) = 0\\
+	g_2(x) &\text{falls } h(x) > 0
+	\end{cases}
+\end{align*}
+\subsection{Lemma 3.11}
+sind $g_1, g_2, h$ primitiv rekursiv, so auch $f$.
+\subsection{Definition 3.12: bechränkte Minimalisierung}
+Es sei $n \geq 0 $. Die Funktion $ f: \mathbb{N}^{n+1} \to \mathbb{N}$ entsteht aus $g: \mathbb{N}^{n+1} \to \mathbb{N}$ durch beschränkte Minimalisierung, falls gilt:
+\begin{align*}
+	f(x,y) = \begin{cases} j &\text{falls } j = min\{i\leq y | g(x,i) = 0\} \text{ existiert }\\
+	y+1 &\text{sonst}
+	\end{cases}
+\end{align*}
+Wir schreiben dann $f = \overline \mu g$.
+\subsection{Lemma 3.13}
+Ist $g$ primitiv rekursiv, so auch $\overline \mu g$.
+
+\section{•}
+Es sei P ein LOOP - Programm für $f: \mathbb{N}' \to \mathbb{N}$
+Es sei l der maximale Index der in P vorkommenden Variablen und $ K = max\{r,l\}$. wir zeigen durch Induktion über den Aufbau von LOOP-Programmen, dass die folgende Funktion $g_p : \mathbb{N}\to \mathbb{N}$ primitiv rekursiv ist:
+\begin{align*}
+	z \to_{\text{kodieren}} a_0, \ldots , a_k \to_P b_0, \ldots, b_k \to_{\text{dekodieren}} g_{P^{(z)}}
+\end{align*}
+
+... fill ... \\
+
+Um alle berechnbaren Funktionen zu erhalten, muss man
+\begin{itemize}
+	\item die primitiv rekursiven Funktionen um eine weitere Operation, die unbeschränkte Minimalisierung erwetiern;
+	\item die LOOP-Programme muss an um eine While-Schleife erweitern ...
+\end{itemize}
+Beachte: Der $\mu$-Operator sucht im Prinzip nach dem kleinsten y, so dass $g(\underline{x},y) = 0$ ist. Dabei müssen aber alle vorherigen Werte g...
+\subsection{Definition 4.1}
+Die funktion $f: \mathbb{N}^n \to \mathbb{N}$ entsteht aus $g:\mathbb{N}^{n+1} \to \mathbb{N}$ durch unbeschränkte Minimalisierung ...
+\subsection{Beispiel 4.2}
+\begin{align*}
+	&g_1(x,y) = \begin{cases} 
+	x-y &\text{ falls } x \ge y\\
+	\text{undefiniert} &\text{ falls } x < y \end{cases}\\
+	&g_2(x,y) = \begin{cases} 
+	y-x &\text{ falls } x \ge y\\
+	\text{undefiniert} &\text{ falls } x < y \end{cases}\\
+	&g_3(x,y) = x+y =\begin{cases} 
+	0 &\text{ falls } x =0\\
+	\text{undefiniert} &\text{ sonst} \end{cases}
+\end{align*}
+Durch Anwendung ...
+\subsection{Definition 4.3 Klasse der $\mu$-rekursiven Funktionen}
+fill
+\subsection{Definition 4.4 Syntax von WHILE-Programmen}
+Die Syntax von WHILE-Programmen enthält alle Konstrukte in der Syntax von LOOP-Programmen und zusätzlich
+\begin{itemize}
+	\item[4.] Falls P ein WHILE-Programm ist und $i\ge 0$, so ist auch 
+	\begin{align*}
+		\text{WHILE } x_i \neq 0
+	\end{align*}
+\end{itemize}
+fill\\
+\textbf{Beacte}: Man könnte bei der Definition der While-Programme auf das LOOP-Konstrukt verzichten, da es durch WHILE simulierbar ist: 
+\begin{lstlisting}
+LOOP x DO P END
+\end{lstlisting}
+kann simuliert werden durch:
+\begin{lstlisting}
+y = x + 0 
+WHILE ...
+\end{lstlisting}
+fill
+\subsection{Definition 4.5}
+Die (partielle) Funktion $f:\mathbb{N}^2 \to \mathbb{N}$ mit:
+\begin{align*}
+	&(x,y) \mapsto \begin{cases} x-y &\text{ falls } x\ge y\\
+	\text{undefiniert} &\text{ sonst }\end{cases}
+\end{align*}
+ist WHILE-berechenbar durch das folgende Programm:
+\begin{lstlisting}
+WHILE x2 != 0 DO
+	x3 = x1;
+	WHILE x3 != 0 DO
+		x1 = x1 - 1
+		x2 = x2 - 1
+		x3 = 0
+	END
+END
+x0 = x1;
+\end{lstlisting}
+\subsection{Satz 4.7}
+Die Klasse der $\mu$  ... fill ...
+\subsection{Beweis Satz 4.7}
+
+\section{}
+fill
+\subsection{Darstellung von Zahlen auf Touringmaschinen}
+fill\par
+Ändern dieses Symbols zu $a_j$:\par 
+Der neue wert von $x_3$ ist
+\begin{align*}
+	(j_r, \ldots, j_2, j)_b = div((j_r, \ldots, j_2, j_1)_b, b)\cdot b+j
+\end{align*}
+Das WHILE-Programm, welches die gegebene DTM simuliert, arbeitet wie folgt:
+\begin{itemize}
+	\item Aus der Eingabe wird die Kodierung der Startkonfiguration der DTM in den Variablen ... fill
+	\item fill
+	\item fill
+\end{itemize}
+Insgesamt haben wir also gezeigt:
+\subsection{Theorem 4.10}
+Die folgenden Klassen von Funktionen ... fill
+\subsection{Universelle Turing-maschinen und unentscheidbare Probleme}
+Wir werden heir zeigen, dass es Relationen(Problee) gibt, die nicht Turing-entscheidbar sind, d.h. ihre charakteristische Funktion ist nicht Turing-berechenbar. Mit der Churchschen These ... fill
+\subsubsection{Konventionen}
+\begin{itemize}
+	\item Arbeitsalphabete der betrachteten Turingmaschinen sind Teilmengen von $\{a_1, a_2, a_3, \ldots\}$. wobei $a_1 = a, a_2 = b, a_3 = \not b$
+	\item Zustandsmengen der etrachteten Turingmaschinen sind Teilmengen von $\{q_1, q_2, \ldots\}$ ... fill
+	\end{itemize}
+\subsection{Definition 5.1 - Kodierung einer Turingmaschine}
+Es sei $A = (Q, \Sigma, \Gamma, q_1, \Delta, F)$ eine Turingmaschine die (o.B.d.A.) die obigen Konventionen erfüllt.
+\begin{itemize}
+	\item Eine Transition
+	\begin{align*}
+		t = (q_i, a_j, a_{j'}, l|r|n, q_{i'})
+	\end{align*}
+	wird kodiert durch:
+	\begin{align*}
+		code(t) = a^iba^jba^{j'}ba|aa|aaaba^{i'}bb
+	\end{align*}
+	\item fill
+\end{itemize}
+\subsection{Bemerkung 5.2}
+Es sei $A$ eine TM und $w\in \Sigma^*$. Für
+\begin{align*}
+	x = code(A)w
+\end{align*}
+gilt das folgende:
+\begin{itemize}
+	\item $w$ beginnt genau nach dem zweiten Block bbb
+	\item $w$ kann also aus $x$ eindeutig wieder herausgelesen werden
+\end{itemize}
+Es gibt eine DTM $A_{CODE}$, welche \ldots fill
+\subsection{Satz 5.3 Turing}
+Es gibt eine unverselle DTM $U$ über $\Sigma$, d.h. eine DTM it der folgenden Eigenschaft: Für alle DTM $A$ und alle $w \in \Sigma^*$gilt:
+\begin{align*}
+	&U\text{ akzeptiert } code(A)w &&\text{gdw ... fill}
+\end{align*}
+\subsubsection{Konfigurationskodierung:}
+fill
+\subsubsection{Arbeitsweise von U}
+fill
+\subsection{Satz 5.4}
+Die Relation
+\begin{align*}
+	&UNIV := code(A)w \in \Sigma^* | A \text{ is DTM über }\Sigma \text{ ... fill ...}
+\end{align*}
+ist partiell entscheidbar aber unentscheidbar.
+\subsubsection{Beweis}
+fill
+\section{}
+\subsection{Satz 5.5}
+$L_1 \subset L_0$\\
+\subsubsection{Beweis}
+siehe Folien S. 43
+\subsection{Satz 5.6}
+Das Wortproblem für DTM (und damit auch für $L_0$ ist unentscheidbar, d.h. es gibt kein Berechnungsverfahren, das zu jeder gegebenen DTM A und jedem Eingabewort w entscheidet, ob A das Wort w akzeptiert.
+\subsection{Beweis}
+Wenn das Wortproblem für DTM entscheibar wäre, so wäre auch UNIV entscheidbar (ist es aber nicht). Um zu entsscheiden ob $code(A)w \in \text{UNIV}$ ist, müsste man ja nur das Entscheidungsverfahren für das Wortproblem feststellen lassen, ob A das Wort w akzeptiert.
+\subsection{Satz 5.7}
+Das Halteproblem für DTM ist unentscheidbar, d.h. es gibt kein Berechnungsverfahren das zu jeder gegebenen DTM $\hat A$ entscheidet, ob $\hat A$ beginnend mit leerem Eingabeband terminiert.
+\subsubsection{Beweis}
+Wäre das Halteproblem entscheidbar, so auch das Wortproblem. \par 
+Um zu gegebner TM $A$ und gegebenem Wort $w$ zu entscheiden, ob $A$ das Wort $w$ akzeptiert, könnte man dann nämlich wie folgt vorgehen:\par 
+\begin{itemize}
+	\item Bei leerem Band schreibt $\hat A$ zunächst $w$ auf das Band.
+	\item Danach verhält sich $\hat A$ wie $A$
+	\item Stoppt $A$ mit akzeptierender Stoppkonfiguration, so stoppt auch $\hat A$. Hält $A$ mit nichtakzeptierender Stoppkonfiguration, so geht $\hat A$ in eine Endlosschleife.
+\end{itemize}
+Damit gilt:
+\begin{align*}
+	&\hat A \text{ hält mit leerem Eingabeband} &&\text{\underline{gdw.} } A \text{ akzeptiert }w
+\end{align*}
+Mit dem Entscheidungsverfahren für das Halteproblem (angewandt auf $\hat A$) könnte man also das Wortproblem (Ist $w$ in $L(A)$?) entscheiden.
+\subsection{Satz 5.8}
+Das Leerheitsproblem für DTM (und damit auch für $L_0$) ist unentscheidbar, d.h. es gibt kein Berechnungsverfahren, das bei gegebener DTM $\hat A$ entscheidet, ob es eine Eingabe $w$ gibt, auf der $\hat A$ terminiert.
+\subsubsection{Beweis}
+Wäre das Leerheitsproblem entscheidbar, so auch das Halteproblem.\par
+Um bei gegebener DTM $A$ zu entscheiden, ob $A$ auf leerer Engabe hält, konstruiert man die DTM $\hat A$ wie folt:
+\begin{itemize}
+	\item $\hat A$ löscht seine Eingabe
+	\item Danach verhält sich $\hat A$ wie $A$
+	\item Stoppt die Berechnung, so geht $\hat A$ in eine akzeptierende Stoppkonfiguration
+\end{itemize}
+Offenbar gibt es eine Eingabe, für die $\hat A$ hält \underline{gdw.} $A$ auf leerem Eingabeband hält.
+\subsection{Satz 5.9}
+Das Äquivalenzproblem für DTM (und damit auch für $L_0$) ist unentscheidbar.
+\subsubsection{Beweis}
+Offenbar kann man leicht eine DTM $\hat A$ konstruieren mit $L(\hat A) = \emptyset $. \par 
+Wäre das Äquivalenzproblem
+\begin{align*}
+	L(A_1) = L(A_2)
+\end{align*}
+entscheidbar, so könnte man durch den Test
+\begin{align*}
+	L(A) = L(\hat A)
+\end{align*}
+das Leerheitsproblem für A entscheiden.
+\subsection{Satz 5.10}
+$L_0$ ist nicht unter Komplement abgeschlossen.
+\subsubsection{Beweis}
+Wir wissen von der in Satz 5.4 eingeführten Sprache UNIV:
+\begin{itemize}
+	\item UNIV ist partiell entscheidbar, d.h. gehört zu $L_0$
+	\item UNIV ist nicht entscheidbar
+\end{itemize}
+Wäre $\overline{UNIV} \in L_0$, d.h. partiell entscheidbar, so würde aber mit Satz 2.4 (Teil 4) folgen, dass UNIV entscheidbar ist. \par
+\subsubsection{Unentscheidbarkeit zeigen}
+Wie kann man Unentscheidbakeit eines Problems (formal: einer Relation) zeigen?
+\begin{itemize}
+	\item[1] Durch ein Diagonalisierungsargument wie im Beweis von Satz 5.4
+	\item[2] Das in den Beweisen der Sätze 5.6 bis 5.9 gewählte Vorgehen nennt man Reduktion:
+	\begin{itemize}
+		\item Ein Problem $P_1$ (z.B. halteproblem) wird auf ein Problem $P_2$ (z.B. Äquivalenzproblem) reduziert.
+		\item Wäre daher $P_2$ entscheidbar, so auch $P_1$
+		\item Weiss man bereits, dass $P_1$ unentscheidbar ist, so folgt daher, dass auch $P_2$ unentscheidbar ist.
+	\end{itemize}
+\end{itemize}
+Formaler betrachten wir (o.B.d.A.) einstellige Relationen $R \subseteq \Sigma^*$
+\subsection{Definition 5.11 (Reduktion)}
+\begin{itemize}
+	\item[1)] Eine Reduktion von $R_1 \subseteq \Sigma^*$ auf $R_2 \subseteq \Sigma^*$ ist eine berechenbare Funktion
+	\begin{align*}
+		f: \Sigma^* \to \Sigma^*
+	\end{align*}
+	für die gilt:
+	\begin{align*}
+		w \in R_1 \text{ \underline{gdw.} } f(w) \in R_2
+	\end{align*}
+	\item[2)] Wir schreiben
+	\begin{align*}
+		&R_1 \leq_m R_2 &&R_1 \text{wird auf }R_2\text{ reduziert}
+	\end{align*}
+	falls es eine Reduktion von $R_1$ nach $R_2$ gibt.
+\end{itemize}
+\subsection{Lemma 5.12}
+\begin{itemize}
+	\item[1)] $R_1 \leq_m R_2$ und $R_2$ entscheidbar $\Rightarrow R_1$ entscheidbar
+	\item[2)] $R_1 \leq_m R_2$ und $R_1$ unentscheidbar $\Rightarrow R_2$ unentscheidbar
+\end{itemize}
+\subsubsection{Beweis}
+\begin{itemize}
+	\item[1)] Um $w\in R_1$ zu entscheiden
+	\begin{itemize}
+		\item berechnet man $f(w)$ und
+		\item entscheidet $f(w) in R_2$
+	\end{itemize}
+	\item[2)] Folgt unmittelbar aus 1)
+\end{itemize}
+Mit Hilfe einer Reduktion des Halteproblems kann man zeigen: Jede nichttriviale semantische Eigenschaft von Programmen (DTM) ist unentscheidbarl
+\begin{itemize}
+	\item Semantisch: heißt hier: Die Eigenschaft hängt nicht von der syntaktischen Form des Programms, sondern nur von der berechneten Funktion ab.
+	\item Nichttrivial: Es gibt berechenbare Funktionen, die sie erfüllen, aber nicht alle berechenbaren Funktionen erfüllen sie.
+\end{itemize}
+Beispiele für solche Eigenschaften:
+\begin{itemize}
+	\item die berechnete Funktion ist total, d.h. die DTM hält für jede Eingabe.
+	\item die berechnete Funktion ist bei Eingabe $\epsilon$ definiert (Halteproblem).
+	\item die berechnete Funktion ist die Nullfuntion, d.h. der Funktionswert ist für jede Eingabe gleich 0.
+	\item die berechnete Funktion liefert bei Eingabe $\epsilon$ den Wert 0.
+	\item \ldots
+\end{itemize}
+\subsection{Satz 5.13 (Satz von Rice)}
+Es sei E eine Eigenschaft partiell berechenbarer Funktionen $f: \Sigma^*  \to \Sigma^* $ so dass gilt:
+\begin{align*}
+	\emptyset \subset \{f:\Sigma^* \to \Sigma^* | f \text{ erfüllt } E\} \subset \{f: \Sigma^* \to \Sigma^* | f \text{  ist partiell berechenbar}\}
+\end{align*}
+dann ist
+\begin{align*}
+	L(E) := \{code(A) | \text{die von }A\text{ berechnete Funktion }f: \Sigma^* \to \Sigma^* \text{ erfüllt } E\}
+\end{align*}
+unentscheidbar.
+\subsubsection{Beweis}
+Angenommen $L(E)$ ist entscheidbar\par
+Wir zeigen, dass man dann auch ein Entscheidungsverfahren für das Halteproblem erhält (Widerspruch zu Satz 5.7).\par 
+Mit $f_u$ bezeichnen wir die überall undefinierte Funktion, welche offenbar partiell berechenbar ist. O.B.d.A. erfülle $f_u$ die Eigenschaft $E$. \par 
+Sonst könnte man statt $E$ die Eigenschaft $\overline{E}$: "$f$ erfüllt $E$ nicht" betrachten. mit $L(E)$ ist auch $L(\overline{E})= \overline{L(E)}$ entscheidbar. \par 
+Da nicht alle partiell berechenbaren Funktionen $E$ erfüllen, gibt es eine partiell berechenbare funktion $g$, welche $E$ nicht erfüllt.\par 
+Es sei nun $A_g$ eine DTM für $g$ und $A_u$ eine für $f_u$. Wir konstruieren nun eine DTM $A'$, welche eine Funktion $f:\Sigma^* \to \Sigma^*$ berechnet mit:
+\begin{align*}
+	&w = code(a) \text{ für eine DTM , die auf leerer Eingabe terminiert}\\
+	&\text{gdw } f(w) \notin L(E) &&(*)
+\end{align*}
+Wäre daher $L(E)$ entscheidbar, so auch das Halteproblem.
+\\
+
+\textbf{Konstruktion von $A'$:}\par Die DTM $A'$ testet bei Eingabe $w$ zunächst, ob $w$ Kodierung einer DTM ist.
+\begin{itemize}
+	\item Falls nein, so gibt $A' code(A_u) \in L(E)$ aus
+	\item Falls ja, so ist $w = code(A) $ für eine DTM $A$. Die DTM $A'$ gibt dann $code(A'')$ aus, wobei $A''$ noch geeignet zu definieren ist:
+	\begin{align*}
+		code(A'') \notin L(E) \text{  \underline{gdw}. } A \text{ hält auf leerer Eingabe}
+	\end{align*}
+\end{itemize}
+\textbf{Definition von $A''$:}\par 
+\begin{itemize}
+	\item $A''$ ignoriert zunächst die Eingabe $x$ und simuliert das Verhalten von $A$ auf dem leeren Eingabeband.
+	\item Im Anschluss (d.h. falls $A$ auf leerem Eingabeband terminiert) verhält sich $A''$ wie $A_z$ bei Eingabe $x$.
+\end{itemize}
+Damit gilt für $A''$ offenbar:
+\begin{itemize}
+	\item Terminiert $A$ auf leerer Eingabe nicht, so berechnet $A''$ die Funktion $f_u$, d.h. $code(A'') \in L(E)$, da $f_u$ $E$ erfüllt.
+	\item Terminiert $A$ auf leerer Eingabe, so berechnet $A''$ die Funktion $g$, d.h. $code(A'')\notin L(E)$, da $g$ $E$ nicht erfüllt.
+\end{itemize}
+Insgesamt haben wir also gezeigt, dass die von $A'$ berechnete Funktion $f$ die Bedingung (*) erfüllt, das Halteproblem also auf das Problem, $L(E)$ zu entscheiden, reduziert. \par 
+Da das Halteproblem unentscheidbar ist, folgt die Unentscheidbarkeit von $L(E)$.
+\section{}
+\subsection{Definition 6.1 (Postsches Korrespondenzproblem)}
+Eine Instanz es Postschen Korrespondenzproblems (PKP) ist gegeben durch eine endliche Folge
+\begin{align*}
+	P = (x_1,y_1),\ldots,(x_k, y_k)
+\end{align*}
+von Wortpaaren mit $x_i, y_i \in \Sigma^+$ für ein endliches Alphabet $\Sigma$.\\
+Eine Lösung des Problems ist eine Indexfolge $i_1, \ldots, i_m$ mit \begin{itemize}
+	\item $m>0$ und
+	\item $i_j \in \{1, \ldots, k\}$,
+\end{itemize}
+so dass gilt: $x_{i_1} \ldots x_{i_m} = y_{i_1} \ldots y_{i_m}$.\par
+\subsubsection{Beispiel}
+siehe Skript 48
+\subsubsection{Bemerkung}
+Um die Unentscheidbarkeit des PKP zu zeigen, führen wir zunächst ein Zwischenproblem ein, das modifizierte PKP (MPKP):\par
+Hier muss für die Lösung zusätzlich $i_1 = 1$ gelten, d.h. das Wortpaar, mit dem man beginnen muss ist festgelegt.
+\subsection{Lemma 6.3}
+Das MPKP kann auf das PKP reduziert werden.
+\subsubsection{Beweis}
+Siehe Vorlesung 49\\
+$\to$ Das MPKP P hat eine Lösung \underline{gdw}. Das PKP f(P) hat eine Lösung
+\subsubsection{Beispiel}
+$P = (a, aaa),(aab,b)$ ist als MPKP lösbar mit Lösung 1,2.
+\begin{align*}
+	f(P) = (\#a\#,\#a\#a\#a),(a\#,\#a\#a\#a),(a\#a\#b\#, \#b), (\$,\#\$)
+\end{align*}
+Die Lösung 1, 2 von $P$ liefert die Lösung 0,2,3 von $f(P)$:
+\begin{align*}
+	&\#a\#|a\#a\#b\#|\$\\
+	&\#a\#a\#a|\#b|\#\$
+\end{align*}
+Offenbar muss jede Lösung von $f(P) $ mit 0 beginnen.\\
+Wäre daher das PKP entscheidbar, so auch das MPKP. Um die Unentscheidbarkeits des PKP zu zeigen, genügt es also zu zeigen, dass MPKP unentscheidbar ist.
+\subsection{Lemma 6.4}
+Das Halteproblem kann auf das MPKP reduziert werden.
+\subsubsection{Beweis}
+siehe Vorlesung 50 ff.
+\subsection{Satz 6.5}
+Das PKP ist unentscheidbar.\\
+Wir verwenden dieses Resultat um Unentscheidbarkeit von Porblemen für kontextfreie und kontextsensitive Sprachen nachzuweisen. Wir zeigen zunächst:
+\subsection{Lemma 6.6}
+Es ist nicht entscheidbar, ob für kontextfreie Grammatiken $G_1, G_2$ gilt:
+\begin{align*}
+	L(G_1)\cap L(G_2) \not = \emptyset
+\end{align*}
+\subsection{Beweis}
+siehe Vorlesung 52.
+

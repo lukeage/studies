@@ -224,3 +224,323 @@ WHERE s.population > 1000000
 GROUP BY c.name
 ORDER BY 2 DESC
 \end{lstlisting}
+
+\section{}
+fill 16.05.
+\subsection{Primzeugs}
+\begin{enumerate}
+\item Prim 1 \\
+\begin{lstlisting}
+SELECT p, p+2, p+4
+FROM Prim
+WHERE p + 2 in (SELECT p from PRIM)
+	AND p + 4 in (SELECT p FROM PRIM)
+\end{lstlisting}
+\item Prim 2\\
+\begin{lstlisting}
+SELECT p
+FROM Prim
+WHERE ((p+1) mod 6 = 0 or (p-1) mod 6 = 0)
+	AND p > 3
+\end{lstlisting}
+\end{enumerate}
+
+\section{}
+\subsection{ER-Modell}
+MIN/MAX Angaben
+\ref{img:MM}
+\begin{figure}[h]
+	\includegraphics[width = 16cm]{./Database/Images/6_1.png}
+	\caption{Min/Max}
+	\label{img:MM}
+\end{figure}
+\begin{lstlisting}
+CREATE TABLE Menschen (SozVNr varchar(30) primary key, 
+	Name varchar(30));
+\end{lstlisting}
+verheiratet
+\begin{lstlisting}
+CREATE TABLE verheiratet(
+	Ehepartner1 varchar(30) 
+	REFERENCES Menschen ON DELETE CASCADE, 
+	Eheparnter 2 varchar(30) NOT NULL UNIQUE
+	REFERENCES Menschen ON DELETE CASCADE, PRIMARY KEY(Ehepartner1)
+);
+\end{lstlisting}
+Eltern von
+\begin{lstlisting}
+CREATE TABLE Eltern_von (
+	MutterVater varchar(30) NOT NULL REFERNECES Menschen, 
+	Kind varchar(30) REFERNECES Menschen NOT NULL, 
+	PRIMARY KEY(VaterMutter, Kind));
+\end{lstlisting}
+\subsection{SQL-Anfragen}
+\begin{enumerate}
+\item AB ist Schlüssel? Wenn ja dann darf folgendes keine Einträge haben.
+\begin{lstlisting}
+SELECT A,B FROM R GROUP BY A, B HAVING COUNT(*) > 1;
+\end{lstlisting}
+\item DE $\to$ B
+\begin{lstlisting}
+SELECT D, E FROM R GROPU BY D, E HAVING COUNT (DISTINCT B) > 1;
+\end{lstlisting}
+\end{enumerate}
+\subsection{Relationsschema}
+\begin{enumerate}
+	\item
+	\begin{itemize}
+		\item \{Name, Aufbage\} $\to$ \{Erzielt\}
+		\item \{Name \} $\to$ \{KlausurSumme, Bonus\}
+		\item \{KNote, Bonus\} $\to$ \{Gnote\}
+		\item \{KlausurSumme\} $\to$ \{KNote\}
+		\item \{Aufgabe\} $\to$ \{Max\}
+	\end{itemize}
+\end{enumerate}
+\section{06.06.2016}
+\subsection{}
+Attributhülle: $(F,A) = A^+$\\ Menge aller Attribute, die funktional von A bestimmt werden.
+\subsubsection{Links-Reduktion}
+$\forall \alpha \to \beta \in F: $ Wenn $\beta \subseteq $ Attributhülle $(F,(\alpha - A))$ dann entferne A auf linker Seite, $A \in \alpha$
+\subsubsection{Rechts-Reduktion}
+$\forall \alpha \to \beta \in F: $ Wenn B $ \in $ Attributhülle $(F\to(\alpha \to \beta) \cup (\alpha \to (\beta \to \text{ B}))\cup \alpha)$ dann entferne B auf rechter Seite, $B \in \beta$
+\subsubsection{Aufgabe}
+Beispiel Links- und Rechtsreduktion
+\begin{align*}
+F &= \{A \to B, B\to C, AB \to C\}\\
+\text{nach Linksreduktion: }F &= \{A \to B, B\to C, A \to C\}\\
+\text{nach Rechtsreduktion: }F &= \{A \to B, B \to C\, A \to \emptyset\}\\
+&= \{A \to B, B \to C\} \text{ wird kanonische Überdeckung genannt}
+\end{align*} 
+\begin{enumerate}
+	\item $\emptyset \to \{MaxSumme\}$
+	\item FDS:
+\begin{itemize}
+	\item \{KNote, Bonus\} $\to$ \{GNote\}
+	\item \{Aufgabe\} $\to$ \{Max\}
+	\item \{ErzieltSumme\} $\to$ \{KNote\}
+	\item \{Name, Aufgabe\} $\to$ \{Erzielt\}
+	\item \{Name\} $\to$ \{ErzieltSumme, Bonus, GNote\} \\
+		nach Rechtsreduktion: \{Name\} $\to$ \{ErzieltSumme, Bonus\}
+	\item Formal funktioniert Reduktion so:\\
+	\{Name\} $\to$ \{\underline{ErzieltSum}, Bonus, GNote\}\\
+	\{ErzielstSum\} $\notin$ AttributHülle\{FD, F - \{Name\} $\to$ \{ErzieltSum, Bonus, GNote\} $\cup$ (\{Name\}$\to$\{Bonus,GNote\}),\{Name\}),
+	\end{itemize}
+	\item
+	\begin{itemize}
+		\item Noten: \{[\underline{KNote},\underline{Bonus}, GNote]\}
+		\item Aufgaben: \{[\underline{Aufgabe}, Max]\}
+		\item PunkteNote: \{[ES, KNote]\}
+		\item MaxSumme: \{[MaxSumme]\}
+	\end{itemize}
+\end{enumerate}
+\subsection{}
+\begin{itemize}
+	\item \{Signatur\} $\to$ \{Titel\}
+	\item \{Vorgang\} $\to$ \{Datum\}
+	\item \{Datum,Vorgang\} $\to$\{Benutzer\}
+	\item \{Benutzer\} $\to$ \{Straße, PLZ, Ort\}
+	\item \{PLZ\} $\to$ \{Ort\}
+\end{itemize}
+PK: \{Vorgang, Signatur\}
+\begin{itemize}
+	\item R1: \{\underline{Vorgang}, Datum, Benutzer, Straße, PLZ, Ort\}
+	\item R2: \{\underline{Signatur}, Titel\}
+	\item R3: \{\underline{Vorgang}, \underline{Signatur}\}
+\end{itemize}
+ist in 2. NF
+\subsection{FLüge}
+\begin{itemize}
+	\item[] FLÜGE(E,G,A0,Z0,AZ,D)
+	\item[] ReiseBüros(\underline{K},N,O,A)
+	\item[] Passagiere(\underline{V},\underline{N},W)
+	\item[] Reserviert(\underline{K}, \underline{F})
+	\item[] BuchtBei(\underline{V},\underline{N}, \underline{K})
+	\item[] FliegtMit(\underline{V}, \underline{N}, \underline{F})
+	\item[] $ F^+ = F \cup G \cup A0 \cup Z0 \cup AZ \cup D$
+	\item[] $ G\cup A0 \cup Z0)^+ = G \cup A0 \cup Z0\cup F \cup AZ \cup D $
+	\item[] $ G\cup A0 \cup Z0 \to F$
+\end{itemize}
+\section{}
+\subsection{}
+\begin{itemize}
+	\item[A]tomicity
+	\item[C]onsistency
+	\item[I]solation
+	\item[D]urability
+\end{itemize}
+\subsection{}
+\subsubsection{DIRTY READ}
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+	T2 & T3\\
+\hline
+ & B0T3\\
+\hline
+& r2(B)\\
+\hline
+& w3(B)\\
+\hline
+B0T2&\\
+\hline
+r2(B)&\\
+\hline
+r2(A)&\\
+\hline
+w2(B)&\\
+\hline
+C2&\\
+\hline
+&a3\\
+\hline
+\end{tabularx}
+\subsubsection{NON REPEATABLE READ}
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+	T1 & T2\\
+\hline
+ B0T1&\\
+\hline
+ r1(B)&\\
+\hline
+& B0T2\\
+\hline
+&r2(B)\\
+\hline
+&r2(A)\\
+\hline
+&w2(B)\\
+\hline
+&C2\\
+\hline
+w1(A)&\\
+\hline
+r1(B)&\\
+\hline
+w1(B) & \\
+\hline
+C1&\\
+\hline
+\end{tabularx}
+
+\subsection{}
+\begin{enumerate}
+	\item \ldots
+	\item Serialisierbarkeitsgraph
+	\begin{itemize}
+		\item T1
+		\begin{itemize}
+			\item T1 $\to$ T2
+			\item T1 $\to$ T3	
+		\end{itemize}
+		\item T2
+		\begin{itemize}
+			\item T2 $\to$ T1
+			\item T2 $\to$ T3
+		\end{itemize}
+		\item T3
+	\end{itemize}
+	\item ist nicht serialisierbar ($\exists$ Zyklen)
+\end{enumerate}
+
+\subsection{}
+\begin{enumerate}
+	\item w1[x]w1[y]c1r2[x]w2[z]c2r3[y]a3
+	\begin{enumerate}
+		\item SR (keine Zyklen)?
+		\begin{itemize}
+			\item T1
+			\begin{itemize}
+				\item T1 $\to$ T2
+				\item T1 $\to$ T3
+			\end{itemize}
+			\item T2
+			\item T3
+		\end{itemize}
+		$\Rightarrow$ der Graph hat keine Zyklen
+	\item RC: schreib-lese Reihenfolge = schließ Reihenfolge
+	\begin{itemize}
+		\item[ja] $\to$ ACA: Lesen nur von abgeschlossenen Transaktionen
+		\begin{itemize}
+			\item[ja] $\to$ ST: Schreiben nur auf abgeschlossenen Transaktionen
+		\end{itemize}
+	\end{itemize}
+	\end{enumerate}
+	\item
+	\item 
+	\begin{itemize}
+			\item T1
+			\begin{itemize}
+				\item T1 $\to$ T2
+				\item T1 $\to$ T3
+			\end{itemize}
+			\item T2
+			\begin{itemize}
+				\item T2 $\to$ T1 $\Rightarrow$ ZYKLUS!!! Schreib-Lese-Reihenfolge?
+				\begin{itemize}
+					\item nicht RC $\to$ nicht ACA und nicht ST
+				\end{itemize}
+			\end{itemize}
+			\item T3
+	\end{itemize}
+\end{enumerate}
+
+\subsection{}
+\begin{enumerate}
+	\item $w_1(x)r_2(x)w_2(y)c_2c_1$ Historie nicht rücksetzbar aber korrekt bei 2PL $\to$ deshalb S2PL, damit wird der Term serialisierbar
+	\item S2PL erzeugt serielle Abläufe, dagegen 2PL serialisierbar aber \textbf{ohne} serielle Abläufe zu garantieren!!
+\end{enumerate}
+\begin{tabularx}{\textwidth}{X|X}
+T1 &T2\\
+\hline
+B0T1&- \\
+Lock X(A) &- \\
+w1&-\\
+\hline
+-&B0T2\\
+-&Lock X(B)\\
+-&W2(B)\\
+\hline
+Lock S(B) &-\\
+-&Lock S(A)
+\end{tabularx}
+
+\subsection{}
+\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
+\hline
+&a &b &c &d &e &f\\
+\hline
+T1 &x &s &\textbf{X} &- &s &-\\
+\hline
+T2 &- &s &- &- &- &\textbf{S}\\
+\hline
+T3 &- &\textbf{X} &s &- &s &-\\
+\hline
+T4 &\textbf{S} &- &s &x &s &-\\
+\hline
+T5 &- &- &- &\textbf{X} &- &x\\
+\hline
+\end{tabularx}
+\begin{itemize}
+	\item T1
+	\begin{itemize}
+		\item T1 $\to$ T3
+		\item T1 $\to$ T4
+	\end{itemize}
+	\item T2
+	\begin{itemize}
+		\item T2 $\to$ T5
+	\end{itemize}
+	\item T3
+	\begin{itemize}
+		\item T3 $\to$ T1
+		\item T3 $\to$ T2
+	\end{itemize}
+	\item T4
+	\begin{itemize}
+		\item T4 $\to$ T1
+	\end{itemize}
+	\item T5
+	\begin{itemize}
+		\item T5 $\to$ T4
+	\end{itemize}
+\end{itemize}

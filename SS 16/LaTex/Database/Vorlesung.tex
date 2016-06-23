@@ -422,9 +422,6 @@ Hinweis: Alle Spalten bei SELECT, die nicht in einem Aggregat-Ausdruck (mit SUM(
 	\item ORDER BY
 \end{itemize}
 \subsubsection{Beispiel (44)}
-
-
-\section{SQL}
 \subsection{Innere und äußere Verbundoperationen}
 \subsubsection{Alternative Schreibweise zur "normalen" Verbundoperation}
 \begin{lstlisting}
@@ -540,3 +537,48 @@ Regeln beim Ändern/Löschen/Einfügen von Tupeln (74 ff)
 \subsubsection{Weitere einfache statische Integritätsbedingungen}
 CHECK CONSTRAINTS (79)\\
 Erzwingen und Missachten von Integritätsbedingungen
+\subsection{Aktive Datenbanktechnologie (80 ff)}
+\subsubsection{ECA-Prinzip eines Triggers}
+Event-Condition-Action Rules
+\subsubsection{Anlegen von Triggern (82)}
+\subsubsection{Triggeraktivierungszeit (83 ff)}
+\subsubsection{Datenbankprozeduren und -funktionen (93)}
+
+\section{Entwurfstheorie relationaler Datenbanken}
+Normalisierung: ER-Modell $\to$ Relationen-Schema $\to$ Normalisiertes Relationen-Schema mit Hilfe des Synthesealgorithmus
+\subsection{Ziele und Motivation des Datenbankentwurfs}
+Beispiele 4ff.
+\subsection{Theorie der Funktionalen Abhängigkeiten}
+\subsubsection{Funktionen (16)}
+\subsubsection{Funktionale Abhängigkeiten}
+Beispiel 17 ff.
+\subsubsection{Berechnung funktionaler Abhängigkeiten}
+Aus einer Menge F von FDs sind weitere FDs herleitbar (24ff)
+\subsubsection{Membership-Problem (26)}
+\subsection{Zerlegung (Dekomposition) von Relationen}
+\subsubsection{Zerlegung eines Relationenschemas (29)}
+\subsubsection{Verlustlosigkeit (30 ff.)}
+Kriterien (32)
+\subsubsection{Abhängigkeitsbewahrung (33)}
+Beispiel (34)
+\subsection{Normaleformena}
+\subsubsection{Schemaaqualitätsprüfung}
+Es gibt Normalformen (NF) die etwas über die Qualität eines Schemas aussagen (37)
+\subsubsection{Erste NF(39)}
+\subsubsection{Zweite NF(40)}
+Beispiel zur zweiten NF (40 ff)
+\subsubsection{Dritte NF(43 ff)}
+\subsubsection{Automatische Zerlegung}
+Zerlegung wird normalerweise nicht jedes Mal mühsam per Hand gemacht und überführt
+\subsubsection{Kanonische Überdeckung (46 ff)}
+Definition: Äquivalenz funktionaler Abhängigketien: Zwei Mengen F und G von FDs eines Relationenschemas R sind äquivalent falls $F^+ = G^+$ gilt
+\subsubsection{Beispiel Kanonische Überdeckung (49 ff)}
+\subsubsection{3NF-Synthesealgorithmus (52)}
+\subsubsection{Boyce-Codd-Normalform (57)}
+\subsubsection{Erzeugung der BCNF}
+\subsubsection{Mehrwertige Abhängigkeiten (59 ff)}
+\subsubsection{Vierte Normalform (64)}
+\section{Transaktionsverarbeitung I - Synchronisation}
+siehe Skript
+\section{ 	Transaktionsverarbeitung II - Fehlerbehandlung, Logging und Recovery}
+siehe Skript

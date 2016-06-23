@@ -874,3 +874,238 @@ Ablauf:
 \item AAL5
 \item AAL Rahmen (31)
 \end{itemize}
+
+\section{}
+
+\section{}
+
+\section{Netzwerkperformance}
+Sicherungs- $\to$ Transportschicht
+\subsection{Einführung}
+\subsubsection{Leinstungsprobleme in Rechnernetzen}
+\begin{itemize}
+	\item Überlastung von Routern
+	\item Ungleichgewicht der strukturellen Ressourcen
+	\item synchrone Überlastung
+	\item mangelhafte Systemabstimmung
+	\item Jitter
+\end{itemize}
+\subsection{Messung der Netzwerkleistung}
+\begin{itemize}
+	\item Möglichkeiten: Timer setzen oder Zähler für Häufigkeiten
+	\item zu beachten:
+	\begin{itemize}
+		\item Samplegröße groß wählen $\to$ Durchschnittswert
+		\item repräsentative Samples
+		\item Caching/Puffer deaktiviert
+		\item ohne äußere Einflüsse
+		\item Verwendung einer präzisen Computeruhr
+		\item vorsichtiges Extrapolieren von Ergebnissen
+	\end{itemize}
+\end{itemize}
+\subsubsection{Leistungsoptimierung}
+\begin{itemize}
+	\item viele verschiedene Mechanismen, Techniken und Kofigurationsmöglichkeiten
+		\item für Performance-Vergleiche ist Optimierungsziel festzulegen, z.B.
+		\begin{itemize}
+			\item minimale Paketübertragungszeit
+			\item max. Gesamtnetzdurchsatz
+			\item Durchsatz und Übertragungszeit nur für bestimmte Datenklassen und/oder Sender optimieren
+			\item minimale Verlustrate
+			\item minimaler Jitter
+			\item minimale Paketvertauschungen
+		\end{itemize}
+		\item bei Optimierung müssen meist mehrere Schichten gleichzeitig betrachtet werden $\to$ Wechselwirkung von Maßnahmen
+\end{itemize}
+\subsubsection{Performaceverlust - Beispiel}
+siehe S. 7
+\subsection{Leistungsaspekte Ehernet}
+Leistungssteigerung von 10 MBit/s zu 100 GBit/s
+\begin{itemize}
+	\item Verkürzung maimaler Kabellängen
+	\item Erhöhen der minimalen Framelänge - Auffülen kurzer Frames (Padding)
+	\item Paketaggregation - mehrere kleine Frames in einem Frame übertragen (Bursting)
+	\item 4B/5B-Codierung oder 8B/10B-Codierung statt Manchester-Codierung
+	\item höhere Taktrate/Symbolrate
+	\item Jumborahmen
+\end{itemize}
+\subsubsection{Jumbo-Frames}
+\begin{itemize}
+	\item proprietäre Ethernet-Erweiterung
+	\item Vorteile
+	\begin{itemize}
+		\item TCP-Lastkontrolle: schnellerer Anstieg der Datenrate nach Paketverlust
+		\item weiniger Header-Overhead - 5,7\% bei 1500 Byte, 1\% bei 9000 Byte $\to$ 4 - 5 \% mehr Datendurchsatz
+		\item reduzierte CPU-Last (weniger Pakete zu verarbeiten, weniger Routing-Entscheidungen, etc.)
+	\end{itemize}
+	\item Nachteile
+	\begin{itemize}
+		\item nur effizient einsetzbar, wenn Ende-zu-Ende-Unterstützung
+		\item CRC-32 nicht robust genug bei großen Frames (>12KB)
+		\item Delay und Jitter werden leicht erhöht
+	\end{itemize}
+\end{itemize}
+\subsubsection{Jumbo-Frames und TCP-Lastkontrolle}
+siehe S.10
+\subsubsection{Padding/Bursting: Motivation}
+siehe S.11
+\subsubsection{Afubau eines Ehernet Frames}
+siehe S.12
+\subsubsection{Berechnung Worst-Case-Effizienz}
+sihe S.13
+\subsection{Fairness}
+\begin{itemize}
+	\item Trotz hoher Leistungsanforderungen muss Fairness gewährleistet sein
+	\begin{itemize}
+		\item Alle Teilnehmer greifen gleichberechtigt und gleichmäßig auf das Netzwerk zu
+	\end{itemize}
+	\item Beispiel: Transatlantisches Telefonkabel Nr. 14(TAT-14)
+	\begin{itemize}
+		\item Finanziert durch Konsortium aus mehreren Providern (z.B. Deutsche Telekom, Concert, France Telecom, Sprint)
+		\item Fairer Zugriff auf vorhandene Ressourcen für alle Provider
+	\end{itemize}
+\end{itemize}
+\subsubsection{Fairness - Algorithmen}
+siehe S. 15 ff.
+\begin{itemize}
+	\item FIFO, FCS, Taildrop
+	\item Round-Robin-Fair-Queueing
+	\item Gewichtetes Fair Queueing
+	\item Prioritätsscheduling
+	\item Scheduling anhand von Paketzeitstempel
+\end{itemize}
+\subsubsection{Fairness - Forschung}
+\begin{itemize}
+	\item Vergleichsmessungen verschiedener Algorithmen
+	\begin{itemize}
+		\item First-Come, First-Served (FCFS)
+		\item Elastic Round Robin (ERR): Round-Robin-Erweiterung mit besseren Fairness- und Leistungseigenschaften
+	\end{itemize}
+	\item Offene Forschungsfragen gemäß "The Fairness Challenge in Computer Networks"
+	\begin{itemize}
+		\item Erweiterungen für Fairness in Multicast- und Broadcast-Szenarien
+		\item Erweiterung auf andere QoS-Parameter: Faire Verwaltung und Steuerung von Paketverzögerung, Jitter, Verlustrate
+	\end{itemize}
+\end{itemize}
+\subsection{Überlastungsüberwachung}
+\subsubsection{Gewünschte Bandbreitenzuordnung}
+\begin{itemize}
+	\item Problem: zu viele Pakete werden ins Netz geschickt $\to$ Überlastung des Netzes
+	\item Vermeidung: Überwachung der Überlastung auf Schichten 3 und 4 
+	\item optimiertes Ziel: Bandbreite optimal auf Transportinstantzen im Netz verteilen
+	\item[1.] Effiziente Senderate
+	\begin{itemize}
+		\item falsche Annahme: 100 MBit/s- Verbindung auf 4 Transportinstanzen zu je 25 MBit/s verteilen
+		\begin{itemize}
+			\item knapp unterhalb der Kapazitätsgrenze (<100 MBit/s) treten bei kurzzeitigen Paketschüben Pufferverluste auf
+			\item Verzögerung steigt durch Neuübertragung von Paketen $\to$ führt zu noch mehr Last $\to $ exponentieller Anstieg
+		\end{itemize}
+		\item Lösung: Bandbreite nur zordnen bis Verzögerung stark ansteigt
+	\end{itemize}
+	\item[2.] Max-Min-Fairness. Rate steigt für alle Datenflüsse gleichmäßig an. Wenn Engpass erreicht werd, wachsen nur restliche Datenflüsse weiter. (Beispiel für faire zuteilung: Kanäle mit je 300 MBit/s, 4 Datenflüsse A-D)
+	\item[3.] Konvergenz
+	\begin{itemize}
+		\item Problem: stark schwankende Bandbreitennachfrage im Netz
+		\item Algorithmus zur Überlastungsüberwachung muss möglichst schnell gegen faire und effiziente Zuordnung konvergieren
+	\end{itemize}
+\end{itemize}
+\subsubsection{Regulierung der Senderate}
+\begin{itemize}
+	\item beeinflusst von
+	\begin{itemize}
+		\item[1.] Flusskontrolle (Empfänger hat zu wenig Puffer) $\to $ Regulierung über Fenster mit variabler Größe
+		\item[2.] Überlstungsüberwachung (geringe Kapazität des Netzes) $\to$ auf Feedback vom Empfänger reagieren
+	\end{itemize}
+	\item Beispiele Überlastungsüberwachung
+	\begin{itemize}
+		\item TCP klassisch - Paketverlust führt zu "Neustart" (Slow Start) der Senderate, Verdopplung bis Schwellwert
+		\item Erweiterung Fast-Retransmit - bei fehlenden Paketen werden Folgepakete doppelt vom Empfänger bestätigt (Dup-Acks) $\to$ Sender erkennt Dup-Acks und sendet fehlendes Paket vor Ablauf des Timers für Paketverlust
+		\item Erweiterung TCP-Reno - Fast Recovery: bei Empfang von 3 Dup-Acks (frühes Zeichen für Paketverlust) wird Congestion Window halbiert (vermeidet Slow Start)
+		\item Fast TCP - Übertragungsverzögerung (Ende-zu-Ende) wird gemessen und Datenrate wird angepasst
+	\end{itemize}
+\end{itemize}
+\subsubsection{Fast TCP}
+\begin{itemize}
+	\item Protokoll mit neuem TCP congestion avoidance Algorithmus für schnelle Netze mit langen Verzögerungen (Long Fat Networks)
+	\item Motivation: TCP-Nachteile:
+	\begin{itemize}
+		\item geringe Paketverluste sind Voraussetzung für einen kontinuierlich hohen Datenstrom
+	\end{itemize}
+	\item Gegüber TCP verwendet FAST TCP die Verzögerung des Netzwerks als Feedback um die Senderate anzupassen $\to$ Datenrate bleibt konstant
+	\begin{itemize}
+		\item RTT (round trip time) - Tatsächliche Zeit der Paketübermittlung
+		\item base RTT - Zeit der Paketübermittlung ohne Warteschlangen
+		\item Unterschied beider Werte gibt angenommene Paketanzahl in der Warteschlange an
+		\item viele Pakete in der Warteschlange $\to$ Senderate wird reduziert
+		\item wenige pakete in der Warteschlange $\to$ Senderate wird erhöht
+	\end{itemize}
+\end{itemize}
+\subsubsection{TCP-Reno vs. Fast TCP}
+sihe S.22
+\subsection{Leistungsteigerung}
+\subsubsection{Hostdesign}
+\begin{itemize}
+	\item System kann durch Netzwerkoptimierungen nur bis zu einem gewiisen Punkt verbessert werden $\to$ zugrunde ligendes Hostdesign optimieren
+	\item Hostgeschwindigkeit (CPU + Speicher) wichtiger als Netzgeschwindigkeit
+	\item weniger Overhead durch groß gewählte Pakete
+	\item weniger Kopiervorgänge der Daten zwischen Schichten
+	\begin{itemize}
+		\item Zusammenfassen der Schichten
+		\item parallele Operationen
+	\end{itemize}
+	\item weniger Kontextwechsel
+	\item weniger Timeouts, da unnötige Wiederholungen die Hostressourcen belasten
+	\item grundsätzlich: Überlastung vermeiden ist besser als Überlastung beheben	
+	\end{itemize}
+\subsubsection{Protokolle für den Normalfall optimieren}
+s.S. 25
+\subsubsection{Engpass: Beschränkte Bandbreite}
+s.S. 26
+\subsubsection{Long Fat Networks}
+s.S. 27
+\subsubsection{Bandwidth-Delay-Product}
+s.S. 28
+\subsubsection{Lösungen für Long Fat networks}
+s.S. 29
+\subsection{Unterberungstolerante Netzwerke - DTN}
+s.S. 30 fff
+\subsubsection{DTN - disruption-tolerant network}
+s.S. 30
+\section{Internetdienste}
+\subsection{Domain Name System}
+\begin{itemize}
+	\item Abbildung von Namen auf IP-Adressen
+	\item hierarchisches, auf Domänen basierendes Benennungsschema
+	\item replizierte Verzeichnisdatenbanken
+	\item Namensvergabe durch ICANN (Internet Corporation for Assigned Names and Numbers) - bzw. durch beauftrage Unternehmen
+\end{itemize}
+\subsubsection{Resource Records}
+\begin{itemize}
+	\item zu jeder Domäne gehören entsprechende Resource Records
+	\item typischer Resource Record ist Zuordnung Host $\to$ IP-Adresse
+	\item Aufbau: <Domain\_name, Time\_to\_live, Class, Type, Value>
+	\item Beispiel: stargate 86400 IN A 141.76.40.230
+	\item Erläuterung s.S. 5
+\end{itemize}
+\subsubsection{Nameserver (6)}
+\subsubsection{Namensauflösung für entfernte Domänen (7)}
+\subsection{E-Mail (8)}
+\subsubsection{Nachrichtenformat - RFC 5322 (9)}
+\subsubsection{MIME (10)}
+\subsubsection{SMTP (11ff)}
+\subsubsection{IMAP (13)}
+\subsubsection{WWW (14)}
+\subsection{WWW - World Wide Web}
+\subsubsection{Ablauf Abruf einer Webseite (15)}
+\subsubsection{Webserver (16)}
+\subsubsection{HTTP(17ff)}
+\subsubsection{HTML (20ff)}
+\subsubsection{Dynamische Webseiten (24ff)}
+\subsection{Content Delivery (25)}
+\subsubsection{Serverfarmen (26)}
+\subsubsection{Webproxys (27)}
+\subsubsection{Content-Delivery-Netze (28)}
+\subsubsection{Peer-to-Peer-Netze (29)}
+\subsection{Netzwerkmanagement (30 ff)}
+\subsubsection{SNMP - Simple Network Management Protocol (22)}
+
